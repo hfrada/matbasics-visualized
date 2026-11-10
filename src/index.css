@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-hand: "Caveat", cursive;
+  --font-math: "KaTeX_Main", "Times New Roman", serif;
+  --font-math-italic: "KaTeX_Math", "Times New Roman", serif;
+  --color-paper: #fbfaf4;
+  --color-grid: #cfe0f0;
+  --color-ink: #1d3b78;
+  --color-muted: #5b6f96;
+  --color-faint: #93a3c2;
+  --color-highlight: #ffe14d;
+  --color-highlight-soft: #ffe14d59;
+  --color-marker: #e2574c;
+  --animate-fade-in: fade-in 0.3s ease-out both;
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    translate: 0 10px;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@utility enter {
+  animation: enter 0.35s ease-out backwards;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation-name: fade-in;
+  }
+}
+
+@utility pen-border {
+  border: 2px solid var(--color-ink);
+  border-radius: 4px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 3px -4px -4px 3px;
+    border: 1px solid var(--color-ink);
+    border-radius: 5px;
+    opacity: 0.35;
+    pointer-events: none;
+    transition: inherit;
+  }
+}
+
+@utility pen-outline {
+  border: 2px solid var(--color-ink);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+}
+
+@utility marker-highlight {
+  position: relative;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -0.12em -0.45em -0.08em -0.4em;
+    background: var(--color-highlight);
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40' preserveAspectRatio='none'%3E%3Cpath fill-opacity='.75' d='M4 7 C18 5 30 8 45 6 S75 4 96 6 L99 31 C85 34 70 31 55 33 S20 35 1 34 Z'/%3E%3Cpath fill-opacity='.6' d='M4 7 L10 7 L7 34 L1 34 Z M92 6 L96 6 L99 31 L94 32 Z'/%3E%3C/svg%3E")
+      no-repeat 0 0 / 100% 100%;
+    mix-blend-mode: multiply;
+  }
+
+  [data-theme="dark"] &::before {
+    mix-blend-mode: normal;
+  }
+}
+
+@layer base {
+  [data-theme="dark"] {
+    --color-paper: #123a6b;
+    --color-grid: #2a5590;
+    --color-ink: #f2f6ff;
+    --color-muted: #a9c0e4;
+    --color-faint: #7393c4;
+    --color-highlight: #7fd3ff;
+    --color-highlight-soft: #7fd3ff40;
+    --color-marker: #ff8a7a;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-paper text-ink antialiased transition-colors;
+    background-image:
+      linear-gradient(var(--color-grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-grid) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0 auto 0 8px;
+    width: 2px;
+    background: var(--color-marker);
+    opacity: 0.7;
+    pointer-events: none;
+
+    @media (width >= 40rem) {
+      left: 56px;
+    }
+  }
+}

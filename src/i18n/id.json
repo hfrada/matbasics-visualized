@@ -1,0 +1,122 @@
+{
+  "home": {
+    "title": "MatBasicsV",
+    "subtitle": "dasar matematika di kertas petak"
+  },
+  "sections": {
+    "setsAndNumbers": "Himpunan & Bilangan",
+    "logic": "Logika",
+    "realsAndRelations": "Bilangan Real & Relasi",
+    "functionsAndProofs": "Fungsi & Pembuktian"
+  },
+  "toolbar": {
+    "darkMode": "Mode gelap"
+  },
+  "pager": {
+    "previous": "sebelumnya",
+    "next": "berikutnya"
+  },
+  "playback": {
+    "start": "mulai",
+    "stop": "berhenti",
+    "delay": "jeda",
+    "seconds": "{{value, number}} dtk"
+  },
+  "topics": {
+    "writingSets": {
+      "title": "Menulis Himpunan",
+      "hint": "klik salah satu objek untuk melihat alasannya",
+      "tray": "tumpukan objek",
+      "tabs": {
+        "below10": "N: asli < 10",
+        "vowels": "V: huruf hidup",
+        "empty": "∅: asli < 1",
+        "natural": "ℕ: semua asli"
+      },
+      "forms": {
+        "rule": "cara (1): mencirikan",
+        "list": "cara (2): mendaftarkan"
+      },
+      "rules": {
+        "below10": "N=\\{x \\mid x \\text{ bilangan asli lebih kecil dari } 10\\}",
+        "vowels": "V=\\{x \\mid x \\text{ huruf hidup (vokal)}\\}",
+        "empty": "\\emptyset=\\{x \\mid x \\text{ bilangan asli lebih kecil dari } 1\\}",
+        "natural": "\\mathbb{N}=\\{x \\mid x \\text{ bilangan asli}\\}"
+      },
+      "reasons": {
+        "naturalBelow10": "{{x}} bilangan asli dan {{x}} < 10.",
+        "notNumber": "{{x}} bukan bilangan.",
+        "zero": "0 bukan bilangan asli, bilangan asli mulai dari 1.",
+        "notNatural": "{{x}} bukan bilangan asli.",
+        "vowel": "{{x}} huruf hidup.",
+        "consonant": "{{x}} huruf mati (konsonan).",
+        "notLetter": "{{x}} bukan huruf.",
+        "notBelow1": "{{x}} bilangan asli, tetapi tidak lebih kecil dari 1.",
+        "natural": "{{x}} bilangan asli.",
+        "continues": "masih ada 10, 11, 12, … dan seterusnya."
+      },
+      "count": {
+        "found": "ditemukan: {{count}} anggota",
+        "finite": "banyak anggota: {{count}}, jadi {{name}} himpunan terhingga",
+        "empty": "banyak anggota: 0, himpunan kosong",
+        "infinite": "banyak anggota: tak terhingga, daftarnya tidak pernah berakhir"
+      }
+    },
+    "subsetsAndComplement": {
+      "title": "Himpunan Bagian & Komplemen",
+      "hint": "klik salah satu bilangan untuk melihat alasannya",
+      "cards": {
+        "given": "yang diketahui",
+        "result": "kesimpulan"
+      },
+      "complementRule": "A^C=\\{x \\mid x \\in S \\text{ tetapi } x \\notin A\\}",
+      "symbols": {
+        "member": "anggota",
+        "notMember": "bukan anggota",
+        "subset": "bagian",
+        "proper": "bagian sejati",
+        "notSubset": "bukan bagian",
+        "complement": "komplemen",
+        "suchThat": "dengan"
+      },
+      "reasons": {
+        "inBoth": "${{x}} \\in {{a}}$ dan ${{x}} \\in {{b}}$.",
+        "onlyIn": "${{x}} \\in {{b}}$ tetapi ${{x}} \\notin {{a}}$, jadi ${{a}} \\neq {{b}}$.",
+        "notChecked": "${{x}} \\notin {{a}}$. Yang diperiksa hanya anggota ${{a}}$.",
+        "counter": "${{x}} \\in {{a}}$ tetapi ${{x}} \\notin {{b}}$, jadi ${{a}} \\not\\subset {{b}}$.",
+        "oneEnough": "Satu contoh penyangkal sudah cukup.",
+        "allIn": "setiap anggota ${{a}}$ juga anggota ${{b}}$, jadi ${{a}} \\subseteq {{b}}$.",
+        "proper": "${{a}} \\subseteq {{b}}$ dan ${{a}} \\neq {{b}}$, jadi ${{a}} \\subset {{b}}$.",
+        "equal": "${{a}} \\subseteq {{b}}$ dan ${{b}} \\subseteq {{a}}$, jadi ${{a}} = {{b}}$.",
+        "inSet": "${{x}} \\in A$, jadi ${{x}} \\notin A^C$.",
+        "inComplement": "${{x}} \\in S$ tetapi ${{x}} \\notin A$, jadi ${{x}} \\in A^C$.",
+        "outside": "daerah $S$ di luar $A$ adalah $A^C$."
+      }
+    },
+    "powerSet": {
+      "title": "Himpunan Kuasa",
+      "hint": "klik salah satu ujung cabang untuk melihat jalannya",
+      "choices": "2 pilihan",
+      "cards": {
+        "powerSet": "himpunan kuasa",
+        "count": "banyak anggota"
+      },
+      "symbols": {
+        "powerSet": "himpunan kuasa",
+        "empty": "kosong",
+        "size": "banyak anggota",
+        "in": "masuk",
+        "out": "tidak"
+      },
+      "choice": {
+        "in": "${{x}}$ masuk",
+        "out": "${{x}}$ tidak"
+      },
+      "reasons": {
+        "level": "${{x}}$ masuk atau tidak: 2 pilihan, cabangnya jadi {{branches}}.",
+        "leaf": "{{path}}, jadi ${{set}}$.",
+        "final": "setiap anggota punya 2 pilihan: masuk atau tidak. Jadi $|P({{name}})|={{power}}$."
+      }
+    }
+  }
+}

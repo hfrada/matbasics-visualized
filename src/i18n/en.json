@@ -1,0 +1,123 @@
+{
+  "home": {
+    "title": "MatBasicsV",
+    "subtitle": "math basics on grid paper"
+  },
+  "sections": {
+    "setsAndNumbers": "Sets & Numbers",
+    "logic": "Logic",
+    "realsAndRelations": "Real Numbers & Relations",
+    "functionsAndProofs": "Functions & Proofs"
+  },
+  "toolbar": {
+    "darkMode": "Dark mode"
+  },
+  "pager": {
+    "previous": "previous",
+    "next": "next"
+  },
+  "playback": {
+    "start": "start",
+    "stop": "stop",
+    "delay": "delay",
+    "seconds": "{{value, number}} s"
+  },
+  "topics": {
+    "writingSets": {
+      "title": "Writing a Set",
+      "hint": "click an object to see why",
+      "tray": "pile of objects",
+      "tabs": {
+        "below10": "N: natural < 10",
+        "vowels": "V: vowels",
+        "empty": "∅: natural < 1",
+        "natural": "ℕ: all natural"
+      },
+      "forms": {
+        "rule": "method 1: describe",
+        "list": "method 2: list"
+      },
+      "rules": {
+        "below10": "N=\\{x \\mid x \\text{ is a natural number less than } 10\\}",
+        "vowels": "V=\\{x \\mid x \\text{ is a vowel}\\}",
+        "empty": "\\emptyset=\\{x \\mid x \\text{ is a natural number less than } 1\\}",
+        "natural": "\\mathbb{N}=\\{x \\mid x \\text{ is a natural number}\\}"
+      },
+      "reasons": {
+        "naturalBelow10": "{{x}} is a natural number and {{x}} < 10.",
+        "notNumber": "{{x}} is not a number.",
+        "zero": "0 is not a natural number, natural numbers start at 1.",
+        "notNatural": "{{x}} is not a natural number.",
+        "vowel": "{{x}} is a vowel.",
+        "consonant": "{{x}} is a consonant.",
+        "notLetter": "{{x}} is not a letter.",
+        "notBelow1": "{{x}} is a natural number, but not less than 1.",
+        "natural": "{{x}} is a natural number.",
+        "continues": "there are still 10, 11, 12, … and so on."
+      },
+      "count": {
+        "found_one": "found: {{count}} member",
+        "found_other": "found: {{count}} members",
+        "finite": "{{count}} members, so {{name}} is finite",
+        "empty": "0 members, the empty set",
+        "infinite": "infinitely many members, the list never ends"
+      }
+    },
+    "subsetsAndComplement": {
+      "title": "Subsets & Complement",
+      "hint": "click a number to see why",
+      "cards": {
+        "given": "given",
+        "result": "conclusion"
+      },
+      "complementRule": "A^C=\\{x \\mid x \\in S \\text{ but } x \\notin A\\}",
+      "symbols": {
+        "member": "member",
+        "notMember": "not a member",
+        "subset": "subset",
+        "proper": "proper subset",
+        "notSubset": "not a subset",
+        "complement": "complement",
+        "suchThat": "such that"
+      },
+      "reasons": {
+        "inBoth": "${{x}} \\in {{a}}$ and ${{x}} \\in {{b}}$.",
+        "onlyIn": "${{x}} \\in {{b}}$ but ${{x}} \\notin {{a}}$, so ${{a}} \\neq {{b}}$.",
+        "notChecked": "${{x}} \\notin {{a}}$. Only members of ${{a}}$ are checked.",
+        "counter": "${{x}} \\in {{a}}$ but ${{x}} \\notin {{b}}$, so ${{a}} \\not\\subset {{b}}$.",
+        "oneEnough": "One counterexample is enough.",
+        "allIn": "every member of ${{a}}$ is also a member of ${{b}}$, so ${{a}} \\subseteq {{b}}$.",
+        "proper": "${{a}} \\subseteq {{b}}$ and ${{a}} \\neq {{b}}$, so ${{a}} \\subset {{b}}$.",
+        "equal": "${{a}} \\subseteq {{b}}$ and ${{b}} \\subseteq {{a}}$, so ${{a}} = {{b}}$.",
+        "inSet": "${{x}} \\in A$, so ${{x}} \\notin A^C$.",
+        "inComplement": "${{x}} \\in S$ but ${{x}} \\notin A$, so ${{x}} \\in A^C$.",
+        "outside": "the part of $S$ outside $A$ is $A^C$."
+      }
+    },
+    "powerSet": {
+      "title": "Power Set",
+      "hint": "click a branch end to see its path",
+      "choices": "2 choices",
+      "cards": {
+        "powerSet": "power set",
+        "count": "number of members"
+      },
+      "symbols": {
+        "powerSet": "power set",
+        "empty": "empty",
+        "size": "number of members",
+        "in": "in",
+        "out": "out"
+      },
+      "choice": {
+        "in": "${{x}}$ in",
+        "out": "${{x}}$ out"
+      },
+      "reasons": {
+        "level": "${{x}}$ in or out: 2 choices, so {{branches}} branches.",
+        "leaf": "{{path}}, so ${{set}}$.",
+        "final": "every member has 2 choices: in or out. So $|P({{name}})|={{power}}$."
+      }
+    }
+  }
+}
