@@ -20,7 +20,8 @@
     "start": "start",
     "stop": "stop",
     "delay": "delay",
-    "seconds": "{{value, number}} s"
+    "seconds": "{{value, number}} s",
+    "idle": "press start to see the steps one by one."
   },
   "topics": {
     "writingSets": {
@@ -117,6 +118,260 @@
         "level": "${{x}}$ in or out: 2 choices, so {{branches}} branches.",
         "leaf": "{{path}}, so ${{set}}$.",
         "final": "every member has 2 choices: in or out. So $|P({{name}})|={{power}}$."
+      }
+    },
+    "setOperations": {
+      "title": "Set Operations",
+      "hint": "click a number to see why, or press start to check the regions one by one",
+      "cards": {
+        "rule": "rule",
+        "result": "result",
+        "regions": "check each region"
+      },
+      "table": {
+        "region": "region",
+        "taken": "in?",
+        "yes": "yes",
+        "no": "no",
+        "in": "in",
+        "out": "out"
+      },
+      "regions": {
+        "onlyA": "only in $A$",
+        "both": "in $A$ and $B$",
+        "onlyB": "only in $B$",
+        "outside": "outside $A$ and $B$"
+      },
+      "operations": {
+        "union": {
+          "meaning": "union: in $A$ or in $B$ (or both)",
+          "rule": "A\\cup B=\\{x \\mid x \\in A \\text{ or } x \\in B\\}"
+        },
+        "intersection": {
+          "meaning": "intersection: in $A$ and in $B$ at once",
+          "rule": "A\\cap B=\\{x \\mid x \\in A \\text{ and } x \\in B\\}"
+        },
+        "differenceAB": {
+          "meaning": "difference: in $A$ but not in $B$",
+          "rule": "A-B=\\{x \\mid x \\in A, x \\notin B\\}"
+        },
+        "differenceBA": {
+          "meaning": "difference: in $B$ but not in $A$",
+          "rule": "B-A=\\{x \\mid x \\in B, x \\notin A\\}"
+        },
+        "symmetric": {
+          "meaning": "symmetric difference: in $A$ or in $B$, but not both",
+          "rule": "A+B=\\{x \\mid x \\in (A\\cup B), x \\notin (A\\cap B)\\}"
+        },
+        "complementOfUnion": {
+          "meaning": "complement of the union: not in $A$ and not in $B$",
+          "rule": "(A\\cup B)^C=\\{x \\in S \\mid x \\notin (A\\cup B)\\}"
+        }
+      },
+      "symbols": {
+        "union": "union",
+        "intersection": "intersection",
+        "difference": "difference",
+        "symmetric": "symmetric difference",
+        "complement": "complement",
+        "notMember": "not a member"
+      },
+      "reasons": {
+        "region": "{{region}}: ${{a}}$, ${{b}}$, so {{verdict}}.",
+        "taken": "in ${{name}}$",
+        "left": "not in ${{name}}$",
+        "chip": "${{a}}$ and ${{b}}$, so ${{result}}$.",
+        "final": "${{name}}$ is the highlighted part:"
+      }
+    },
+    "setOperationProperties": {
+      "title": "Properties of Set Operations",
+      "hint": "click a region (on the diagram or in the table) to see why, or press start to draw each side and then check the regions one by one",
+      "laws": {
+        "deMorganUnion": "De Morgan (a)",
+        "deMorganIntersection": "De Morgan (b)",
+        "distributiveUnion": "distributive (a)",
+        "distributiveIntersection": "distributive (b)",
+        "associativeUnion": "associative"
+      },
+      "board": {
+        "left": "left:",
+        "right": "right:",
+        "drawing": "drawing:",
+        "notYet": "right: not yet"
+      },
+      "cards": {
+        "left": "left side",
+        "right": "right side",
+        "regions": "check each region",
+        "others": "other laws"
+      },
+      "describe": {
+        "union": "in ${{x}}$ or in ${{y}}$",
+        "intersection": "in ${{x}}$ and in ${{y}}$ at once",
+        "complementOfSet": "everything not in ${{x}}$",
+        "complementOfResult": "the opposite of ${{x}}$: everything that was not highlighted"
+      },
+      "regions": {
+        "onlyA": "only in $A$",
+        "both": "in $A$ and $B$",
+        "onlyB": "only in $B$",
+        "outsideBoth": "outside $A$ and $B$",
+        "onlyAB": "in $A$ and $B$ only",
+        "onlyAC": "in $A$ and $C$ only",
+        "all": "in $A$, $B$, and $C$",
+        "onlyBC": "in $B$ and $C$ only",
+        "onlyC": "only in $C$",
+        "outsideAll": "outside all three"
+      },
+      "table": {
+        "region": "region",
+        "left": "left",
+        "right": "right",
+        "same": "same?",
+        "yes": "yes",
+        "no": "no",
+        "in": "in",
+        "out": "out",
+        "equal": "same",
+        "different": "different"
+      },
+      "others": {
+        "identity": "identity",
+        "idempotent": "idempotent",
+        "commutative": "commutative",
+        "complement": "complement",
+        "order": "order"
+      },
+      "symbols": {
+        "union": "union",
+        "intersection": "intersection",
+        "complement": "complement",
+        "member": "member",
+        "notMember": "not a member"
+      },
+      "reasons": {
+        "build": "${{tex}}$: {{description}}.",
+        "compare": "{{region}}: left {{left}}, right {{right}}, so same.",
+        "region": "{{region}}: {{where}}.",
+        "leftChain": "left: {{chain}}",
+        "rightChain": "right: {{chain}}",
+        "bothIn": "both are in, so same.",
+        "bothOut": "both are out, so same.",
+        "final": "both sides highlight the same regions:",
+        "coverage": "these regions cover every place $x$ can be, so the law holds for all sets ${{sets}}$."
+      }
+    },
+    "cartesianProduct": {
+      "title": "Cartesian Product",
+      "hint": "click a point or a member on an axis, or press start to pair them one by one",
+      "cards": {
+        "result": "result",
+        "rule": "rule",
+        "count": "number of members",
+        "order": "order matters"
+      },
+      "rule": {
+        "axes": "first member from ${{first}}$ (horizontal axis), second member from ${{second}}$ (vertical axis)."
+      },
+      "count": {
+        "soFar": "${{sum}}$ pairs so far",
+        "each": "each member of ${{first}}$ has ${{rows}}$ pairs, and ${{first}}$ has ${{columns}}$ members."
+      },
+      "order": {
+        "swap": "${{pair}}\\in {{product}}$, swapped it becomes ${{swapped}}\\in {{swappedProduct}}$.",
+        "differ": "${{pair}}\\neq {{swapped}}$ because ${{x}}\\neq {{y}}$.",
+        "same": "${{pair}}$ stays the same when swapped, so it is in both, because ${{x}}\\in {{first}}$ and ${{x}}\\in {{second}}$.",
+        "notFirst": "${{swapped}}\\notin {{product}}$ because ${{y}}\\notin {{first}}$.",
+        "notSecond": "${{swapped}}\\notin {{product}}$ because ${{x}}\\notin {{second}}$.",
+        "conclusion": "so ${{product}}\\neq {{swappedProduct}}$, even though they have the same number of members: ${{size}}={{size}}$."
+      },
+      "symbols": {
+        "product": "Cartesian product",
+        "pair": "ordered pair",
+        "size": "number of members",
+        "times": "times (numbers)",
+        "guide": "guide line"
+      },
+      "reasons": {
+        "step": "${{x}}$ from ${{first}}$, ${{y}}$ from ${{second}}$: point ${{pair}}$.",
+        "columnDone": "${{x}}$ is now paired with every member of ${{second}}$.",
+        "point": "${{pair}}$: ${{x}}\\in {{first}}$ is read on the horizontal axis, ${{y}}\\in {{second}}$ on the vertical axis. The point sits where those two dashed lines meet.",
+        "column": "${{x}}$ is paired with every member of ${{second}}$: ${{pairs}}$. That is ${{count}}$ pairs, one column.",
+        "row": "${{y}}$ is the second member in ${{count}}$ pairs: ${{pairs}}$. One row.",
+        "final": "${{product}}$: every member of ${{first}}$ is paired with every member of ${{second}}$. Each pair is one point."
+      }
+    },
+    "operationLimits": {
+      "title": "Limits of Operations",
+      "hint": "click a table cell, or play to work through it one by one",
+      "controls": {
+        "set": "set",
+        "operation": "operation"
+      },
+      "sets": {
+        "natural": { "label": "natural", "plural": "natural numbers", "singular": "a natural number" },
+        "whole": { "label": "whole", "plural": "whole numbers", "singular": "a whole number" },
+        "integer": { "label": "integer", "plural": "integers", "singular": "an integer" },
+        "rational": { "label": "rational", "plural": "rational numbers", "singular": "a rational number" }
+      },
+      "operations": {
+        "sum": "addition",
+        "difference": "subtraction",
+        "product": "multiplication",
+        "quotient": "division"
+      },
+      "board": "${{expression}}$ with $a,b\\in {{set}}$",
+      "cards": {
+        "closed": "closed?",
+        "summary": "summary",
+        "larger": "larger sets"
+      },
+      "closed": {
+        "rule": "${{set}}$ is closed under {{operation}} if ${{expression}}\\in {{set}}$ for every $a,b\\in {{set}}$.",
+        "ruleNonzero": "${{set}}$ is closed under {{operation}} if ${{expression}}\\in {{set}}$ for every $a,b\\in {{set}}$ with $b\\neq 0$.",
+        "no": "not closed.",
+        "noExample": "one example is enough: ${{example}}\\notin {{set}}$.",
+        "yes": "yes, closed.",
+        "yesReason": "the table only holds examples. The reason: {{reason}}",
+        "reasons": {
+          "sum": "the sum of two {{plural}} is always {{singular}}.",
+          "difference": "the difference of two {{plural}} is always {{singular}}.",
+          "product": "the product of two {{plural}} is always {{singular}}.",
+          "quotient": "$\\tfrac{p}{q}\\div\\tfrac{r}{s}=\\tfrac{p\\times s}{q\\times r}$ with $r\\neq 0$: the numerator and denominator stay integers, so the result is rational."
+        },
+        "soFar": "so far: {{outside}} of {{checked}} results $\\notin {{set}}$.",
+        "outsideCount": "in the table: {{outside}} of {{total}} results $\\notin {{set}}$.",
+        "allInside": "in the table: all {{total}} results $\\in {{set}}$.",
+        "skipped": "{{count}} cells divide by $0$ and are skipped."
+      },
+      "summary": {
+        "yes": "yes",
+        "no": "no",
+        "footnote": "yes = closed. For $\\div$, the divisor is $\\neq 0$."
+      },
+      "larger": {
+        "natural": "the simplest",
+        "whole": "holds $2-2=0$",
+        "integer": "holds $3-6=-3$",
+        "rational": "holds $6\\div 4=\\tfrac{3}{2}$"
+      },
+      "symbols": {
+        "notMember": "not a member",
+        "negatives": "negative integers",
+        "inside": "result inside",
+        "outside": "result outside",
+        "undefined": "undefined"
+      },
+      "reasons": {
+        "inside": "${{expression}}$, and ${{membership}}$.",
+        "outside": "${{expression}}$, but ${{membership}}$.",
+        "outsideWhy": "${{expression}}\\notin {{set}}$: {{why}}.",
+        "zero": "the result is $0$, which first appears in $\\mathbb{C}_a$",
+        "negative": "the result is a negative integer, which first appears in $\\mathbb{Z}$",
+        "fraction": "the result is a fraction, which first appears in $\\mathbb{Q}$",
+        "undefined": "${{dividend}}\\div 0$: division by $0$ is undefined, so this cell is skipped.",
+        "final": "this table works out ${{expression}}$ for five sample members of ${{set}}$. Highlighted results are $\\in {{set}}$, results circled in red are $\\notin {{set}}$."
       }
     }
   }

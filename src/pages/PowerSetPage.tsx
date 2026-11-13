@@ -153,20 +153,30 @@ export function PowerSetPage() {
           />
         </>
       }
+      board={
+        <div className="pen-border relative bg-paper p-2">
+          <PowerSetTreeBoard
+            members={example.members}
+            italic={example.italic}
+            level={level}
+            listed={listed}
+            active={active}
+            choicesLabel={t('choices')}
+            interactive={!player.playing}
+            onSelect={(leaf) => setSelected((value) => (value === leaf ? null : leaf))}
+          />
+        </div>
+      }
+      progress={
+        <StepProgress
+          total={steps.length}
+          current={player.target}
+          caption={current && <MathText text={stepReason(current)} />}
+          idleText={tPlayback('idle')}
+        />
+      }
       stage={
         <div className="grid gap-5">
-          <div className="pen-border relative bg-paper p-2">
-            <PowerSetTreeBoard
-              members={example.members}
-              italic={example.italic}
-              level={level}
-              listed={listed}
-              active={active}
-              choicesLabel={t('choices')}
-              interactive={!player.playing}
-              onSelect={(leaf) => setSelected((value) => (value === leaf ? null : leaf))}
-            />
-          </div>
           <div className="grid gap-5 sm:grid-cols-[minmax(0,2fr)_minmax(0,1fr)]">
             <div className="pen-border relative min-w-0 bg-paper px-4.5 py-3">
               <h2 className="font-hand text-2xl font-bold">{t('cards.powerSet')}</h2>
@@ -211,7 +221,7 @@ export function PowerSetPage() {
               <MathText text={leafReason(selected)} />
             </p>
           )}
-          <dl className="mt-4 grid grid-cols-[2.25rem_1fr] items-baseline gap-y-0.5 border-t border-dashed border-faint pt-3">
+          <dl className="mt-4 grid grid-cols-[auto_1fr] items-baseline gap-x-3 gap-y-0.5 border-t border-dashed border-faint pt-3">
             {legendTex.map((entry) => (
               <div key={entry.key} className="contents">
                 <dt>
@@ -240,11 +250,6 @@ export function PowerSetPage() {
             ))}
           </dl>
         </NoteCard>
-      }
-      progress={
-        current && (
-          <StepProgress compact total={steps.length} current={player.target!} caption={<MathText text={stepReason(current)} />} />
-        )
       }
       pager={<TopicPager {...navigation.pager} />}
     />

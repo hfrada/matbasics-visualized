@@ -20,7 +20,8 @@
     "start": "mulai",
     "stop": "berhenti",
     "delay": "jeda",
-    "seconds": "{{value, number}} dtk"
+    "seconds": "{{value, number}} dtk",
+    "idle": "tekan mulai untuk melihat langkahnya satu per satu."
   },
   "topics": {
     "writingSets": {
@@ -116,6 +117,260 @@
         "level": "${{x}}$ masuk atau tidak: 2 pilihan, cabangnya jadi {{branches}}.",
         "leaf": "{{path}}, jadi ${{set}}$.",
         "final": "setiap anggota punya 2 pilihan: masuk atau tidak. Jadi $|P({{name}})|={{power}}$."
+      }
+    },
+    "setOperations": {
+      "title": "Operasi Himpunan",
+      "hint": "klik salah satu bilangan untuk melihat alasannya, atau putar untuk mengecek daerah satu per satu",
+      "cards": {
+        "rule": "aturan",
+        "result": "hasil",
+        "regions": "cek per daerah"
+      },
+      "table": {
+        "region": "daerah",
+        "taken": "masuk?",
+        "yes": "ya",
+        "no": "tidak",
+        "in": "masuk",
+        "out": "tidak"
+      },
+      "regions": {
+        "onlyA": "hanya di $A$",
+        "both": "di $A$ dan $B$",
+        "onlyB": "hanya di $B$",
+        "outside": "di luar $A$ dan $B$"
+      },
+      "operations": {
+        "union": {
+          "meaning": "gabungan: di $A$ atau di $B$ (boleh keduanya)",
+          "rule": "A\\cup B=\\{x \\mid x \\in A \\text{ atau } x \\in B\\}"
+        },
+        "intersection": {
+          "meaning": "irisan: di $A$ dan sekaligus di $B$",
+          "rule": "A\\cap B=\\{x \\mid x \\in A \\text{ dan } x \\in B\\}"
+        },
+        "differenceAB": {
+          "meaning": "selisih: di $A$ tetapi tidak di $B$",
+          "rule": "A-B=\\{x \\mid x \\in A, x \\notin B\\}"
+        },
+        "differenceBA": {
+          "meaning": "selisih: di $B$ tetapi tidak di $A$",
+          "rule": "B-A=\\{x \\mid x \\in B, x \\notin A\\}"
+        },
+        "symmetric": {
+          "meaning": "selisih simetris: di $A$ atau di $B$, tetapi tidak keduanya",
+          "rule": "A+B=\\{x \\mid x \\in (A\\cup B), x \\notin (A\\cap B)\\}"
+        },
+        "complementOfUnion": {
+          "meaning": "komplemen gabungan: tidak di $A$ dan tidak di $B$",
+          "rule": "(A\\cup B)^C=\\{x \\in S \\mid x \\notin (A\\cup B)\\}"
+        }
+      },
+      "symbols": {
+        "union": "gabungan",
+        "intersection": "irisan",
+        "difference": "selisih",
+        "symmetric": "selisih simetris",
+        "complement": "komplemen",
+        "notMember": "bukan anggota"
+      },
+      "reasons": {
+        "region": "{{region}}: ${{a}}$, ${{b}}$, jadi {{verdict}}.",
+        "taken": "masuk ${{name}}$",
+        "left": "tidak masuk ${{name}}$",
+        "chip": "${{a}}$ dan ${{b}}$, jadi ${{result}}$.",
+        "final": "${{name}}$ adalah daerah yang distabilo:"
+      }
+    },
+    "setOperationProperties": {
+      "title": "Sifat Operasi Himpunan",
+      "hint": "klik sebuah daerah (di diagram atau di tabel) untuk melihat alasannya, atau putar untuk menggambar tiap ruas lalu mengecek daerah satu per satu",
+      "laws": {
+        "deMorganUnion": "De Morgan (a)",
+        "deMorganIntersection": "De Morgan (b)",
+        "distributiveUnion": "distributif (a)",
+        "distributiveIntersection": "distributif (b)",
+        "associativeUnion": "asosiatif"
+      },
+      "board": {
+        "left": "kiri:",
+        "right": "kanan:",
+        "drawing": "sedang digambar:",
+        "notYet": "kanan: belum"
+      },
+      "cards": {
+        "left": "ruas kiri",
+        "right": "ruas kanan",
+        "regions": "cek per daerah",
+        "others": "hukum lain"
+      },
+      "describe": {
+        "union": "di ${{x}}$ atau di ${{y}}$",
+        "intersection": "di ${{x}}$ dan sekaligus di ${{y}}$",
+        "complementOfSet": "semua yang tidak di ${{x}}$",
+        "complementOfResult": "kebalikan dari ${{x}}$: semua yang tadi tidak distabilo"
+      },
+      "regions": {
+        "onlyA": "hanya di $A$",
+        "both": "di $A$ dan $B$",
+        "onlyB": "hanya di $B$",
+        "outsideBoth": "di luar $A$ dan $B$",
+        "onlyAB": "di $A$ dan $B$ saja",
+        "onlyAC": "di $A$ dan $C$ saja",
+        "all": "di $A$, $B$, dan $C$",
+        "onlyBC": "di $B$ dan $C$ saja",
+        "onlyC": "hanya di $C$",
+        "outsideAll": "di luar ketiganya"
+      },
+      "table": {
+        "region": "daerah",
+        "left": "kiri",
+        "right": "kanan",
+        "same": "sama?",
+        "yes": "ya",
+        "no": "tidak",
+        "in": "masuk",
+        "out": "tidak",
+        "equal": "sama",
+        "different": "beda"
+      },
+      "others": {
+        "identity": "identitas",
+        "idempotent": "idempoten",
+        "commutative": "komutatif",
+        "complement": "komplemen",
+        "order": "urutan"
+      },
+      "symbols": {
+        "union": "gabungan",
+        "intersection": "irisan",
+        "complement": "komplemen",
+        "member": "anggota",
+        "notMember": "bukan anggota"
+      },
+      "reasons": {
+        "build": "${{tex}}$: {{description}}.",
+        "compare": "daerah {{region}}: kiri {{left}}, kanan {{right}}, jadi sama.",
+        "region": "daerah {{region}}: {{where}}.",
+        "leftChain": "kiri: {{chain}}",
+        "rightChain": "kanan: {{chain}}",
+        "bothIn": "dua-duanya masuk, jadi sama.",
+        "bothOut": "dua-duanya tidak masuk, jadi sama.",
+        "final": "kedua ruas menstabilo daerah yang sama:",
+        "coverage": "daerah-daerah ini mencakup semua kemungkinan letak $x$, jadi hukum ini berlaku untuk semua himpunan ${{sets}}$."
+      }
+    },
+    "cartesianProduct": {
+      "title": "Perkalian Cartesius",
+      "hint": "klik titik atau anggota di sumbu, atau putar untuk memasangkan satu per satu",
+      "cards": {
+        "result": "hasil",
+        "rule": "aturan",
+        "count": "banyak anggota",
+        "order": "urutan penting"
+      },
+      "rule": {
+        "axes": "anggota pertama dari ${{first}}$ (sumbu datar), anggota kedua dari ${{second}}$ (sumbu tegak)."
+      },
+      "count": {
+        "soFar": "${{sum}}$ pasangan sejauh ini",
+        "each": "tiap anggota ${{first}}$ punya ${{rows}}$ pasangan, dan ada ${{columns}}$ anggota ${{first}}$."
+      },
+      "order": {
+        "swap": "${{pair}}\\in {{product}}$, dibalik jadi ${{swapped}}\\in {{swappedProduct}}$.",
+        "differ": "${{pair}}\\neq {{swapped}}$ karena ${{x}}\\neq {{y}}$.",
+        "same": "${{pair}}$ dibalik tetap sama, jadi ada di keduanya karena ${{x}}\\in {{first}}$ dan ${{x}}\\in {{second}}$.",
+        "notFirst": "${{swapped}}\\notin {{product}}$ karena ${{y}}\\notin {{first}}$.",
+        "notSecond": "${{swapped}}\\notin {{product}}$ karena ${{x}}\\notin {{second}}$.",
+        "conclusion": "jadi ${{product}}\\neq {{swappedProduct}}$, walau banyak anggotanya sama: ${{size}}={{size}}$."
+      },
+      "symbols": {
+        "product": "perkalian Cartesius",
+        "pair": "pasangan terurut",
+        "size": "banyak anggota",
+        "times": "kali (bilangan)",
+        "guide": "garis bantu"
+      },
+      "reasons": {
+        "step": "${{x}}$ dari ${{first}}$, ${{y}}$ dari ${{second}}$: titik ${{pair}}$.",
+        "columnDone": "${{x}}$ sudah dipasangkan dengan semua anggota ${{second}}$.",
+        "point": "${{pair}}$: ${{x}}\\in {{first}}$ dibaca di sumbu datar, ${{y}}\\in {{second}}$ di sumbu tegak. Titiknya ada di pertemuan dua garis putus-putus itu.",
+        "column": "${{x}}$ dipasangkan dengan setiap anggota ${{second}}$: ${{pairs}}$. Ada ${{count}}$ pasangan, satu kolom.",
+        "row": "${{y}}$ jadi anggota kedua di ${{count}}$ pasangan: ${{pairs}}$. Satu baris.",
+        "final": "${{product}}$: setiap anggota ${{first}}$ dipasangkan dengan setiap anggota ${{second}}$. Tiap pasangan adalah satu titik."
+      }
+    },
+    "operationLimits": {
+      "title": "Keterbatasan Operasi",
+      "hint": "klik sel tabel, atau putar untuk menghitung satu per satu",
+      "controls": {
+        "set": "himpunan",
+        "operation": "operasi"
+      },
+      "sets": {
+        "natural": { "label": "asli", "plural": "bilangan asli", "singular": "bilangan asli" },
+        "whole": { "label": "cacah", "plural": "bilangan cacah", "singular": "bilangan cacah" },
+        "integer": { "label": "bulat", "plural": "bilangan bulat", "singular": "bilangan bulat" },
+        "rational": { "label": "rasional", "plural": "bilangan rasional", "singular": "bilangan rasional" }
+      },
+      "operations": {
+        "sum": "penjumlahan",
+        "difference": "pengurangan",
+        "product": "perkalian",
+        "quotient": "pembagian"
+      },
+      "board": "${{expression}}$ dengan $a,b\\in {{set}}$",
+      "cards": {
+        "closed": "tertutup?",
+        "summary": "ringkasan",
+        "larger": "himpunan yang lebih luas"
+      },
+      "closed": {
+        "rule": "${{set}}$ tertutup terhadap {{operation}} jika ${{expression}}\\in {{set}}$ untuk setiap $a,b\\in {{set}}$.",
+        "ruleNonzero": "${{set}}$ tertutup terhadap {{operation}} jika ${{expression}}\\in {{set}}$ untuk setiap $a,b\\in {{set}}$, $b\\neq 0$.",
+        "no": "tidak tertutup.",
+        "noExample": "satu contoh sudah cukup: ${{example}}\\notin {{set}}$.",
+        "yes": "ya, tertutup.",
+        "yesReason": "tabel hanya memuat contoh, alasannya: {{reason}}",
+        "reasons": {
+          "sum": "jumlah dua {{plural}} selalu {{singular}}.",
+          "difference": "selisih dua {{plural}} selalu {{singular}}.",
+          "product": "hasil kali dua {{plural}} selalu {{singular}}.",
+          "quotient": "$\\tfrac{p}{q}\\div\\tfrac{r}{s}=\\tfrac{p\\times s}{q\\times r}$ dengan $r\\neq 0$: pembilang dan penyebutnya tetap bulat, jadi hasilnya rasional."
+        },
+        "soFar": "sejauh ini: {{outside}} dari {{checked}} hasil $\\notin {{set}}$.",
+        "outsideCount": "di tabel: {{outside}} dari {{total}} hasil $\\notin {{set}}$.",
+        "allInside": "di tabel: semua {{total}} hasil $\\in {{set}}$.",
+        "skipped": "{{count}} sel dibagi $0$ dilewati."
+      },
+      "summary": {
+        "yes": "ya",
+        "no": "tidak",
+        "footnote": "ya = tertutup. Untuk $\\div$, pembaginya $\\neq 0$."
+      },
+      "larger": {
+        "natural": "paling sederhana",
+        "whole": "menampung $2-2=0$",
+        "integer": "menampung $3-6=-3$",
+        "rational": "menampung $6\\div 4=\\tfrac{3}{2}$"
+      },
+      "symbols": {
+        "notMember": "bukan anggota",
+        "negatives": "bulat negatif",
+        "inside": "hasil di dalam",
+        "outside": "hasil di luar",
+        "undefined": "tidak didefinisikan"
+      },
+      "reasons": {
+        "inside": "${{expression}}$, dan ${{membership}}$.",
+        "outside": "${{expression}}$, tetapi ${{membership}}$.",
+        "outsideWhy": "${{expression}}\\notin {{set}}$: {{why}}.",
+        "zero": "hasilnya $0$, baru ada di $\\mathbb{C}_a$",
+        "negative": "hasilnya bulat negatif, baru ada di $\\mathbb{Z}$",
+        "fraction": "hasilnya pecahan, baru ada di $\\mathbb{Q}$",
+        "undefined": "${{dividend}}\\div 0$: pembagian dengan $0$ tidak didefinisikan, jadi sel ini dilewati.",
+        "final": "tabel ini menghitung ${{expression}}$ untuk lima contoh anggota ${{set}}$. Hasil yang distabilo $\\in {{set}}$, yang dilingkari merah $\\notin {{set}}$."
       }
     }
   }

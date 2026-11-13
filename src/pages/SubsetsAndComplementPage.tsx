@@ -307,18 +307,28 @@ export function SubsetsAndComplementPage() {
           />
         </>
       }
+      board={
+        <div className="pen-border relative bg-paper p-2">
+          <VennCheckBoard
+            shapes={example.shapes}
+            chips={chips}
+            universe={example.universe}
+            outsideLabel={shaded ? 'A' : null}
+            interactive={!player.playing}
+            onSelect={(index) => setSelected((value) => (value === index ? null : index))}
+          />
+        </div>
+      }
+      progress={
+        <StepProgress
+          total={example.steps.length}
+          current={player.target}
+          caption={current && reasonText(current.reasons)}
+          idleText={tPlayback('idle')}
+        />
+      }
       stage={
         <div className="grid gap-5">
-          <div className="pen-border relative bg-paper p-2">
-            <VennCheckBoard
-              shapes={example.shapes}
-              chips={chips}
-              universe={example.universe}
-              outsideLabel={shaded ? 'A' : null}
-              interactive={!player.playing}
-              onSelect={(index) => setSelected((value) => (value === index ? null : index))}
-            />
-          </div>
           <div className="grid gap-5 sm:grid-cols-2">
             <div className="pen-border relative bg-paper px-4.5 py-3">
               <h2 className="font-hand text-2xl font-bold">{t('cards.given')}</h2>
@@ -357,16 +367,6 @@ export function SubsetsAndComplementPage() {
             ))}
           </dl>
         </NoteCard>
-      }
-      progress={
-        current && (
-          <StepProgress
-            compact
-            total={example.steps.length}
-            current={player.target!}
-            caption={reasonText(current.reasons)}
-          />
-        )
       }
       pager={<TopicPager {...navigation.pager} />}
     />

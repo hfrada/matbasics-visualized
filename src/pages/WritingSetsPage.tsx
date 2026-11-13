@@ -232,19 +232,29 @@ export function WritingSetsPage() {
           />
         </>
       }
+      board={
+        <div className="pen-border relative bg-paper p-2">
+          <SetListingBoard
+            chips={chips}
+            memberCount={members.length}
+            continuation={continued ? continuation : []}
+            emptyResult={setKey === 'empty' && finished}
+            trayLabel={t('tray')}
+            interactive={!player.playing}
+            onSelect={(index) => setSelected((current) => (current === index ? null : index))}
+          />
+        </div>
+      }
+      progress={
+        <StepProgress
+          total={totalSteps}
+          current={player.target}
+          caption={progressCaption()}
+          idleText={tPlayback('idle')}
+        />
+      }
       stage={
         <div className="grid gap-5">
-          <div className="pen-border relative bg-paper p-2">
-            <SetListingBoard
-              chips={chips}
-              memberCount={members.length}
-              continuation={continued ? continuation : []}
-              emptyResult={setKey === 'empty' && finished}
-              trayLabel={t('tray')}
-              interactive={!player.playing}
-              onSelect={(index) => setSelected((current) => (current === index ? null : index))}
-            />
-          </div>
           <div className="pen-border relative bg-paper px-4.5 py-3">
             <h2 className="font-hand text-2xl font-bold">{t('forms.rule')}</h2>
             <MathTex tex={t(`rules.${setKey}`)} className="block overflow-x-auto py-1.5 text-[17px]" />
@@ -262,11 +272,6 @@ export function WritingSetsPage() {
         <NoteCard>
           {selected === null ? <p className="text-muted">{t('hint')}</p> : <p>{reasonLine(pile[selected])}</p>}
         </NoteCard>
-      }
-      progress={
-        player.target !== null && (
-          <StepProgress compact total={totalSteps} current={player.target} caption={progressCaption()} />
-        )
       }
       pager={<TopicPager {...navigation.pager} />}
     />

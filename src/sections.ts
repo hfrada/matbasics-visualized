@@ -1,5 +1,12 @@
 export type SectionKey = 'setsAndNumbers' | 'logic' | 'realsAndRelations' | 'functionsAndProofs'
-export type TopicKey = 'writingSets' | 'subsetsAndComplement' | 'powerSet'
+export type TopicKey =
+  | 'writingSets'
+  | 'subsetsAndComplement'
+  | 'powerSet'
+  | 'setOperations'
+  | 'setOperationProperties'
+  | 'cartesianProduct'
+  | 'operationLimits'
 
 export type Topic = {
   key: TopicKey
@@ -20,6 +27,10 @@ export const sections: Section[] = [
       { key: 'writingSets', slug: 'writing-sets' },
       { key: 'subsetsAndComplement', slug: 'subsets-and-complement' },
       { key: 'powerSet', slug: 'power-set' },
+      { key: 'setOperations', slug: 'set-operations' },
+      { key: 'setOperationProperties', slug: 'set-operation-properties' },
+      { key: 'cartesianProduct', slug: 'cartesian-product' },
+      { key: 'operationLimits', slug: 'limits-of-operations' },
     ],
   },
   { key: 'logic', slug: 'logic', topics: [] },
