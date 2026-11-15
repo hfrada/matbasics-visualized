@@ -373,6 +373,254 @@
         "undefined": "${{dividend}}\\div 0$: division by $0$ is undefined, so this cell is skipped.",
         "final": "this table works out ${{expression}}$ for five sample members of ${{set}}$. Highlighted results are $\\in {{set}}$, results circled in red are $\\notin {{set}}$."
       }
+    },
+    "numberHierarchy": {
+      "title": "Number Hierarchy",
+      "tabs": {
+        "build": "building up",
+        "disguised": "numbers in disguise"
+      },
+      "hints": {
+        "build": "click a point or a row name, or play to fill the rows from the bottom",
+        "disguised": "click a number, or play to check them one by one"
+      },
+      "intro": {
+        "build": "every row holds all the points of the rows below it. From bottom to top the line gets fuller, then $\\mathbb{C}$ leaves the line.",
+        "disguised": "the way a number is written can fool you. Simplify it first, then find the lowest row that holds it."
+      },
+      "tray": "check",
+      "sets": {
+        "natural": "natural",
+        "whole": "whole",
+        "integer": "integer",
+        "rational": "rational",
+        "real": "real",
+        "complex": "complex"
+      },
+      "added": {
+        "natural": "primes, $1$ and composites",
+        "whole": "plus $0$",
+        "integer": "plus the negative integers",
+        "rational": "plus the fractions",
+        "real": "plus the irrational numbers",
+        "complex": "plus the numbers with $b\\neq 0$"
+      },
+      "build": {
+        "natural": "the primes, $1$ and the composites make up $\\mathbb{N}$.",
+        "whole": "$\\mathbb{N}$ plus $0$ makes $\\mathbb{C}_a$.",
+        "integer": "$\\mathbb{C}_a$ plus the negative integers makes $\\mathbb{Z}$.",
+        "rational": "$\\mathbb{Z}$ plus the fractions makes $\\mathbb{Q}$.",
+        "real": "$\\mathbb{Q}$ plus the irrational numbers makes $\\mathbb{R}$.",
+        "complex": "$\\mathbb{R}$ plus the numbers $a+bi$ with $b\\neq 0$ makes $\\mathbb{C}$."
+      },
+      "about": {
+        "natural": "$\\mathbb{N}=\\{1,2,3,\\dots\\}$ is made of the primes $\\mathbb{P}=\\{2,3,5,7,\\dots\\}$, the number $1$ and the composites $\\mathbb{K}=\\{4,6,8,9,\\dots\\}$.",
+        "whole": "$\\mathbb{C}_a=\\{0,1,2,3,\\dots\\}$ is $\\mathbb{N}$ plus $0$.",
+        "integer": "$\\mathbb{Z}=\\{\\dots,-2,-1,0,1,2,\\dots\\}$ is $\\mathbb{C}_a$ plus the negative integers $\\mathbb{N}_n=\\{\\dots,-3,-2,-1\\}$.",
+        "rational": "$\\mathbb{Q}$ is $\\mathbb{Z}$ plus fractions such as $\\tfrac12$ and $-\\tfrac23$. Every rational number can be written as $\\tfrac{m}{n}$ with $m,n\\in\\mathbb{Z}$, $n\\neq 0$.",
+        "real": "$\\mathbb{R}$ is $\\mathbb{Q}$ plus the irrational numbers $\\mathbb{I}_r$, such as $\\sqrt2$, $e$ and $\\pi$. Its line is whole, with no gaps.",
+        "complex": "$\\mathbb{C}=\\{a+bi\\mid a,b\\in\\mathbb{R},\\ i^2=-1\\}$. A real number is a complex number with $b=0$, for example $3=3+0i$, so it sits on the line. What gets added: the numbers with $b\\neq 0$, off the line."
+      },
+      "decimals": {
+        "threeQuarters": { "tex": "0.75", "plain": "0.75" },
+        "repeating": { "tex": "0.333\\dots", "plain": "0.333…" }
+      },
+      "reasons": {
+        "one": "$1$ is neither prime nor composite, so it has its own part of $\\mathbb{N}$.",
+        "two": "$2$ is divisible only by $1$ and $2$: a prime.",
+        "three": "$3$ is divisible only by $1$ and $3$: a prime.",
+        "zero": "$0$ is not a natural number. It first appears in $\\mathbb{C}_a$.",
+        "negative": "a negative integer, which first appears in $\\mathbb{Z}$.",
+        "fraction": "a fraction that is not an integer, which first appears in $\\mathbb{Q}$.",
+        "sqrtTwo": "$\\sqrt2$ cannot be written as $\\tfrac{m}{n}$: an irrational number. In the $\\mathbb{Q}$ row its place is still a gap.",
+        "pi": "$\\pi=3.14159\\dots$ has decimals that never stop and never repeat: an irrational number. In the $\\mathbb{Q}$ row its place is still a gap.",
+        "imaginaryUnit": "$i=0+1i$, so $a=0$ and $b=1$. Since $b\\neq 0$, the point leaves the real line, $1$ unit up.",
+        "onePlusTwoI": "$a=1$ and $b=2$: $1$ unit right, $2$ units up. Since $b\\neq 0$, it is not a real number.",
+        "sixThirds": "looks like a fraction, but $6\\div 3=2$: a prime.",
+        "sqrtNine": "has a root sign, but $3\\times 3=9$, so $\\sqrt9=3$: a prime.",
+        "minusEightQuarters": "$-8\\div 4=-2$: a negative integer, not a fraction.",
+        "iSquared": "has an $i$, but $i^2=-1$ by definition: a negative integer.",
+        "threeQuarters": "a terminating decimal: $0.75=\\tfrac{75}{100}=\\tfrac34$, so it is rational.",
+        "repeating": "a repeating decimal is rational too: let $x=0.333\\dots$, then $10x-x=3$, so $x=\\tfrac13$.",
+        "sqrtEight": "$\\sqrt8=2\\sqrt2$, and $\\sqrt2$ is irrational, so $\\sqrt8$ is irrational too.",
+        "sqrtMinusFour": "no real number squares to $-4$. $\\sqrt{-4}=2i$, because $(2i)^2=4i^2=-4$."
+      },
+      "note": {
+        "lowest": "its lowest row is ${{set}}$, so ${{value}}\\in {{chain}}$.",
+        "inNatural": "inside $\\mathbb{N}$: ${{value}}\\in {{part}}$.",
+        "notNatural": "but ${{value}}\\notin\\mathbb{N}$.",
+        "notBelow": "but ${{value}}\\notin {{set}}$, so it is not in any lower row."
+      },
+      "step": "${{expression}}$, lowest row ${{set}}$.",
+      "cards": {
+        "build": "building up",
+        "membership": "membership check"
+      },
+      "membershipFootnote": "read each column: once a number is $\\in$ a set, it stays $\\in$ further down.",
+      "symbols": {
+        "prime": "prime",
+        "composite": "composite",
+        "negatives": "negative integers",
+        "irrationals": "irrational",
+        "imaginaryUnit": "$i^2=-1$",
+        "subset": "subset",
+        "member": "member",
+        "notMember": "not a member",
+        "guide": "guide only",
+        "realLine": "all real numbers",
+        "otherFractions": "other fractions",
+        "gap": "gap in $\\mathbb{Q}$"
+      }
+    },
+    "complexNumbers": {
+      "title": "Complex Numbers",
+      "tabs": {
+        "plot": "plot z",
+        "conjugate": "conjugate"
+      },
+      "boardTitle": "complex plane",
+      "examples": {
+        "plot": {
+          "intro": "a complex number $z = a + bi$ is drawn as the point $(a, b)$: the real part $a$ on the horizontal axis $\\mathrm{Re}(z)$, the imaginary part $b$ on the vertical axis $\\mathrm{Im}(z)$.",
+          "summary": "every $z = a + bi$ has exactly one point $(a, b)$ in the plane, and every point has exactly one $z$.",
+          "hint": "click a point, or play to draw them one by one.",
+          "captions": [
+            "$z_1 = 1 + 2i$: 1 to the right along $\\mathrm{Re}(z)$, then 2 up. The point is $(1, 2)$.",
+            "$z_2 = -2 + i$: 2 to the left, then 1 up. The point is $(-2, 1)$.",
+            "$z_3 = -1 - 2i$: 1 to the left, then 2 down. The point is $(-1, -2)$.",
+            "$z_4 = 2 - i$: 2 to the right, then 1 down. The point is $(2, -1)$."
+          ]
+        },
+        "add": {
+          "intro": "real adds to real, imaginary to imaginary. In the plane: start at $z_1$, then walk as far as $z_2$.",
+          "summary": "$z_1 + z_2 = 3 - i$. Adding means joining: the walk of $z_2$ (2 right, 3 down) is attached to the end of $z_1$.",
+          "hint": "click a point, or play to add part by part.",
+          "captions": [
+            "real part: $1 + 2 = 3$. From $z_1$ move 2 to the right.",
+            "imaginary part: $2 + (-3) = -1$. Move 3 down.",
+            "so $z_1 + z_2 = 3 - i$, the point $(3, -1)$."
+          ]
+        },
+        "subtract": {
+          "intro": "real minus real, imaginary minus imaginary. In the plane: start at $z_1$, then walk as far as $z_2$ in the opposite direction.",
+          "summary": "$z_1 - z_2 = -1 + 5i$. Subtracting $z_2$ is walking as far as $z_2$ the other way: 2 left, 3 up.",
+          "hint": "click a point, or play to subtract part by part.",
+          "captions": [
+            "real part: $1 - 2 = -1$. From $z_1$ move 2 to the left.",
+            "imaginary part: $2 - (-3) = 5$. Move 3 up.",
+            "so $z_1 - z_2 = -1 + 5i$, the point $(-1, 5)$."
+          ]
+        },
+        "multiply": {
+          "intro": "every term times every term, like $(a + b)(c + d)$. The difference: $i \\cdot i = i^2 = -1$, so imaginary times imaginary moves to the real part.",
+          "summary": "$z_1 \\cdot z_2 = 8 + i$. The term $2i \\cdot (-3i)$ looks imaginary, but $i^2 = -1$ makes it real: 6 to the right, not up.",
+          "hint": "click a point, or play to fill the boxes one by one.",
+          "captions": [
+            "$1 \\cdot 2 = 2$, real. From 0 move 2 to the right.",
+            "$1 \\cdot (-3i) = -3i$, imaginary. Move 3 down, right onto $z_2$, because $1 \\cdot z_2 = z_2$.",
+            "$2i \\cdot 2 = 4i$, imaginary. Move 4 up.",
+            "$2i \\cdot (-3i) = -6i^2 = 6$, because $i^2 = -1$. So it is real: move 6 to the right.",
+            "real $2 + 6 = 8$, imaginary $-3i + 4i = i$. So $z_1 \\cdot z_2 = 8 + i$."
+          ]
+        },
+        "divide": {
+          "intro": "multiply the top and the bottom by the conjugate of the bottom, $\\bar{z}_2$. The bottom becomes a real number, then each part is simply divided.",
+          "summary": "$\\tfrac{z_1}{z_2} = -\\tfrac{4}{13} + \\tfrac{7}{13}i$. The key is $z_2 \\cdot \\bar{z}_2 = 2^2 + 3^2 = 13$, always real.",
+          "hint": "click a point, or play to divide step by step.",
+          "captions": [
+            "conjugate of the bottom: $\\bar{z}_2 = 2 + 3i$, the mirror of $z_2$ in the $\\mathrm{Re}(z)$ axis.",
+            "bottom: $(2 - 3i)(2 + 3i) = 4 + 9 = 13$. The imaginary part cancels, so it is real.",
+            "top: $(1 + 2i)(2 + 3i) = 2 + 3i + 4i - 6 = -4 + 7i$.",
+            "divide by 13: $\\tfrac{z_1}{z_2} = -\\tfrac{4}{13} + \\tfrac{7}{13}i$. Same direction as $-4 + 7i$, 13 times closer to 0."
+          ]
+        },
+        "conjugate": {
+          "intro": "the conjugate of $z = a + bi$ is $\\bar{z} = a - bi$: the imaginary part changes sign. In the plane: a mirror in the $\\mathrm{Re}(z)$ axis.",
+          "summary": "conjugate = mirror in the $\\mathrm{Re}(z)$ axis. That is why $\\overline{z_1 - z_2} = \\bar{z}_1 - \\bar{z}_2$: both are the point $(-1, -5)$.",
+          "hint": "click a point, or play to mirror them one by one.",
+          "captions": [
+            "$\\bar{z}_1 = 1 - 2i$: the mirror of $z_1$ in the $\\mathrm{Re}(z)$ axis.",
+            "$\\bar{z}_2 = 2 + 3i$: the mirror of $z_2$.",
+            "$\\bar{z}_1 - \\bar{z}_2 = (1 - 2i) - (2 + 3i) = -1 - 5i$.",
+            "$z_1 - z_2 = -1 + 5i$, as on the $z_1 - z_2$ tab.",
+            "the mirror of $z_1 - z_2$ lands on the same point: $\\overline{z_1 - z_2} = \\bar{z}_1 - \\bar{z}_2$."
+          ]
+        }
+      },
+      "lines": {
+        "add": [
+          "real: $1 + 2 = 3$",
+          "imaginary: $2 + (-3) = -1$",
+          "$z_1 + z_2 = (1 + 2i) + (2 - 3i) = 3 - i$"
+        ],
+        "subtract": [
+          "real: $1 - 2 = -1$",
+          "imaginary: $2 - (-3) = 5$",
+          "$z_1 - z_2 = (1 + 2i) - (2 - 3i) = -1 + 5i$"
+        ],
+        "multiply": [
+          "$z_1 \\cdot z_2 = (1 + 2i)(2 - 3i)$",
+          "$= 2 - 3i + 4i - 6i^2$",
+          "$= 2 + 6 - 3i + 4i = 8 + i$"
+        ],
+        "divide": [
+          "$\\bar{z}_2 = \\overline{2 - 3i} = 2 + 3i$",
+          "$z_2 \\cdot \\bar{z}_2 = (2 - 3i)(2 + 3i) = 4 + 6i - 6i - 9i^2 = 13$",
+          "$z_1 \\cdot \\bar{z}_2 = (1 + 2i)(2 + 3i) = 2 + 3i + 4i + 6i^2 = -4 + 7i$",
+          "$\\dfrac{z_1}{z_2} = \\dfrac{z_1 \\cdot \\bar{z}_2}{z_2 \\cdot \\bar{z}_2} = \\dfrac{-4 + 7i}{13} = -\\dfrac{4}{13} + \\dfrac{7}{13}i$"
+        ],
+        "conjugate": [
+          "$\\bar{z}_1 = \\overline{1 + 2i} = 1 - 2i$",
+          "$\\bar{z}_2 = \\overline{2 - 3i} = 2 + 3i$",
+          "$\\bar{z}_1 - \\bar{z}_2 = (1 - 2i) - (2 + 3i) = -1 - 5i$",
+          "$z_1 - z_2 = -1 + 5i$",
+          "$\\overline{z_1 - z_2} = \\overline{-1 + 5i} = -1 - 5i$"
+        ]
+      },
+      "extras": {
+        "conjugateOfZ2": "the mirror of $z_2$ in the $\\mathrm{Re}(z)$ axis.",
+        "numerator": "this is the top, not yet divided by 13.",
+        "quotient": "it lies on the line from 0 to $-4 + 7i$, 13 times closer to 0.",
+        "mirrorOfZ1": "the mirror of $z_1 = 1 + 2i$, so $\\bar{z}_1 = 1 - 2i$.",
+        "mirrorOfZ2": "the mirror of $z_2 = 2 - 3i$, so $\\bar{z}_2 = 2 + 3i$."
+      },
+      "note": {
+        "reading": "the point $({{a}}, {{b}})$: {{horizontal}}, {{vertical}}.",
+        "right": "${{size}}$ right of the $\\mathrm{Im}(z)$ axis",
+        "left": "${{size}}$ left of the $\\mathrm{Im}(z)$ axis",
+        "above": "${{size}}$ above the $\\mathrm{Re}(z)$ axis",
+        "below": "${{size}}$ below the $\\mathrm{Re}(z)$ axis"
+      },
+      "cards": {
+        "twoForms": "two forms",
+        "whyI": "why we need $i$",
+        "readPoints": "reading the points",
+        "known": "given",
+        "rule": "rule",
+        "compute": "compute",
+        "product": "multiplication box"
+      },
+      "twoFormsFootnote": "so $(1, 2)$ and $1 + 2i$ are the same number.",
+      "whyIText": "$x^2 + 1 = 0$ means $x^2 = -1$. The square of a real number is never negative, so $\\mathbb{R}$ has no answer. With $i^2 = -1$, the answers are $x = i$ and $x = -i$.",
+      "table": {
+        "number": "number",
+        "point": "point"
+      },
+      "productTags": {
+        "real": "real: horizontal",
+        "imaginary": "imaginary: vertical",
+        "footnote": "rows from $z_1 = 1 + 2i$, columns from $z_2 = 2 - 3i$. Shaded boxes = real part."
+      },
+      "symbols": {
+        "re": "real axis",
+        "im": "imaginary axis",
+        "i": "$i^2 = -1$",
+        "conjugate": "conjugate",
+        "walk": "walk",
+        "mirror": "mirror in the real axis",
+        "guide": "distance to the axes",
+        "result": "result"
+      }
     }
   }
 }

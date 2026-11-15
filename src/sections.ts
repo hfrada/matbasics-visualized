@@ -7,6 +7,8 @@ export type TopicKey =
   | 'setOperationProperties'
   | 'cartesianProduct'
   | 'operationLimits'
+  | 'numberHierarchy'
+  | 'complexNumbers'
 
 export type Topic = {
   key: TopicKey
@@ -31,6 +33,8 @@ export const sections: Section[] = [
       { key: 'setOperationProperties', slug: 'set-operation-properties' },
       { key: 'cartesianProduct', slug: 'cartesian-product' },
       { key: 'operationLimits', slug: 'limits-of-operations' },
+      { key: 'numberHierarchy', slug: 'number-hierarchy' },
+      { key: 'complexNumbers', slug: 'complex-numbers' },
     ],
   },
   { key: 'logic', slug: 'logic', topics: [] },

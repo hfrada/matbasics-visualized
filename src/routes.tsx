@@ -1,7 +1,9 @@
 import type { ComponentType } from 'react'
 import { createBrowserRouter, type RouteObject } from 'react-router'
 import { CartesianProductPage } from './pages/CartesianProductPage'
+import { ComplexNumbersPage } from './pages/ComplexNumbersPage'
 import { HomePage } from './pages/HomePage'
+import { NumberHierarchyPage } from './pages/NumberHierarchyPage'
 import { OperationLimitsPage } from './pages/OperationLimitsPage'
 import { PowerSetPage } from './pages/PowerSetPage'
 import { SectionPage } from './pages/SectionPage'
@@ -20,6 +22,8 @@ const topicPages: Record<TopicKey, ComponentType> = {
   setOperationProperties: SetOperationPropertiesPage,
   cartesianProduct: CartesianProductPage,
   operationLimits: OperationLimitsPage,
+  numberHierarchy: NumberHierarchyPage,
+  complexNumbers: ComplexNumbersPage,
 }
 
 const sectionRoutes: RouteObject[] = sections

@@ -12,6 +12,8 @@ math basics on grid paper
 - Properties of Set Operations
 - Cartesian Product
 - Limits of Operations
+- Number Hierarchy
+- Complex Numbers
 
 ## Bahasa Indonesia
 
@@ -25,3 +27,5 @@ dasar matematika di kertas petak
 - Sifat Operasi Himpunan
 - Perkalian Cartesius
 - Keterbatasan Operasi
+- Hierarki Bilangan
+- Bilangan Kompleks

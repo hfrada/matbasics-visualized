@@ -372,6 +372,254 @@
         "undefined": "${{dividend}}\\div 0$: pembagian dengan $0$ tidak didefinisikan, jadi sel ini dilewati.",
         "final": "tabel ini menghitung ${{expression}}$ untuk lima contoh anggota ${{set}}$. Hasil yang distabilo $\\in {{set}}$, yang dilingkari merah $\\notin {{set}}$."
       }
+    },
+    "numberHierarchy": {
+      "title": "Hierarki Bilangan",
+      "tabs": {
+        "build": "pembentukan",
+        "disguised": "bilangan menyamar"
+      },
+      "hints": {
+        "build": "klik titik atau nama baris, atau putar untuk mengisi baris dari bawah",
+        "disguised": "klik bilangan, atau putar untuk memeriksa satu per satu"
+      },
+      "intro": {
+        "build": "setiap baris memuat semua titik dari baris di bawahnya. Dari bawah ke atas garisnya makin penuh, lalu $\\mathbb{C}$ keluar dari garis.",
+        "disguised": "bentuk tulisan bisa menipu. Sederhanakan dulu bilangannya, baru cari baris terbawah yang memuatnya."
+      },
+      "tray": "periksa",
+      "sets": {
+        "natural": "asli",
+        "whole": "cacah",
+        "integer": "bulat",
+        "rational": "rasional",
+        "real": "real",
+        "complex": "kompleks"
+      },
+      "added": {
+        "natural": "prima, $1$, dan komposit",
+        "whole": "ditambah $0$",
+        "integer": "ditambah bilangan bulat negatif",
+        "rational": "ditambah bilangan pecahan",
+        "real": "ditambah bilangan irasional",
+        "complex": "ditambah bilangan dengan $b\\neq 0$"
+      },
+      "build": {
+        "natural": "bilangan prima, $1$, dan bilangan komposit membentuk $\\mathbb{N}$.",
+        "whole": "$\\mathbb{N}$ ditambah $0$ membentuk $\\mathbb{C}_a$.",
+        "integer": "$\\mathbb{C}_a$ ditambah bilangan bulat negatif membentuk $\\mathbb{Z}$.",
+        "rational": "$\\mathbb{Z}$ ditambah bilangan pecahan membentuk $\\mathbb{Q}$.",
+        "real": "$\\mathbb{Q}$ ditambah bilangan irasional membentuk $\\mathbb{R}$.",
+        "complex": "$\\mathbb{R}$ ditambah bilangan $a+bi$ dengan $b\\neq 0$ membentuk $\\mathbb{C}$."
+      },
+      "about": {
+        "natural": "$\\mathbb{N}=\\{1,2,3,\\dots\\}$ dibentuk oleh bilangan prima $\\mathbb{P}=\\{2,3,5,7,\\dots\\}$, bilangan $1$, dan bilangan komposit $\\mathbb{K}=\\{4,6,8,9,\\dots\\}$.",
+        "whole": "$\\mathbb{C}_a=\\{0,1,2,3,\\dots\\}$ adalah $\\mathbb{N}$ ditambah $0$.",
+        "integer": "$\\mathbb{Z}=\\{\\dots,-2,-1,0,1,2,\\dots\\}$ adalah $\\mathbb{C}_a$ ditambah bilangan bulat negatif $\\mathbb{N}_n=\\{\\dots,-3,-2,-1\\}$.",
+        "rational": "$\\mathbb{Q}$ adalah $\\mathbb{Z}$ ditambah bilangan pecahan seperti $\\tfrac12$ dan $-\\tfrac23$. Setiap bilangan rasional bisa ditulis $\\tfrac{m}{n}$ dengan $m,n\\in\\mathbb{Z}$, $n\\neq 0$.",
+        "real": "$\\mathbb{R}$ adalah $\\mathbb{Q}$ ditambah bilangan irasional $\\mathbb{I}_r$, seperti $\\sqrt2$, $e$, dan $\\pi$. Garisnya utuh, tanpa celah.",
+        "complex": "$\\mathbb{C}=\\{a+bi\\mid a,b\\in\\mathbb{R},\\ i^2=-1\\}$. Bilangan real adalah bilangan kompleks dengan $b=0$, misalnya $3=3+0i$, jadi letaknya di garis. Yang ditambahkan: bilangan dengan $b\\neq 0$, di luar garis."
+      },
+      "decimals": {
+        "threeQuarters": { "tex": "0{,}75", "plain": "0,75" },
+        "repeating": { "tex": "0{,}333\\dots", "plain": "0,333…" }
+      },
+      "reasons": {
+        "one": "$1$ bukan prima dan bukan komposit, jadi punya bagian sendiri di $\\mathbb{N}$.",
+        "two": "$2$ hanya habis dibagi $1$ dan $2$: bilangan prima.",
+        "three": "$3$ hanya habis dibagi $1$ dan $3$: bilangan prima.",
+        "zero": "$0$ bukan bilangan asli. $0$ baru ada di $\\mathbb{C}_a$.",
+        "negative": "bilangan bulat negatif, baru ada di $\\mathbb{Z}$.",
+        "fraction": "pecahan yang bukan bilangan bulat, baru ada di $\\mathbb{Q}$.",
+        "sqrtTwo": "$\\sqrt2$ tidak bisa ditulis sebagai $\\tfrac{m}{n}$: bilangan irasional. Di baris $\\mathbb{Q}$ tempatnya masih berupa celah.",
+        "pi": "$\\pi=3{,}14159\\dots$ desimalnya tidak berhenti dan tidak berulang: bilangan irasional. Di baris $\\mathbb{Q}$ tempatnya masih berupa celah.",
+        "imaginaryUnit": "$i=0+1i$, jadi $a=0$ dan $b=1$. Karena $b\\neq 0$, titiknya keluar dari garis real, $1$ satuan ke atas.",
+        "onePlusTwoI": "$a=1$ dan $b=2$: $1$ satuan ke kanan, $2$ satuan ke atas. Karena $b\\neq 0$, bukan bilangan real.",
+        "sixThirds": "terlihat seperti pecahan, tetapi $6\\div 3=2$: bilangan prima.",
+        "sqrtNine": "ada tanda akar, tetapi $3\\times 3=9$, jadi $\\sqrt9=3$: bilangan prima.",
+        "minusEightQuarters": "$-8\\div 4=-2$: bilangan bulat negatif, bukan pecahan.",
+        "iSquared": "ada $i$, tetapi $i^2=-1$ menurut definisinya: bilangan bulat negatif.",
+        "threeQuarters": "desimal yang berhenti: $0{,}75=\\tfrac{75}{100}=\\tfrac34$, jadi rasional.",
+        "repeating": "desimal yang berulang juga rasional: misalkan $x=0{,}333\\dots$, maka $10x-x=3$, jadi $x=\\tfrac13$.",
+        "sqrtEight": "$\\sqrt8=2\\sqrt2$, dan $\\sqrt2$ irasional, jadi $\\sqrt8$ juga irasional.",
+        "sqrtMinusFour": "tidak ada bilangan real yang kuadratnya $-4$. $\\sqrt{-4}=2i$, karena $(2i)^2=4i^2=-4$."
+      },
+      "note": {
+        "lowest": "baris terbawahnya ${{set}}$, jadi ${{value}}\\in {{chain}}$.",
+        "inNatural": "di dalam $\\mathbb{N}$: ${{value}}\\in {{part}}$.",
+        "notNatural": "tetapi ${{value}}\\notin\\mathbb{N}$.",
+        "notBelow": "tetapi ${{value}}\\notin {{set}}$, jadi tidak ada di baris yang lebih bawah."
+      },
+      "step": "${{expression}}$, baris terbawahnya ${{set}}$.",
+      "cards": {
+        "build": "pembentukan",
+        "membership": "cek keanggotaan"
+      },
+      "membershipFootnote": "baca per kolom: begitu sebuah bilangan $\\in$ satu himpunan, ke bawah tetap $\\in$.",
+      "symbols": {
+        "prime": "prima",
+        "composite": "komposit",
+        "negatives": "bulat negatif",
+        "irrationals": "irasional",
+        "imaginaryUnit": "$i^2=-1$",
+        "subset": "himpunan bagian",
+        "member": "anggota",
+        "notMember": "bukan anggota",
+        "guide": "penuntun saja",
+        "realLine": "semua bilangan real",
+        "otherFractions": "pecahan lain",
+        "gap": "celah di $\\mathbb{Q}$"
+      }
+    },
+    "complexNumbers": {
+      "title": "Bilangan Kompleks",
+      "tabs": {
+        "plot": "gambar z",
+        "conjugate": "sekawan"
+      },
+      "boardTitle": "bidang kompleks",
+      "examples": {
+        "plot": {
+          "intro": "bilangan kompleks $z = a + bi$ digambar sebagai titik $(a, b)$: bagian real $a$ di sumbu mendatar $\\mathrm{Re}(z)$, bagian imajiner $b$ di sumbu tegak $\\mathrm{Im}(z)$.",
+          "summary": "setiap $z = a + bi$ punya tepat satu titik $(a, b)$ di bidang, dan setiap titik punya tepat satu $z$.",
+          "hint": "klik titik, atau putar untuk menggambar satu per satu.",
+          "captions": [
+            "$z_1 = 1 + 2i$: 1 ke kanan di sumbu $\\mathrm{Re}(z)$, lalu 2 ke atas. Titiknya $(1, 2)$.",
+            "$z_2 = -2 + i$: 2 ke kiri, lalu 1 ke atas. Titiknya $(-2, 1)$.",
+            "$z_3 = -1 - 2i$: 1 ke kiri, lalu 2 ke bawah. Titiknya $(-1, -2)$.",
+            "$z_4 = 2 - i$: 2 ke kanan, lalu 1 ke bawah. Titiknya $(2, -1)$."
+          ]
+        },
+        "add": {
+          "intro": "real dijumlah dengan real, imajiner dengan imajiner. Di bidang: mulai dari $z_1$, lalu berjalan sejauh $z_2$.",
+          "summary": "$z_1 + z_2 = 3 - i$. Menjumlah berarti menyambung: langkah $z_2$ (2 ke kanan, 3 ke bawah) ditempel di ujung $z_1$.",
+          "hint": "klik titik, atau putar untuk menjumlah bagian demi bagian.",
+          "captions": [
+            "bagian real: $1 + 2 = 3$. Dari $z_1$ geser 2 ke kanan.",
+            "bagian imajiner: $2 + (-3) = -1$. Geser 3 ke bawah.",
+            "jadi $z_1 + z_2 = 3 - i$, titik $(3, -1)$."
+          ]
+        },
+        "subtract": {
+          "intro": "real dikurang real, imajiner dikurang imajiner. Di bidang: mulai dari $z_1$, lalu berjalan sejauh $z_2$ dengan arah dibalik.",
+          "summary": "$z_1 - z_2 = -1 + 5i$. Mengurang $z_2$ sama dengan berjalan sejauh $z_2$ ke arah sebaliknya: 2 ke kiri, 3 ke atas.",
+          "hint": "klik titik, atau putar untuk mengurang bagian demi bagian.",
+          "captions": [
+            "bagian real: $1 - 2 = -1$. Dari $z_1$ geser 2 ke kiri.",
+            "bagian imajiner: $2 - (-3) = 5$. Geser 3 ke atas.",
+            "jadi $z_1 - z_2 = -1 + 5i$, titik $(-1, 5)$."
+          ]
+        },
+        "multiply": {
+          "intro": "setiap suku dikali setiap suku, seperti $(a + b)(c + d)$. Bedanya, $i \\cdot i = i^2 = -1$: imajiner kali imajiner pindah ke bagian real.",
+          "summary": "$z_1 \\cdot z_2 = 8 + i$. Suku $2i \\cdot (-3i)$ kelihatan imajiner, tetapi $i^2 = -1$ membuatnya real: 6 ke kanan, bukan ke atas.",
+          "hint": "klik titik, atau putar untuk mengisi kotak satu per satu.",
+          "captions": [
+            "$1 \\cdot 2 = 2$, real. Dari 0 geser 2 ke kanan.",
+            "$1 \\cdot (-3i) = -3i$, imajiner. Geser 3 ke bawah, tepat di $z_2$, karena $1 \\cdot z_2 = z_2$.",
+            "$2i \\cdot 2 = 4i$, imajiner. Geser 4 ke atas.",
+            "$2i \\cdot (-3i) = -6i^2 = 6$, karena $i^2 = -1$. Jadi real: geser 6 ke kanan.",
+            "real $2 + 6 = 8$, imajiner $-3i + 4i = i$. Jadi $z_1 \\cdot z_2 = 8 + i$."
+          ]
+        },
+        "divide": {
+          "intro": "pembilang dan penyebut dikali sekawan penyebut $\\bar{z}_2$. Penyebutnya jadi bilangan real, lalu tiap bagian tinggal dibagi.",
+          "summary": "$\\tfrac{z_1}{z_2} = -\\tfrac{4}{13} + \\tfrac{7}{13}i$. Kuncinya $z_2 \\cdot \\bar{z}_2 = 2^2 + 3^2 = 13$, selalu real.",
+          "hint": "klik titik, atau putar untuk membagi langkah demi langkah.",
+          "captions": [
+            "sekawan penyebut: $\\bar{z}_2 = 2 + 3i$, cermin $z_2$ terhadap sumbu $\\mathrm{Re}(z)$.",
+            "penyebut: $(2 - 3i)(2 + 3i) = 4 + 9 = 13$. Bagian imajinernya habis, jadi real.",
+            "pembilang: $(1 + 2i)(2 + 3i) = 2 + 3i + 4i - 6 = -4 + 7i$.",
+            "dibagi 13: $\\tfrac{z_1}{z_2} = -\\tfrac{4}{13} + \\tfrac{7}{13}i$. Arahnya sama dengan $-4 + 7i$, jaraknya 13 kali lebih dekat ke 0."
+          ]
+        },
+        "conjugate": {
+          "intro": "sekawan dari $z = a + bi$ adalah $\\bar{z} = a - bi$: bagian imajinernya berganti tanda. Di bidang: cermin terhadap sumbu $\\mathrm{Re}(z)$.",
+          "summary": "sekawan = cermin terhadap sumbu $\\mathrm{Re}(z)$. Karena itu $\\overline{z_1 - z_2} = \\bar{z}_1 - \\bar{z}_2$: keduanya titik $(-1, -5)$.",
+          "hint": "klik titik, atau putar untuk mencerminkan satu per satu.",
+          "captions": [
+            "$\\bar{z}_1 = 1 - 2i$: cermin $z_1$ terhadap sumbu $\\mathrm{Re}(z)$.",
+            "$\\bar{z}_2 = 2 + 3i$: cermin $z_2$.",
+            "$\\bar{z}_1 - \\bar{z}_2 = (1 - 2i) - (2 + 3i) = -1 - 5i$.",
+            "$z_1 - z_2 = -1 + 5i$, sama seperti di tab $z_1 - z_2$.",
+            "cermin $z_1 - z_2$ jatuh di titik yang sama: $\\overline{z_1 - z_2} = \\bar{z}_1 - \\bar{z}_2$."
+          ]
+        }
+      },
+      "lines": {
+        "add": [
+          "real: $1 + 2 = 3$",
+          "imajiner: $2 + (-3) = -1$",
+          "$z_1 + z_2 = (1 + 2i) + (2 - 3i) = 3 - i$"
+        ],
+        "subtract": [
+          "real: $1 - 2 = -1$",
+          "imajiner: $2 - (-3) = 5$",
+          "$z_1 - z_2 = (1 + 2i) - (2 - 3i) = -1 + 5i$"
+        ],
+        "multiply": [
+          "$z_1 \\cdot z_2 = (1 + 2i)(2 - 3i)$",
+          "$= 2 - 3i + 4i - 6i^2$",
+          "$= 2 + 6 - 3i + 4i = 8 + i$"
+        ],
+        "divide": [
+          "$\\bar{z}_2 = \\overline{2 - 3i} = 2 + 3i$",
+          "$z_2 \\cdot \\bar{z}_2 = (2 - 3i)(2 + 3i) = 4 + 6i - 6i - 9i^2 = 13$",
+          "$z_1 \\cdot \\bar{z}_2 = (1 + 2i)(2 + 3i) = 2 + 3i + 4i + 6i^2 = -4 + 7i$",
+          "$\\dfrac{z_1}{z_2} = \\dfrac{z_1 \\cdot \\bar{z}_2}{z_2 \\cdot \\bar{z}_2} = \\dfrac{-4 + 7i}{13} = -\\dfrac{4}{13} + \\dfrac{7}{13}i$"
+        ],
+        "conjugate": [
+          "$\\bar{z}_1 = \\overline{1 + 2i} = 1 - 2i$",
+          "$\\bar{z}_2 = \\overline{2 - 3i} = 2 + 3i$",
+          "$\\bar{z}_1 - \\bar{z}_2 = (1 - 2i) - (2 + 3i) = -1 - 5i$",
+          "$z_1 - z_2 = -1 + 5i$",
+          "$\\overline{z_1 - z_2} = \\overline{-1 + 5i} = -1 - 5i$"
+        ]
+      },
+      "extras": {
+        "conjugateOfZ2": "cermin $z_2$ terhadap sumbu $\\mathrm{Re}(z)$.",
+        "numerator": "ini pembilangnya, belum dibagi 13.",
+        "quotient": "letaknya di garis dari 0 ke $-4 + 7i$, 13 kali lebih dekat ke 0.",
+        "mirrorOfZ1": "cermin $z_1 = 1 + 2i$, jadi $\\bar{z}_1 = 1 - 2i$.",
+        "mirrorOfZ2": "cermin $z_2 = 2 - 3i$, jadi $\\bar{z}_2 = 2 + 3i$."
+      },
+      "note": {
+        "reading": "titik $({{a}}, {{b}})$: {{horizontal}}, {{vertical}}.",
+        "right": "${{size}}$ di kanan sumbu $\\mathrm{Im}(z)$",
+        "left": "${{size}}$ di kiri sumbu $\\mathrm{Im}(z)$",
+        "above": "${{size}}$ di atas sumbu $\\mathrm{Re}(z)$",
+        "below": "${{size}}$ di bawah sumbu $\\mathrm{Re}(z)$"
+      },
+      "cards": {
+        "twoForms": "dua bentuk",
+        "whyI": "kenapa perlu $i$",
+        "readPoints": "baca titiknya",
+        "known": "yang diketahui",
+        "rule": "aturan",
+        "compute": "hitung",
+        "product": "kotak perkalian"
+      },
+      "twoFormsFootnote": "jadi $(1, 2)$ dan $1 + 2i$ adalah bilangan yang sama.",
+      "whyIText": "$x^2 + 1 = 0$ berarti $x^2 = -1$. Kuadrat bilangan real tidak pernah negatif, jadi di $\\mathbb{R}$ tidak ada jawabnya. Dengan $i^2 = -1$, jawabnya $x = i$ atau $x = -i$.",
+      "table": {
+        "number": "bilangan",
+        "point": "titik"
+      },
+      "productTags": {
+        "real": "real: mendatar",
+        "imaginary": "imajiner: tegak",
+        "footnote": "baris dari $z_1 = 1 + 2i$, kolom dari $z_2 = 2 - 3i$. Kotak yang diwarnai = bagian real."
+      },
+      "symbols": {
+        "re": "sumbu real",
+        "im": "sumbu imajiner",
+        "i": "$i^2 = -1$",
+        "conjugate": "sekawan",
+        "walk": "langkah",
+        "mirror": "cermin terhadap sumbu real",
+        "guide": "jarak ke sumbu",
+        "result": "hasil"
+      }
     }
   }
 }
