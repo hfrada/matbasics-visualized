@@ -9,6 +9,12 @@ export type TopicKey =
   | 'operationLimits'
   | 'numberHierarchy'
   | 'complexNumbers'
+  | 'propositionsAndQuantifiers'
+  | 'negationConjunctionDisjunction'
+  | 'implicationBiconditional'
+  | 'converseInverseContrapositive'
+  | 'layeredTablesAndEquivalence'
+  | 'tautologiesAndValidArguments'
 
 export type Topic = {
   key: TopicKey
@@ -37,7 +43,18 @@ export const sections: Section[] = [
       { key: 'complexNumbers', slug: 'complex-numbers' },
     ],
   },
-  { key: 'logic', slug: 'logic', topics: [] },
+  {
+    key: 'logic',
+    slug: 'logic',
+    topics: [
+      { key: 'propositionsAndQuantifiers', slug: 'propositions-and-quantifiers' },
+      { key: 'negationConjunctionDisjunction', slug: 'negation-conjunction-disjunction' },
+      { key: 'implicationBiconditional', slug: 'implication-biconditional' },
+      { key: 'converseInverseContrapositive', slug: 'converse-inverse-contrapositive' },
+      { key: 'layeredTablesAndEquivalence', slug: 'layered-tables-and-equivalence' },
+      { key: 'tautologiesAndValidArguments', slug: 'tautologies-and-valid-arguments' },
+    ],
+  },
   { key: 'realsAndRelations', slug: 'reals-and-relations', topics: [] },
   { key: 'functionsAndProofs', slug: 'functions-and-proofs', topics: [] },
 ]

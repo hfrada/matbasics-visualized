@@ -391,7 +391,7 @@ export function NumberHierarchyPage() {
           </div>
           <div className="pen-border relative min-w-0 bg-paper px-4.5 py-3">
             <h2 className="font-hand text-2xl font-bold">{t('cards.membership')}</h2>
-            <div className="relative overflow-x-auto">
+            <div className="relative overflow-x-auto overflow-y-hidden">
               <table className="my-1 border-collapse text-base">
                 <thead>
                   <tr>

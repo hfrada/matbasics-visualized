@@ -333,7 +333,7 @@ export function SubsetsAndComplementPage() {
             <div className="pen-border relative bg-paper px-4.5 py-3">
               <h2 className="font-hand text-2xl font-bold">{t('cards.given')}</h2>
               {example.given.map((tex) => (
-                <MathTex key={tex} tex={tex} className="block overflow-x-auto py-1 text-[17px]" />
+                <MathTex key={tex} tex={tex} className="block overflow-x-auto overflow-y-hidden py-1 text-[17px]" />
               ))}
             </div>
             <div className="pen-border relative bg-paper px-4.5 py-3">
@@ -342,7 +342,7 @@ export function SubsetsAndComplementPage() {
                 <MathTex
                   key={line.key}
                   tex={line.tex}
-                  className={`block overflow-x-auto py-1 text-[17px] transition-opacity duration-300 ${line.shown ? '' : 'opacity-15'}`}
+                  className={`block overflow-x-auto overflow-y-hidden py-1 text-[17px] transition-opacity duration-300 ${line.shown ? '' : 'opacity-15'}`}
                 />
               ))}
             </div>

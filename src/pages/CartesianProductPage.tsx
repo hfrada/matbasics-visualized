@@ -277,21 +277,21 @@ export function CartesianProductPage() {
               <h2 className="font-hand text-2xl font-bold">{t('cards.rule')}</h2>
               <MathTex
                 tex={`${product}=\\{(${firstVariable},${secondVariable})\\mid ${firstVariable}\\in ${first.name},\\ ${secondVariable}\\in ${second.name}\\}`}
-                className="block overflow-x-auto py-1 text-[17px]"
+                className="block overflow-x-auto overflow-y-hidden py-1 text-[17px]"
               />
               <p className="font-hand text-xl leading-snug">
                 <MathText text={t('rule.axes', names)} />
               </p>
               <div className="mt-2 border-t border-dashed border-faint pt-2 text-muted">
                 {[first, second].map((set) => (
-                  <MathTex key={set.name} tex={setTex(set)} className="block overflow-x-auto py-0.5 text-[15px]" />
+                  <MathTex key={set.name} tex={setTex(set)} className="block overflow-x-auto overflow-y-hidden py-0.5 text-[15px]" />
                 ))}
               </div>
             </div>
             <div className="pen-border relative min-w-0 bg-paper px-4.5 py-3">
               <h2 className="font-hand text-2xl font-bold">{t('cards.count')}</h2>
               {current === null ? (
-                <MathTex tex={`|${product}|=${sum}`} className="block overflow-x-auto py-1 text-[17px]" />
+                <MathTex tex={`|${product}|=${sum}`} className="block overflow-x-auto overflow-y-hidden py-1 text-[17px]" />
               ) : (
                 <p className="py-1 font-hand text-xl leading-snug">
                   <MathText text={t('count.soFar', { sum })} />
@@ -299,7 +299,7 @@ export function CartesianProductPage() {
               )}
               <MathTex
                 tex={`|${product}|=|${first.name}|\\cdot|${second.name}|=${columnCount}\\cdot ${rowCount}=${total}`}
-                className={`block overflow-x-auto py-1 text-[17px] transition-opacity duration-300 ${current === null ? '' : 'opacity-15'}`}
+                className={`block overflow-x-auto overflow-y-hidden py-1 text-[17px] transition-opacity duration-300 ${current === null ? '' : 'opacity-15'}`}
               />
               <p className="font-hand text-xl leading-snug text-muted">
                 <MathText text={t('count.each', { first: first.name, rows: rowCount, columns: columnCount })} />

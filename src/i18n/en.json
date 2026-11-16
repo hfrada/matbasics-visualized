@@ -23,6 +23,10 @@
     "seconds": "{{value, number}} s",
     "idle": "press start to see the steps one by one."
   },
+  "truthValues": {
+    "true": "T",
+    "false": "F"
+  },
   "topics": {
     "writingSets": {
       "title": "Writing a Set",
@@ -620,6 +624,1005 @@
         "mirror": "mirror in the real axis",
         "guide": "distance to the axes",
         "result": "result"
+      }
+    },
+    "propositionsAndQuantifiers": {
+      "title": "Propositions & Quantifiers",
+      "tabs": {
+        "proposition": "proposition?",
+        "plusOne": "x + 1 prime",
+        "plusThree": "x + 3 ∈ ℕ",
+        "minusThree": "x − 3 ∈ ℕ",
+        "equation": "2x − 1 = 0",
+        "primes": "x + y prime",
+        "composites": "a + b prime"
+      },
+      "controls": {
+        "quantifier": "quantifier"
+      },
+      "quantifiers": {
+        "all": "∀ for every",
+        "exists": "∃ there exists"
+      },
+      "proposition": "proposition",
+      "notProposition": "not a proposition",
+      "board": {
+        "sentences": "check the sentences",
+        "examples": "check the examples"
+      },
+      "flow": {
+        "start": "sentence",
+        "declarative": "declarative sentence?",
+        "definite": "surely T or F?",
+        "yes": "yes",
+        "no": "no",
+        "aria": "proposition check flow"
+      },
+      "outcomes": {
+        "notDeclarative": "not a declarative sentence",
+        "notDefinite": "value not definite",
+        "true": "value T",
+        "false": "value F"
+      },
+      "sentences": {
+        "a": {
+          "text": "That bulb is somewhat on.",
+          "reason": "a declarative sentence, but \"somewhat on\" is neither true nor false: a bulb is either on or not on. It has no truth value, so it is not a proposition."
+        },
+        "b": {
+          "text": "$3 - 2 = 4$.",
+          "reason": "a declarative sentence that is false, because $3 - 2 = 1$. A proposition with value F, written $Q$."
+        },
+        "c": {
+          "text": "$3 + 2 = 5$.",
+          "reason": "a declarative sentence that is true. A proposition with value T, written $R$."
+        },
+        "d": {
+          "text": "Have you done formative test 1?",
+          "reason": "a question, not a declarative sentence. So it is not a proposition."
+        },
+        "e": {
+          "text": "You should study hard!",
+          "reason": "a suggestion, not a declarative sentence. So it is not a proposition."
+        },
+        "f": {
+          "text": "The values of $x$ that satisfy $x^2 - 1 = 0$ are $x = 1$ and $x = -1$.",
+          "reason": "a declarative sentence that is true: $1^2 - 1 = 0$ and $(-1)^2 - 1 = 0$. A proposition with value T, written $P$."
+        },
+        "g": {
+          "text": "$x + 1$ is a prime number, $x \\in \\mathbb{N}$.",
+          "reason": "a declarative sentence, but its value depends on $x$: $x = 1$ gives $2$ (prime), $x = 3$ gives $4$ (not prime). This is an open sentence, so it is not a proposition. A quantifier turns it into one: see the x + 1 prime tab."
+        }
+      },
+      "captions": {
+        "notDeclarative": "({{letter}}) not a declarative sentence: not a proposition.",
+        "notDefinite": "({{letter}}) declarative, but its value is not definite: not a proposition.",
+        "true": "({{letter}}) declarative, surely T: a proposition with value T, written ${{symbol}}$.",
+        "false": "({{letter}}) declarative, surely F: a proposition with value F, written ${{symbol}}$."
+      },
+      "cards": {
+        "results": "check results",
+        "definition": "definition",
+        "symbols": "symbols",
+        "pair": "one sentence, two quantifiers",
+        "reading": "how to read",
+        "enough": "when is one example enough?"
+      },
+      "table": {
+        "sentence": "sentence",
+        "declarative": "declarative?",
+        "definite": "definite value?",
+        "result": "result",
+        "symbol": "symbol",
+        "yes": "yes",
+        "no": "no",
+        "proposition": "proposition, {{value}}"
+      },
+      "definition": {
+        "term": "A proposition",
+        "rest": "is a declarative sentence whose truth value is exactly one of true or false, and nothing else."
+      },
+      "symbolsText": {
+        "names": "propositions are named with capital letters $P$, $Q$, $R$, ...",
+        "values": "truth values: T for true, F for false."
+      },
+      "open": {
+        "plusOne": "$x + 1$ is a prime number, $x \\in \\mathbb{N}$",
+        "plusThree": "$x + 3$ is a natural number, $x \\in \\mathbb{N}$",
+        "minusThree": "$x - 3$ is a natural number, $x \\in \\mathbb{N}$",
+        "equation": "$2x - 1 = 0$, $x \\in \\mathbb{R}$",
+        "primes": "$x + y$ is a prime number, $x, y \\in \\mathbb{P}$",
+        "composites": "$a + b$ is a prime number, $a, b \\in \\mathbb{K}$"
+      },
+      "claim": "$b({{variables}})$: {{open}}",
+      "verdict": "is {{value}}",
+      "generalLine": "general reason: {{reason}}",
+      "general": {
+        "plusThree": {
+          "reason": "for any $x \\in \\mathbb{N}$, $x \\ge 1$, so $x + 3 \\ge 4$: always a natural number.",
+          "step": "all the examples here are true, but there are infinitely many other numbers in $\\mathbb{N}$. A general reason is needed: {{reason}}"
+        }
+      },
+      "checks": {
+        "prime": "{{assign}}: ${{equation}}$, prime.",
+        "notPrime": "{{assign}}: ${{equation}}$, not prime.",
+        "membership": "{{assign}}: ${{equation}}$.",
+        "solves": "{{assign}}: ${{equation}}$, the equation holds.",
+        "notSolves": "{{assign}}: ${{equation}}$, and ${{value}} \\neq 0$."
+      },
+      "decide": {
+        "counter": "One counterexample is enough: ${{prop}}$ is F.",
+        "example": "One example is enough: ${{prop}}$ is T."
+      },
+      "verdicts": {
+        "general": "${{prop}}$ is T. Examples alone are not enough for $\\forall$; the reason: {{reason}}",
+        "counter": "${{prop}}$ is F. One counterexample is enough: {{decider}}.",
+        "example": "${{prop}}$ is T. One example is enough: {{decider}}."
+      },
+      "roles": {
+        "firstCounter": "this is the first counterexample.",
+        "firstExample": "this is the example that makes the statement true.",
+        "alsoCounter": "this is also a counterexample.",
+        "notEnoughAll": "true for this one, but one example is not enough for $\\forall$.",
+        "alsoExample": "this is another example that fits.",
+        "falseButExists": "false for this one, but for $\\exists$ one true case is enough."
+      },
+      "pair": {
+        "general": "general reason",
+        "counter": "counterexample: {{decider}}",
+        "example": "example: {{decider}}",
+        "footnote": "$b({{variables}})$ is the same, the quantifier differs, so the truth value can differ."
+      },
+      "reading": {
+        "all": "$\\forall x,\\ b(x)$: for every $x$, $b(x)$ holds.",
+        "exists": "$\\exists x,\\ b(x)$: there exists $x$ (at least one $x$) for which $b(x)$ holds."
+      },
+      "enough": {
+        "toBeTrue": "to be T",
+        "toBeFalse": "to be F",
+        "allTrue": "$b(x)$ must be true for every $x$: needs a general reason",
+        "allFalse": "one counterexample is enough",
+        "existsTrue": "one example is enough",
+        "existsFalse": "no $x$ at all: needs a general reason"
+      },
+      "intro": {
+        "proposition": "proposition = a declarative sentence that is surely true or surely false. Every sentence goes through two questions.",
+        "open": "an open sentence has no truth value yet. With a quantifier, it becomes a proposition."
+      },
+      "hint": {
+        "proposition": "click a sentence, or play to check them one by one.",
+        "quantifier": "click a cell, or play to check the examples one by one."
+      },
+      "legend": {
+        "true": "true",
+        "false": "false",
+        "names": "proposition names",
+        "all": "for every",
+        "exists": "there exists",
+        "primes": "primes",
+        "composites": "composites"
+      }
+    },
+    "negationConjunctionDisjunction": {
+      "title": "Negation, Conjunction & Disjunction",
+      "board": "truth table ${{expression}}$",
+      "suppose": "suppose",
+      "rowHead": "row",
+      "rowLabel": "row {{row}}",
+      "hint": "click a row, or play to fill the table row by row.",
+      "connectives": {
+        "negation": {
+          "tab": "¬ negation",
+          "context": "",
+          "suppose": ["$P$: It is raining today.", "$\\neg P$: It is *not* raining today."],
+          "meaningHead": "situation",
+          "meanings": ["it is raining", "it is not raining"],
+          "who": ["", ""],
+          "readings": [
+            "$P$ = T: it really is raining, so \"it is not raining today\" is false. The value flips: $\\neg P$ = F.",
+            "$P$ = F: it is not raining, so \"it is not raining today\" is true. The value flips: $\\neg P$ = T."
+          ],
+          "definition": "Let $P$ be a proposition. The negation of $P$ is not $P$, written $\\neg P$. The negation of $P$ is false if $P$ is true, and true if $P$ is false.",
+          "reading": ["$\\neg P$ is read \"not $P$\" or \"the negation of $P$\".", "other books write $\\sim P$."],
+          "intro": "negation flips the truth value: T becomes F, F becomes T."
+        },
+        "conjunction": {
+          "tab": "∧ conjunction",
+          "context": "requirements to join the army:",
+          "suppose": [
+            "$P$: graduated from high school",
+            "$Q$: in good health",
+            "$P \\wedge Q$: in good health *and* graduated from high school"
+          ],
+          "meaningHead": "accepted?",
+          "meanings": ["accepted", "not accepted", "not accepted", "not accepted"],
+          "who": ["Amir", "", "Ali", ""],
+          "readings": [
+            "$P$ = T, $Q$ = T: graduated and in good health, like Amir. Both requirements are met, so $P \\wedge Q$ = T: accepted.",
+            "$P$ = T, $Q$ = F: graduated but not in good health. One requirement fails, so $P \\wedge Q$ = F: not accepted.",
+            "$P$ = F, $Q$ = T: in good health but did not graduate, like Ali. One requirement fails, so $P \\wedge Q$ = F: not accepted.",
+            "$P$ = F, $Q$ = F: did not graduate and not in good health. Both requirements fail, so $P \\wedge Q$ = F: not accepted."
+          ],
+          "definition": "Let $P$ and $Q$ be two propositions. The conjunction of $P$ and $Q$, written $P \\wedge Q$, is true if both are true, and false otherwise.",
+          "reading": ["$P \\wedge Q$ is read \"$P$ and $Q$\".", "\"but\" is also a conjunction: \"in good health but did not graduate\"."],
+          "intro": "a conjunction is T only when both are T."
+        },
+        "disjunction": {
+          "tab": "∨ disjunction",
+          "context": "",
+          "suppose": [
+            "$P$: Amir goes to Bandung",
+            "$Q$: Amad goes to Bandung",
+            "$P \\vee Q$: Amir goes to Bandung *or* Amad goes to Bandung"
+          ],
+          "meaningHead": "situation",
+          "meanings": ["both go", "only Amir goes", "only Amad goes", "nobody goes"],
+          "who": ["", "", "", ""],
+          "readings": [
+            "$P$ = T, $Q$ = T: Amir and Amad both go to Bandung. \"Or\" here includes both, so $P \\vee Q$ = T.",
+            "$P$ = T, $Q$ = F: only Amir goes. One true part is enough, so $P \\vee Q$ = T.",
+            "$P$ = F, $Q$ = T: only Amad goes. One true part is enough, so $P \\vee Q$ = T.",
+            "$P$ = F, $Q$ = F: nobody goes to Bandung. Both are false, so $P \\vee Q$ = F."
+          ],
+          "definition": "Let $P$ and $Q$ be two propositions. The disjunction of $P$ and $Q$, written $P \\vee Q$, is false if both are false, and true otherwise.",
+          "reading": ["$P \\vee Q$ is read \"$P$ or $Q$\".", "\"or\" here includes both: $P \\vee Q$ is still T when $P$ and $Q$ are both T."],
+          "intro": "a disjunction is F only when both are F."
+        }
+      },
+      "captions": {
+        "negation": "row {{row}}: {{assign}}, flipped to $\\neg P$ = {{result}}.",
+        "compound": "row {{row}}: {{assign}}. {{reason}}, so ${{expression}}$ = {{result}}."
+      },
+      "reasons": {
+        "bothTrue": "Both are T",
+        "bothFalse": "Both are F",
+        "oneTrue": "One is T",
+        "oneFalse": "One is F"
+      },
+      "cards": {
+        "definition": "definition",
+        "reading": "how to read",
+        "examples": "negation examples",
+        "sideBySide": "$\\wedge$ and $\\vee$ side by side",
+        "enough": "when is one value enough?"
+      },
+      "sideBySide": {
+        "footnote": "$\\wedge$ is T only in row 1, $\\vee$ is F only in row 4."
+      },
+      "enough": {
+        "toBeTrue": "to be T",
+        "toBeFalse": "to be F",
+        "conjunction": {
+          "true": "both must be T",
+          "false": "one F is enough"
+        },
+        "disjunction": {
+          "true": "one T is enough",
+          "false": "both must be F"
+        },
+        "footnote": "like the quantifiers: $\\wedge$ is like $\\forall$ (all must be T), $\\vee$ is like $\\exists$ (one T is enough)."
+      },
+      "examples": [
+        { "text": "It is raining today", "negation": "It is not raining today", "remark": "" },
+        {
+          "text": "Amir did not pass the exam",
+          "negation": "Amir did not not pass the exam",
+          "remark": "the sentence already has \"not\"; its negation means Amir passed the exam."
+        },
+        { "text": "$3 + 5 = 8$", "negation": "$3 + 5 \\neq 8$", "remark": "$R$ is true, so $\\neg R$ is false: row 1." }
+      ],
+      "legend": {
+        "true": "true",
+        "false": "false",
+        "decider": "decides the result",
+        "not": "not",
+        "and": "and",
+        "or": "or"
+      }
+    },
+    "implicationBiconditional": {
+      "title": "Implication & Biconditional",
+      "board": "truth table ${{expression}}$",
+      "suppose": "suppose",
+      "rowHead": "row",
+      "rowLabel": "row {{row}}",
+      "hint": "click a row, or play to fill the table row by row.",
+      "connectives": {
+        "implication": {
+          "tab": "⇒ implication",
+          "context": "Amir's father promises:",
+          "suppose": [
+            "$P$: Amir passes the exam",
+            "$Q$: Amir's father throws a party",
+            "$P \\Rightarrow Q$: *if* Amir passes the exam, *then* his father throws a party"
+          ],
+          "meaningHead": "the promise",
+          "meanings": ["kept", "broken", "not broken", "not broken"],
+          "readings": [
+            "$P$ = T, $Q$ = T: Amir passes and his father throws a party. The promise is kept, so $P \\Rightarrow Q$ = T.",
+            "$P$ = T, $Q$ = F: Amir passes but his father throws no party. The promise is broken, so $P \\Rightarrow Q$ = F. This is the only F row.",
+            "$P$ = F, $Q$ = T: Amir fails but his father throws a party anyway. The promise only covers Amir passing, so it is not broken: $P \\Rightarrow Q$ = T.",
+            "$P$ = F, $Q$ = F: Amir fails and his father throws no party. The promise is not broken, so $P \\Rightarrow Q$ = T."
+          ],
+          "definition": "Let $P$ and $Q$ be two propositions. The implication $P \\Rightarrow Q$ is false if $P$ is true and $Q$ is false, and true otherwise.",
+          "reading": [
+            "$P \\Rightarrow Q$ is read \"if $P$ then $Q$\".",
+            "other books write $P \\to Q$.",
+            "the order matters: $P \\Rightarrow Q$ and $Q \\Rightarrow P$ differ in rows 2 and 3."
+          ],
+          "intro": "an implication is F only when $P$ = T and $Q$ = F, otherwise T."
+        },
+        "biconditional": {
+          "tab": "⇔ biconditional",
+          "context": "",
+          "suppose": [
+            "$P$: I go to work",
+            "$Q$: I am healthy",
+            "$P \\Leftrightarrow Q$: I go to work *if and only if* I am healthy"
+          ],
+          "meaningHead": "situation",
+          "meanings": ["at work and healthy", "at work while sick", "healthy but stays home", "sick and stays home"],
+          "readings": [
+            "$P$ = T, $Q$ = T: I go to work and I am healthy. The values match, so $P \\Leftrightarrow Q$ = T.",
+            "$P$ = T, $Q$ = F: I go to work while sick. The values differ, so $P \\Leftrightarrow Q$ = F.",
+            "$P$ = F, $Q$ = T: I am healthy but stay home. The values differ, so $P \\Leftrightarrow Q$ = F.",
+            "$P$ = F, $Q$ = F: I am sick and stay home. The values match, so $P \\Leftrightarrow Q$ = T."
+          ],
+          "definition": "Let $P$ and $Q$ be two propositions. The biconditional of $P$ and $Q$, written $P \\Leftrightarrow Q$, is true if both are true or both are false, and false otherwise.",
+          "reading": [
+            "$P \\Leftrightarrow Q$ is read \"$P$ if and only if $Q$\".",
+            "other books write $P \\leftrightarrow Q$.",
+            "it holds two implications at once: if $P$ then $Q$, and if $Q$ then $P$."
+          ],
+          "intro": "a biconditional is T when $P$ and $Q$ are both T or both F."
+        }
+      },
+      "caption": "row {{row}}: {{assign}}. {{reason}}, so ${{expression}}$ = {{result}}.",
+      "reasons": {
+        "broken": "$P$ = T but $Q$ = F",
+        "premiseFalseConclusionTrue": "$P$ = F and $Q$ = T",
+        "premiseFalse": "$P$ = F",
+        "conclusionTrue": "$Q$ = T",
+        "same": "The values match",
+        "different": "The values differ"
+      },
+      "cards": {
+        "definition": "definition",
+        "reading": "how to read",
+        "directions": "one way, both ways",
+        "when": "when T, when F?",
+        "untested": "why are rows 3 and 4 T?",
+        "examples": "biconditional examples"
+      },
+      "directions": {
+        "footnote": "$P \\Leftrightarrow Q$ = T exactly in the rows where both directions are T: rows 1 and 4."
+      },
+      "when": {
+        "toBeTrue": "to be T",
+        "toBeFalse": "to be F",
+        "implication": {
+          "true": "$P$ = F is enough, or $Q$ = T is enough",
+          "false": "$P$ must be T and $Q$ must be F"
+        },
+        "biconditional": {
+          "true": "$P$ and $Q$ match",
+          "false": "$P$ and $Q$ differ"
+        },
+        "footnote": "$P \\Rightarrow Q$ is F only in row 2, $P \\Leftrightarrow Q$ is F in rows 2 and 3."
+      },
+      "untested": {
+        "body": "The father's promise only talks about the case where Amir passes (rows 1 and 2). If Amir fails (rows 3 and 4), the promise says nothing: party or no party, the promise is not broken.",
+        "footnote": "so an implication is F only when the condition happens but the promise is not kept: $P$ = T and $Q$ = F."
+      },
+      "examples": {
+        "universe": "a is a natural number.",
+        "items": [
+          {
+            "text": "a is even if and only if a is divisible by 2",
+            "remark": "both directions hold: if a is even, a is divisible by 2; if a is divisible by 2, a is even."
+          },
+          {
+            "text": "a is even if and only if a is not divisible by 2",
+            "remark": "if a is even, it should be divisible by 2."
+          },
+          {
+            "text": "a is not even if and only if a is divisible by 2",
+            "remark": "if a is divisible by 2, it should be even."
+          },
+          {
+            "text": "a is not even if and only if a is not divisible by 2",
+            "remark": "both directions hold: if a is not even, a is not divisible by 2, and the other way round."
+          }
+        ]
+      },
+      "legend": {
+        "true": "true",
+        "false": "false",
+        "decider": "decides the result",
+        "implication": "if … then",
+        "biconditional": "if and only if"
+      }
+    },
+    "converseInverseContrapositive": {
+      "title": "Converse, Inverse & Contrapositive",
+      "board": "truth table ${{expression}}$",
+      "suppose": "suppose",
+      "supposeLines": [
+        "$P$: I am sick",
+        "$Q$: I go to the doctor",
+        "$P \\Rightarrow Q$: *if* I am sick, *then* I go to the doctor"
+      ],
+      "rowHead": "row",
+      "rowLabel": "row {{row}}",
+      "sameHead": "same?",
+      "hint": "click a row, or play to fill the table row by row and compare it with $P \\Rightarrow Q$.",
+      "names": {
+        "implication": "implication",
+        "converse": "converse",
+        "inverse": "inverse",
+        "contrapositive": "contrapositive"
+      },
+      "situations": [
+        "I am sick and I go to the doctor",
+        "I am sick but I do not go to the doctor",
+        "I am not sick but I go to the doctor",
+        "I am not sick and I do not go to the doctor"
+      ],
+      "forms": {
+        "converse": {
+          "sentence": "$Q \\Rightarrow P$: *if* I go to the doctor, *then* I am sick",
+          "intro": "the converse swaps $P$ and $Q$: $P \\Rightarrow Q$ becomes $Q \\Rightarrow P$.",
+          "verdict": "$Q \\Rightarrow P$ and $P \\Rightarrow Q$ differ in rows 2 and 3, so the converse does not always have the same value as the implication.",
+          "reading": [
+            "$Q \\Rightarrow P$ is read \"if $Q$ then $P$\".",
+            "how to build it: swap $P$ and $Q$."
+          ]
+        },
+        "inverse": {
+          "sentence": "$\\neg P \\Rightarrow \\neg Q$: *if* I am not sick, *then* I do not go to the doctor",
+          "intro": "the inverse negates both and keeps the order: $P \\Rightarrow Q$ becomes $\\neg P \\Rightarrow \\neg Q$.",
+          "verdict": "$\\neg P \\Rightarrow \\neg Q$ and $P \\Rightarrow Q$ differ in rows 2 and 3, so the inverse does not always have the same value as the implication.",
+          "reading": [
+            "$\\neg P \\Rightarrow \\neg Q$ is read \"if not $P$ then not $Q$\".",
+            "how to build it: negate $P$ and $Q$, keep their places."
+          ]
+        },
+        "contrapositive": {
+          "sentence": "$\\neg Q \\Rightarrow \\neg P$: *if* I do not go to the doctor, *then* I am not sick",
+          "intro": "the contrapositive swaps and negates both: $P \\Rightarrow Q$ becomes $\\neg Q \\Rightarrow \\neg P$.",
+          "verdict": "$\\neg Q \\Rightarrow \\neg P$ and $P \\Rightarrow Q$ match in all four rows: the contrapositive always has the same value as the implication.",
+          "reading": [
+            "$\\neg Q \\Rightarrow \\neg P$ is read \"if not $Q$ then not $P$\".",
+            "how to build it: swap $P$ and $Q$, then negate both."
+          ]
+        }
+      },
+      "caption": "row {{row}}: {{reason}}, so ${{expression}}$ = {{result}}, {{comparison}}.",
+      "reading": "{{situation}}. {{reason}}, so ${{expression}}$ = {{result}}. The implication $P \\Rightarrow Q$ = {{implication}}, {{ending}}",
+      "reasons": {
+        "broken": "${{premise}}$ = T but ${{conclusion}}$ = F",
+        "premiseFalseConclusionTrue": "${{premise}}$ = F and ${{conclusion}}$ = T",
+        "premiseFalse": "${{premise}}$ = F",
+        "conclusionTrue": "${{conclusion}}$ = T"
+      },
+      "comparison": {
+        "same": "the same as $P \\Rightarrow Q$",
+        "different": "unlike $P \\Rightarrow Q$, which is {{value}}"
+      },
+      "readingEnd": {
+        "same": "so in this row both match.",
+        "different": "so in this row they differ."
+      },
+      "cards": {
+        "definition": "definition",
+        "reading": "how to read",
+        "falseRow": "in which row is it F?",
+        "square": "swap and negate"
+      },
+      "definition": {
+        "intro": "If $P \\Rightarrow Q$ is an implication, then:",
+        "lines": [
+          "(a) $Q \\Rightarrow P$ is called the converse of $P \\Rightarrow Q$;",
+          "(b) $\\neg P \\Rightarrow \\neg Q$ is called the inverse of $P \\Rightarrow Q$;",
+          "(c) $\\neg Q \\Rightarrow \\neg P$ is called the contrapositive of $P \\Rightarrow Q$."
+        ]
+      },
+      "falseRow": {
+        "form": "form",
+        "condition": "F only if",
+        "row": "row",
+        "items": {
+          "implication": { "condition": "$P$ = T and $Q$ = F", "also": "" },
+          "converse": { "condition": "$Q$ = T and $P$ = F", "also": "" },
+          "inverse": { "condition": "$\\neg P$ = T and $\\neg Q$ = F", "also": "that is $P$ = F and $Q$ = T" },
+          "contrapositive": { "condition": "$\\neg Q$ = T and $\\neg P$ = F", "also": "that is $P$ = T and $Q$ = F" }
+        },
+        "footnote": "every implication is F in exactly one row. Two forms that are F in the same row always have the same value."
+      },
+      "square": {
+        "swap": "swap",
+        "negate": "negate",
+        "footnote": "swap = swap the two propositions, negate = put $\\neg$ on both. Forms at the two ends of the same diagonal always have the same value: the implication with the contrapositive, the converse with the inverse."
+      },
+      "legend": {
+        "true": "true",
+        "false": "false",
+        "decider": "decides the result",
+        "same": "same as the implication",
+        "different": "differs from the implication",
+        "negation": "not",
+        "implication": "if … then"
+      }
+    },
+    "layeredTablesAndEquivalence": {
+      "title": "Layered Tables & Equivalence",
+      "modes": {
+        "layered": "layered tables",
+        "equivalence": "equivalence"
+      },
+      "board": "truth table of ${{expression}}$",
+      "rowHead": "row",
+      "rowLabel": "row {{row}}",
+      "stepHead": "step",
+      "sameHead": "same?",
+      "sides": {
+        "left": "left side",
+        "right": "right side"
+      },
+      "treeLabel": "expression tree",
+      "treeSideLabel": "expression tree, {{side}}",
+      "rules": {
+        "not": "flips the value",
+        "and": "is T only when both are T",
+        "or": "is F only when both are F",
+        "implies": "is F only when the left part is T and the right part is F",
+        "iff": "is T when both are the same"
+      },
+      "caption": "step {{step}}: ${{expression}}$ from {{sources}}. ${{connective}}$ {{rule}}. Result: {{values}}.",
+      "sideCaption": "step {{step}}, {{side}}: ${{expression}}$ from {{sources}}. ${{connective}}$ {{rule}}. Result: {{values}}.",
+      "verdict": {
+        "same": "All four rows match, so ${{left}} \\equiv {{right}}$.",
+        "different": "They differ in rows {{rows}}, so ${{left}} \\not\\equiv {{right}}$: the two are not equivalent."
+      },
+      "intro": {
+        "layered": "${{expression}}$ has {{total}} connectives, so the table takes {{total}} steps.",
+        "equivalence": "Fill in both sides from the inside out, then compare their last columns row by row."
+      },
+      "examples": {
+        "bothNegated": "Both negations come first, because the conjunction uses the columns $\\neg P$ and $\\neg Q$.",
+        "conjunctionOrNegation": "$P \\wedge Q$ and $\\neg P$ come first, the disjunction comes last.",
+        "disjunctionImpliesConjunction": "Fill in both brackets first, the implication comes last.",
+        "disjunctionIffNegatedConjunction": "The column $\\neg (P \\wedge Q)$ can only be filled once the column $P \\wedge Q$ exists. The biconditional comes last.",
+        "threeLetters": "There are three letters, so the table has 8 rows. The bracket first, the implication last.",
+        "negatedImplication": "The right side is the negation of an implication, the left side is a conjunction.",
+        "deMorgan": "Left side: the negation of a conjunction. Right side: a disjunction of two negations.",
+        "implicationAsDisjunction": "An implication on the left side, a disjunction on the right side.",
+        "onlyQ": "The left side is just $Q$, its column is already there. Only the right side needs work.",
+        "notDeMorgan": "Like the pair $\\neg (P \\wedge Q)$ and $\\neg P \\vee \\neg Q$, but the right side uses $\\wedge$."
+      },
+      "hint": {
+        "layered": "click a row to see its values in the tree, or press start to fill the table step by step.",
+        "equivalence": "click a row, or press start to fill both sides and then compare them."
+      },
+      "reading": {
+        "result": "so ${{expression}}$ = {{value}} in this row.",
+        "same": "left side {{left}}, right side {{right}}: the same.",
+        "different": "left side {{left}}, right side {{right}}: different."
+      },
+      "cards": {
+        "order": "order of steps",
+        "count": "how many steps, how many rows?",
+        "lookup": "one row is enough",
+        "definition": "definition",
+        "series": "values in a row",
+        "pairs": "equivalent pairs"
+      },
+      "order": {
+        "step": "step",
+        "column": "column",
+        "uses": "uses {{sources}}",
+        "footnote": "a new column only uses columns that already exist, so the innermost part always comes first. All steps go in one table; there is no need for a separate table per part."
+      },
+      "count": {
+        "connectives": "{{total}} connectives: {{list}}. One connective, one step.",
+        "letters": "letters",
+        "rows": "rows",
+        "example": "example",
+        "footnote": "each letter can be T or F, so every new letter doubles the number of rows: $n$ letters, $2^n$ rows."
+      },
+      "lookup": {
+        "suppose": "suppose",
+        "known": "${{letter}}$: {{name}}, its value is {{value}}",
+        "sentence": "the sentence: ${{expression}}$",
+        "row": "row {{row}} is enough, from the inside out:",
+        "result": {
+          "true": "so the sentence is true.",
+          "false": "so the sentence is false."
+        },
+        "items": [
+          {
+            "sentence": "*if* it is not raining *then* it is not cloudy",
+            "names": [
+              "it is cloudy",
+              "it is raining"
+            ]
+          },
+          {
+            "sentence": "Mother buys clothes *or* father does not buy a motorbike",
+            "names": [
+              "Mother buys clothes",
+              "Father buys a motorbike"
+            ]
+          }
+        ],
+        "footnote": "when the value of every letter is known, the whole table is not needed: find the matching row, then work through its steps from the inside out."
+      },
+      "definition": {
+        "before": "Two propositions are called ",
+        "term": "equivalent",
+        "after": ", written \"$\\equiv$\", when all their truth values are the same.",
+        "reading": "$\\equiv$ reads \"is equivalent to\", $\\not\\equiv$ reads \"is not equivalent to\"."
+      },
+      "series": {
+        "row": "row",
+        "same": "same?",
+        "footnote": "like the quantifier $\\forall$: every row has to match. One differing row is enough to say not equivalent."
+      },
+      "pairs": {
+        "pair": "pair",
+        "values": "values",
+        "reading": "reads",
+        "and": "and",
+        "items": {
+          "negatedImplication": "\"$P$ but not $Q$\" means the same as \"it is not true that if $P$ then $Q$\"",
+          "deMorgan": "\"it is not true that $P$ and $Q$\" means the same as \"not $P$ or not $Q$\"",
+          "implicationAsDisjunction": "\"if $P$ then $Q$\" means the same as \"not $P$ or $Q$\"",
+          "onlyQ": "\"$Q$\" means the same as \"if $P$ or not $Q$, then $Q$\"",
+          "contrapositive": "an implication and its contrapositive: \"if $P$ then $Q$\" means the same as \"if not $Q$ then not $P$\"",
+          "notDeMorgan": "\"it is not true that $P$ and $Q$\" does not mean the same as \"not $P$ and not $Q$\""
+        },
+        "footnote": "values = the column from row 1 to row 4. The last line is not an equivalent pair: a common mistake when negating a conjunction."
+      },
+      "legend": {
+        "true": "last column true",
+        "false": "last column false",
+        "step": "step number",
+        "feeds": "columns this step uses",
+        "treeTrue": "in the tree: T in the chosen row",
+        "same": "same in this row",
+        "different": "different in this row",
+        "equivalent": "equivalent: same in every row"
+      }
+    },
+    "tautologiesAndValidArguments": {
+      "title": "Tautologies & Valid Arguments",
+      "modes": {
+        "tautology": "tautology & contradiction",
+        "argument": "valid arguments"
+      },
+      "board": "truth table of ${{expression}}$",
+      "rowHead": "row",
+      "rowLabel": "row {{row}}",
+      "stepHead": "step",
+      "treeLabel": "expression tree",
+      "suppose": "suppose",
+      "kinds": {
+        "tautology": "tautology",
+        "contradiction": "contradiction",
+        "neither": "neither"
+      },
+      "validity": {
+        "valid": "valid",
+        "invalid": "not valid"
+      },
+      "rules": {
+        "not": "flips the value",
+        "and": "is T only when both are T",
+        "or": "is F only when both are F",
+        "implies": "is F only when the left part is T and the right part is F"
+      },
+      "caption": "step {{step}}: ${{expression}}$ from {{sources}}. ${{connective}}$ {{rule}}. Result: {{values}}.",
+      "verdict": {
+        "tautology": "check the last column: all {{value}}, so ${{expression}}$ is a tautology.",
+        "contradiction": "check the last column: all {{value}}, so ${{expression}}$ is a contradiction.",
+        "neither": "check the last column: not a tautology because rows {{falseRows}} are {{falseValue}}, not a contradiction because rows {{trueRows}} are {{trueValue}}.",
+        "valid": "check the last column: all {{value}}. The implication is a tautology, so this argument is valid.",
+        "invalid": "check the last column: row {{rows}} is {{value}}. The implication is not a tautology, so this argument is not valid. In that row every premise is true but the conclusion is false."
+      },
+      "intro": {
+        "tautology": "Fill in the table step by step, then check the last column.",
+        "argument": "Join the premises with $\\wedge$, then $\\Rightarrow$ the conclusion. The argument is valid if that implication is a tautology."
+      },
+      "hint": {
+        "tautology": "click a row to see its values in the tree, or press start to fill the table and then check the last column.",
+        "argument": "click a row to see the value of each premise, or press start to fill the table and then check the last column."
+      },
+      "formulas": {
+        "implicationOrP": "The last column decides: all T, all F, or mixed.",
+        "pImpliesDisjunction": "If $P$ is true, $P \\vee Q$ must be true. Does the table agree?",
+        "rainAndNoRain": "Only one letter, so the table has 2 rows.",
+        "modusPonensAndNotP": "The left part needs $P$ true, the right part needs $P$ false.",
+        "notPImpliesConjunction": "Not every proposition is a tautology or a contradiction."
+      },
+      "rain": {
+        "letter": "$P$: it is raining today",
+        "reading": "$P \\wedge \\neg P$: \"it is raining today and it is not raining today\""
+      },
+      "roles": {
+        "single": "premise",
+        "numbered": "premise {{number}}",
+        "conclusion": "conclusion",
+        "therefore": "∴",
+        "thereforeLine": "∴ conclusion"
+      },
+      "asImplication": "written as an implication",
+      "arguments": {
+        "modusPonens": {
+          "label": "modus ponens",
+          "title": "modus ponens",
+          "letters": [
+            [
+              "the switch is on",
+              "the switch is off"
+            ],
+            [
+              "the bulb is lit",
+              "the bulb is not lit"
+            ]
+          ],
+          "premises": [
+            "if the switch is on then the bulb is lit",
+            "the switch is on"
+          ],
+          "conclusion": "the bulb is lit",
+          "intro": "Premise 2 affirms the left part of premise 1."
+        },
+        "modusTollens": {
+          "label": "modus tollens",
+          "title": "modus tollens",
+          "letters": [
+            [
+              "the switch is on",
+              "the switch is off"
+            ],
+            [
+              "the bulb is lit",
+              "the bulb is not lit"
+            ]
+          ],
+          "premises": [
+            "if the switch is on then the bulb is lit",
+            "the bulb is not lit"
+          ],
+          "conclusion": "the switch is off",
+          "intro": "Premise 2 denies the right part of premise 1."
+        },
+        "syllogism": {
+          "label": "syllogism",
+          "title": "syllogism",
+          "letters": [
+            [
+              "it is a holiday",
+              "it is not a holiday"
+            ],
+            [
+              "I go to the beach",
+              "I do not go to the beach"
+            ],
+            [
+              "I swim",
+              "I do not swim"
+            ]
+          ],
+          "premises": [
+            "if it is a holiday then I will go to the beach",
+            "if I go to the beach then I will swim"
+          ],
+          "conclusion": "if it is a holiday then I will swim",
+          "intro": "The two implications meet at $Q$. There are three letters, so the table has 8 rows."
+        },
+        "contrapositive": {
+          "label": "contrapositive",
+          "title": "contrapositive",
+          "letters": [
+            [
+              "I am sick",
+              "I am not sick"
+            ],
+            [
+              "I go to the doctor",
+              "I do not go to the doctor"
+            ]
+          ],
+          "premises": [
+            "if I am sick then I go to the doctor"
+          ],
+          "conclusion": "if I do not go to the doctor then I am not sick",
+          "intro": "Only one premise. The conclusion is its contrapositive."
+        },
+        "meaningfulNotValid": {
+          "label": "sensible, not valid",
+          "title": "the left turn argument",
+          "letters": [
+            [
+              "turning left",
+              "not turning left"
+            ],
+            [
+              "may go on",
+              "may not go on"
+            ]
+          ],
+          "premises": [
+            "if turning left then you may go on",
+            "not turning left"
+          ],
+          "conclusion": "you may not go on",
+          "intro": "Looks like modus tollens, but premise 2 denies the left part of premise 1, not the right part."
+        }
+      },
+      "samples": {
+        "modusPonens": [
+          {
+            "tag": "(a)",
+            "lines": [
+              "if wages go up then prices go up too",
+              "wages go up"
+            ],
+            "conclusion": "prices go up too"
+          },
+          {
+            "tag": "(b)",
+            "lines": [
+              "if $3 < 4$ then $9 < 16$",
+              "$3 < 4$"
+            ],
+            "conclusion": "$9 < 16$"
+          }
+        ],
+        "modusTollens": [
+          {
+            "tag": "(a)",
+            "lines": [
+              "if they study hard then they pass the year",
+              "they do not pass the year"
+            ],
+            "conclusion": "they do not study hard"
+          },
+          {
+            "tag": "(b)",
+            "lines": [
+              "if $2x = 6$ then $x = 3$",
+              "$x \\neq 3$"
+            ],
+            "conclusion": "$2x \\neq 6$"
+          }
+        ],
+        "syllogism": [
+          {
+            "tag": "(c)",
+            "lines": [
+              "if they are sick then they go to the doctor",
+              "if they go to the doctor then they get medicine"
+            ],
+            "conclusion": "if they are sick then they get medicine"
+          },
+          {
+            "tag": "(d)",
+            "lines": [
+              "if $2$ is an integer then $2^2$ is an integer",
+              "if $2^2$ is an integer then $2^4$ is an integer"
+            ],
+            "conclusion": "if $2$ is an integer then $2^4$ is an integer"
+          }
+        ],
+        "contrapositive": [
+          {
+            "tag": "(a)",
+            "lines": [
+              "if it rains then Jakarta floods"
+            ],
+            "conclusion": "if Jakarta does not flood then it does not rain"
+          },
+          {
+            "tag": "(c)",
+            "lines": [
+              "if leaders are not corrupt then the people prosper"
+            ],
+            "conclusion": "if the people do not prosper then leaders are corrupt"
+          }
+        ]
+      },
+      "reading": {
+        "result": "so ${{expression}}$ = {{value}} in this row.",
+        "situation": "the situation: {{situation}}.",
+        "role": "{{role}}: ${{expression}}$ = {{value}}",
+        "untested": "a premise is false, so this row does not test the argument. The implication is {{value}} on its own.",
+        "tested": "every premise is true and the conclusion is true.",
+        "counter": "every premise is true but the conclusion is false: a counterexample. This one row is enough to say the argument is not valid."
+      },
+      "cards": {
+        "definition": "definition",
+        "kinds": "all T, all F, or mixed?",
+        "finals": "last columns",
+        "argument": "argument",
+        "samples": "{{name}} examples",
+        "meaning": "valid or sensible?",
+        "critical": "rows with true premises",
+        "summary": "four valid arguments"
+      },
+      "definition": {
+        "tautology": "A proposition is a **tautology** when it is always true, whatever the values of the propositions it is built from.",
+        "contradiction": "A compound proposition is a **contradiction** when it is always false, whatever the values of the propositions it is built from.",
+        "neither": "${{expression}}$ fits neither."
+      },
+      "kindTable": {
+        "column": "last column",
+        "name": "called",
+        "tautology": "all T",
+        "contradiction": "all F",
+        "neither": "some T, some F",
+        "footnote": "like the quantifier $\\forall$: a tautology is T in every row. One F row is enough to say it is not a tautology, one T row is enough to say it is not a contradiction."
+      },
+      "finals": {
+        "proposition": "proposition",
+        "values": "values",
+        "name": "called",
+        "footnote": "values = the last column from the first row to the last. Valid arguments are checked the same way: the implication must be a tautology."
+      },
+      "argument": {
+        "terms": "The propositions given as reasons are the **premises**, the proposition drawn from them is the **conclusion**. Drawing a conclusion from premises is an **argument**.",
+        "valid": "An argument is **valid** when its premises are true and its conclusion is true as well.",
+        "footnote": "join the premises with $\\wedge$, then $\\Rightarrow$ the conclusion. If that implication is a tautology, the argument is valid."
+      },
+      "meaning": {
+        "items": [
+          {
+            "tag": "valid, but not sensible",
+            "lines": [
+              "if Ani is pretty then Amir is handsome",
+              "Amir is not handsome"
+            ],
+            "conclusion": "Ani is not pretty",
+            "remark": "it has the form of modus tollens, so it is valid. But Ani's looks have nothing to do with Amir's."
+          },
+          {
+            "tag": "sensible, but not valid",
+            "lines": [
+              "if turning left then you may go on",
+              "not turning left"
+            ],
+            "conclusion": "you may not go on",
+            "remark": "it sounds reasonable at a crossing with traffic lights, but the implication is not a tautology."
+          }
+        ],
+        "footnote": "logic checks whether an argument is valid, not whether it makes sense."
+      },
+      "critical": {
+        "row": "row",
+        "meaning": "meaning",
+        "counter": "all premises true, conclusion false: a counterexample",
+        "tested": "all premises true, conclusion true",
+        "untested": "a premise is F, so the implication is T on its own",
+        "footnote": "an implication is F only when its left part is T and its right part is F, that is, when every premise is true but the conclusion is false. So only the rows with all premises true need checking: if the conclusion is always T there, the argument is valid."
+      },
+      "summary": {
+        "name": "name",
+        "implication": "implication",
+        "argument": "argument",
+        "invalid": "not valid",
+        "footnote": "the last row is not a valid argument. It looks like modus tollens, but it denies the left part instead of the right part."
+      },
+      "legend": {
+        "true": "last column true",
+        "false": "last column false",
+        "step": "step number",
+        "feeds": "columns this step uses",
+        "ringTautology": "rows that stop it being a tautology",
+        "ringArgument": "counterexample",
+        "treeTrue": "in the tree: T in the chosen row",
+        "role": "role of the column in the argument",
+        "therefore": "conclusion column"
       }
     }
   }

@@ -303,7 +303,7 @@ export function SetOperationPropertiesPage() {
         <>
           <MathTex
             tex={`${expressionTex(law.left)} = ${expressionTex(law.right)}`}
-            className="block overflow-x-auto text-[22px]"
+            className="block overflow-x-auto overflow-y-hidden text-[22px]"
           />
           <div className="pen-border relative bg-paper px-2 pt-2.5 pb-1.5">
             <div className="grid items-center gap-1.5 sm:grid-cols-[1fr_auto_1fr]">
@@ -353,7 +353,7 @@ export function SetOperationPropertiesPage() {
               </div>
             ))}
           </div>
-          <div className="pen-border relative overflow-x-auto bg-paper px-4.5 py-3">
+          <div className="pen-border relative overflow-x-auto overflow-y-hidden bg-paper px-4.5 py-3">
             <h2 className="font-hand text-2xl font-bold">{t('cards.regions')}</h2>
             <table className="w-full border-collapse text-[15px]">
               <thead>

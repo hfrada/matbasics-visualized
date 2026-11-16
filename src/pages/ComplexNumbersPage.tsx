@@ -332,7 +332,7 @@ export function ComplexNumbersPage() {
         <div className={cardClass}>
           <h2 className={cardTitleClass}>{t('cards.twoForms')}</h2>
           {twoFormsTex.map((tex) => (
-            <MathTex key={tex} tex={tex} className="relative block overflow-x-auto py-1.5 text-[17px]" />
+            <MathTex key={tex} tex={tex} className="relative block overflow-x-auto overflow-y-hidden py-1.5 text-[17px]" />
           ))}
           <p className="text-[15px] text-muted">
             <MathText text={t('twoFormsFootnote')} />
@@ -348,7 +348,7 @@ export function ComplexNumbersPage() {
         </div>
         <div className={`${cardClass} sm:col-span-2`}>
           <h2 className={cardTitleClass}>{t('cards.readPoints')}</h2>
-          <div className="relative overflow-x-auto">
+          <div className="relative overflow-x-auto overflow-y-hidden">
             <table className="w-full border-collapse text-[15px]">
               <thead>
                 <tr className="font-hand text-[21px]">
@@ -402,7 +402,7 @@ export function ComplexNumbersPage() {
           <p className="mt-2 text-sm text-muted">{t('cards.rule')}</p>
           <MathTex
             tex={`\\displaystyle ${example.rule ?? ''}`}
-            className="relative block overflow-x-auto py-1 text-[15px]"
+            className="relative block overflow-x-auto overflow-y-hidden py-1 text-[15px]"
           />
         </div>
         <div className={cardClass}>

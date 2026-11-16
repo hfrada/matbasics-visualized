@@ -191,15 +191,15 @@ export function PowerSetPage() {
               </p>
               <MathTex
                 tex={`${example.name}=\\{${example.members.join(',')}\\}`}
-                className="block overflow-x-auto py-1 text-[17px] text-muted"
+                className="block overflow-x-auto overflow-y-hidden py-1 text-[17px] text-muted"
               />
             </div>
             <div className="pen-border relative min-w-0 bg-paper px-4.5 py-3">
               <h2 className="font-hand text-2xl font-bold">{t('cards.count')}</h2>
-              <MathTex tex={countTex} className="block overflow-x-auto py-1 text-[17px]" />
+              <MathTex tex={countTex} className="block overflow-x-auto overflow-y-hidden py-1 text-[17px]" />
               <MathTex
                 tex={`n=|${example.name}|=${n}`}
-                className="block overflow-x-auto py-1 text-[17px] text-muted"
+                className="block overflow-x-auto overflow-y-hidden py-1 text-[17px] text-muted"
               />
             </div>
           </div>

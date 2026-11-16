@@ -1,8 +1,9 @@
+import type { ReactNode } from 'react'
 import { TabButton } from '../atoms/TabButton'
 
 type TabOption<T extends string> = {
   value: T
-  label: string
+  label: ReactNode
 }
 
 type TabGroupProps<T extends string> = {

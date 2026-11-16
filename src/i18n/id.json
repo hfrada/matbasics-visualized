@@ -23,6 +23,10 @@
     "seconds": "{{value, number}} dtk",
     "idle": "tekan mulai untuk melihat langkahnya satu per satu."
   },
+  "truthValues": {
+    "true": "B",
+    "false": "S"
+  },
   "topics": {
     "writingSets": {
       "title": "Menulis Himpunan",
@@ -619,6 +623,1006 @@
         "mirror": "cermin terhadap sumbu real",
         "guide": "jarak ke sumbu",
         "result": "hasil"
+      }
+    },
+    "propositionsAndQuantifiers": {
+      "title": "Proposisi & Kuantor",
+      "tabs": {
+        "proposition": "proposisi?",
+        "plusOne": "x + 1 prima",
+        "plusThree": "x + 3 ∈ ℕ",
+        "minusThree": "x − 3 ∈ ℕ",
+        "equation": "2x − 1 = 0",
+        "primes": "x + y prima",
+        "composites": "a + b prima"
+      },
+      "controls": {
+        "quantifier": "kuantor"
+      },
+      "quantifiers": {
+        "all": "∀ untuk setiap",
+        "exists": "∃ terdapat"
+      },
+      "proposition": "proposisi",
+      "notProposition": "bukan proposisi",
+      "board": {
+        "sentences": "periksa kalimatnya",
+        "examples": "periksa contohnya"
+      },
+      "flow": {
+        "start": "kalimat",
+        "declarative": "kalimat deklaratif?",
+        "definite": "nilainya pasti B atau S?",
+        "yes": "ya",
+        "no": "tidak",
+        "aria": "alur pemeriksaan proposisi"
+      },
+      "outcomes": {
+        "notDeclarative": "bukan kalimat deklaratif",
+        "notDefinite": "nilainya tidak pasti",
+        "true": "bernilai B",
+        "false": "bernilai S"
+      },
+      "sentences": {
+        "a": {
+          "text": "Bohlam itu agak hidup.",
+          "reason": "kalimat deklaratif, tetapi \"agak hidup\" bukan benar dan bukan salah: bohlam hanya hidup atau tidak hidup. Tidak punya nilai kebenaran, jadi bukan proposisi."
+        },
+        "b": {
+          "text": "$3 - 2 = 4$.",
+          "reason": "kalimat deklaratif yang salah, karena $3 - 2 = 1$. Proposisi bernilai S, dilambangkan $Q$."
+        },
+        "c": {
+          "text": "$3 + 2 = 5$.",
+          "reason": "kalimat deklaratif yang benar. Proposisi bernilai B, dilambangkan $R$."
+        },
+        "d": {
+          "text": "Apakah Anda telah mengerjakan tes formatif 1?",
+          "reason": "kalimat tanya, bukan kalimat deklaratif. Jadi bukan proposisi."
+        },
+        "e": {
+          "text": "Sebaiknya Anda rajin belajar!",
+          "reason": "kalimat saran, bukan kalimat deklaratif. Jadi bukan proposisi."
+        },
+        "f": {
+          "text": "Nilai $x$ yang memenuhi $x^2 - 1 = 0$ adalah $x = 1$ dan $x = -1$.",
+          "reason": "kalimat deklaratif yang benar: $1^2 - 1 = 0$ dan $(-1)^2 - 1 = 0$. Proposisi bernilai B, dilambangkan $P$."
+        },
+        "g": {
+          "text": "$x + 1$ adalah bilangan prima, $x \\in \\mathbb{N}$.",
+          "reason": "kalimat deklaratif, tetapi nilainya bergantung pada $x$: $x = 1$ memberi $2$ (prima), $x = 3$ memberi $4$ (bukan prima). Ini kalimat terbuka, jadi bukan proposisi. Kuantor mengubahnya menjadi proposisi: lihat tab x + 1 prima."
+        }
+      },
+      "captions": {
+        "notDeclarative": "({{letter}}) bukan kalimat deklaratif: bukan proposisi.",
+        "notDefinite": "({{letter}}) deklaratif, tetapi nilainya tidak pasti: bukan proposisi.",
+        "true": "({{letter}}) deklaratif, nilainya pasti B: proposisi bernilai B, dilambangkan ${{symbol}}$.",
+        "false": "({{letter}}) deklaratif, nilainya pasti S: proposisi bernilai S, dilambangkan ${{symbol}}$."
+      },
+      "cards": {
+        "results": "hasil pemeriksaan",
+        "definition": "definisi",
+        "symbols": "lambang",
+        "pair": "satu kalimat, dua kuantor",
+        "reading": "cara membaca",
+        "enough": "kapan satu contoh cukup?"
+      },
+      "table": {
+        "sentence": "kalimat",
+        "declarative": "deklaratif?",
+        "definite": "nilai pasti?",
+        "result": "hasil",
+        "symbol": "lambang",
+        "yes": "ya",
+        "no": "tidak",
+        "proposition": "proposisi, {{value}}"
+      },
+      "definition": {
+        "term": "proposisi",
+        "rest": "adalah kalimat deklaratif yang memiliki nilai kebenaran salah satu di antara benar atau salah, tidak dapat yang lain."
+      },
+      "symbolsText": {
+        "names": "proposisi diberi huruf besar $P$, $Q$, $R$, ...",
+        "values": "nilai kebenaran: B untuk benar, S untuk salah."
+      },
+      "open": {
+        "plusOne": "$x + 1$ adalah bilangan prima, $x \\in \\mathbb{N}$",
+        "plusThree": "$x + 3$ adalah bilangan asli, $x \\in \\mathbb{N}$",
+        "minusThree": "$x - 3$ adalah bilangan asli, $x \\in \\mathbb{N}$",
+        "equation": "$2x - 1 = 0$, $x \\in \\mathbb{R}$",
+        "primes": "$x + y$ adalah bilangan prima, $x, y \\in \\mathbb{P}$",
+        "composites": "$a + b$ adalah bilangan prima, $a, b \\in \\mathbb{K}$"
+      },
+      "claim": "$b({{variables}})$: {{open}}",
+      "verdict": "bernilai {{value}}",
+      "generalLine": "alasan umum: {{reason}}",
+      "general": {
+        "plusThree": {
+          "reason": "berapa pun $x \\in \\mathbb{N}$, $x \\ge 1$, jadi $x + 3 \\ge 4$: selalu bilangan asli.",
+          "step": "semua contoh di sini benar, tetapi masih ada tak hingga banyak bilangan lain di $\\mathbb{N}$. Perlu alasan umum: {{reason}}"
+        }
+      },
+      "checks": {
+        "prime": "{{assign}}: ${{equation}}$, prima.",
+        "notPrime": "{{assign}}: ${{equation}}$, bukan prima.",
+        "membership": "{{assign}}: ${{equation}}$.",
+        "solves": "{{assign}}: ${{equation}}$, persamaannya terpenuhi.",
+        "notSolves": "{{assign}}: ${{equation}}$, dan ${{value}} \\neq 0$."
+      },
+      "decide": {
+        "counter": "Satu contoh penyangkal cukup: ${{prop}}$ bernilai S.",
+        "example": "Satu contoh cukup: ${{prop}}$ bernilai B."
+      },
+      "verdicts": {
+        "general": "${{prop}}$ bernilai B. Contoh saja tidak cukup untuk $\\forall$; alasannya: {{reason}}",
+        "counter": "${{prop}}$ bernilai S. Satu contoh penyangkal sudah cukup: {{decider}}.",
+        "example": "${{prop}}$ bernilai B. Satu contoh sudah cukup: {{decider}}."
+      },
+      "roles": {
+        "firstCounter": "ini contoh penyangkal pertama.",
+        "firstExample": "ini contoh yang membuat pernyataannya benar.",
+        "alsoCounter": "ini juga contoh penyangkal.",
+        "notEnoughAll": "benar untuk yang ini, tetapi satu contoh tidak cukup untuk $\\forall$.",
+        "alsoExample": "ini juga contoh yang cocok.",
+        "falseButExists": "salah untuk yang ini, tetapi untuk $\\exists$ cukup ada satu yang benar."
+      },
+      "pair": {
+        "general": "alasan umum",
+        "counter": "penyangkal: {{decider}}",
+        "example": "contoh: {{decider}}",
+        "footnote": "$b({{variables}})$ sama, kuantornya beda, nilai kebenarannya bisa beda."
+      },
+      "reading": {
+        "all": "$\\forall x,\\ b(x)$: untuk setiap $x$, berlaku $b(x)$.",
+        "exists": "$\\exists x,\\ b(x)$: terdapat $x$ (ada sekurangnya sebuah $x$), berlaku $b(x)$."
+      },
+      "enough": {
+        "toBeTrue": "supaya bernilai B",
+        "toBeFalse": "supaya bernilai S",
+        "allTrue": "$b(x)$ harus benar untuk setiap $x$: perlu alasan umum",
+        "allFalse": "cukup satu contoh penyangkal",
+        "existsTrue": "cukup satu contoh",
+        "existsFalse": "tidak ada satu pun $x$: perlu alasan umum"
+      },
+      "intro": {
+        "proposition": "proposisi = kalimat deklaratif yang pasti benar atau pasti salah. Setiap kalimat melewati dua pertanyaan.",
+        "open": "kalimat terbuka belum punya nilai kebenaran. Ditambah kuantor, ia menjadi proposisi."
+      },
+      "hint": {
+        "proposition": "klik kalimat, atau putar untuk memeriksa satu per satu.",
+        "quantifier": "klik sel, atau putar untuk memeriksa contoh satu per satu."
+      },
+      "legend": {
+        "true": "benar",
+        "false": "salah",
+        "names": "lambang proposisi",
+        "all": "untuk setiap",
+        "exists": "terdapat",
+        "primes": "prima",
+        "composites": "komposit"
+      }
+    },
+    "negationConjunctionDisjunction": {
+      "title": "Negasi, Konjungsi & Disjungsi",
+      "board": "tabel kebenaran ${{expression}}$",
+      "suppose": "misalkan",
+      "rowHead": "baris",
+      "rowLabel": "baris {{row}}",
+      "hint": "klik baris, atau putar untuk mengisi tabel baris demi baris.",
+      "connectives": {
+        "negation": {
+          "tab": "¬ negasi",
+          "context": "",
+          "suppose": ["$P$: Hari ini hujan.", "$\\neg P$: Hari ini *tidak* hujan."],
+          "meaningHead": "keadaannya",
+          "meanings": ["hari ini hujan", "hari ini tidak hujan"],
+          "who": ["", ""],
+          "readings": [
+            "$P$ = B: hari ini memang hujan, jadi \"hari ini tidak hujan\" salah. Nilainya dibalik: $\\neg P$ = S.",
+            "$P$ = S: hari ini tidak hujan, jadi \"hari ini tidak hujan\" benar. Nilainya dibalik: $\\neg P$ = B."
+          ],
+          "definition": "Misalkan $P$ suatu proposisi, negasi $P$ adalah tidak $P$ dan diberi notasi $\\neg P$. Negasi $P$ bernilai salah jika $P$ bernilai benar dan negasi $P$ bernilai benar jika $P$ bernilai salah.",
+          "reading": ["$\\neg P$ dibaca \"tidak $P$\" atau \"negasi $P$\".", "buku lain menulis $\\sim P$."],
+          "intro": "negasi membalik nilai kebenaran: B menjadi S, S menjadi B."
+        },
+        "conjunction": {
+          "tab": "∧ konjungsi",
+          "context": "syarat diterima menjadi anggota TNI:",
+          "suppose": ["$P$: lulus SLA", "$Q$: berbadan sehat", "$P \\wedge Q$: berbadan sehat *dan* lulus SLA"],
+          "meaningHead": "anggota TNI?",
+          "meanings": ["diterima", "tidak diterima", "tidak diterima", "tidak diterima"],
+          "who": ["Amir", "", "Ali", ""],
+          "readings": [
+            "$P$ = B, $Q$ = B: lulus SLA dan berbadan sehat, seperti Amir. Kedua syarat dipenuhi, jadi $P \\wedge Q$ = B: diterima.",
+            "$P$ = B, $Q$ = S: lulus SLA tetapi tidak berbadan sehat. Satu syarat tidak dipenuhi, jadi $P \\wedge Q$ = S: tidak diterima.",
+            "$P$ = S, $Q$ = B: berbadan sehat tetapi tidak lulus SLA, seperti Ali. Satu syarat tidak dipenuhi, jadi $P \\wedge Q$ = S: tidak diterima.",
+            "$P$ = S, $Q$ = S: tidak lulus SLA dan tidak berbadan sehat. Kedua syarat tidak dipenuhi, jadi $P \\wedge Q$ = S: tidak diterima."
+          ],
+          "definition": "Misalkan $P$ dan $Q$ dua proposisi. Konjungsi $P$ dan $Q$ diberi notasi $P \\wedge Q$ bernilai benar jika kedua-duanya bernilai benar, jika tidak bernilai salah.",
+          "reading": ["$P \\wedge Q$ dibaca \"$P$ dan $Q$\".", "\"tetapi\" juga konjungsi: \"berbadan sehat tetapi tidak lulus SLA\"."],
+          "intro": "konjungsi bernilai B hanya jika kedua-duanya B."
+        },
+        "disjunction": {
+          "tab": "∨ disjungsi",
+          "context": "",
+          "suppose": [
+            "$P$: Amir pergi ke Bandung",
+            "$Q$: Amad pergi ke Bandung",
+            "$P \\vee Q$: Amir pergi ke Bandung *atau* Amad pergi ke Bandung"
+          ],
+          "meaningHead": "keadaannya",
+          "meanings": ["keduanya pergi", "hanya Amir yang pergi", "hanya Amad yang pergi", "tidak ada yang pergi"],
+          "who": ["", "", "", ""],
+          "readings": [
+            "$P$ = B, $Q$ = B: Amir dan Amad sama-sama pergi ke Bandung. \"Atau\" di sini termasuk dua-duanya, jadi $P \\vee Q$ = B.",
+            "$P$ = B, $Q$ = S: hanya Amir yang pergi. Satu yang benar sudah cukup, jadi $P \\vee Q$ = B.",
+            "$P$ = S, $Q$ = B: hanya Amad yang pergi. Satu yang benar sudah cukup, jadi $P \\vee Q$ = B.",
+            "$P$ = S, $Q$ = S: tidak ada yang pergi ke Bandung. Kedua-duanya salah, jadi $P \\vee Q$ = S."
+          ],
+          "definition": "Misalkan $P$ dan $Q$ dua proposisi. Disjungsi $P$ dan $Q$ diberi notasi $P \\vee Q$ bernilai salah jika kedua-duanya bernilai salah, jika tidak bernilai benar.",
+          "reading": ["$P \\vee Q$ dibaca \"$P$ atau $Q$\".", "\"atau\" di sini termasuk dua-duanya: $P \\vee Q$ tetap B jika $P$ dan $Q$ sama-sama B."],
+          "intro": "disjungsi bernilai S hanya jika kedua-duanya S."
+        }
+      },
+      "captions": {
+        "negation": "baris {{row}}: {{assign}}, dibalik menjadi $\\neg P$ = {{result}}.",
+        "compound": "baris {{row}}: {{assign}}. {{reason}}, jadi ${{expression}}$ = {{result}}."
+      },
+      "reasons": {
+        "bothTrue": "Kedua-duanya B",
+        "bothFalse": "Kedua-duanya S",
+        "oneTrue": "Ada yang B",
+        "oneFalse": "Ada yang S"
+      },
+      "cards": {
+        "definition": "definisi",
+        "reading": "cara membaca",
+        "examples": "contoh negasi",
+        "sideBySide": "$\\wedge$ dan $\\vee$ berdampingan",
+        "enough": "kapan satu nilai cukup?"
+      },
+      "sideBySide": {
+        "footnote": "$\\wedge$ hanya B di baris 1, $\\vee$ hanya S di baris 4."
+      },
+      "enough": {
+        "toBeTrue": "supaya bernilai B",
+        "toBeFalse": "supaya bernilai S",
+        "conjunction": {
+          "true": "kedua-duanya harus B",
+          "false": "cukup satu S"
+        },
+        "disjunction": {
+          "true": "cukup satu B",
+          "false": "kedua-duanya harus S"
+        },
+        "footnote": "mirip kuantor: $\\wedge$ seperti $\\forall$ (semua harus B), $\\vee$ seperti $\\exists$ (cukup satu B)."
+      },
+      "examples": [
+        { "text": "Hari ini hujan", "negation": "Hari ini tidak hujan", "remark": "" },
+        {
+          "text": "Amir tidak lulus ujian",
+          "negation": "Amir tidak tidak lulus ujian",
+          "remark": "kalimatnya sudah memakai \"tidak\"; negasinya berarti Amir lulus ujian."
+        },
+        { "text": "$3 + 5 = 8$", "negation": "$3 + 5 \\neq 8$", "remark": "$R$ memang benar, jadi $\\neg R$ salah: baris 1." }
+      ],
+      "legend": {
+        "true": "benar",
+        "false": "salah",
+        "decider": "penentu hasilnya",
+        "not": "tidak",
+        "and": "dan",
+        "or": "atau"
+      }
+    },
+    "implicationBiconditional": {
+      "title": "Implikasi & Biimplikasi",
+      "board": "tabel kebenaran ${{expression}}$",
+      "suppose": "misalkan",
+      "rowHead": "baris",
+      "rowLabel": "baris {{row}}",
+      "hint": "klik baris, atau putar untuk mengisi tabel baris demi baris.",
+      "connectives": {
+        "implication": {
+          "tab": "⇒ implikasi",
+          "context": "Bapak Amir berjanji:",
+          "suppose": [
+            "$P$: Amir lulus ujian",
+            "$Q$: Bapak Amir pesta",
+            "$P \\Rightarrow Q$: *jika* Amir lulus ujian *maka* Bapak Amir pesta"
+          ],
+          "meaningHead": "janji Bapak Amir",
+          "meanings": ["ditepati", "tidak ditepati", "tidak dilanggar", "tidak dilanggar"],
+          "readings": [
+            "$P$ = B, $Q$ = B: Amir lulus ujian dan Bapak Amir pesta. Janjinya ditepati, jadi $P \\Rightarrow Q$ = B.",
+            "$P$ = B, $Q$ = S: Amir lulus ujian tetapi Bapak Amir tidak pesta. Janjinya tidak ditepati, jadi $P \\Rightarrow Q$ = S. Hanya baris ini yang S.",
+            "$P$ = S, $Q$ = B: Amir tidak lulus ujian tetapi Bapak Amir tetap pesta. Janjinya hanya untuk kalau Amir lulus, jadi tidak dilanggar: $P \\Rightarrow Q$ = B.",
+            "$P$ = S, $Q$ = S: Amir tidak lulus ujian dan Bapak Amir tidak pesta. Janjinya tidak dilanggar, jadi $P \\Rightarrow Q$ = B."
+          ],
+          "definition": "Misalkan $P$ dan $Q$ dua proposisi. Implikasi $P \\Rightarrow Q$ bernilai salah jika $P$ bernilai benar dan $Q$ bernilai salah, jika tidak bernilai benar.",
+          "reading": [
+            "$P \\Rightarrow Q$ dibaca \"jika $P$ maka $Q$\".",
+            "buku lain menulis $P \\to Q$.",
+            "urutannya penting: $P \\Rightarrow Q$ dan $Q \\Rightarrow P$ berbeda di baris 2 dan 3."
+          ],
+          "intro": "implikasi bernilai S hanya jika $P$ = B dan $Q$ = S, selain itu B."
+        },
+        "biconditional": {
+          "tab": "⇔ biimplikasi",
+          "context": "",
+          "suppose": [
+            "$P$: Saya masuk kerja",
+            "$Q$: Saya sehat",
+            "$P \\Leftrightarrow Q$: Saya masuk kerja *jika dan hanya jika* saya sehat"
+          ],
+          "meaningHead": "keadaannya",
+          "meanings": [
+            "masuk kerja dan sehat",
+            "masuk kerja padahal tidak sehat",
+            "sehat tetapi tidak masuk kerja",
+            "tidak sehat dan tidak masuk kerja"
+          ],
+          "readings": [
+            "$P$ = B, $Q$ = B: saya masuk kerja dan saya sehat. Nilainya sama, jadi $P \\Leftrightarrow Q$ = B.",
+            "$P$ = B, $Q$ = S: saya masuk kerja padahal tidak sehat. Nilainya berbeda, jadi $P \\Leftrightarrow Q$ = S.",
+            "$P$ = S, $Q$ = B: saya sehat tetapi tidak masuk kerja. Nilainya berbeda, jadi $P \\Leftrightarrow Q$ = S.",
+            "$P$ = S, $Q$ = S: saya tidak sehat dan tidak masuk kerja. Nilainya sama, jadi $P \\Leftrightarrow Q$ = B."
+          ],
+          "definition": "Misalkan $P$ dan $Q$ dua proposisi. Biimplikasi $P$ dan $Q$ diberi notasi $P \\Leftrightarrow Q$ bernilai benar jika kedua-duanya bernilai benar atau kedua-duanya bernilai salah, jika tidak bernilai salah.",
+          "reading": [
+            "$P \\Leftrightarrow Q$ dibaca \"$P$ jika dan hanya jika $Q$\".",
+            "buku lain menulis $P \\leftrightarrow Q$.",
+            "isinya dua implikasi sekaligus: jika $P$ maka $Q$, dan jika $Q$ maka $P$."
+          ],
+          "intro": "biimplikasi bernilai B jika $P$ dan $Q$ sama-sama B atau sama-sama S."
+        }
+      },
+      "caption": "baris {{row}}: {{assign}}. {{reason}}, jadi ${{expression}}$ = {{result}}.",
+      "reasons": {
+        "broken": "$P$ = B tetapi $Q$ = S",
+        "premiseFalseConclusionTrue": "$P$ = S dan $Q$ = B",
+        "premiseFalse": "$P$ = S",
+        "conclusionTrue": "$Q$ = B",
+        "same": "Nilainya sama",
+        "different": "Nilainya berbeda"
+      },
+      "cards": {
+        "definition": "definisi",
+        "reading": "cara membaca",
+        "directions": "satu arah, dua arah",
+        "when": "kapan B, kapan S?",
+        "untested": "mengapa baris 3 dan 4 B?",
+        "examples": "contoh biimplikasi"
+      },
+      "directions": {
+        "footnote": "$P \\Leftrightarrow Q$ = B tepat di baris yang kedua arahnya B: baris 1 dan 4."
+      },
+      "when": {
+        "toBeTrue": "supaya bernilai B",
+        "toBeFalse": "supaya bernilai S",
+        "implication": {
+          "true": "cukup $P$ = S, atau cukup $Q$ = B",
+          "false": "$P$ harus B dan $Q$ harus S"
+        },
+        "biconditional": {
+          "true": "$P$ dan $Q$ sama",
+          "false": "$P$ dan $Q$ berbeda"
+        },
+        "footnote": "$P \\Rightarrow Q$ hanya S di baris 2, $P \\Leftrightarrow Q$ S di baris 2 dan 3."
+      },
+      "untested": {
+        "body": "Janji Bapak Amir hanya berbicara tentang keadaan Amir lulus ujian (baris 1 dan 2). Kalau Amir tidak lulus (baris 3 dan 4), janji itu tidak mengatur apa-apa: Bapak Amir pesta atau tidak, janjinya tidak dilanggar.",
+        "footnote": "jadi implikasi hanya S kalau syaratnya terjadi tetapi janjinya tidak ditepati: $P$ = B dan $Q$ = S."
+      },
+      "examples": {
+        "universe": "a bilangan asli.",
+        "items": [
+          {
+            "text": "a bilangan genap jika dan hanya jika a dapat dibagi 2",
+            "remark": "dua arahnya benar: kalau a genap, a dapat dibagi 2; kalau a dapat dibagi 2, a genap."
+          },
+          {
+            "text": "a bilangan genap jika dan hanya jika a tidak dapat dibagi 2",
+            "remark": "kalau a genap, seharusnya a dapat dibagi 2."
+          },
+          {
+            "text": "a tidak genap jika dan hanya jika a dapat dibagi 2",
+            "remark": "kalau a dapat dibagi 2, seharusnya a genap."
+          },
+          {
+            "text": "a tidak genap jika dan hanya jika a tidak dapat dibagi 2",
+            "remark": "dua arahnya benar: kalau a tidak genap, a tidak dapat dibagi 2, dan sebaliknya."
+          }
+        ]
+      },
+      "legend": {
+        "true": "benar",
+        "false": "salah",
+        "decider": "penentu hasilnya",
+        "implication": "jika … maka",
+        "biconditional": "jika dan hanya jika"
+      }
+    },
+    "converseInverseContrapositive": {
+      "title": "Konvers, Invers & Kontraposisi",
+      "board": "tabel kebenaran ${{expression}}$",
+      "suppose": "misalkan",
+      "supposeLines": [
+        "$P$: saya sakit",
+        "$Q$: saya pergi ke dokter",
+        "$P \\Rightarrow Q$: *jika* saya sakit *maka* saya pergi ke dokter"
+      ],
+      "rowHead": "baris",
+      "rowLabel": "baris {{row}}",
+      "sameHead": "sama?",
+      "hint": "klik baris, atau putar untuk mengisi tabel baris demi baris lalu membandingkannya dengan $P \\Rightarrow Q$.",
+      "names": {
+        "implication": "implikasi",
+        "converse": "konvers",
+        "inverse": "invers",
+        "contrapositive": "kontraposisi"
+      },
+      "situations": [
+        "saya sakit dan pergi ke dokter",
+        "saya sakit tetapi tidak pergi ke dokter",
+        "saya tidak sakit tetapi pergi ke dokter",
+        "saya tidak sakit dan tidak pergi ke dokter"
+      ],
+      "forms": {
+        "converse": {
+          "sentence": "$Q \\Rightarrow P$: *jika* saya pergi ke dokter *maka* saya sakit",
+          "intro": "konvers menukar letak $P$ dan $Q$: dari $P \\Rightarrow Q$ menjadi $Q \\Rightarrow P$.",
+          "verdict": "$Q \\Rightarrow P$ dan $P \\Rightarrow Q$ berbeda di baris 2 dan 3, jadi konvers tidak selalu bernilai sama dengan implikasinya.",
+          "reading": [
+            "$Q \\Rightarrow P$ dibaca \"jika $Q$ maka $P$\".",
+            "cara membentuknya: tukar letak $P$ dan $Q$."
+          ]
+        },
+        "inverse": {
+          "sentence": "$\\neg P \\Rightarrow \\neg Q$: *jika* saya tidak sakit *maka* saya tidak pergi ke dokter",
+          "intro": "invers memberi negasi pada keduanya, urutannya tetap: dari $P \\Rightarrow Q$ menjadi $\\neg P \\Rightarrow \\neg Q$.",
+          "verdict": "$\\neg P \\Rightarrow \\neg Q$ dan $P \\Rightarrow Q$ berbeda di baris 2 dan 3, jadi invers tidak selalu bernilai sama dengan implikasinya.",
+          "reading": [
+            "$\\neg P \\Rightarrow \\neg Q$ dibaca \"jika tidak $P$ maka tidak $Q$\".",
+            "cara membentuknya: beri negasi pada $P$ dan $Q$, letaknya tetap."
+          ]
+        },
+        "contrapositive": {
+          "sentence": "$\\neg Q \\Rightarrow \\neg P$: *jika* saya tidak pergi ke dokter *maka* saya tidak sakit",
+          "intro": "kontraposisi menukar letak dan memberi negasi pada keduanya: dari $P \\Rightarrow Q$ menjadi $\\neg Q \\Rightarrow \\neg P$.",
+          "verdict": "$\\neg Q \\Rightarrow \\neg P$ dan $P \\Rightarrow Q$ sama di keempat baris: kontraposisi selalu bernilai sama dengan implikasinya.",
+          "reading": [
+            "$\\neg Q \\Rightarrow \\neg P$ dibaca \"jika tidak $Q$ maka tidak $P$\".",
+            "cara membentuknya: tukar letak $P$ dan $Q$, lalu beri negasi pada keduanya."
+          ]
+        }
+      },
+      "caption": "baris {{row}}: {{reason}}, jadi ${{expression}}$ = {{result}}, {{comparison}}.",
+      "reading": "{{situation}}. {{reason}}, jadi ${{expression}}$ = {{result}}. Implikasinya $P \\Rightarrow Q$ = {{implication}}, {{ending}}",
+      "reasons": {
+        "broken": "${{premise}}$ = B tetapi ${{conclusion}}$ = S",
+        "premiseFalseConclusionTrue": "${{premise}}$ = S dan ${{conclusion}}$ = B",
+        "premiseFalse": "${{premise}}$ = S",
+        "conclusionTrue": "${{conclusion}}$ = B"
+      },
+      "comparison": {
+        "same": "sama dengan $P \\Rightarrow Q$",
+        "different": "berbeda dari $P \\Rightarrow Q$ yang {{value}}"
+      },
+      "readingEnd": {
+        "same": "jadi di baris ini keduanya sama.",
+        "different": "jadi di baris ini keduanya berbeda."
+      },
+      "cards": {
+        "definition": "definisi",
+        "reading": "cara membaca",
+        "falseRow": "di baris mana S?",
+        "square": "tukar dan negasi"
+      },
+      "definition": {
+        "intro": "Apabila $P \\Rightarrow Q$ suatu implikasi, maka:",
+        "lines": [
+          "(a) $Q \\Rightarrow P$ disebut konvers implikasi $P \\Rightarrow Q$;",
+          "(b) $\\neg P \\Rightarrow \\neg Q$ disebut invers implikasi $P \\Rightarrow Q$;",
+          "(c) $\\neg Q \\Rightarrow \\neg P$ disebut kontraposisi implikasi $P \\Rightarrow Q$."
+        ]
+      },
+      "falseRow": {
+        "form": "bentuk",
+        "condition": "S hanya jika",
+        "row": "baris",
+        "items": {
+          "implication": { "condition": "$P$ = B dan $Q$ = S", "also": "" },
+          "converse": { "condition": "$Q$ = B dan $P$ = S", "also": "" },
+          "inverse": { "condition": "$\\neg P$ = B dan $\\neg Q$ = S", "also": "yaitu $P$ = S dan $Q$ = B" },
+          "contrapositive": { "condition": "$\\neg Q$ = B dan $\\neg P$ = S", "also": "yaitu $P$ = B dan $Q$ = S" }
+        },
+        "footnote": "setiap implikasi hanya S di satu baris. Dua bentuk yang S di baris yang sama selalu bernilai sama."
+      },
+      "square": {
+        "swap": "tukar",
+        "negate": "negasi",
+        "footnote": "tukar = tukar letak kedua proposisi, negasi = beri $\\neg$ pada keduanya. Bentuk di ujung garis yang sama nilainya selalu sama: implikasi dengan kontraposisi, konvers dengan invers."
+      },
+      "legend": {
+        "true": "benar",
+        "false": "salah",
+        "decider": "penentu hasilnya",
+        "same": "sama dengan implikasinya",
+        "different": "berbeda dari implikasinya",
+        "negation": "tidak",
+        "implication": "jika … maka"
+      }
+    },
+    "layeredTablesAndEquivalence": {
+      "title": "Tabel Bertingkat & Keekuivalenan",
+      "modes": {
+        "layered": "tabel bertingkat",
+        "equivalence": "keekuivalenan"
+      },
+      "board": "tabel kebenaran ${{expression}}$",
+      "rowHead": "baris",
+      "rowLabel": "baris {{row}}",
+      "stepHead": "langkah ke",
+      "sameHead": "sama?",
+      "sides": {
+        "left": "ruas kiri",
+        "right": "ruas kanan"
+      },
+      "treeLabel": "pohon ekspresi",
+      "treeSideLabel": "pohon ekspresi {{side}}",
+      "rules": {
+        "not": "membalik nilainya",
+        "and": "bernilai B hanya jika keduanya B",
+        "or": "bernilai S hanya jika keduanya S",
+        "implies": "bernilai S hanya jika bagian kiri B dan bagian kanan S",
+        "iff": "bernilai B jika keduanya sama"
+      },
+      "caption": "langkah {{step}}: ${{expression}}$ dari kolom {{sources}}. ${{connective}}$ {{rule}}. Hasilnya {{values}}.",
+      "sideCaption": "langkah {{step}}, {{side}}: ${{expression}}$ dari kolom {{sources}}. ${{connective}}$ {{rule}}. Hasilnya {{values}}.",
+      "verdict": {
+        "same": "Keempat baris sama, jadi ${{left}} \\equiv {{right}}$.",
+        "different": "Berbeda di baris {{rows}}, jadi ${{left}} \\not\\equiv {{right}}$: keduanya tidak ekuivalen."
+      },
+      "intro": {
+        "layered": "${{expression}}$ punya {{total}} penghubung, jadi tabelnya {{total}} langkah.",
+        "equivalence": "Isi kolom kedua ruas dari dalam ke luar, lalu bandingkan kolom terakhir keduanya di setiap baris."
+      },
+      "examples": {
+        "bothNegated": "Kedua negasi dikerjakan lebih dulu, karena konjungsinya memakai kolom $\\neg P$ dan $\\neg Q$.",
+        "conjunctionOrNegation": "$P \\wedge Q$ dan $\\neg P$ dikerjakan lebih dulu, disjungsinya terakhir.",
+        "disjunctionImpliesConjunction": "Isi kedua kurung lebih dulu, implikasinya terakhir.",
+        "disjunctionIffNegatedConjunction": "Kolom $\\neg (P \\wedge Q)$ baru bisa diisi setelah kolom $P \\wedge Q$ ada. Biimplikasinya terakhir.",
+        "threeLetters": "Ada tiga huruf, jadi tabelnya 8 baris. Kurungnya dulu, implikasinya terakhir.",
+        "negatedImplication": "Ruas kanan adalah negasi sebuah implikasi, ruas kiri sebuah konjungsi.",
+        "deMorgan": "Ruas kiri: negasi sebuah konjungsi. Ruas kanan: disjungsi dua negasi.",
+        "implicationAsDisjunction": "Implikasi di ruas kiri, disjungsi di ruas kanan.",
+        "onlyQ": "Ruas kiri hanya $Q$, kolomnya sudah ada. Yang dihitung hanya ruas kanan.",
+        "notDeMorgan": "Mirip pasangan $\\neg (P \\wedge Q)$ dan $\\neg P \\vee \\neg Q$, tetapi ruas kanannya memakai $\\wedge$."
+      },
+      "hint": {
+        "layered": "klik baris untuk melihat nilainya di pohon, atau putar untuk mengisi tabel langkah demi langkah.",
+        "equivalence": "klik baris, atau putar untuk mengisi kedua ruas lalu membandingkannya."
+      },
+      "reading": {
+        "result": "jadi ${{expression}}$ = {{value}} di baris ini.",
+        "same": "ruas kiri {{left}}, ruas kanan {{right}}: sama.",
+        "different": "ruas kiri {{left}}, ruas kanan {{right}}: berbeda."
+      },
+      "cards": {
+        "order": "urutan langkah",
+        "count": "berapa langkah, berapa baris?",
+        "lookup": "cukup satu baris",
+        "definition": "definisi",
+        "series": "deretan nilai",
+        "pairs": "pasangan ekuivalen"
+      },
+      "order": {
+        "step": "ke",
+        "column": "kolom",
+        "uses": "memakai {{sources}}",
+        "footnote": "kolom baru hanya memakai kolom yang sudah ada, jadi bagian terdalam selalu dikerjakan lebih dulu. Semua langkah ditulis di satu tabel, tidak perlu tabel terpisah untuk tiap bagian."
+      },
+      "count": {
+        "connectives": "penghubungnya {{total}}: {{list}}. Satu penghubung, satu langkah.",
+        "letters": "huruf",
+        "rows": "baris",
+        "example": "contoh",
+        "footnote": "setiap huruf bisa B atau S, jadi setiap huruf baru menggandakan banyaknya baris: $n$ huruf, $2^n$ baris."
+      },
+      "lookup": {
+        "suppose": "misalkan",
+        "known": "${{letter}}$: {{name}}, nilainya {{value}}",
+        "sentence": "kalimatnya: ${{expression}}$",
+        "row": "cukup baris {{row}}, dari dalam ke luar:",
+        "result": {
+          "true": "jadi kalimat itu benar.",
+          "false": "jadi kalimat itu salah."
+        },
+        "items": [
+          {
+            "sentence": "*jika* hari tidak hujan *maka* hari tidak mendung",
+            "names": [
+              "hari mendung",
+              "hari hujan"
+            ]
+          },
+          {
+            "sentence": "Ibu membeli baju *atau* ayah tidak membeli motor",
+            "names": [
+              "Ibu membeli baju",
+              "Ayah membeli sepeda motor"
+            ]
+          }
+        ],
+        "footnote": "kalau nilai setiap huruf sudah diketahui, tidak perlu seluruh tabel: cari baris yang cocok, lalu kerjakan langkahnya dari dalam ke luar."
+      },
+      "definition": {
+        "before": "Dua proposisi dikatakan ",
+        "term": "ekuivalen",
+        "after": " diberi notasi \"$\\equiv$\" apabila semua nilai kebenarannya sama.",
+        "reading": "$\\equiv$ dibaca \"ekuivalen dengan\", $\\not\\equiv$ dibaca \"tidak ekuivalen dengan\"."
+      },
+      "series": {
+        "row": "baris",
+        "same": "sama?",
+        "footnote": "seperti kuantor $\\forall$: semua baris harus sama. Satu baris berbeda sudah cukup untuk berkata tidak ekuivalen."
+      },
+      "pairs": {
+        "pair": "pasangan",
+        "values": "nilai",
+        "reading": "dibaca",
+        "and": "dan",
+        "items": {
+          "negatedImplication": "\"$P$ tetapi tidak $Q$\" sama dengan \"tidak benar bahwa jika $P$ maka $Q$\"",
+          "deMorgan": "\"tidak benar bahwa $P$ dan $Q$\" sama dengan \"tidak $P$ atau tidak $Q$\"",
+          "implicationAsDisjunction": "\"jika $P$ maka $Q$\" sama dengan \"tidak $P$ atau $Q$\"",
+          "onlyQ": "\"$Q$\" sama dengan \"jika $P$ atau tidak $Q$, maka $Q$\"",
+          "contrapositive": "implikasi dan kontraposisinya: \"jika $P$ maka $Q$\" sama dengan \"jika tidak $Q$ maka tidak $P$\"",
+          "notDeMorgan": "\"tidak benar bahwa $P$ dan $Q$\" tidak sama dengan \"tidak $P$ dan tidak $Q$\""
+        },
+        "footnote": "nilai = isi kolom dari baris 1 sampai baris 4. Baris terakhir bukan pasangan ekuivalen: kesalahan yang sering terjadi saat memberi negasi pada konjungsi."
+      },
+      "legend": {
+        "true": "kolom terakhir benar",
+        "false": "kolom terakhir salah",
+        "step": "nomor langkah",
+        "feeds": "kolom yang dipakai langkah ini",
+        "treeTrue": "di pohon: nilainya B di baris terpilih",
+        "same": "sama di baris ini",
+        "different": "berbeda di baris ini",
+        "equivalent": "ekuivalen: sama di semua baris"
+      }
+    },
+    "tautologiesAndValidArguments": {
+      "title": "Tautologi & Argumen Sah",
+      "modes": {
+        "tautology": "tautologi & kontradiksi",
+        "argument": "argumen sah"
+      },
+      "board": "tabel kebenaran ${{expression}}$",
+      "rowHead": "baris",
+      "rowLabel": "baris {{row}}",
+      "stepHead": "langkah ke",
+      "treeLabel": "pohon ekspresi",
+      "suppose": "misalkan",
+      "kinds": {
+        "tautology": "tautologi",
+        "contradiction": "kontradiksi",
+        "neither": "bukan keduanya"
+      },
+      "validity": {
+        "valid": "sah",
+        "invalid": "tidak sah"
+      },
+      "rules": {
+        "not": "membalik nilainya",
+        "and": "bernilai B hanya jika keduanya B",
+        "or": "bernilai S hanya jika keduanya S",
+        "implies": "bernilai S hanya jika bagian kiri B dan bagian kanan S"
+      },
+      "caption": "langkah {{step}}: ${{expression}}$ dari kolom {{sources}}. ${{connective}}$ {{rule}}. Hasilnya {{values}}.",
+      "verdict": {
+        "tautology": "periksa kolom terakhir: semua {{value}}, jadi ${{expression}}$ tautologi.",
+        "contradiction": "periksa kolom terakhir: semua {{value}}, jadi ${{expression}}$ kontradiksi.",
+        "neither": "periksa kolom terakhir: bukan tautologi karena baris {{falseRows}} bernilai {{falseValue}}, bukan kontradiksi karena baris {{trueRows}} bernilai {{trueValue}}.",
+        "valid": "periksa kolom terakhir: semua {{value}}. Implikasinya tautologi, jadi argumen ini sah.",
+        "invalid": "periksa kolom terakhir: baris {{rows}} bernilai {{value}}. Implikasinya bukan tautologi, jadi argumen ini tidak sah. Di baris itu premisnya benar semua tetapi kesimpulannya salah."
+      },
+      "intro": {
+        "tautology": "Isi tabelnya langkah demi langkah, lalu periksa kolom terakhir.",
+        "argument": "Premis-premisnya digabung dengan $\\wedge$, lalu $\\Rightarrow$ kesimpulan. Argumennya sah jika implikasi itu tautologi."
+      },
+      "hint": {
+        "tautology": "klik baris untuk melihat nilainya di pohon, atau putar untuk mengisi tabel lalu memeriksa kolom terakhir.",
+        "argument": "klik baris untuk melihat nilai setiap premis, atau putar untuk mengisi tabel lalu memeriksa kolom terakhir."
+      },
+      "formulas": {
+        "implicationOrP": "Kolom terakhirnya menentukan: semua B, semua S, atau campuran.",
+        "pImpliesDisjunction": "Jika $P$ benar, $P \\vee Q$ pasti benar. Apakah tabelnya setuju?",
+        "rainAndNoRain": "Hanya satu huruf, jadi tabelnya 2 baris.",
+        "modusPonensAndNotP": "Bagian kirinya meminta $P$ benar, bagian kanannya meminta $P$ salah.",
+        "notPImpliesConjunction": "Tidak semua proposisi tautologi atau kontradiksi."
+      },
+      "rain": {
+        "letter": "$P$: hari ini hujan",
+        "reading": "$P \\wedge \\neg P$: \"hari ini hujan dan hari ini tidak hujan\""
+      },
+      "roles": {
+        "single": "premis",
+        "numbered": "premis {{number}}",
+        "conclusion": "kesimpulan",
+        "therefore": "∴",
+        "thereforeLine": "∴ kesimpulan"
+      },
+      "asImplication": "ditulis sebagai implikasi",
+      "arguments": {
+        "modusPonens": {
+          "label": "modus ponens",
+          "title": "argumen modus ponens",
+          "letters": [
+            [
+              "sakelar tersambung",
+              "sakelar tidak tersambung"
+            ],
+            [
+              "bohlam hidup",
+              "bohlam tidak hidup"
+            ]
+          ],
+          "premises": [
+            "jika sakelar tersambung maka bohlam hidup",
+            "sakelar tersambung"
+          ],
+          "conclusion": "bohlam hidup",
+          "intro": "Premis 2 membenarkan bagian kiri premis 1."
+        },
+        "modusTollens": {
+          "label": "modus tollens",
+          "title": "argumen modus tollens",
+          "letters": [
+            [
+              "sakelar tersambung",
+              "sakelar tidak tersambung"
+            ],
+            [
+              "bohlam hidup",
+              "bohlam tidak hidup"
+            ]
+          ],
+          "premises": [
+            "jika sakelar tersambung maka bohlam hidup",
+            "bohlam tidak hidup"
+          ],
+          "conclusion": "sakelar tidak tersambung",
+          "intro": "Premis 2 menyangkal bagian kanan premis 1."
+        },
+        "syllogism": {
+          "label": "silogisme",
+          "title": "argumen silogisme",
+          "letters": [
+            [
+              "liburan",
+              "tidak liburan"
+            ],
+            [
+              "saya ke pantai",
+              "saya tidak ke pantai"
+            ],
+            [
+              "saya berenang",
+              "saya tidak berenang"
+            ]
+          ],
+          "premises": [
+            "jika liburan maka saya akan ke pantai",
+            "jika ke pantai maka saya akan berenang"
+          ],
+          "conclusion": "jika liburan maka saya akan berenang",
+          "intro": "Kedua implikasi bersambung di $Q$. Ada tiga huruf, jadi tabelnya 8 baris."
+        },
+        "contrapositive": {
+          "label": "kontrapositif",
+          "title": "argumen kontrapositif",
+          "letters": [
+            [
+              "saya sakit",
+              "saya tidak sakit"
+            ],
+            [
+              "saya pergi ke dokter",
+              "saya tidak pergi ke dokter"
+            ]
+          ],
+          "premises": [
+            "jika saya sakit maka saya pergi ke dokter"
+          ],
+          "conclusion": "jika saya tidak pergi ke dokter maka saya tidak sakit",
+          "intro": "Hanya satu premis. Kesimpulannya adalah kontraposisi premis itu."
+        },
+        "meaningfulNotValid": {
+          "label": "bermakna, tidak sah",
+          "title": "argumen belok ke kiri",
+          "letters": [
+            [
+              "belok ke kiri",
+              "tidak belok ke kiri"
+            ],
+            [
+              "boleh jalan terus",
+              "tidak boleh jalan terus"
+            ]
+          ],
+          "premises": [
+            "jika belok ke kiri maka boleh jalan terus",
+            "tidak belok ke kiri"
+          ],
+          "conclusion": "tidak boleh jalan terus",
+          "intro": "Mirip modus tollens, tetapi premis 2 menyangkal bagian kiri premis 1, bukan bagian kanannya."
+        }
+      },
+      "samples": {
+        "modusPonens": [
+          {
+            "tag": "(a)",
+            "lines": [
+              "jika gaji naik maka harga-harga juga naik",
+              "gaji naik"
+            ],
+            "conclusion": "harga-harga juga naik"
+          },
+          {
+            "tag": "(b)",
+            "lines": [
+              "jika $3 < 4$ maka $9 < 16$",
+              "$3 < 4$"
+            ],
+            "conclusion": "$9 < 16$"
+          }
+        ],
+        "modusTollens": [
+          {
+            "tag": "(a)",
+            "lines": [
+              "jika ia rajin belajar maka ia naik kelas",
+              "ia tidak naik kelas"
+            ],
+            "conclusion": "ia tidak rajin belajar"
+          },
+          {
+            "tag": "(b)",
+            "lines": [
+              "jika $2x = 6$ maka $x = 3$",
+              "$x \\neq 3$"
+            ],
+            "conclusion": "$2x \\neq 6$"
+          }
+        ],
+        "syllogism": [
+          {
+            "tag": "(c)",
+            "lines": [
+              "jika ia sakit maka ia pergi ke dokter",
+              "jika ia pergi ke dokter maka ia diberi obat"
+            ],
+            "conclusion": "jika ia sakit maka ia diberi obat"
+          },
+          {
+            "tag": "(d)",
+            "lines": [
+              "jika $2$ bilangan bulat maka $2^2$ bilangan bulat",
+              "jika $2^2$ bilangan bulat maka $2^4$ bilangan bulat"
+            ],
+            "conclusion": "jika $2$ bilangan bulat maka $2^4$ bilangan bulat"
+          }
+        ],
+        "contrapositive": [
+          {
+            "tag": "(a)",
+            "lines": [
+              "jika hari hujan maka Jakarta banjir"
+            ],
+            "conclusion": "jika Jakarta tidak banjir maka hari tidak hujan"
+          },
+          {
+            "tag": "(c)",
+            "lines": [
+              "jika pemimpin tidak korup maka rakyat makmur"
+            ],
+            "conclusion": "jika rakyat tidak makmur maka pemimpin korup"
+          }
+        ]
+      },
+      "reading": {
+        "result": "jadi ${{expression}}$ = {{value}} di baris ini.",
+        "situation": "keadaannya: {{situation}}.",
+        "role": "{{role}}: ${{expression}}$ = {{value}}",
+        "untested": "ada premis yang salah, jadi baris ini tidak menguji argumennya. Implikasinya {{value}} dengan sendirinya.",
+        "tested": "premisnya benar semua dan kesimpulannya benar.",
+        "counter": "premisnya benar semua tetapi kesimpulannya salah: contoh penyangkal. Satu baris ini cukup untuk berkata argumennya tidak sah."
+      },
+      "cards": {
+        "definition": "definisi",
+        "kinds": "semua B, semua S, atau campuran?",
+        "finals": "kolom terakhir",
+        "argument": "argumen",
+        "samples": "contoh {{name}}",
+        "meaning": "sah atau bermakna?",
+        "critical": "baris yang premisnya benar",
+        "summary": "empat argumen sah"
+      },
+      "definition": {
+        "tautology": "Suatu proposisi disebut **tautologi** apabila proposisi tersebut selalu bernilai benar, tidak tergantung dari nilai proposisi-proposisi yang membangunnya.",
+        "contradiction": "Suatu proposisi majemuk disebut **kontradiksi** jika proposisi tersebut selalu bernilai salah, tidak tergantung dari nilai proposisi-proposisi yang membangunnya.",
+        "neither": "${{expression}}$ tidak cocok dengan keduanya."
+      },
+      "kindTable": {
+        "column": "kolom terakhir",
+        "name": "sebutannya",
+        "tautology": "semua B",
+        "contradiction": "semua S",
+        "neither": "ada B, ada S",
+        "footnote": "seperti kuantor $\\forall$: tautologi berarti B di setiap baris. Satu baris S sudah cukup untuk berkata bukan tautologi, satu baris B sudah cukup untuk berkata bukan kontradiksi."
+      },
+      "finals": {
+        "proposition": "proposisi",
+        "values": "nilai",
+        "name": "sebutannya",
+        "footnote": "nilai = isi kolom terakhir dari baris pertama sampai baris terakhir. Argumen sah diperiksa dengan cara yang sama: implikasinya harus tautologi."
+      },
+      "argument": {
+        "terms": "Proposisi yang menjadi alasan disebut **premis**, proposisi yang disimpulkan disebut **kesimpulan**. Cara menarik kesimpulan dari premis-premis disebut **argumen**.",
+        "valid": "Argumen disebut **sah** apabila premis-premisnya benar dan kesimpulannya juga benar.",
+        "footnote": "premis-premisnya digabung dengan $\\wedge$, lalu $\\Rightarrow$ kesimpulan. Jika implikasi itu tautologi, argumennya sah."
+      },
+      "meaning": {
+        "items": [
+          {
+            "tag": "sah, tetapi tidak bermakna",
+            "lines": [
+              "jika Ani cantik maka Amir tampan",
+              "Amir tidak tampan"
+            ],
+            "conclusion": "Ani tidak cantik",
+            "remark": "bentuknya modus tollens, jadi sah. Tetapi kecantikan Ani tidak ada hubungannya dengan ketampanan Amir."
+          },
+          {
+            "tag": "bermakna, tetapi tidak sah",
+            "lines": [
+              "jika belok ke kiri maka boleh jalan terus",
+              "tidak belok ke kiri"
+            ],
+            "conclusion": "tidak boleh jalan terus",
+            "remark": "terdengar wajar di perempatan berlampu lalu lintas, tetapi implikasinya bukan tautologi."
+          }
+        ],
+        "footnote": "logika memeriksa sah atau tidaknya argumen, bukan kebermaknaannya."
+      },
+      "critical": {
+        "row": "baris",
+        "meaning": "artinya",
+        "counter": "premis benar semua, kesimpulan salah: contoh penyangkal",
+        "tested": "premis benar semua, kesimpulan benar",
+        "untested": "ada premis yang S, implikasinya B dengan sendirinya",
+        "footnote": "implikasi hanya bernilai S jika bagian kirinya B dan bagian kanannya S, yaitu premisnya benar semua tetapi kesimpulannya salah. Jadi cukup periksa baris yang premisnya benar semua: jika kesimpulannya selalu B, argumennya sah."
+      },
+      "summary": {
+        "name": "nama",
+        "implication": "implikasi",
+        "argument": "argumen",
+        "invalid": "tidak sah",
+        "footnote": "baris terakhir bukan argumen sah. Bentuknya mirip modus tollens, tetapi yang disangkal bagian kiri, bukan bagian kanan."
+      },
+      "legend": {
+        "true": "kolom terakhir benar",
+        "false": "kolom terakhir salah",
+        "step": "nomor langkah",
+        "feeds": "kolom yang dipakai langkah ini",
+        "ringTautology": "baris yang membuatnya bukan tautologi",
+        "ringArgument": "contoh penyangkal",
+        "treeTrue": "di pohon: nilainya B di baris terpilih",
+        "role": "peran kolom dalam argumen",
+        "therefore": "kolom kesimpulan"
       }
     }
   }

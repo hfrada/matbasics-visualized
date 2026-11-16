@@ -222,10 +222,10 @@ export function SetOperationsPage() {
               <p className="font-hand text-xl leading-snug">
                 <MathText text={t(`operations.${operationKey}.meaning`)} />
               </p>
-              <MathTex tex={t(`operations.${operationKey}.rule`)} className="block overflow-x-auto py-1 text-[17px]" />
+              <MathTex tex={t(`operations.${operationKey}.rule`)} className="block overflow-x-auto overflow-y-hidden py-1 text-[17px]" />
               <div className="mt-2 border-t border-dashed border-faint pt-2 text-muted">
                 {given.map((tex) => (
-                  <MathTex key={tex} tex={tex} className="block overflow-x-auto py-0.5 text-[15px]" />
+                  <MathTex key={tex} tex={tex} className="block overflow-x-auto overflow-y-hidden py-0.5 text-[15px]" />
                 ))}
               </div>
             </div>
@@ -235,7 +235,7 @@ export function SetOperationsPage() {
                 <MathTex
                   key={line.key}
                   tex={line.tex}
-                  className={`block overflow-x-auto py-1 text-[17px] transition-opacity duration-300 ${line.shown ? '' : 'opacity-15'}`}
+                  className={`block overflow-x-auto overflow-y-hidden py-1 text-[17px] transition-opacity duration-300 ${line.shown ? '' : 'opacity-15'}`}
                 />
               ))}
             </div>

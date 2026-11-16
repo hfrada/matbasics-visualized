@@ -257,11 +257,11 @@ export function WritingSetsPage() {
         <div className="grid gap-5">
           <div className="pen-border relative bg-paper px-4.5 py-3">
             <h2 className="font-hand text-2xl font-bold">{t('forms.rule')}</h2>
-            <MathTex tex={t(`rules.${setKey}`)} className="block overflow-x-auto py-1.5 text-[17px]" />
+            <MathTex tex={t(`rules.${setKey}`)} className="block overflow-x-auto overflow-y-hidden py-1.5 text-[17px]" />
           </div>
           <div className="pen-border relative bg-paper px-4.5 py-3">
             <h2 className="font-hand text-2xl font-bold">{t('forms.list')}</h2>
-            <MathTex tex={listTex()} className="block overflow-x-auto py-1.5 text-[17px]" />
+            <MathTex tex={listTex()} className="block overflow-x-auto overflow-y-hidden py-1.5 text-[17px]" />
           </div>
           <p aria-live="polite" className="font-hand text-2xl">
             {countText()}
