@@ -1624,6 +1624,1847 @@
         "role": "peran kolom dalam argumen",
         "therefore": "kolom kesimpulan"
       }
+    },
+    "fieldAxioms": {
+      "title": "Aksioma Medan",
+      "laws": {
+        "commutative": "komutatif",
+        "associative": "asosiatif",
+        "distributive": "distributif",
+        "identity": "identitas",
+        "inverse": "invers",
+        "derived": "pengurangan & pembagian"
+      },
+      "operations": {
+        "add": "+ penambahan",
+        "mul": "· perkalian",
+        "subtract": "− pengurangan",
+        "divide": "÷ pembagian",
+        "both": "distributif memakai keduanya"
+      },
+      "sides": {
+        "left": "ruas kiri",
+        "right": "ruas kanan"
+      },
+      "same": "sama",
+      "hint": "klik ruas kiri atau ruas kanan untuk membaca langkahnya, atau tekan mulai.",
+      "reading": {
+        "result": "hasilnya {{value}}, sama dengan {{other}}."
+      },
+      "mirror": "garis miring",
+      "cuboidNotes": {
+        "layers": "{{parts}} lapis, tiap lapis {{each}}",
+        "slices": "{{parts}} irisan, tiap irisan {{each}}"
+      },
+      "samples": {
+        "commutativeAdd": {
+          "title": "komutatif penambahan",
+          "intro": "Komutatif artinya urutan boleh ditukar. Maju 2 lalu 3, atau maju 3 lalu 2, berhentinya sama-sama di 5.",
+          "steps": [
+            "Ruas kiri $2 + 3$: mulai dari 0, maju 2 sampai di 2.",
+            "Maju 3 lagi, berhenti di 5. Jadi $2 + 3 = 5$.",
+            "Ruas kanan $3 + 2$: mulai dari 0, maju 3 sampai di 3.",
+            "Maju 2 lagi, berhenti di 5. Jadi $3 + 2 = 5$.",
+            "Kedua ruas berhenti di 5, jadi $2 + 3 = 3 + 2$."
+          ]
+        },
+        "commutativeMul": {
+          "title": "komutatif perkalian",
+          "intro": "Menukar urutan perkalian sama dengan mencerminkan persegi panjangnya terhadap garis miring. Banyak petaknya tidak berubah.",
+          "steps": [
+            "Ruas kiri $2 \\cdot (-4)$: sisi mendatar 2 ke kanan, sisi tegak 4 ke bawah. Isinya 8 petak di daerah negatif, jadi $-8$.",
+            "Ruas kanan $(-4) \\cdot 2$: sisi mendatar 4 ke kiri, sisi tegak 2 ke atas. Isinya juga 8 petak di daerah negatif, jadi $-8$.",
+            "Dicerminkan terhadap garis miring, kedua persegi panjang bertukar tempat. Petaknya tetap 8 dan tetap negatif, jadi $2 \\cdot (-4) = (-4) \\cdot 2$."
+          ]
+        },
+        "associativeAdd": {
+          "title": "asosiatif penambahan",
+          "intro": "Asosiatif artinya pengelompokan boleh dipindah. Kurung menentukan lompatan mana yang digabung dulu, tetapi titik akhirnya tetap sama.",
+          "steps": [
+            "Ruas kiri $2 + (4 + \\tfrac{1}{2})$: maju 2 sampai di 2.",
+            "Kurung dulu: $4 + \\tfrac{1}{2} = 4\\tfrac{1}{2}$, satu lompatan dari 2 sampai di $6\\tfrac{1}{2}$.",
+            "Ruas kanan $(2 + 4) + \\tfrac{1}{2}$: kurung dulu, $2 + 4 = 6$, satu lompatan sampai di 6.",
+            "Maju $\\tfrac{1}{2}$ lagi, berhenti di $6\\tfrac{1}{2}$.",
+            "Kedua ruas berhenti di $6\\tfrac{1}{2}$. Kurungnya pindah, hasilnya tetap."
+          ]
+        },
+        "associativeMul": {
+          "title": "asosiatif perkalian",
+          "intro": "Tiga faktor membentuk balok. Dipotong mendatar jadi lapis atau dipotong tegak jadi irisan, banyak kubusnya tetap.",
+          "steps": [
+            "Ruas kiri $2\\big((3)(4)\\big)$: kurung dulu, $3 \\cdot 4 = 12$ kubus dalam satu lapis.",
+            "Dua lapis: $2 \\cdot 12 = 24$ kubus.",
+            "Ruas kanan $\\big((2)(3)\\big)4$: kurung dulu, $2 \\cdot 3 = 6$ kubus dalam satu irisan.",
+            "Empat irisan: $6 \\cdot 4 = 24$ kubus.",
+            "Balok $2 \\times 3 \\times 4$ yang sama, hanya dipotong dengan cara berbeda. Kedua ruas 24."
+          ]
+        },
+        "distributive": {
+          "title": "distributif",
+          "intro": "Distributif menghubungkan perkalian dengan penambahan: $\\tfrac{1}{2}$ dikalikan ke setiap suku di dalam kurung.",
+          "steps": [
+            "Ruas kiri $\\tfrac{1}{2}(2 + 4)$: kurung dulu, $2 + 4 = 6$.",
+            "Persegi panjang $\\tfrac{1}{2}$ kali 6: enam setengah petak, luasnya 3.",
+            "Ruas kanan: $\\tfrac{1}{2}(2) = 1$, dua setengah petak.",
+            "$\\tfrac{1}{2}(4) = 2$, lalu $1 + 2 = 3$.",
+            "Kedua ruas 3. Memotong persegi panjang jadi dua bagian tidak mengubah luasnya."
+          ]
+        },
+        "identityAdd": {
+          "title": "identitas penambahan",
+          "intro": "Unsur identitas penambahan adalah 0: menambah 0 tidak menggeser titik.",
+          "steps": [
+            "Ruas kiri $-4 + 0$: mundur 4 sampai di $-4$.",
+            "Tambah 0: tidak bergeser sama sekali, tetap di $-4$.",
+            "Ruas kanan $-4$: mundur 4 sampai di $-4$.",
+            "Kedua ruas di $-4$. Menambah 0 tidak mengubah bilangan."
+          ]
+        },
+        "identityMul": {
+          "title": "identitas perkalian",
+          "intro": "Unsur identitas perkalian adalah 1: persegi panjang setinggi 1 luasnya sama dengan panjangnya.",
+          "steps": [
+            "Ruas kiri $(4)(1)$: persegi panjang 4 kali 1, isinya 4 petak.",
+            "Ruas kanan 4: panjang 4 di garis bilangan.",
+            "Tinggi 1 membuat luasnya sama dengan panjangnya, jadi $(4)(1) = 4$."
+          ]
+        },
+        "inverseAdd": {
+          "title": "invers penambahan",
+          "intro": "Invers penambahan dari 6 adalah $-6$: maju 6 lalu mundur 6, kembali ke 0.",
+          "steps": [
+            "Ruas kiri $6 + (-6)$: maju 6 sampai di 6.",
+            "Tambah $-6$: mundur 6, kembali ke 0.",
+            "Ruas kanan 0: tetap di titik 0.",
+            "Kedua ruas di 0. $-6$ adalah invers penambahan dari 6."
+          ]
+        },
+        "inverseMul": {
+          "title": "invers perkalian",
+          "intro": "Invers perkalian dari 2 adalah $2^{-1} = \\tfrac{1}{2}$: persegi panjang 2 kali $\\tfrac{1}{2}$ tepat satu petak.",
+          "steps": [
+            "Ruas kiri $2 \\cdot 2^{-1}$ dengan $2^{-1} = \\tfrac{1}{2}$: persegi panjang 2 kali $\\tfrac{1}{2}$, dua setengah petak.",
+            "Ruas kanan 1: satu petak penuh.",
+            "Dua setengah petak ditumpuk jadi satu petak, jadi $2 \\cdot 2^{-1} = 1$."
+          ]
+        },
+        "subtraction": {
+          "title": "pengurangan",
+          "intro": "Pengurangan bukan operasi baru: $4 - 3$ berarti 4 ditambah invers dari 3, yaitu $-3$.",
+          "steps": [
+            "Ruas kiri $4 - 3$ dibaca $4 + (-3)$. Maju 4 sampai di 4.",
+            "Tambah $-3$, invers dari 3: mundur 3 sampai di 1.",
+            "Ruas kanan 1: maju 1 sampai di 1.",
+            "Kedua ruas di 1, jadi $4 - 3 = 4 + (-3) = 1$."
+          ]
+        },
+        "division": {
+          "title": "pembagian",
+          "intro": "Pembagian bukan operasi baru: $\\tfrac{4}{2}$ berarti 4 dikali invers dari 2, yaitu $\\tfrac{1}{2}$.",
+          "steps": [
+            "Ruas kiri $\\tfrac{4}{2}$ dibaca $4 \\cdot 2^{-1} = 4 \\cdot \\tfrac{1}{2}$: persegi panjang 4 kali $\\tfrac{1}{2}$, empat setengah petak.",
+            "Ruas kanan 2: dua petak penuh.",
+            "Empat setengah petak sama dengan dua petak, jadi $\\tfrac{4}{2} = 4 \\cdot 2^{-1} = 2$."
+          ]
+        }
+      },
+      "otherRemarks": {
+        "commutativeAdd": "kedua ruas 11",
+        "commutativeMul": "kedua ruas −12",
+        "associativeAdd": "kedua ruas 18",
+        "associativeMul": "kedua ruas −64",
+        "distributive": "kedua ruas 16. 6 − 2 dibaca 6 + (−2), jadi 4 dikalikan ke 6 dan ke −2.",
+        "identityAdd": "kedua ruas 4",
+        "identityMul": "kedua ruas −2",
+        "inverseAdd": "muncul di tengah langkah 4 − 3 = 1 + 3 + (−3)"
+      },
+      "cards": {
+        "substitution": "dari rumus ke contoh",
+        "others": "contoh lain",
+        "chain": "langkah lengkapnya",
+        "nonzero": "mengapa $x \\neq 0$?",
+        "laws": "aksioma medan"
+      },
+      "substitution": {
+        "formula": "rumus",
+        "values": "ganti",
+        "example": "contoh",
+        "footnote": "Rumusnya berlaku untuk setiap bilangan real. Contoh di papan hanya satu pilihan untuk $x$, $y$, $z$."
+      },
+      "chain": {
+        "reasons": {
+          "subtractionDefinition": "definisi pengurangan",
+          "divisionDefinition": "definisi pembagian",
+          "fourAsSum": "4 ditulis $1 + 3$",
+          "fourAsProduct": "4 ditulis $2 \\cdot 2$",
+          "associative": "asosiatif",
+          "inverse": "invers",
+          "identity": "identitas"
+        },
+        "footnoteSubtraction": "Setiap tanda $=$ punya alasan: satu aksioma atau satu definisi.",
+        "footnoteDivision": "Setiap tanda $=$ punya alasan. Penyebutnya tidak boleh 0, sebab 0 tidak punya invers perkalian."
+      },
+      "nonzero": {
+        "body": "Tidak ada bilangan $y$ dengan $0 \\cdot y = 1$, sebab $0 \\cdot y = 0$ untuk setiap $y$. Persegi panjang yang salah satu sisinya 0 tidak berisi petak sama sekali.",
+        "footnote": "Karena 0 tidak punya invers perkalian, pembagian dengan 0 tidak didefinisikan."
+      },
+      "lawTable": {
+        "property": "sifat",
+        "addition": "penambahan",
+        "multiplication": "perkalian",
+        "derived": "bukan aksioma, dibentuk dari invers",
+        "footnote": "Berlaku untuk setiap $x, y, z \\in \\mathbb{R}$. Hasil $x + y$ dan $x \\cdot y$ selalu bilangan real lagi, artinya $\\mathbb{R}$ tertutup terhadap kedua operasi."
+      },
+      "legend": {
+        "arrow": "maju ke kanan atau mundur ke kiri sejauh bilangannya",
+        "now": "langkah sekarang",
+        "end": "titik akhir kedua ruas",
+        "cell": "satu petak",
+        "cube": "satu kubus, satu petak di tiap sisinya",
+        "halves": "dua setengah petak",
+        "negative": "luas negatif: kanan bawah atau kiri atas",
+        "mirror": "garis miring, tempat bercermin",
+        "result": "hasil kedua ruas"
+      },
+      "aria": {
+        "line": "garis bilangan dengan panah kedua ruas",
+        "plane": "persegi panjang bertanda di kertas petak",
+        "cuboid": "balok dari kubus satuan yang dipotong dua cara",
+        "area": "persegi panjang dari petak satuan",
+        "side": "{{side}}: {{expression}}"
+      }
+    },
+    "orderAxioms": {
+      "title": "Aksioma Urutan",
+      "laws": {
+        "trichotomy": "trikotomi",
+        "transitive": "transitif",
+        "addition": "penambahan",
+        "multiplication": "perkalian"
+      },
+      "examples": {
+        "trichotomyY": "terhadap y",
+        "trichotomyZero": "terhadap 0",
+        "transitiveA": "3, 7, 9",
+        "transitiveB": "−2, 3, 9"
+      },
+      "given": "contoh: $x = {{x}}$, $y = {{y}}$",
+      "words": {
+        "and": "dan",
+        "or": "atau"
+      },
+      "slider": "geser",
+      "idle": "tekan mulai untuk melihat contohnya satu per satu, atau geser ${{name}}$ sendiri.",
+      "stamps": {
+        "negative": "negatif",
+        "zero": "nol",
+        "positive": "positif",
+        "kept": "urutan tetap",
+        "same": "tanda tetap",
+        "flipped": "tanda berbalik"
+      },
+      "figure": {
+        "left": "← kiri",
+        "right": "kanan →",
+        "negative": "negatif",
+        "positive": "positif",
+        "before": "sebelum",
+        "after": "sesudah",
+        "crossed": "bersilang",
+        "meet": "keduanya jatuh di 0"
+      },
+      "samples": {
+        "trichotomyY": {
+          "steps": [
+            "$x = -5$ di kiri $y = 3$. Hanya $x < y$ yang benar.",
+            "$x = 3$ berimpit dengan $y = 3$. Hanya $x = y$ yang benar.",
+            "$x = 8$ di kanan $y = 3$. Hanya $x > y$ yang benar."
+          ]
+        },
+        "trichotomyZero": {
+          "steps": [
+            "$x = -6$ di kiri 0, jadi $x < 0$: $x$ negatif.",
+            "$x = 0$ berimpit dengan 0: bukan positif, bukan negatif.",
+            "$x = 4$ di kanan 0, jadi $x > 0$: $x$ positif."
+          ]
+        },
+        "transitiveA": {
+          "steps": [
+            "$x = 3$ di kiri $y = 7$, jadi $3 < 7$.",
+            "$y = 7$ di kiri $z = 9$, jadi $7 < 9$.",
+            "Dua langkah ke kanan digabung tetap ke kanan: $x$ di kiri $z$, jadi $3 < 9$."
+          ]
+        },
+        "transitiveB": {
+          "steps": [
+            "$x = -2$ di kiri $y = 3$, jadi $-2 < 3$.",
+            "$y = 3$ di kiri $z = 9$, jadi $3 < 9$.",
+            "Dua langkah ke kanan digabung tetap ke kanan: $x$ di kiri $z$, jadi $-2 < 9$."
+          ]
+        },
+        "addition": {
+          "steps": [
+            "Mulai dari $x = 3$ dan $y = 7$: $3$ di kiri $7$, jadi $3 < 7$.",
+            "$\\Rightarrow$ Tambahkan $z = 9$ ke kedua ruas. Kedua titik bergeser 9 ke kanan: $12 < 16$, urutannya tetap.",
+            "$\\Leftarrow$ Tambahkan $-9$ ke kedua ruas. Kedua titik bergeser 9 ke kiri, kembali ke $3 < 7$.",
+            "Dengan $z = -5$ kedua titik bergeser ke kiri: $-2 < 2$. Urutannya tetap juga."
+          ]
+        },
+        "multiplication": {
+          "steps": [
+            "$z = 3 > 0$: $xz = 6$ dan $yz = 12$. Garis penghubung tidak bersilang, $6 < 12$. Tanda tetap.",
+            "$z = -3 < 0$: $xz = -6$ dan $yz = -12$. Garis penghubung bersilang di atas 0, $-6 > -12$. Tanda berbalik.",
+            "$z = -\\tfrac{1}{2} < 0$: $xz = -1$ dan $yz = -2$. Bersilang lagi, $-1 > -2$.",
+            "$z = \\tfrac{1}{2} > 0$: $xz = 1$ dan $yz = 2$. Garis menyusut ke arah 0 tanpa bersilang, $1 < 2$."
+          ]
+        }
+      },
+      "intros": {
+        "trichotomyY": "Dua bilangan $x$ dan $y$ hanya punya tiga kemungkinan posisi di garis bilangan: $x$ di kiri $y$, berimpit dengan $y$, atau di kanan $y$. Tepat satu yang terjadi, jadi tepat satu dari $x < y$, $x = y$, $x > y$ yang benar.",
+        "trichotomyZero": "Bilangan 0 memisahkan $\\mathbb{R}$ menjadi dua bagian. Yang di kanan 0 disebut positif, yang di kiri 0 disebut negatif. Bilangan 0 sendiri bukan keduanya.",
+        "transitive": "Kalau $x$ di kiri $y$ dan $y$ di kiri $z$, maka $x$ pasti di kiri $z$. Dua langkah ke kanan digabung tetap satu langkah ke kanan.",
+        "addition": "Menambah $z$ ke kedua ruas menggeser kedua titik sejauh $z$ ke arah yang sama. Urutan dan jaraknya tidak berubah, untuk $z$ positif maupun negatif. Tanda $\\iff$ berarti berlaku dua arah: tambah $z$, lalu tambah $-z$ untuk kembali.",
+        "multiplication": "Mengalikan dengan $z > 0$ meregangkan atau menyusutkan garis dari 0, urutannya tetap. Mengalikan dengan $z < 0$ juga membalik garis di 0: yang tadinya di kiri pindah ke kanan. Karena itu tanda urutannya berbalik."
+      },
+      "tips": {
+        "addition": "Geser $z$: garis penghubungnya selalu sejajar.",
+        "multiplication": "Geser $z$: garis penghubungnya bersilang tepat saat $z < 0$."
+      },
+      "reading": {
+        "less": "$x = {{x}}$ di kiri $y = {{y}}$, jadi $x < y$.",
+        "equal": "$x = {{x}}$ berimpit dengan $y$, jadi $x = y$.",
+        "greater": "$x = {{x}}$ di kanan $y = {{y}}$, jadi $x > y$.",
+        "negative": "$x = {{x}}$ di kiri 0, jadi $x < 0$: $x$ negatif.",
+        "zero": "$x = 0$: bukan positif, bukan negatif.",
+        "positive": "$x = {{x}}$ di kanan 0, jadi $x > 0$: $x$ positif.",
+        "transitive": "${{a}}$ di kiri ${{b}}$ dan ${{b}}$ di kiri ${{c}}$, jadi ${{a}}$ di kiri ${{c}}$: ${{a}} < {{c}}$.",
+        "additionTop": "${{x}}$ di kiri ${{y}}$, jadi ${{x}} < {{y}}$.",
+        "additionDown": "$x + z = {{movedX}}$ di kiri $y + z = {{movedY}}$, jadi $x + z < y + z$. Jaraknya tetap {{gap}}.",
+        "additionUp": "Tambah ${{back}}$ ke kedua ruas: kembali ke ${{x}} < {{y}}$.",
+        "multiplicationZero": "$z = 0$: $xz = yz = 0$. Aksioma ini hanya membahas $z > 0$ dan $z < 0$.",
+        "multiplicationPositive": "$z = {{z}} > 0$: $xz = {{movedX}}$ di kiri $yz = {{movedY}}$, jadi $xz < yz$. Tanda tetap.",
+        "multiplicationNegative": "$z = {{z}} < 0$: $xz = {{movedX}}$ di kanan $yz = {{movedY}}$, jadi $xz > yz$. Tanda berbalik."
+      },
+      "cards": {
+        "substitution": "dari rumus ke contoh",
+        "signs": "positif & negatif",
+        "others": "contoh lain",
+        "twoWays": "dua arah",
+        "trap": "awas tertukar",
+        "ordering": "mengurutkan",
+        "rules": "aksioma urutan"
+      },
+      "substitution": {
+        "formula": "rumus",
+        "values": "ganti",
+        "example": "contoh",
+        "footnote": "Rumusnya berlaku untuk setiap bilangan real. Contoh di papan hanya satu pilihan.",
+        "noFormula": "tidak ada untuk $z = 0$",
+        "zeroFootnote": "Aksioma perkalian hanya membahas $z > 0$ dan $z < 0$. Dengan $z = 0$ kedua ruas sama-sama 0."
+      },
+      "signs": {
+        "positive": "$x$ positif, di kanan 0",
+        "negative": "$x$ negatif, di kiri 0",
+        "footnote": "Trikotomi dengan $y = 0$: setiap bilangan real tepat satu dari negatif, nol, atau positif."
+      },
+      "transitiveOthers": {
+        "values": "$x = {{a}}$, $y = {{b}}$, $z = {{c}}$",
+        "footnote": "Syaratnya dua pertidaksamaan yang tersambung: ujung kanan yang pertama sama dengan ujung kiri yang kedua."
+      },
+      "twoWays": {
+        "forward": "tambah 9 ke kedua ruas",
+        "backward": "tambah $-9$ ke kedua ruas",
+        "footnote": "Kedua arah benar, makanya ditulis $\\iff$."
+      },
+      "multiplicationOthers": {
+        "double": "$x = 3$, $y = 6$, $z = 2$: tanda tetap",
+        "half": "$z = \\tfrac{1}{2}$: tanda tetap",
+        "minusFour": "$z = -4$: tanda berbalik",
+        "minusTwoThirds": "$z = -\\tfrac{2}{3}$: tanda berbalik",
+        "minusTen": "$x = 2$, $y = 4$, $z = -10$: tanda berbalik"
+      },
+      "trap": {
+        "wrong": "salah",
+        "right": "benar",
+        "footnote": "$-12$ lebih jauh ke kiri dari 0 daripada $-6$, jadi $-12$ yang lebih kecil. Ini contoh $z = -3$ di papan."
+      },
+      "ordering": {
+        "task": "Diketahui $x = 5$, $y = -4$, $z = \\tfrac{1}{3}$, $w = -\\tfrac{1}{2}$. Urutkan $xy$, $xz$, $xw$, $yz$, $yw$, $zw$ dari kecil ke besar."
+      },
+      "rules": {
+        "property": "sifat",
+        "formula": "rumus",
+        "names": {
+          "trichotomy": "trikotomi",
+          "transitive": "transitif",
+          "addition": "penambahan",
+          "multiplicationPositive": "perkalian, $z > 0$",
+          "multiplicationNegative": "perkalian, $z < 0$"
+        },
+        "notes": {
+          "trichotomy": "tepat satu yang benar",
+          "multiplicationNegative": "tanda urutan berbalik"
+        },
+        "footnote": "Berlaku untuk setiap $x, y, z \\in \\mathbb{R}$. Bersama aksioma medan, keempat sifat ini membentuk sistem bilangan real."
+      },
+      "legend": {
+        "reference": "titik $y$, tetap",
+        "referenceZero": "titik 0, tetap",
+        "point": "titik $x$, digeser",
+        "relation": "hubungan yang benar",
+        "arrow": "ke kanan: pangkalnya lebih kecil",
+        "now": "langkah sekarang",
+        "linkAddition": "titik pindah setelah ditambah $z$",
+        "linkMultiplication": "titik pindah setelah dikali $z$",
+        "band": "jarak kedua titik",
+        "crossed": "bersilang: tanda urutan berbalik"
+      },
+      "aria": {
+        "trichotomy": "garis bilangan dengan titik x dan y",
+        "transitive": "garis bilangan dengan tiga titik dan panah",
+        "shift": "dua garis bilangan, sebelum dan sesudah",
+        "slider": "geser {{name}}"
+      }
+    },
+    "inequalities": {
+      "title": "Pertidaksamaan",
+      "groups": {
+        "compare": "persamaan vs pertidaksamaan",
+        "linear": "linear",
+        "chained": "bertingkat",
+        "bothSides": "x di kedua ruas"
+      },
+      "words": {
+        "or": "atau"
+      },
+      "slider": "uji",
+      "idle": "tekan mulai untuk melihat langkahnya satu per satu, atau geser $x$ untuk menguji.",
+      "table": {
+        "step": "langkah",
+        "test": "uji",
+        "holds": "benar",
+        "fails": "salah"
+      },
+      "reasons": {
+        "add": "tambah ${{term}}$",
+        "addEach": "tambah ${{term}}$ ke setiap ruas",
+        "subtractEach": "kurangi ${{term}}$ dari setiap ruas",
+        "simplify": "sederhanakan",
+        "divideKept": "bagi ${{term}}$, tanda tetap",
+        "divideFlipped": "bagi ${{term}}$, tanda berbalik",
+        "readBackward": "dibaca dari kanan",
+        "factor": "faktorkan",
+        "zeroFactor": "salah satu faktor 0"
+      },
+      "samples": {
+        "equationLinear": {
+          "steps": [
+            "Persamaan $x - 2 = 0$.",
+            "Tambah 2 ke kedua ruas: $x = 2$.",
+            "Hanya satu titik yang memenuhi: $\\{2\\}$."
+          ]
+        },
+        "equationSquare": {
+          "steps": [
+            "Persamaan $x^2 - \\tfrac{1}{4} = 0$.",
+            "Faktorkan ruas kiri: $(x - \\tfrac{1}{2})(x + \\tfrac{1}{2}) = 0$.",
+            "Hasil kali sama dengan 0 jika salah satu faktornya 0: $x = \\tfrac{1}{2}$ atau $x = -\\tfrac{1}{2}$.",
+            "Dua titik yang memenuhi: $\\{-\\tfrac{1}{2}, \\tfrac{1}{2}\\}$."
+          ]
+        },
+        "inequalityBasic": {
+          "steps": [
+            "Pertidaksamaan $x < 1$.",
+            "Semua titik di kiri 1 memenuhi, 1 sendiri tidak: selang $(-\\infty, 1)$."
+          ]
+        },
+        "linearPositive": {
+          "steps": [
+            "Mulai dari $2x - 4 < 0$.",
+            "Tambah 4 ke kedua ruas (aksioma penambahan).",
+            "Sederhanakan: $2x < 4$.",
+            "Bagi kedua ruas dengan 2. Karena $2 > 0$, tanda tetap: $x < 2$.",
+            "Jadi semua $x$ di kiri 2 memenuhi, 2 sendiri tidak: selang $(-\\infty, 2)$."
+          ]
+        },
+        "linearNegative": {
+          "steps": [
+            "Mulai dari $-2x + 4 < 0$.",
+            "Tambah $-4$ ke kedua ruas.",
+            "Sederhanakan: $-2x < -4$.",
+            "Bagi kedua ruas dengan $-2$. Karena $-2 < 0$, tanda berbalik: $x > 2$.",
+            "Jadi semua $x$ di kanan 2 memenuhi: selang $(2, \\infty)$."
+          ]
+        },
+        "chainedOpen": {
+          "steps": [
+            "Mulai dari $0 < 2x - 2 \\le 4$. Ada tiga ruas.",
+            "Tambah 2 ke setiap ruas.",
+            "Sederhanakan: $2 < 2x \\le 6$.",
+            "Bagi setiap ruas dengan 2 (kali $2^{-1}$), tanda tetap: $1 < x \\le 3$.",
+            "Jadi $x$ di antara 1 dan 3, tanpa 1 tetapi dengan 3: selang $(1, 3]$."
+          ]
+        },
+        "chainedClosed": {
+          "steps": [
+            "Mulai dari $10 \\ge 2x + 6 \\ge 4$.",
+            "Kurangi 6 dari setiap ruas: $4 \\ge 2x \\ge -2$.",
+            "Bagi setiap ruas dengan 2: $2 \\ge x \\ge -1$.",
+            "Baca dari kanan ke kiri, artinya sama: $-1 \\le x \\le 2$.",
+            "Jadi $x$ dari $-1$ sampai 2, kedua ujung ikut: selang $[-1, 2]$."
+          ]
+        },
+        "bothSidesKept": {
+          "steps": [
+            "Mulai dari $5x + 6 < 3x + 14$. Ada $x$ di kedua ruas.",
+            "Tambah $(-3x - 6)$ ke kedua ruas, supaya suku $x$ terkumpul di kiri dan bilangan di kanan.",
+            "Sederhanakan: $2x < 8$.",
+            "Bagi kedua ruas dengan 2, tanda tetap: $x < 4$.",
+            "Jadi selang $(-\\infty, 4)$."
+          ]
+        },
+        "bothSidesFlipped": {
+          "steps": [
+            "Mulai dari $-2x + 10 \\ge 3x - 5$.",
+            "Tambah $(-3x - 10)$ ke kedua ruas.",
+            "Sederhanakan: $-5x \\ge -15$.",
+            "Bagi dengan $-5$ (kali $-\\tfrac{1}{5}$). Karena negatif, tanda berbalik: $x \\le 3$.",
+            "Jadi selang $(-\\infty, 3]$, 3 ikut."
+          ]
+        }
+      },
+      "intros": {
+        "compare": "Persamaan hanya dipenuhi oleh beberapa titik, banyaknya berhingga. Pertidaksamaan dipenuhi oleh sebuah selang, banyaknya tak berhingga.",
+        "linear": "Pertidaksamaan diselesaikan dengan aksioma urutan: tambah bilangan yang sama ke kedua ruas, lalu bagi dengan koefisien $x$. Kalau koefisiennya negatif, tanda urutannya berbalik.",
+        "chained": "Pertidaksamaan bertingkat punya tiga ruas. Setiap langkah dikerjakan ke ketiga ruas sekaligus.",
+        "bothSides": "Kalau $x$ ada di kedua ruas, kumpulkan dulu suku $x$ di satu ruas dengan menambahkan lawannya ke kedua ruas."
+      },
+      "tip": "Geser $x$: semua baris benar bersama-sama atau salah bersama-sama. Langkah yang sah tidak mengubah himpunan penyelesaian.",
+      "reading": {
+        "inside": "$x = {{x}}$ memenuhi: semua baris benar.",
+        "outside": "$x = {{x}}$ tidak memenuhi: semua baris salah.",
+        "insideSingle": "$x = {{x}}$ memenuhi.",
+        "outsideSingle": "$x = {{x}}$ tidak memenuhi."
+      },
+      "cards": {
+        "ways": "tiga cara menulis",
+        "others": "contoh lain",
+        "forms": "membaca selang"
+      },
+      "ways": {
+        "line": "garis",
+        "set": "himpunan",
+        "interval": "selang",
+        "notInterval": "bukan selang, hanya titik"
+      },
+      "counts": {
+        "one": "Banyaknya nilai $x$: 1, berhingga.",
+        "two": "Banyaknya nilai $x$: 2, berhingga.",
+        "infinite": "Banyaknya nilai $x$ tak berhingga, sebab selang memuat semua bilangan real di dalamnya."
+      },
+      "others": {
+        "compare": [
+          "1 nilai",
+          "1 nilai",
+          "$x = 0$ atau $x = 1$: 2 nilai",
+          "$x = -2$ atau $x = 1$: 2 nilai",
+          "$x = 0$, $x = -\\sqrt{2}$, atau $x = \\sqrt{2}$: 3 nilai",
+          "$x = \\pm 3$ atau $x = \\pm 1$: 4 nilai"
+        ],
+        "linear": [
+          "bagi 2: tanda tetap",
+          "bagi $-2$: tanda berbalik",
+          "bagi 2: tanda tetap",
+          "bagi $-2$: tanda berbalik"
+        ],
+        "chained": [
+          "kurangi 2, lalu bagi 4",
+          "tambah 7, lalu bagi 3"
+        ],
+        "bothSides": [
+          "tambah $(-5x + 6)$, lalu bagi $-8$: tanda berbalik",
+          "tambah $(2x - 7)$, lalu bagi 5"
+        ]
+      },
+      "forms": {
+        "inequality": "pertidaksamaan",
+        "interval": "selang",
+        "line": "garis",
+        "footnote": "Kurung biasa berarti ujungnya tidak ikut, kurung siku berarti ujungnya ikut. Di sisi $\\infty$ selalu kurung biasa, sebab $\\infty$ bukan bilangan real."
+      },
+      "legend": {
+        "closed": "ujung tertutup: ikut ($\\le$, $\\ge$)",
+        "open": "ujung terbuka: tidak ikut ($<$, $>$)",
+        "set": "himpunan penyelesaian",
+        "probeIn": "$x$ yang diuji, memenuhi",
+        "probeOut": "$x$ yang diuji, tidak memenuhi"
+      },
+      "aria": {
+        "line": "garis bilangan dengan himpunan penyelesaian",
+        "slider": "uji x"
+      }
+    },
+    "absoluteValue": {
+      "title": "Nilai Mutlak",
+      "groups": {
+        "definition": "definisi",
+        "equation": "persamaan",
+        "theorem": "teorema",
+        "inequality": "pertidaksamaan",
+        "properties": "sifat"
+      },
+      "words": {
+        "or": "atau",
+        "not": "bukan",
+        "undefined": "tidak didefinisikan",
+        "decimal": "{,}"
+      },
+      "slider": {
+        "test": "uji",
+        "move": "geser"
+      },
+      "idle": {
+        "x": "tekan mulai untuk melihat langkahnya satu per satu, atau geser $x$ untuk menguji.",
+        "a": "tekan mulai untuk melihat langkahnya satu per satu, atau geser $a$.",
+        "ab": "tekan mulai untuk melihat langkahnya satu per satu, atau geser $a$ dan $b$."
+      },
+      "table": {
+        "step": "langkah",
+        "test": "uji",
+        "holds": "benar",
+        "fails": "salah"
+      },
+      "reasons": {
+        "open": "buka tanda mutlak",
+        "sameOrOpposite": "sama, atau saling berlawanan",
+        "subtract": "kurangi ${{term}}$",
+        "add": "tambah ${{term}}$",
+        "addEach": "tambah ${{term}}$ ke setiap ruas",
+        "gather": "kumpulkan suku $x$",
+        "divide": "bagi ${{term}}$",
+        "divideCoefficient": "bagi dengan koefisien $x$",
+        "candidates": "bagi, dapat dua calon",
+        "condition": "syarat: ruas kanan sama dengan nilai mutlak, jadi tidak boleh negatif",
+        "simplify": "sederhanakan"
+      },
+      "cases": {
+        "nonnegative": "jika $a \\ge 0$",
+        "negative": "jika $a < 0$"
+      },
+      "definition": {
+        "steps": {
+          "point": "Titik $a = {{a}}$ di garis bilangan.",
+          "caseNonnegative": "$a \\ge 0$, jadi pakai baris pertama: $\\lvert a \\rvert = a$.",
+          "caseNegative": "$a < 0$, jadi pakai baris kedua: $\\lvert a \\rvert = -a$.",
+          "stay": "$\\lvert a \\rvert = a$: titiknya tetap di tempat.",
+          "mirror": "$-a = {{negation}}$: titiknya dicerminkan terhadap 0.",
+          "distance": "Jaraknya ke 0 adalah ${{result}}$. Jadi ${{absolute}}$, tidak negatif."
+        },
+        "reading": "${{absolute}}$: titik ${{a}}$ berjarak ${{result}}$ dari 0.",
+        "readingZero": "$\\lvert 0 \\rvert = 0$: titik 0 sendiri, jaraknya ke 0 adalah 0."
+      },
+      "properties": {
+        "steps": {
+          "sum": "Panah $a = {{a}}$ dari 0, lalu panah $b = {{b}}$ dari ujungnya. Ujung akhirnya di $a + b = {{sum}}$.",
+          "sumDistance": "$\\lvert a + b \\rvert$ adalah jarak ujung itu ke 0: ${{absolute}} = {{left}}$.",
+          "absolute": "Untuk $\\lvert a \\rvert + \\lvert b \\rvert$ kedua panah dibuat ke kanan: ${{a}} + {{b}} = {{right}}$.",
+          "equal": "Kedua ruas sama, ${{left}} = {{right}}$, sebab {{why}}: tidak ada panah yang berbalik.",
+          "less": "Ruas kiri lebih kecil, ${{left}} < {{right}}$, sebab {{why}}: panah $b$ berbalik dan menghapus sebagian jalan."
+        },
+        "why": {
+          "zero": "salah satunya 0",
+          "same": "tanda $a$ dan $b$ sama",
+          "opposite": "tanda $a$ dan $b$ berbeda"
+        },
+        "reading": {
+          "equal": "$\\lvert a + b \\rvert = {{left}}$ dan $\\lvert a \\rvert + \\lvert b \\rvert = {{right}}$: kedua ruas sama, sebab {{why}}.",
+          "less": "$\\lvert a + b \\rvert = {{left}}$ dan $\\lvert a \\rvert + \\lvert b \\rvert = {{right}}$: ruas kiri lebih kecil, sebab {{why}}."
+        }
+      },
+      "samples": {
+        "equationConstant": {
+          "steps": [
+            "Persamaan $\\lvert 4x + 3 \\rvert = 7$: isi tanda mutlaknya berjarak 7 dari 0.",
+            "Menurut Definisi 4.2.1, isinya 7 atau $-7$.",
+            "Kurangi 3 dari kedua ruas pada setiap bagian.",
+            "Bagi 4: $x = 1$ atau $x = -\\tfrac{10}{4}$.",
+            "Dua titik yang memenuhi: $\\{-\\tfrac{10}{4}, 1\\}$."
+          ]
+        },
+        "equationVariable": {
+          "steps": [
+            "Persamaan $\\lvert 7x \\rvert = x - 4$. Ruas kanannya memuat $x$.",
+            "Buka tanda mutlak seperti contoh pertama.",
+            "Kumpulkan suku $x$: $6x = -4$ atau $8x = 4$.",
+            "Bagi: calonnya $x = -\\tfrac{4}{6}$ atau $x = \\tfrac{4}{8}$.",
+            "Tetapi $\\lvert 7x \\rvert$ tidak pernah negatif, jadi ruas kanan juga: $x - 4 \\ge 0$, artinya $x \\ge 4$.",
+            "Kedua calon kurang dari 4, jadi ditolak. Tidak ada $x$ yang memenuhi: $\\varnothing$."
+          ]
+        },
+        "equationBoth": {
+          "steps": [
+            "Persamaan $\\lvert 5x - 3 \\rvert = \\lvert 3x + 5 \\rvert$: kedua isinya sama jauh dari 0.",
+            "Dua bilangan sama jauh dari 0 jika keduanya sama atau saling berlawanan.",
+            "Kumpulkan suku $x$ di kiri dan bilangan di kanan.",
+            "Bagi: $x = 4$ atau $x = -\\tfrac{2}{8}$.",
+            "Dua titik yang memenuhi: $\\{-\\tfrac{2}{8}, 4\\}$."
+          ]
+        },
+        "theoremLess": {
+          "steps": [
+            "$\\lvert x \\rvert < 3$: jarak $x$ ke 0 kurang dari 3.",
+            "Titik yang jaraknya ke 0 kurang dari 3 ada di antara $-3$ dan 3.",
+            "Ujung $-3$ dan 3 berjarak tepat 3, jadi tidak ikut: selang $(-3, 3)$."
+          ]
+        },
+        "theoremGreater": {
+          "steps": [
+            "$\\lvert x \\rvert > 3$: jarak $x$ ke 0 lebih dari 3.",
+            "Titiknya di kiri $-3$ atau di kanan 3.",
+            "Dua bagian, ujungnya tidak ikut: $(-\\infty, -3) \\cup (3, \\infty)$."
+          ]
+        },
+        "theoremLessEqual": {
+          "steps": [
+            "$\\lvert x \\rvert \\le 3$: jarak $x$ ke 0 paling jauh 3.",
+            "Titiknya di antara $-3$ dan 3, termasuk keduanya.",
+            "Ujungnya berjarak tepat 3, dan $3 \\le 3$, jadi ikut: selang $[-3, 3]$."
+          ]
+        },
+        "theoremGreaterEqual": {
+          "steps": [
+            "$\\lvert x \\rvert \\ge 3$: jarak $x$ ke 0 paling dekat 3.",
+            "Titiknya di kiri $-3$ atau di kanan 3, termasuk keduanya.",
+            "Dua bagian, ujungnya ikut: $(-\\infty, -3] \\cup [3, \\infty)$."
+          ]
+        },
+        "inequalityA": {
+          "steps": [
+            "Mulai dari $\\lvert x - 4 \\rvert < 7$.",
+            "Teorema 4.2.1(a) dengan $x - 4$ di tempat $x$ dan $a = 7$.",
+            "Tambah 4 ke setiap ruas.",
+            "Sederhanakan: $-3 < x < 11$.",
+            "Jadi selang $(-3, 11)$."
+          ]
+        },
+        "inequalityB": {
+          "steps": [
+            "Mulai dari $\\lvert 2x - 5 \\rvert < 3$.",
+            "Teorema 4.2.1(a): $-3 < 2x - 5 < 3$.",
+            "Tambah 5 ke setiap ruas: $2 < 2x < 8$.",
+            "Bagi setiap ruas dengan 2: $1 < x < 4$.",
+            "Jadi selang $(1, 4)$."
+          ]
+        },
+        "inequalityC": {
+          "steps": [
+            "Mulai dari $\\lvert x - 3 \\rvert > 5$.",
+            "Teorema 4.2.1(b): dua bagian dengan kata atau.",
+            "Tambah 3 ke kedua ruas pada setiap bagian: $x < -2$ atau $x > 8$.",
+            "Jadi dua selang: $(-\\infty, -2) \\cup (8, \\infty)$."
+          ]
+        },
+        "inequalityD": {
+          "steps": [
+            "Mulai dari $\\lvert 3x - 7 \\rvert > 2$.",
+            "Teorema 4.2.1(b): $3x - 7 < -2$ atau $3x - 7 > 2$.",
+            "Tambah 7: $3x < 5$ atau $3x > 9$.",
+            "Bagi 3: $x < \\tfrac{5}{3}$ atau $x > 3$.",
+            "Jadi $(-\\infty, \\tfrac{5}{3}) \\cup (3, \\infty)$."
+          ]
+        },
+        "inequalityE": {
+          "steps": [
+            "Mulai dari $\\lvert 3x - 2 \\rvert \\le 4$.",
+            "Akibat 4.2.1(a): $-4 \\le 3x - 2 \\le 4$.",
+            "Tambah 2 ke setiap ruas: $-2 \\le 3x \\le 6$.",
+            "Bagi setiap ruas dengan 3: $-\\tfrac{2}{3} \\le x \\le 2$.",
+            "Jadi selang $[-\\tfrac{2}{3}, 2]$, kedua ujung ikut."
+          ]
+        },
+        "inequalityF": {
+          "steps": [
+            "Mulai dari $\\lvert 3x - 4 \\rvert \\ge 2$.",
+            "Akibat 4.2.1(b): $3x - 4 \\le -2$ atau $3x - 4 \\ge 2$.",
+            "Tambah 4: $3x \\le 2$ atau $3x \\ge 6$.",
+            "Bagi 3: $x \\le \\tfrac{2}{3}$ atau $x \\ge 2$.",
+            "Jadi $(-\\infty, \\tfrac{2}{3}] \\cup [2, \\infty)$, ujungnya ikut."
+          ]
+        }
+      },
+      "intros": {
+        "definition": "Nilai mutlak $\\lvert a \\rvert$ tidak pernah negatif. Kalau $a \\ge 0$, nilainya tetap $a$. Kalau $a < 0$, nilainya $-a$: titik $a$ dicerminkan terhadap 0. Di garis bilangan, $\\lvert a \\rvert$ adalah jarak $a$ ke 0.",
+        "equation": "Persamaan nilai mutlak dipecah dua dengan Definisi 4.2.1: isi tanda mutlak sama dengan ruas kanan, atau sama dengan lawannya. Kalau ruas kanan memuat $x$, calonnya harus diperiksa.",
+        "theorem": "Untuk $a > 0$: $\\lvert x \\rvert < a$ berarti jarak $x$ ke 0 kurang dari $a$, jadi $x$ di antara $-a$ dan $a$. $\\lvert x \\rvert > a$ berarti $x$ di luar keduanya.",
+        "inequality": "Lepas tanda mutlak dengan Teorema 4.2.1 atau Akibat 4.2.1, lalu selesaikan seperti pertidaksamaan biasa. Bentuk $<$ dan $\\le$ menjadi bertingkat, bentuk $>$ dan $\\ge$ menjadi dua bagian dengan kata atau.",
+        "properties": "Ketaksamaan segitiga: $\\lvert a + b \\rvert \\le \\lvert a \\rvert + \\lvert b \\rvert$. Kalau tanda $a$ dan $b$ sama, panahnya searah dan kedua ruas sama. Kalau berbeda, panah $b$ berbalik dan ruas kiri lebih kecil."
+      },
+      "tips": {
+        "definition": "Geser $a$ ke kiri 0: titiknya dicerminkan ke kanan. Hasilnya tidak pernah di kiri 0.",
+        "equation": "Geser $x$: semua baris benar bersama-sama atau salah bersama-sama. Pada contoh kedua, coba $x = \\tfrac{1}{2}$.",
+        "theorem": "Geser $x$: kurung bawah adalah $\\lvert x \\rvert$. Bandingkan panjangnya dengan 3.",
+        "inequality": "Geser $x$: semua baris benar bersama-sama atau salah bersama-sama.",
+        "properties": "Geser $a$ dan $b$. Kedua ruas sama hanya jika $a$ dan $b$ tidak berlawanan tanda."
+      },
+      "reading": {
+        "inside": "$x = {{x}}$ memenuhi: semua baris benar.",
+        "outside": "$x = {{x}}$ tidak memenuhi: semua baris salah.",
+        "falseCandidate": "$x = {{x}}$ memenuhi baris 2 sampai 4, tetapi tidak memenuhi syarat $x \\ge 4$ dan soalnya sendiri: calon palsu.",
+        "conditionOnly": "$x = {{x}}$ memenuhi syarat, tetapi bukan calon. Soalnya salah.",
+        "never": "$x = {{x}}$ tidak memenuhi soalnya."
+      },
+      "cards": {
+        "examples": "contoh lain",
+        "root": "akar kuadrat",
+        "opening": "membuka tanda mutlak",
+        "others": "contoh lain",
+        "cases": "dua kasus",
+        "condition": "mengapa $a > 0$",
+        "swap": "dari teorema ke contoh",
+        "live": "Teorema 4.2.2 dengan $a$, $b$ ini",
+        "proof": "bukti (c)",
+        "rules": "rumus nilai mutlak"
+      },
+      "labels": {
+        "rule": "rumus",
+        "replace": "ganti",
+        "result": "jadi",
+        "live": "dengan $a$ ini",
+        "square": "kuadrat",
+        "root": "akar"
+      },
+      "examplesFootnote": "Bilangan tak negatif tetap. Bilangan negatif diberi tanda minus sekali lagi, jadi positif.",
+      "rootFootnote": "Persamaan $x^2 = 16$ punya dua akar, tetapi tanda akar $\\sqrt{\\ }$ hanya memberi akar yang tak negatif. Karena itu $\\sqrt{x^2} = \\lvert x \\rvert$.",
+      "openingNotes": {
+        "constant": "Syaratnya $c \\ge 0$. Di sini $c = 7$, aman.",
+        "variable": "Di sini $c = x - 4$ memuat $x$, jadi syarat $c \\ge 0$ harus diperiksa.",
+        "both": "Kedua ruas nilai mutlak, keduanya tak negatif, jadi tidak perlu syarat."
+      },
+      "equationOthers": [
+        "ruas kanan 2, positif: kedua calon memenuhi",
+        "ruas kanan 5, positif: kedua calon memenuhi",
+        "ruas kanan 2, positif: kedua calon memenuhi",
+        "tidak ada $x$: nilai mutlak tidak pernah negatif"
+      ],
+      "inequalityOthers": [
+        "Teorema 4.2.1(a), tambah 1, bagi 2",
+        "Teorema 4.2.1(b), tambah 8, bagi 4",
+        "Akibat 4.2.1(a), tambah 1, bagi 5",
+        "Akibat 4.2.1(b), kurangi 8, bagi 4"
+      ],
+      "casesFootnote": "Sekarang ${{now}}$. Gabungkan kedua kasus: ${{joined}}$.",
+      "condition": {
+        "remarks": [
+          "tidak ada $x$: nilai mutlak tidak pernah negatif",
+          "hanya $x = 0$",
+          "semua $x \\in \\mathbb{R}$"
+        ],
+        "footnote": "Untuk $a \\le 0$ teoremanya tidak dipakai. Jawabannya dibaca langsung dari definisi."
+      },
+      "swapFootnote": "Yang diganti adalah seluruh isi tanda mutlak, bukan hanya $x$.",
+      "live": {
+        "corollaryA": "akibat (a)",
+        "corollaryB": "akibat (b)"
+      },
+      "proof": {
+        "reasons": [
+          "dari definisi",
+          "dari definisi",
+          "jumlahkan (aksioma penambahan)",
+          "Akibat 4.2.1(a)"
+        ],
+        "footnote": "Bukti (a): $\\lvert ab \\rvert = \\sqrt{(ab)^2} = \\sqrt{a^2}\\,\\sqrt{b^2} = \\lvert a \\rvert \\cdot \\lvert b \\rvert$, memakai $\\sqrt{x^2} = \\lvert x \\rvert$."
+      },
+      "rules": {
+        "name": "nama",
+        "formula": "rumus",
+        "line": "garis",
+        "names": {
+          "definition": "Definisi 4.2.1",
+          "root": "akar kuadrat",
+          "theoremA": "Teorema 4.2.1(a)",
+          "theoremB": "Teorema 4.2.1(b)",
+          "corollaryA": "Akibat 4.2.1(a)",
+          "corollaryB": "Akibat 4.2.1(b)",
+          "product": "Teorema 4.2.2(a)",
+          "quotient": "Teorema 4.2.2(b)",
+          "triangle": "Teorema 4.2.2(c)",
+          "difference": "Akibat 4.2.2"
+        },
+        "footnote": "Teorema 4.2.1 dan Akibat 4.2.1 hanya untuk $a > 0$. Pada gambar garis, titik kiri adalah $-a$ dan titik kanan adalah $a$."
+      },
+      "legend": {
+        "point": "titik $a$",
+        "mirrorPoint": "titik $-a$, cerminan $a$",
+        "mirror": "dicerminkan terhadap 0",
+        "distance": "jarak ke 0",
+        "solution": "titik yang memenuhi",
+        "rejected": "calon yang ditolak",
+        "set": "himpunan penyelesaian",
+        "closed": "ujung tertutup: ikut",
+        "open": "ujung terbuka: tidak ikut",
+        "probeIn": "$x$ yang diuji, memenuhi",
+        "probeOut": "$x$ yang diuji, tidak memenuhi",
+        "arrow": "langkah sepanjang $a$ atau $b$",
+        "end": "ujung akhir",
+        "gap": "selisih kedua ruas"
+      },
+      "aria": {
+        "definition": "nilai mutlak sebagai jarak ke 0",
+        "line": "garis bilangan dengan himpunan penyelesaian",
+        "triangle": "ketaksamaan segitiga dengan panah",
+        "slider": {
+          "a": "geser a",
+          "b": "geser b",
+          "x": "uji x"
+        }
+      }
+    },
+    "supremumInfimum": {
+      "title": "Supremum & Infimum",
+      "groups": {
+        "bounds": "batas",
+        "supInf": "sup & inf",
+        "sequences": "himpunan barisan"
+      },
+      "words": {
+        "none": "tidak ada",
+        "decimal": "{,}",
+        "decimalMark": ","
+      },
+      "slider": "geser",
+      "idle": {
+        "ab": "tekan mulai untuk melihat langkahnya satu per satu, atau geser $b$ dan $a$.",
+        "y": "tekan mulai untuk melihat langkahnya satu per satu, atau geser $y$."
+      },
+      "rows": {
+        "upper": "batas atas",
+        "lower": "batas bawah"
+      },
+      "table": {
+        "check": "uji",
+        "holds": "benar",
+        "fails": "salah"
+      },
+      "reasons": {
+        "upperFails": "$x = {{x}} \\in {{name}}$ dan ${{x}} > {{b}}$",
+        "upperHolds": "tidak ada anggota ${{name}}$ di kanan $b$",
+        "lowerFails": "$x = {{x}} \\in {{name}}$ dan ${{x}} < {{a}}$",
+        "lowerHolds": "tidak ada anggota ${{name}}$ di kiri $a$",
+        "aboveFound": "$x = {{x}}$, jadi $y$ belum batas atas",
+        "aboveNone": "tidak ada, $y$ sudah batas atas",
+        "belowFound": "$x = {{x}}$, jadi $y$ belum batas bawah",
+        "belowNone": "tidak ada, $y$ sudah batas bawah"
+      },
+      "steps": {
+        "intervalSet": "Himpunan ${{set}}$ diarsir di garis.",
+        "sequenceSet": "Anggota ${{set}}$ berupa titik-titik di garis.",
+        "upperHolds": "Uji $b = {{b}}$: tidak ada anggota di kanannya, jadi batas atas.",
+        "upperFails": "Uji $b = {{b}}$: ada anggota di kanannya, jadi bukan batas atas.",
+        "lowerHolds": "Uji $a = {{a}}$: tidak ada anggota di kirinya, jadi batas bawah.",
+        "lowerFails": "Uji $a = {{a}}$: ada anggota di kirinya, jadi bukan batas bawah.",
+        "allBounds": "Semua batas atas: {{upper}}. Semua batas bawah: {{lower}}.",
+        "uppers": "Semua batas atas ${{name}}$: ${{range}}$.",
+        "noUppers": "Batas atas: tidak ada, anggotanya terus membesar.",
+        "supMember": "Yang terkecil: $\\sup {{name}} = {{value}}$, anggota ${{name}}$.",
+        "supOutside": "Yang terkecil: $\\sup {{name}} = {{value}}$, bukan anggota ${{name}}$.",
+        "noSup": "${{name}}$ tidak punya batas atas, jadi tidak ada $\\sup {{name}}$.",
+        "lowers": "Semua batas bawah ${{name}}$: ${{range}}$.",
+        "noLowers": "Batas bawah: tidak ada, anggotanya terus mengecil.",
+        "infMember": "Yang terbesar: $\\inf {{name}} = {{value}}$, anggota ${{name}}$.",
+        "infOutside": "Yang terbesar: $\\inf {{name}} = {{value}}$, bukan anggota ${{name}}$.",
+        "noInf": "${{name}}$ tidak punya batas bawah, jadi tidak ada $\\inf {{name}}$."
+      },
+      "reading": {
+        "upperHolds": "$b = {{b}}$ batas atas ${{name}}$",
+        "upperFails": "$b = {{b}}$ bukan batas atas ${{name}}$",
+        "lowerHolds": "$a = {{a}}$ batas bawah ${{name}}$",
+        "lowerFails": "$a = {{a}}$ bukan batas bawah ${{name}}$",
+        "aboveFound": "di kanan $y = {{y}}$ masih ada $x = {{x}}$",
+        "aboveNone": "di kanan $y = {{y}}$ tidak ada anggota",
+        "belowFound": "di kirinya masih ada $x = {{x}}$",
+        "belowNone": "di kirinya tidak ada anggota",
+        "joined": "{{first}}; {{second}}."
+      },
+      "cards": {
+        "many": "batas tidak tunggal",
+        "member": "tidak harus anggota",
+        "membership": "anggota atau bukan",
+        "completeness": "aksioma kelengkapan",
+        "unique": "sup dan inf tunggal",
+        "others": "contoh lain",
+        "rules": "rumus batas"
+      },
+      "many": {
+        "footnote": "Setiap bilangan di kanan batas atas juga batas atas, dan setiap bilangan di kiri batas bawah juga batas bawah. Jadi banyaknya tak berhingga."
+      },
+      "member": {
+        "boundMember": "batas, sekaligus anggota",
+        "boundOutside": "batas, walau bukan anggota",
+        "notBound": "bukan batas",
+        "footnote": "Batas atas dan batas bawah tidak harus anggota himpunannya."
+      },
+      "membership": {
+        "set": "himpunan",
+        "footnote": "Contoh 4.2.6(b) menulis batas bawah $E$ adalah 1. Yang benar $\\tfrac{1}{2}$, sesuai Contoh 4.2.8(b)."
+      },
+      "completeness": {
+        "remarks": [
+          "hanya bilangan rasional",
+          "semuanya batas atas rasional ($2^2 = 4$, $1{,}5^2 = 2{,}25$, $1{,}4143^2 = 2{,}00024449$), dan selalu ada yang lebih kecil",
+          "di $\\mathbb{Q}$ tidak ada batas atas terkecil, di $\\mathbb{R}$ ada"
+        ],
+        "footnote": "Teorema 4.2.3: himpunan tak kosong yang punya batas atas selalu punya supremum di $\\mathbb{R}$."
+      },
+      "unique": {
+        "remarks": [
+          "misalkan ada dua",
+          "$a$ batas bawah terbesar dan $b$ batas bawah",
+          "$b$ batas bawah terbesar dan $a$ batas bawah",
+          "jadi hanya ada satu infimum, begitu juga supremum"
+        ],
+        "footnote": "Bukti Teorema 4.2.4 di modul menulis $a < b$ dan $b < a$. Yang benar $\\le$."
+      },
+      "others": {
+        "footnote": "Dari latihan kegiatan belajar ini, jawabannya dihitung di sini. Petunjuk modul untuk 5b dan 5c adalah jawaban 5d dan 5h."
+      },
+      "rules": {
+        "name": "aturan",
+        "formula": "rumus",
+        "names": {
+          "upper": "Definisi 4.2.2(a)",
+          "lower": "Definisi 4.2.2(b)",
+          "sup": "Definisi 4.2.3(a)",
+          "inf": "Definisi 4.2.3(b)",
+          "completeUpper": "Teorema 4.2.3(a)",
+          "completeLower": "Teorema 4.2.3(b)",
+          "unique": "Teorema 4.2.4"
+        },
+        "formulas": {
+          "upper": "b \\text{ batas atas } A \\iff b \\ge x,\\ \\forall x \\in A",
+          "lower": "a \\text{ batas bawah } A \\iff a \\le x,\\ \\forall x \\in A",
+          "sup": "b = \\sup A \\iff b \\text{ batas atas } A \\text{ dan } \\forall y < b\\ \\exists x \\in A,\\ y < x",
+          "inf": "a = \\inf A \\iff a \\text{ batas bawah } A \\text{ dan } \\forall y > a\\ \\exists x \\in A,\\ y > x",
+          "completeUpper": "A \\ne \\varnothing \\text{ punya batas atas} \\Rightarrow \\sup A \\text{ ada}",
+          "completeLower": "A \\ne \\varnothing \\text{ punya batas bawah} \\Rightarrow \\inf A \\text{ ada}",
+          "unique": "\\sup A \\text{ dan } \\inf A \\text{ masing-masing tunggal}"
+        }
+      },
+      "intros": {
+        "bounds": "$b$ batas atas $A$ jika tidak ada anggota $A$ yang lebih besar dari $b$. $a$ batas bawah jika tidak ada anggota yang lebih kecil dari $a$. Batasnya tidak harus anggota $A$, dan banyaknya tak berhingga.",
+        "supInf": "Supremum adalah batas atas terkecil: geser sedikit saja ke kiri, sudah ada anggota yang melewatinya. Infimum adalah batas bawah terbesar.",
+        "sequences": "Anggota himpunan dari barisan berupa titik-titik. Supremum atau infimumnya bisa salah satu anggota, bisa juga titik yang didekati terus tetapi tidak pernah dicapai."
+      },
+      "tips": {
+        "bounds": "Geser $b$ ke kiri sampai muncul anggota di kanannya: saat itu $b$ bukan lagi batas atas.",
+        "supInf": "Geser $y$ di bawah supremum: selalu ada anggota $x$ di kanannya. Mulai dari supremum ke kanan, tidak ada lagi.",
+        "sequences": "Pada $D$, geser $y$ mendekati 0: selalu ada $\\tfrac{1}{n}$ yang lebih kecil, cukup pilih $n$ besar."
+      },
+      "legend": {
+        "set": "anggota himpunan",
+        "sequence": "anggota himpunan",
+        "probe": "bilangan yang diuji",
+        "witness": "anggota $x$ yang melewatinya",
+        "bounds": "semua batas atas atau bawah",
+        "bestMember": "sup atau inf, anggota himpunan",
+        "bestOutside": "sup atau inf, bukan anggota"
+      },
+      "aria": {
+        "line": "himpunan dan batas-batasnya di garis bilangan",
+        "slider": {
+          "a": "geser a",
+          "b": "geser b",
+          "y": "geser y"
+        }
+      }
+    },
+    "sequences": {
+      "title": "Barisan",
+      "groups": {
+        "notation": "menulis barisan",
+        "monotone": "kemonotonan",
+        "bounded": "keterbatasan"
+      },
+      "words": {
+        "none": "tidak ada",
+        "decimal": "{,}",
+        "decimalMark": ",",
+        "and": "dan",
+        "odd": "ganjil",
+        "even": "genap",
+        "above": "di atas",
+        "below": "di bawah"
+      },
+      "slider": "geser",
+      "relationTitle": "tanda",
+      "idle": {
+        "n": "tekan mulai untuk melihat langkahnya satu per satu, atau geser $n$.",
+        "bounds": "tekan mulai untuk melihat langkahnya satu per satu, atau geser $M$ dan $m$."
+      },
+      "table": {
+        "step": "langkah",
+        "compare": "bandingkan",
+        "holds": "benar",
+        "fails": "salah"
+      },
+      "reasons": {
+        "term": "suku ke-{{position}}",
+        "finite": "berhenti di $n = 10$: barisan berhingga",
+        "infinite": "suku umum; sukunya tidak pernah habis: barisan tak berhingga",
+        "difference": "selisih ${{difference}}$",
+        "upperFails": "${{term}} > M$",
+        "upperHolds": "tidak ada suku di atas $M$",
+        "lowerFails": "${{term}} < m$",
+        "lowerHolds": "tidak ada suku di bawah $m$"
+      },
+      "steps": {
+        "substitute": "Ganti $n = {{n}}$: ${{term}}$, suku ke-{{position}}.",
+        "general": "Suku umum $a_n = {{general}}$. Tanda $\\dots$ di akhir berarti barisannya tak berhingga.",
+        "finite": "Barisan ini berhenti di suku ke-10: barisan berhingga.",
+        "plotted": "Suku-sukunya digambar: $n$ ke kanan, $a_n$ ke atas.",
+        "compare": "Bandingkan ${{next}}$ dengan ${{current}}$: ${{relation}}$.",
+        "monotone": "Selisih umumnya menunjukkan barisan ini {{properties}}.",
+        "notMonotone": "Ada pasangan yang naik dan ada yang turun: bukan barisan monoton.",
+        "upperHolds": "Uji $M = {{M}}$: tidak ada suku di atasnya, jadi $M$ batas atas.",
+        "upperFails": "Uji $M = {{M}}$: ${{term}}$ melewatinya, jadi $M$ bukan batas atas.",
+        "lowerHolds": "Uji $m = {{m}}$: tidak ada suku di bawahnya, jadi $m$ batas bawah.",
+        "lowerFails": "Uji $m = {{m}}$: ${{term}}$ di bawahnya, jadi $m$ bukan batas bawah.",
+        "all": "Batas atas: {{upper}}. Batas bawah: {{lower}}.",
+        "everyUpper": "semua $M \\ge {{value}}$",
+        "noUpper": "tidak ada $M$",
+        "everyLower": "semua $m \\le {{value}}$",
+        "noLower": "tidak ada $m$"
+      },
+      "reading": {
+        "term": "$n = {{n}}$: suku ke-{{position}}, ${{term}}$.",
+        "pair": "${{current}}$ dan ${{next}}$: {{word}}.",
+        "less": "naik di pasangan ini",
+        "greater": "turun di pasangan ini",
+        "equal": "sama besar",
+        "upperHolds": "$M = {{M}}$ batas atas",
+        "upperFails": "$M = {{M}}$ bukan batas atas",
+        "lowerHolds": "$m = {{m}}$ batas bawah",
+        "lowerFails": "$m = {{m}}$ bukan batas bawah",
+        "joined": "{{first}}; {{second}}."
+      },
+      "properties": {
+        "increasing": "naik",
+        "decreasing": "turun",
+        "nonIncreasing": "tidak naik",
+        "nonDecreasing": "tidak turun"
+      },
+      "stamps": {
+        "monotonePending": "monoton?",
+        "notMonotone": "bukan monoton",
+        "boundedPending": "terbatas?",
+        "bounded": "terbatas",
+        "belowOnly": "terbatas di bawah, tidak di atas",
+        "aboveOnly": "terbatas di atas, tidak di bawah"
+      },
+      "zones": {
+        "noUpper": "tidak ada batas atas",
+        "noLower": "tidak ada batas bawah"
+      },
+      "cards": {
+        "formula": "dari rumus ke suku",
+        "finite": "berhingga dan tak berhingga",
+        "allN": "untuk semua n",
+        "four": "empat sifat",
+        "best": "batas terbaik",
+        "others": "contoh lain",
+        "rules": "rumus barisan"
+      },
+      "formula": {
+        "general": "rumus suku ke-$n$, $n$ mulai dari {{start}}",
+        "position": "suku ke-{{position}}",
+        "constant": "suku ke-{{position}}, tidak bergantung pada $n$",
+        "zero": "penyebutnya 0, jadi $n$ dimulai dari {{start}}",
+        "typo": "Contoh 4.2.9(g) di modul menulis suku pertama $-1$ dan suku umum $\\tfrac{n}{n-2}$. Untuk $\\tfrac{n}{2-n}$ mulai $n = 3$, suku pertamanya $-3$."
+      },
+      "finite": {
+        "remarks": [
+          "berhenti di suku ke-10: barisan berhingga",
+          "tidak pernah berhenti: barisan tak berhingga, dibaca \"barisan $n$, $n$ dari 1 sampai tak hingga\"",
+          "bentuk umumnya, sering disingkat $\\{a_n\\}$"
+        ]
+      },
+      "allN": {
+        "holds": "tanda selisihnya sama untuk setiap $n$, jadi {{properties}}",
+        "mixed": "ada selisih positif dan ada selisih negatif",
+        "footnote": "Gambar hanya menunjukkan 10 suku pertama. Sifat \"$\\forall n$\" dibuktikan dari selisih $a_{n+1} - a_n$ secara umum."
+      },
+      "four": {
+        "yes": "ya",
+        "no": "tidak",
+        "footnote": "Naik sekaligus tidak turun, turun sekaligus tidak naik. Barisan konstan $2, 2, 2, \\dots$ (Contoh 4.2.9f) tidak naik dan tidak turun.",
+        "typoThird": "Contoh 4.2.10(c) di modul menulis suku ketiga $-3$. Yang benar $1 - 2(3) = -5$.",
+        "typoAlternating": "Modul menyebut Contoh 4.2.10(g) dan (h) \"tidak naik dan tidak turun\". Menurut Definisi 4.2.4 keduanya bukan barisan monoton."
+      },
+      "best": {
+        "sequence": "barisan",
+        "least": "$M$ terkecil",
+        "greatest": "$m$ terbesar",
+        "never": "tidak pernah dicapai",
+        "footnote": "$M$ terkecil adalah $\\sup$ dan $m$ terbesar adalah $\\inf$ dari himpunan sukunya (topik sebelumnya). Contoh 4.2.11 memakai $M$ dan $m$ ini."
+      },
+      "others": {
+        "sequence": "barisan",
+        "monotone": "monoton",
+        "bounded": "terbatas",
+        "footnote": "Barisan Contoh 4.2.9, digolongkan di sini (tidak ada di modul)."
+      },
+      "rules": {
+        "name": "aturan",
+        "formula": "rumus",
+        "footnote": "$\\ni$ dibaca \"sedemikian sehingga\".",
+        "names": {
+          "notation": "pengertian barisan",
+          "increasing": "Definisi 4.2.4(a)",
+          "decreasing": "Definisi 4.2.4(b)",
+          "nonIncreasing": "Definisi 4.2.4(c)",
+          "nonDecreasing": "Definisi 4.2.4(d)",
+          "monotone": "Definisi 4.2.4",
+          "upper": "Definisi 4.2.5(a)",
+          "lower": "Definisi 4.2.5(b)",
+          "bounded": "Definisi 4.2.5(c)"
+        },
+        "formulas": {
+          "notation": "\\{a_n\\}_{n=1}^{\\infty} = a_1, a_2, a_3, \\dots, a_n, a_{n+1}, \\dots",
+          "increasing": "\\text{naik} \\iff a_{n+1} > a_n,\\ \\forall n \\in \\mathbb{N}",
+          "decreasing": "\\text{turun} \\iff a_{n+1} < a_n,\\ \\forall n \\in \\mathbb{N}",
+          "nonIncreasing": "\\text{tidak naik} \\iff a_{n+1} \\le a_n,\\ \\forall n \\in \\mathbb{N}",
+          "nonDecreasing": "\\text{tidak turun} \\iff a_{n+1} \\ge a_n,\\ \\forall n \\in \\mathbb{N}",
+          "monotone": "\\text{monoton} \\iff \\text{salah satu dari (a), (b), (c), (d)}",
+          "upper": "\\text{terbatas di atas} \\iff \\exists M \\in \\mathbb{R} \\ni a_n \\le M,\\ \\forall n \\in \\mathbb{N}",
+          "lower": "\\text{terbatas di bawah} \\iff \\exists m \\in \\mathbb{R} \\ni a_n \\ge m,\\ \\forall n \\in \\mathbb{N}",
+          "bounded": "\\text{terbatas} \\iff \\text{terbatas di atas dan di bawah}"
+        }
+      },
+      "intros": {
+        "notation": "Barisan adalah bilangan-bilangan yang diurutkan: suku ke-1, ke-2, ke-3, dan seterusnya. Rumus $a_n$ memberi sukunya: ganti $n$ dengan 1, 2, 3, ...",
+        "monotone": "Naik jika setiap suku lebih besar dari suku sebelumnya, turun jika selalu lebih kecil. Tidak naik dan tidak turun membolehkan suku yang sama besar.",
+        "bounded": "Terbatas di atas jika ada $M$ yang tidak pernah dilewati sukunya. Terbatas di bawah jika ada $m$ yang tidak pernah dilewati ke bawah."
+      },
+      "tips": {
+        "notation": "Pada $\\{\\tfrac{1}{n-1}\\}_{n=2}^{\\infty}$ suku pertamanya $a_2$, bukan $a_1$: lihat dari mana $n$ dimulai.",
+        "monotone": "Geser $n$ untuk membandingkan pasangan lain. Satu pasangan yang menyimpang sudah cukup untuk menggugurkan sifatnya.",
+        "bounded": "Pada $\\{\\tfrac{1}{n}\\}$, geser $m$ sedikit di atas 0: selalu ada suku yang lebih kecil, walau jauh di kanan."
+      },
+      "legend": {
+        "term": "suku $a_n$ di atas $n$",
+        "shadow": "nilainya di garis bilangan",
+        "chosen": "suku ke-$n$ yang dipilih",
+        "pair": "pasangan yang dibandingkan",
+        "relation": "tanda $a_n$ terhadap $a_{n+1}$",
+        "line": "garis $M$ atau $m$ yang diuji",
+        "witness": "suku yang melewatinya",
+        "zone": "semua batas atas atau bawah"
+      },
+      "aria": {
+        "plot": "suku-suku barisan: n ke kanan, a_n ke atas",
+        "slider": {
+          "n": "geser n",
+          "M": "geser M",
+          "m": "geser m"
+        }
+      }
+    },
+    "relations": {
+      "title": "Relasi",
+      "groups": {
+        "meaning": "pengertian relasi",
+        "rule": "relasi dengan aturan",
+        "domain": "domain & kodomain"
+      },
+      "chips": {
+        "hobby": "kegemaran",
+        "older": "lebih tua",
+        "less": "$b < c$",
+        "greater": "$b > c$",
+        "all": "semua pasangan",
+        "letters": "daftar pasangan",
+        "greaterNatural": "$m > n$",
+        "evenSum": "$m + n$ genap",
+        "negative": "$xy < 0$",
+        "nonnegative": "$xy \\ge 0$",
+        "one": "$xy = 1$",
+        "sqrt": "$\\sqrt a = b$",
+        "triple": "$b = 3a$",
+        "positive": "$ab > 0$"
+      },
+      "members": {
+        "sports": ["tenis meja", "bulu tangkis", "renang"],
+        "siblings": ["Kakak", "Saya", "Adik"]
+      },
+      "statements": {
+        "hobby": "$x \\mathrel{\\mathrm R} y$ jika $x$ gemar $y$",
+        "older": "$x \\mathrel{\\mathrm R} y$ jika $x$ lebih tua daripada $y$",
+        "less": "$b \\mathrel{\\mathrm R} c$ jika $b < c$",
+        "greater": "$b \\mathrel{\\mathrm R} c$ jika $b > c$",
+        "all": "setiap anggota $B$ dikaitkan dengan setiap anggota $C$",
+        "letters": "$\\mathrm R = \\{(a, 1), (b, 2), (c, 1)\\}$"
+      },
+      "why": {
+        "hobby": { "holds": "{{a}} gemar {{b}}", "fails": "{{a}} tidak gemar {{b}}" },
+        "older": { "holds": "{{a}} lebih tua daripada {{b}}", "fails": "{{a}} tidak lebih tua daripada {{b}}", "self": "{{a}} tidak lebih tua daripada dirinya sendiri" },
+        "less": { "holds": "${{a}} < {{b}}$ benar", "fails": "${{a}} < {{b}}$ salah" },
+        "greater": { "holds": "${{a}} > {{b}}$ benar", "fails": "${{a}} > {{b}}$ salah" },
+        "all": { "holds": "setiap pasangan dikaitkan", "fails": "setiap pasangan dikaitkan" },
+        "letters": { "holds": "$({{a}}, {{b}})$ ada di daftar $\\mathrm R$", "fails": "$({{a}}, {{b}})$ tidak ada di daftar $\\mathrm R$" }
+      },
+      "words": {
+        "even": "genap",
+        "odd": "ganjil",
+        "true": "benar",
+        "false": "salah",
+        "outside": "(di luar gambar)",
+        "noB": "tidak ada b"
+      },
+      "lists": {
+        "holds": "memenuhi:",
+        "fails": "tidak memenuhi:",
+        "noneYet": "belum ada",
+        "none": "tidak ada"
+      },
+      "table": {
+        "step": "langkah"
+      },
+      "reading": {
+        "pair": "${{pair}}$: {{why}}, jadi ${{relation}}$ dan ${{pair}} {{member}} \\mathrm R$.",
+        "summary": "$\\mathrm R$ berisi {{count}} dari {{total}} pasangan ${{product}}$. Klik titik untuk membaca satu pasangan.",
+        "probe": "${{vars}} = {{pair}}$: {{test}}, jadi ${{pair}} {{member}} \\mathrm R$.",
+        "sqrtHas": "$a = {{a}}$: ${{root}}$, jadi ${{a}} \\in D(\\mathrm R)$ dengan pasangan $b = {{b}}$.",
+        "sqrtNone": "$a = {{a}}$: ${{root}}$ bukan bilangan asli, tidak ada pasangan $b$; ${{a}} \\notin D(\\mathrm R)$.",
+        "triple": "$a = {{a}}$: $b = {{work}}$, jadi ${{a}} \\in D(\\mathrm R)$ dan ${{b}} \\in \\mathit{R}(\\mathrm R)$.",
+        "positiveZero": "$a = 0$: $0 \\cdot b = 0$, tidak pernah $> 0$; $0 \\notin D(\\mathrm R)$.",
+        "positiveUp": "$a = {{a}}$: setiap $b > 0$ memenuhi, jadi ${{a}} \\in D(\\mathrm R)$.",
+        "positiveDown": "$a = {{a}}$: setiap $b < 0$ memenuhi, jadi ${{a}} \\in D(\\mathrm R)$."
+      },
+      "steps": {
+        "meaningDone": "Semua pasangan sudah diperiksa: {{count}} dari {{total}} pasangan ${{product}}$ masuk $\\mathrm R$, jadi $\\mathrm R \\subseteq {{product}}$.",
+        "rulePair": "${{pair}}$: {{test}}, jadi ${{relation}}$.",
+        "rulePattern": "Semua pasangan yang memenuhi aturan membentuk $\\mathrm R$: {{pattern}}.",
+        "domainPair": "${{work}}$, jadi ${{pair}} \\in \\mathrm R$.",
+        "quadrantI": "Jika $a$ dan $b$ sama-sama positif, $ab > 0$: kuadran I masuk $\\mathrm R$.",
+        "quadrantIII": "Jika keduanya negatif, $ab > 0$ juga: kuadran III masuk $\\mathrm R$.",
+        "zero": "Jika $a = 0$, $0 \\cdot b = 0$ untuk setiap $b$: garis $a = 0$ tidak menyentuh $\\mathrm R$.",
+        "domain": "Jatuhkan setiap titik ke sumbu mendatar: $D(\\mathrm R) = {{set}}$.",
+        "codomain": "Geser setiap titik ke sumbu tegak: $\\mathit{R}(\\mathrm R) = {{set}}$."
+      },
+      "tests": {
+        "compare": "${{expression}}$ {{verdict}}",
+        "product": {
+          "holds": "${{expression}}$, memenuhi ${{condition}}$",
+          "fails": "${{expression}}$, tidak memenuhi ${{condition}}$"
+        }
+      },
+      "patterns": {
+        "greaterNatural": "titik di bawah garis $m = n$",
+        "evenSum": "pola papan catur",
+        "negative": "kuadran II dan IV, tanpa sumbu",
+        "nonnegative": "kuadran I dan III, ditambah kedua sumbu",
+        "one": "kurva $y = \\tfrac{1}{x}$"
+      },
+      "reasons": {
+        "pattern": "semua pasangan yang memenuhi: {{pattern}}",
+        "quadrantI": "kuadran I: semua titiknya anggota $\\mathrm R$",
+        "quadrantIII": "kuadran III juga",
+        "zero": "tidak $> 0$: 0 tidak punya pasangan",
+        "domain": "bayangan ke sumbu $a$: {{why}}",
+        "codomain": "bayangan ke sumbu $b$: {{why}}"
+      },
+      "pairWhy": {
+        "sqrt": "pasangannya $b = {{b}}$",
+        "triple": "setiap $a$ punya tepat satu pasangan"
+      },
+      "domainWhy": {
+        "sqrt": "hanya bilangan kuadrat yang punya pasangan",
+        "triple": "setiap bilangan bulat $a$ punya pasangan $3a$",
+        "positive": "semua kecuali 0: $(-\\infty, 0) \\cup (0, \\infty)$"
+      },
+      "codomainWhy": {
+        "sqrt": "akarnya: hanya 1 sampai 4 yang terpakai",
+        "triple": "hanya kelipatan 3 yang menjadi pasangan",
+        "positive": "$b = 0$ juga tidak pernah menjadi pasangan"
+      },
+      "cards": {
+        "product": "$\\mathrm R$ dan ${{product}}$",
+        "universal": "relasi universal",
+        "rule": "dari aturan ke pasangan",
+        "nonNumber": "tidak harus bilangan",
+        "others": "contoh lain",
+        "domain": "domain dan kodomain",
+        "rules": "rumus relasi"
+      },
+      "product": {
+        "count": "$|\\mathrm R| = {{count}}$ dari $|{{product}}| = {{first}} \\cdot {{second}} = {{size}}$ pasangan; yang distabilo adalah anggota $\\mathrm R$.",
+        "equal": "Di sini $\\mathrm R = {{product}}$: himpunan bagian boleh sama dengan himpunannya.",
+        "subset": "Setiap anggota $\\mathrm R$ ada di ${{product}}$, jadi $\\mathrm R \\subseteq {{product}}$."
+      },
+      "universal": {
+        "yes": "Domain dan kodomainnya sama-sama ${{first}}$: relasi universal, atau relasi pada ${{first}}$.",
+        "no": "Domainnya ${{first}}$, kodomainnya ${{second}}$: bukan relasi universal.",
+        "items": [
+          { "tex": "x \\le n,\\ x \\in \\mathbb R,\\ n \\in \\mathbb N", "remark": "antara $\\mathbb R$ dan $\\mathbb N$: bukan universal" },
+          { "tex": "\\text{peserta kuliah} \\to \\text{nilai A, B, C, D, E}", "remark": "dua himpunan berbeda: bukan universal" },
+          { "tex": "\\text{perkawinan pada himpunan semua orang}", "remark": "universal" },
+          { "tex": "\\text{urutan \\textit{finish} balap F1}", "remark": "antarpembalap: universal" },
+          { "tex": "<,\\ \\le,\\ >,\\ \\ge \\text{ pada } \\mathbb R", "remark": "universal" }
+        ]
+      },
+      "ruleCard": {
+        "rule": "aturan",
+        "substitute": "ganti",
+        "result": "jadi"
+      },
+      "nonNumber": {
+        "items": [
+          { "tex": "\\ell \\mathrel{\\mathrm R} g \\iff \\ell \\perp g", "remark": "pada himpunan semua garis di satu bidang" },
+          { "tex": "x \\mathrel{\\mathrm R} y \\iff x \\text{ orang tua } y", "remark": "pada himpunan semua orang" }
+        ]
+      },
+      "domainCard": {
+        "first": "himpunan asal",
+        "domain": "domain: anggota $A$ yang punya pasangan",
+        "second": "himpunan kawan",
+        "codomain": "kodomain: anggota $B$ yang menjadi pasangan",
+        "footnote": "Ada buku yang menyebut seluruh $A$ domain dan seluruh $B$ kodomain. Di sini domain hanya anggota $A$ yang punya pasangan, kodomain hanya anggota $B$ yang menjadi pasangan."
+      },
+      "rules": {
+        "names": {
+          "relates": "$a$ berelasi dengan $b$: pasangannya memenuhi relasi",
+          "negation": "tidak memenuhi relasi",
+          "setOf": "relasi sebagai himpunan pasangan terurut",
+          "subset": "setiap relasi adalah himpunan bagian dari perkalian Cartesius",
+          "universal": "relasi universal: domain dan kodomainnya himpunan yang sama",
+          "domain": "domain",
+          "codomain": "kodomain"
+        },
+        "formulas": {
+          "relates": "a \\mathrel{\\mathrm R} b",
+          "negation": "\\neg(a \\mathrel{\\mathrm R} b) \\iff (a, b) \\notin \\mathrm R",
+          "setOf": "\\mathrm R = \\{(a, b) \\in A \\times B \\mid a \\mathrel{\\mathrm R} b\\}",
+          "subset": "\\mathrm R \\subseteq A \\times B",
+          "universal": "\\mathrm R \\subseteq A \\times A",
+          "domain": "D(\\mathrm R) = \\{a \\in A \\mid a \\mathrel{\\mathrm R} b \\text{ untuk suatu } b \\in B\\}",
+          "codomain": "\\mathit{R}(\\mathrm R) = \\{b \\in B \\mid a \\mathrel{\\mathrm R} b \\text{ untuk suatu } a \\in A\\}"
+        },
+        "footnote": "$\\neg$ dibaca \"tidak\", $\\iff$ \"jika dan hanya jika\". Pada $\\mathit{R}(\\mathrm R)$, huruf $\\mathit{R}$ miring untuk kodomain, $\\mathrm R$ tegak untuk relasinya."
+      },
+      "intros": {
+        "meaning": "Relasi mengaitkan anggota $A$ dengan anggota $B$. Jika $a$ dan $b$ berkaitan ditulis $a \\mathrel{\\mathrm R} b$, jika tidak $\\neg(a \\mathrel{\\mathrm R} b)$. Pasangan yang berkaitan dikumpulkan menjadi himpunan $\\mathrm R$.",
+        "rule": "Pada himpunan bilangan, relasi biasanya diberi aturan. Ganti kedua bilangan ke aturannya: benar berarti pasangannya anggota $\\mathrm R$.",
+        "domain": "Domain $D(\\mathrm R)$ adalah anggota $A$ yang punya pasangan, kodomain $\\mathit{R}(\\mathrm R)$ adalah anggota $B$ yang menjadi pasangan. Di gambar: bayangan titik-titik $\\mathrm R$ ke kedua sumbu."
+      },
+      "tips": {
+        "meaning": "Diagram panah dan titik di $A \\times B$ adalah relasi yang sama. Setiap panah adalah satu titik yang distabilo.",
+        "rule": "Geser kedua bilangan. Titik yang distabilo membentuk pola aturannya; pada $\\mathbb R$ polanya berupa daerah atau kurva.",
+        "domain": "Geser $a$: garis putus-putus mencari pasangannya. Tanpa pasangan, $a$ tidak masuk domain."
+      },
+      "idle": {
+        "meaning": "tekan mulai untuk melihat langkahnya satu per satu, atau klik titik di $A \\times B$.",
+        "two": "tekan mulai untuk melihat langkahnya satu per satu, atau geser ${{first}}$ dan ${{second}}$.",
+        "one": "tekan mulai untuk melihat langkahnya satu per satu, atau geser ${{first}}$."
+      },
+      "legend": {
+        "arrow": "$a \\mathrel{\\mathrm R} b$: $a$ dikaitkan dengan $b$",
+        "arrowNow": "pasangan yang sedang diperiksa",
+        "member": "pasangan anggota $\\mathrm R$",
+        "miss": "pasangan bukan anggota $\\mathrm R$",
+        "lattice": "pasangan lain",
+        "region": "daerah $\\mathrm R$ pada $\\mathbb R \\times \\mathbb R$",
+        "probe": "pasangan yang digeser, merah jika bukan anggota",
+        "shadow": "bayangan ke sumbu",
+        "probeLine": "mencari pasangan $a$",
+        "open": "tidak termasuk",
+        "not": "tidak"
+      },
+      "slider": "geser",
+      "aria": {
+        "arrows": "diagram panah relasi di samping titik-titiknya pada perkalian Cartesius",
+        "plane": "relasi digambar sebagai titik-titik pada bidang",
+        "slider": "geser {{name}}"
+      }
+    },
+    "relationProperties": {
+      "title": "Sifat Relasi",
+      "groups": {
+        "reflexive": "refleksif",
+        "symmetric": "simetris",
+        "antisymmetric": "antisimetris",
+        "transitive": "transitif",
+        "equivalence": "relasi ekuivalen"
+      },
+      "chips": {
+        "equal": "$a = b$",
+        "lessEq": "$a \\le b$",
+        "less": "$a < b$",
+        "divides": "$a \\mid b$",
+        "sameParity": "$a + b$ genap",
+        "diffOne": "$|a - b| = 1$",
+        "modThree": "$3 \\mid a - b$",
+        "listed": "daftar pasangan"
+      },
+      "statements": {
+        "equal": "$a \\mathrel{\\mathrm R} b \\iff a = b$ pada $A = \\{1, 2, 3, 4\\}$",
+        "lessEq": "$a \\mathrel{\\mathrm R} b \\iff a \\le b$ pada $A = \\{1, 2, 3, 4\\}$",
+        "less": "$a \\mathrel{\\mathrm R} b \\iff a < b$ pada $A = \\{1, 2, 3, 4\\}$",
+        "divides": "$a \\mathrel{\\mathrm R} b \\iff a \\mid b$ ($a$ membagi $b$) pada $A = \\{1, 2, 3, 4, 6\\}$",
+        "sameParity": "$a \\mathrel{\\mathrm R} b \\iff a + b$ genap, pada $A = \\{1, 2, \\dots, 6\\}$",
+        "diffOne": "$a \\mathrel{\\mathrm R} b \\iff |a - b| = 1$ pada $A = \\{1, 2, 3, 4\\}$",
+        "modThree": "$a \\mathrel{\\mathrm R} b \\iff a - b$ kelipatan 3, pada $A = \\{1, 2, \\dots, 7\\}$",
+        "listed": "$\\mathrm R = \\{(1, 1), (2, 2), (3, 3), (1, 2), (2, 1), (2, 3)\\}$ pada $A = \\{1, 2, 3, 4\\}$"
+      },
+      "names": {
+        "reflexive": "refleksif",
+        "symmetric": "simetris",
+        "antisymmetric": "antisimetris",
+        "transitive": "transitif",
+        "equivalence": "relasi ekuivalen"
+      },
+      "stamps": {
+        "reflexive": { "yes": "refleksif", "no": "tidak refleksif" },
+        "symmetric": { "yes": "simetris", "no": "tidak simetris" },
+        "antisymmetric": { "yes": "antisimetris", "no": "tidak antisimetris" },
+        "transitive": { "yes": "transitif", "no": "tidak transitif" },
+        "equivalence": { "yes": "relasi ekuivalen", "no": "bukan relasi ekuivalen" }
+      },
+      "words": {
+        "truth": { "true": "benar", "false": "salah" },
+        "parity": { "true": "genap", "false": "ganjil" },
+        "multiple": { "true": "kelipatan 3", "false": "bukan kelipatan 3" },
+        "yes": "ya",
+        "no": "tidak"
+      },
+      "why": {
+        "rule": "${{expression}}$ {{verdict}}",
+        "listed": "${{pair}}$ ada di daftar",
+        "unlisted": "${{pair}}$ tidak ada di daftar"
+      },
+      "verdict": {
+        "yes": "Semua kasus terpenuhi ({{count}} diperiksa): $\\mathrm R$ {{name}}.",
+        "no": "Satu contoh penyangkal sudah cukup: ${{counter}}$, jadi $\\mathrm R$ tidak {{name}}.",
+        "empty": "Tidak ada kasus yang perlu diperiksa, jadi tidak ada yang melanggar: $\\mathrm R$ {{name}}."
+      },
+      "steps": {
+        "reflexive": {
+          "holds": "$a = {{a}}$: {{why}}, jadi ${{need}} \\in \\mathrm R$: ada loop di ${{a}}$.",
+          "fails": "$a = {{a}}$: {{why}}, jadi ${{need}} \\notin \\mathrm R$: tidak ada loop di ${{a}}$."
+        },
+        "symmetric": {
+          "holds": "${{premise}} \\in \\mathrm R$. Pasangan cerminnya ${{need}}$: {{why}}, jadi juga anggota $\\mathrm R$: ada panah balik.",
+          "fails": "${{premise}} \\in \\mathrm R$. Pasangan cerminnya ${{need}}$: {{why}}, jadi ${{need}} \\notin \\mathrm R$: tidak ada panah balik."
+        },
+        "antisymmetric": {
+          "holds": "${{premise}} \\in \\mathrm R$. Pasangan cerminnya ${{need}}$: {{why}}, jadi ${{need}} \\notin \\mathrm R$: hanya satu arah.",
+          "fails": "${{premise}} \\in \\mathrm R$. Pasangan cerminnya ${{need}}$: {{why}}, jadi juga anggota $\\mathrm R$, padahal ${{a}} \\ne {{b}}$: pasangan dua arah."
+        },
+        "transitive": {
+          "holds": "${{premise}} \\in \\mathrm R$. Jalan pintasnya ${{need}}$: {{why}}, jadi anggota $\\mathrm R$.",
+          "fails": "${{premise}} \\in \\mathrm R$. Jalan pintasnya ${{need}}$: {{why}}, jadi ${{need}} \\notin \\mathrm R$: tidak ada jalan pintas."
+        },
+        "class": "$[{{a}}]$ mengumpulkan semua anggota yang berelasi dengan ${{a}}$: $[{{a}}] = {{set}}$.",
+        "partition": "Ke-{{count}} kelas tidak saling beririsan dan bersama-sama menutupi $A$: $A$ terbagi menjadi {{count}} bagian.",
+        "notEquivalence": "$\\mathrm R$ tidak {{name}}, jadi bukan relasi ekuivalen."
+      },
+      "reasons": {
+        "class": "anggota yang berelasi dengan ${{a}}$",
+        "partition": "{{count}} kelas, tidak beririsan, gabungannya seluruh $A$",
+        "notEquivalence": "tidak {{name}}: bukan relasi ekuivalen"
+      },
+      "reading": {
+        "classes": "$\\mathrm R$ relasi ekuivalen dengan {{count}} kelas: ${{classes}}$."
+      },
+      "table": {
+        "step": "langkah"
+      },
+      "cards": {
+        "properties": "sekilas relasi ini",
+        "pairs": "pasangan-pasangannya",
+        "picture": "di gambar",
+        "classes": "kelas ekuivalen",
+        "rules": "rumus sifat relasi"
+      },
+      "properties": {
+        "counter": "contoh penyangkal: ${{counter}}$",
+        "footnote": "Satu kasus yang melanggar sudah cukup untuk menjawab tidak. Untuk menjawab ya, semua kasus harus diperiksa."
+      },
+      "pairsCard": {
+        "count": "$|\\mathrm R| = {{count}}$ dari $|A \\times A| = {{size}}$ pasangan, dengan $A = {{set}}$. Pasangan yang disorot termasuk kasus yang sedang diperiksa."
+      },
+      "picture": {
+        "graph": "diagram panah",
+        "grid": "titik di A × A",
+        "reflexive": {
+          "graph": "setiap anggota punya loop",
+          "grid": "seluruh diagonal terisi"
+        },
+        "symmetric": {
+          "graph": "setiap panah antara dua anggota punya panah balik",
+          "grid": "titik-titiknya saling bercermin terhadap diagonal"
+        },
+        "antisymmetric": {
+          "graph": "tidak ada panah dua arah antara anggota yang berbeda; loop boleh",
+          "grid": "tidak ada titik di luar diagonal yang punya bayangan cerminnya"
+        },
+        "transitive": {
+          "graph": "setiap jalan dua panah $a \\to b \\to c$ punya jalan pintas langsung $a \\to c$",
+          "grid": "tidak ada pola sederhana: jika $(a, b)$ dan $(b, c)$ titik, $(a, c)$ juga harus titik"
+        },
+        "equivalence": {
+          "graph": "anggota-anggotanya terbagi dalam kelompok terpisah; di dalam satu kelompok semuanya saling terhubung",
+          "grid": "setiap kelas berupa persegi titik yang penuh, bercermin terhadap diagonal"
+        }
+      },
+      "classesCard": {
+        "none": "$\\mathrm R$ bukan relasi ekuivalen, jadi tidak punya kelas ekuivalen.",
+        "footnote": "Setiap anggota ada di tepat satu kelas, dan dua kelas selalu sama atau saling lepas: kelas-kelasnya membentuk partisi dari $A$."
+      },
+      "rules": {
+        "names": {
+          "reflexive": "refleksif: setiap anggota berelasi dengan dirinya sendiri",
+          "symmetric": "simetris: setiap pasangan juga berlaku terbalik",
+          "antisymmetric": "antisimetris: dua anggota berbeda tidak pernah berelasi dua arah",
+          "transitive": "transitif: dua langkah bisa dilakukan sekali jalan",
+          "equivalence": "relasi ekuivalen",
+          "class": "kelas ekuivalen dari $a$"
+        },
+        "formulas": {
+          "reflexive": "\\forall a \\in A:\\ a \\mathrel{\\mathrm R} a",
+          "symmetric": "a \\mathrel{\\mathrm R} b \\Rightarrow b \\mathrel{\\mathrm R} a",
+          "antisymmetric": "a \\mathrel{\\mathrm R} b \\land b \\mathrel{\\mathrm R} a \\Rightarrow a = b",
+          "transitive": "a \\mathrel{\\mathrm R} b \\land b \\mathrel{\\mathrm R} c \\Rightarrow a \\mathrel{\\mathrm R} c",
+          "equivalence": "\\text{refleksif} \\land \\text{simetris} \\land \\text{transitif}",
+          "class": "[a] = \\{x \\in A \\mid x \\mathrel{\\mathrm R} a\\}"
+        },
+        "footnote": "Setiap rumus berlaku untuk semua $a, b, c \\in A$. Simetris dan antisimetris bukan lawan: $=$ memenuhi keduanya, dan sebuah relasi juga bisa tidak memenuhi keduanya."
+      },
+      "intros": {
+        "reflexive": "Relasi pada $A$ disebut refleksif jika setiap anggota berelasi dengan dirinya sendiri: $a \\mathrel{\\mathrm R} a$ untuk setiap $a \\in A$. Periksa anggotanya satu per satu.",
+        "symmetric": "Relasi disebut simetris jika setiap pasangan juga berlaku terbalik: setiap kali $a \\mathrel{\\mathrm R} b$, juga $b \\mathrel{\\mathrm R} a$.",
+        "antisymmetric": "Relasi disebut antisimetris jika dua anggota berbeda tidak pernah berelasi dua arah: dari $a \\mathrel{\\mathrm R} b$ dan $b \\mathrel{\\mathrm R} a$ berlaku $a = b$.",
+        "transitive": "Relasi disebut transitif jika dua langkah selalu bisa dilakukan sekali jalan: dari $a \\mathrel{\\mathrm R} b$ dan $b \\mathrel{\\mathrm R} c$ berlaku $a \\mathrel{\\mathrm R} c$.",
+        "equivalence": "Relasi yang refleksif, simetris, dan transitif disebut relasi ekuivalen. Relasi ini membagi $A$ menjadi kelas-kelas ekuivalen: kelompok anggota yang semuanya saling berelasi."
+      },
+      "tips": {
+        "reflexive": "Lihat loop di diagram panah, atau diagonal di $A \\times A$. Satu loop yang hilang sudah cukup untuk menjawab tidak.",
+        "symmetric": "Setiap panah butuh panah balik. Loop tidak pernah melanggar: loop adalah cermin dirinya sendiri.",
+        "antisymmetric": "$a \\le b$ antisimetris tetapi tidak simetris, $|a - b| = 1$ sebaliknya, dan $a = b$ memenuhi keduanya.",
+        "transitive": "Ikuti setiap jalan dua panah. Jika panah langsungnya tidak ada, jalan itu contoh penyangkal.",
+        "equivalence": "Di dalam satu kelas setiap anggota terhubung dengan semua anggota lain, jadi setiap kelas berupa persegi titik yang penuh di $A \\times A$. Bandingkan $a + b$ genap (2 kelas) dengan $a = b$ (setiap anggota sendirian)."
+      },
+      "idle": "tekan mulai untuk memeriksa kasusnya satu per satu.",
+      "legend": {
+        "arrow": "$a \\mathrel{\\mathrm R} b$ dengan $a \\ne b$",
+        "loop": "loop: $a \\mathrel{\\mathrm R} a$",
+        "cell": "pasangan anggota $\\mathrm R$",
+        "diagonal": "diagonal: pasangan $(a, a)$",
+        "now": "pasangan yang menjadi titik awal",
+        "need": "pasangan yang diperlukan, ada",
+        "missing": "pasangan yang diperlukan, tidak ada: contoh penyangkal"
+      },
+      "aria": {
+        "board": "relasi sebagai diagram panah pada A di samping titik-titiknya di A × A"
+      }
+    },
+    "orderRelations": {
+      "title": "Relasi Urutan",
+      "groups": {
+        "partial": "urutan parsial",
+        "hasse": "diagram Hasse",
+        "extremes": "terkecil & minimal"
+      },
+      "chips": {
+        "lessEq": "$a \\le b$",
+        "divides": "pembagi 12",
+        "less": "$a < b$",
+        "sameParity": "$a + b$ genap",
+        "listed": "daftar pasangan",
+        "subsets": "himpunan bagian $\\{a, b, c\\}$",
+        "divides30": "pembagi 30",
+        "dividesMiddle": "$\\{2, 3, 4, 6\\}$",
+        "properSubsets": "tanpa $\\varnothing$ dan $\\{a, b, c\\}$"
+      },
+      "statements": {
+        "lessEq": "$a \\mathrel{\\mathrm R} b \\iff a \\le b$ pada $A = \\{1, 2, 3, 4\\}$",
+        "divides": "$a \\mathrel{\\mathrm R} b \\iff a \\mid b$ pada pembagi 12: $A = \\{1, 2, 3, 4, 6, 12\\}$",
+        "less": "$a \\mathrel{\\mathrm R} b \\iff a < b$ pada $A = \\{1, 2, 3, 4\\}$",
+        "sameParity": "$a \\mathrel{\\mathrm R} b \\iff a + b$ genap, pada $A = \\{1, 2, 3, 4\\}$",
+        "listed": "$\\mathrm R = \\{(1, 1), (2, 2), (3, 3), (1, 2), (2, 3)\\}$ pada $A = \\{1, 2, 3\\}$",
+        "subsets": "$X \\mathrel{\\mathrm R} Y \\iff X \\subseteq Y$ pada semua himpunan bagian $\\{a, b, c\\}$",
+        "divides30": "$a \\mathrel{\\mathrm R} b \\iff a \\mid b$ pada pembagi 30: $A = \\{1, 2, 3, 5, 6, 10, 15, 30\\}$",
+        "dividesMiddle": "$a \\mathrel{\\mathrm R} b \\iff a \\mid b$ pada $A = \\{2, 3, 4, 6\\}$",
+        "properSubsets": "$X \\mathrel{\\mathrm R} Y \\iff X \\subseteq Y$ pada himpunan bagian $\\{a, b, c\\}$ tanpa $\\varnothing$ dan $\\{a, b, c\\}$"
+      },
+      "names": {
+        "reflexive": "refleksif",
+        "antisymmetric": "antisimetris",
+        "transitive": "transitif",
+        "partial": "urutan parsial",
+        "total": "urutan total"
+      },
+      "words": {
+        "truth": { "true": "benar", "false": "salah" },
+        "parity": { "true": "genap", "false": "ganjil" },
+        "subset": { "true": "benar", "false": "salah" },
+        "yes": "ya",
+        "no": "tidak"
+      },
+      "why": {
+        "rule": "${{expression}}$ {{verdict}}",
+        "listed": "${{pair}}$ ada di daftar",
+        "unlisted": "${{pair}}$ tidak ada di daftar"
+      },
+      "verdict": {
+        "yes": "Semua kasus terpenuhi ({{count}} diperiksa): $\\mathrm R$ {{name}}.",
+        "no": "Contoh penyangkal ${{counter}}$ ({{why}}), jadi $\\mathrm R$ tidak {{name}}.",
+        "empty": "Tidak ada kasus yang perlu diperiksa, jadi tidak ada yang melanggar: $\\mathrm R$ {{name}}."
+      },
+      "steps": {
+        "incomparable": "${{a}}$ dan ${{b}}$: {{forward}} dan {{backward}}. Keduanya tidak bisa dibandingkan.",
+        "comparable": "Setiap dua anggota bisa dibandingkan: salah satunya selalu di bawah yang lain.",
+        "notOrder": "$\\mathrm R$ tidak {{name}}, jadi bukan urutan parsial.",
+        "partial": "Refleksif, antisimetris, dan transitif: urutan parsial. Ada anggota yang tidak bisa dibandingkan, jadi bukan urutan total.",
+        "total": "Urutan parsial yang setiap dua anggotanya bisa dibandingkan: urutan total. Anggotanya berjajar dalam satu garis.",
+        "full": "Gambar $\\mathrm R$ dengan setiap anggota di atas anggota yang lebih kecil: ke-{{count}} pasangan menjadi panah, dan semua panah mengarah ke atas.",
+        "loops": "Urutan parsial itu refleksif, jadi setiap anggota punya loop. Itu sudah pasti: buang ke-{{count}} loop.",
+        "shortcut": "${{a}} \\to {{b}}$ adalah jalan pintas: ${{path}}$ sudah sampai ke sana, dan sifat transitif menambahkan jalan pintasnya. Buang.",
+        "arrows": "Semua panah mengarah ke atas, jadi mata panah tidak memberi informasi: buang. Inilah diagram Hasse, {{count}} garis untuk {{total}} pasangan $\\mathrm R$.",
+        "minimal": "Anggota minimal: tidak ada yang di bawahnya. Di sini ${{set}}$.",
+        "maximal": "Anggota maksimal: tidak ada yang di atasnya. Di sini ${{set}}$.",
+        "least": {
+          "found": "Anggota terkecil: ${{x}}$ ada di bawah semua anggota.",
+          "none": "Tidak ada anggota terkecil: ${{set}}$ semuanya minimal, tetapi tidak ada yang di bawah yang lain."
+        },
+        "greatest": {
+          "found": "Anggota terbesar: ${{x}}$ ada di atas semua anggota.",
+          "none": "Tidak ada anggota terbesar: ${{set}}$ semuanya maksimal, tetapi tidak ada yang di atas yang lain."
+        }
+      },
+      "rows": {
+        "full": "setiap pasangan sebagai panah ke atas",
+        "loops": "{{count}} loop: sudah pasti dari sifat refleksif, dibuang",
+        "shortcut": "jalan pintas: sudah dicapai lewat ${{path}}$, dibuang",
+        "linesTex": "\\text{garis} = {{count}}",
+        "lines": "mata panah dibuang: diagram Hasse dari {{total}} pasangan",
+        "minimalTex": "\\text{minimal: } {{set}}",
+        "minimal": "tidak ada yang di bawahnya",
+        "maximalTex": "\\text{maksimal: } {{set}}",
+        "maximal": "tidak ada yang di atasnya",
+        "leastTex": "\\text{terkecil} = {{x}}",
+        "leastNone": "\\text{tidak ada anggota terkecil}",
+        "greatestTex": "\\text{terbesar} = {{x}}",
+        "greatestNone": "\\text{tidak ada anggota terbesar}"
+      },
+      "roles": {
+        "minimal": "minimal",
+        "maximal": "maksimal",
+        "least": "terkecil",
+        "greatest": "terbesar",
+        "none": "bukan salah satunya",
+        "missing": "tidak ada"
+      },
+      "reading": {
+        "pick": "${{x}}$: di bawahnya ${{below}}$, di atasnya ${{above}}$, tidak bisa dibandingkan dengan ${{others}}$. Sifatnya: {{roles}}.",
+        "extremes": "Minimal ${{minimal}}$, maksimal ${{maximal}}$, terkecil {{least}}, terbesar {{greatest}}. Klik sebuah anggota untuk membacanya.",
+        "hasse": "Diagram Hasse menggambar {{total}} pasangan $\\mathrm R$ hanya dengan {{count}} garis. Klik sebuah anggota untuk melihat apa yang ada di bawah dan di atasnya."
+      },
+      "stamps": {
+        "total": "urutan total",
+        "partial": "urutan parsial",
+        "none": "bukan urutan parsial",
+        "hasse": "diagram Hasse",
+        "least": "terkecil: ${{x}}$",
+        "leastNone": "tanpa terkecil",
+        "greatest": "terbesar: ${{x}}$",
+        "greatestNone": "tanpa terbesar"
+      },
+      "table": {
+        "step": "langkah"
+      },
+      "cards": {
+        "properties": "sekilas relasi ini",
+        "leftOut": "yang tidak digambar",
+        "lines": "garis yang tersisa",
+        "members": "setiap anggota",
+        "rules": "rumus urutan"
+      },
+      "properties": {
+        "counter": "contoh penyangkal: ${{counter}}$",
+        "incomparable": "${{a}}$ dan ${{b}}$ tidak bisa dibandingkan",
+        "footnote": "Urutan parsial butuh tiga sifat. Urutan total juga butuh setiap dua anggota bisa dibandingkan."
+      },
+      "leftOut": {
+        "loops": {
+          "name": "loop",
+          "why": "setiap anggota berelasi dengan dirinya sendiri (refleksif), jadi loop tidak memberi informasi"
+        },
+        "shortcuts": {
+          "name": "jalan pintas",
+          "why": "jika ada $a \\to b \\to c$, sifat transitif memberi $a \\to c$ dengan sendirinya"
+        },
+        "arrows": {
+          "name": "mata panah",
+          "why": "anggota yang lebih kecil digambar lebih rendah, jadi setiap garis dibaca ke atas"
+        }
+      },
+      "linesCard": {
+        "count": "Tersisa {{count}} garis: pasangan yang tidak punya anggota di antaranya. Dibuang: {{loops}} loop dan {{shortcuts}} jalan pintas."
+      },
+      "membersCard": {
+        "footnote": "Anggota terkecil selalu satu-satunya anggota minimal. Kebalikannya tidak berlaku: jika ada dua anggota minimal, tidak ada yang terkecil. Klik anggota di diagram untuk menyorot barisnya."
+      },
+      "formulas": {
+        "reflexive": "\\forall a:\\ a \\preceq a",
+        "antisymmetric": "a \\preceq b \\land b \\preceq a \\Rightarrow a = b",
+        "transitive": "a \\preceq b \\land b \\preceq c \\Rightarrow a \\preceq c",
+        "partial": "\\text{refleksif} \\land \\text{antisimetris} \\land \\text{transitif}",
+        "total": "\\forall a, b:\\ a \\preceq b \\lor b \\preceq a",
+        "cover": "a \\prec b \\text{ tanpa } c \\text{ yang } a \\prec c \\prec b",
+        "minimal": "m \\text{ minimal} \\iff \\text{tidak ada } x \\prec m",
+        "maximal": "m \\text{ maksimal} \\iff \\text{tidak ada } x \\succ m",
+        "least": "\\ell \\text{ terkecil} \\iff \\forall x:\\ \\ell \\preceq x",
+        "greatest": "g \\text{ terbesar} \\iff \\forall x:\\ x \\preceq g"
+      },
+      "rules": {
+        "partial": "urutan parsial",
+        "total": "urutan total (urutan linear): setiap dua anggota bisa dibandingkan",
+        "cover": "garis di diagram Hasse: $b$ tepat di atas $a$",
+        "minimal": "anggota minimal",
+        "maximal": "anggota maksimal",
+        "least": "anggota terkecil",
+        "greatest": "anggota terbesar"
+      },
+      "rulesFootnote": "$\\preceq$ adalah lambang yang biasa dipakai untuk urutan parsial: $a \\preceq b$ berarti $a \\mathrel{\\mathrm R} b$. $a \\prec b$ berarti $a \\preceq b$ dan $a \\ne b$.",
+      "intros": {
+        "partial": "Relasi pada $A$ yang refleksif, antisimetris, dan transitif disebut urutan parsial, sering ditulis $\\preceq$. Jika setiap dua anggota juga bisa dibandingkan, disebut urutan total.",
+        "hasse": "Diagram Hasse adalah gambar rapi sebuah urutan parsial: anggota yang lebih kecil di bawah, dan hanya garis antara anggota yang bertetangga. Sisanya mengikuti dari sifat-sifatnya.",
+        "extremes": "Anggota minimal tidak punya apa pun di bawahnya; anggota terkecil ada di bawah semuanya. Pada urutan total keduanya sama, pada urutan parsial tidak."
+      },
+      "tips": {
+        "partial": "$\\le$ adalah urutan total, $\\mid$ (membagi) hanya urutan parsial: 2 dan 3 tidak saling membagi.",
+        "hasse": "Bandingkan pembagi 30 dengan himpunan bagian $\\{a, b, c\\}$: kedua diagram Hasse-nya berbentuk sama.",
+        "extremes": "Coba $\\{2, 3, 4, 6\\}$: dua anggota minimal dan dua maksimal, tetapi tidak ada yang terkecil maupun terbesar."
+      },
+      "idle": {
+        "play": "tekan mulai untuk memeriksa urutannya langkah demi langkah.",
+        "pick": "tekan mulai untuk melihat langkahnya satu per satu, atau klik sebuah anggota di diagram."
+      },
+      "legend": {
+        "arrow": "$a \\mathrel{\\mathrm R} b$ dengan $a \\ne b$",
+        "loop": "loop: $a \\mathrel{\\mathrm R} a$",
+        "now": "pasangan yang sedang diperiksa atau dibuang",
+        "missing": "pasangan yang tidak ada",
+        "path": "jalan yang membuat jalan pintas tidak perlu",
+        "line": "garis diagram Hasse, dibaca ke atas",
+        "lit": "anggota yang disorot",
+        "focus": "anggota yang sedang dilihat",
+        "ring": "anggota terkecil atau terbesar"
+      },
+      "aria": {
+        "digraph": "relasi sebagai diagram panah pada A di samping titik-titiknya di A × A",
+        "hasse": "diagram Hasse dari urutannya"
+      }
     }
   }
 }

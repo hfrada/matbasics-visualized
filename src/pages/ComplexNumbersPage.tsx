@@ -412,7 +412,7 @@ export function ComplexNumbersPage() {
             return (
               <div
                 key={line}
-                className={`relative -mx-1.5 overflow-x-auto overflow-y-hidden rounded px-1.5 py-0.5 text-[17px] whitespace-nowrap transition-opacity duration-300 ${lineClass(step)}`}
+                className={`relative -mx-1.5 overflow-x-auto overflow-y-hidden rounded px-1.5 py-0.5 text-[17px] transition-opacity duration-300 ${lineClass(step)}`}
               >
                 <MathText text={line} />
               </div>

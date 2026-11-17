@@ -15,6 +15,15 @@ export type TopicKey =
   | 'converseInverseContrapositive'
   | 'layeredTablesAndEquivalence'
   | 'tautologiesAndValidArguments'
+  | 'fieldAxioms'
+  | 'orderAxioms'
+  | 'inequalities'
+  | 'absoluteValue'
+  | 'supremumInfimum'
+  | 'sequences'
+  | 'relations'
+  | 'relationProperties'
+  | 'orderRelations'
 
 export type Topic = {
   key: TopicKey
@@ -55,7 +64,21 @@ export const sections: Section[] = [
       { key: 'tautologiesAndValidArguments', slug: 'tautologies-and-valid-arguments' },
     ],
   },
-  { key: 'realsAndRelations', slug: 'reals-and-relations', topics: [] },
+  {
+    key: 'realsAndRelations',
+    slug: 'reals-and-relations',
+    topics: [
+      { key: 'fieldAxioms', slug: 'field-axioms' },
+      { key: 'orderAxioms', slug: 'order-axioms' },
+      { key: 'inequalities', slug: 'inequalities' },
+      { key: 'absoluteValue', slug: 'absolute-value' },
+      { key: 'supremumInfimum', slug: 'supremum-and-infimum' },
+      { key: 'sequences', slug: 'sequences' },
+      { key: 'relations', slug: 'relations' },
+      { key: 'relationProperties', slug: 'relation-properties' },
+      { key: 'orderRelations', slug: 'order-relations' },
+    ],
+  },
   { key: 'functionsAndProofs', slug: 'functions-and-proofs', topics: [] },
 ]
 

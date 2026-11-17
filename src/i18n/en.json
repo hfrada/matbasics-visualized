@@ -1624,6 +1624,1847 @@
         "role": "role of the column in the argument",
         "therefore": "conclusion column"
       }
+    },
+    "fieldAxioms": {
+      "title": "Field Axioms",
+      "laws": {
+        "commutative": "commutative",
+        "associative": "associative",
+        "distributive": "distributive",
+        "identity": "identity",
+        "inverse": "inverse",
+        "derived": "subtraction & division"
+      },
+      "operations": {
+        "add": "+ addition",
+        "mul": "· multiplication",
+        "subtract": "− subtraction",
+        "divide": "÷ division",
+        "both": "distributivity uses both"
+      },
+      "sides": {
+        "left": "left side",
+        "right": "right side"
+      },
+      "same": "equal",
+      "hint": "click the left or right side to read its steps, or press start.",
+      "reading": {
+        "result": "it gives {{value}}, the same as the {{other}}."
+      },
+      "mirror": "diagonal",
+      "cuboidNotes": {
+        "layers": "{{parts}} layers of {{each}}",
+        "slices": "{{parts}} slices of {{each}}"
+      },
+      "samples": {
+        "commutativeAdd": {
+          "title": "commutative addition",
+          "intro": "Commutative means the order can be swapped. Forward 2 then 3, or forward 3 then 2, both stop at 5.",
+          "steps": [
+            "Left side $2 + 3$: start at 0, move forward 2 to 2.",
+            "Forward 3 more, stop at 5. So $2 + 3 = 5$.",
+            "Right side $3 + 2$: start at 0, move forward 3 to 3.",
+            "Forward 2 more, stop at 5. So $3 + 2 = 5$.",
+            "Both sides stop at 5, so $2 + 3 = 3 + 2$."
+          ]
+        },
+        "commutativeMul": {
+          "title": "commutative multiplication",
+          "intro": "Swapping the order of a product mirrors its rectangle in the diagonal. The number of squares does not change.",
+          "steps": [
+            "Left side $2 \\cdot (-4)$: across 2 to the right, down 4. It holds 8 squares in a negative region, so $-8$.",
+            "Right side $(-4) \\cdot 2$: across 4 to the left, up 2. It also holds 8 squares in a negative region, so $-8$.",
+            "Mirrored in the diagonal, the two rectangles swap places. Still 8 squares, still negative, so $2 \\cdot (-4) = (-4) \\cdot 2$."
+          ]
+        },
+        "associativeAdd": {
+          "title": "associative addition",
+          "intro": "Associative means the grouping can move. The brackets decide which jumps are joined first, but the end point stays the same.",
+          "steps": [
+            "Left side $2 + (4 + \\tfrac{1}{2})$: forward 2 to 2.",
+            "Brackets first: $4 + \\tfrac{1}{2} = 4\\tfrac{1}{2}$, one jump from 2 to $6\\tfrac{1}{2}$.",
+            "Right side $(2 + 4) + \\tfrac{1}{2}$: brackets first, $2 + 4 = 6$, one jump to 6.",
+            "Forward $\\tfrac{1}{2}$ more, stop at $6\\tfrac{1}{2}$.",
+            "Both sides stop at $6\\tfrac{1}{2}$. The brackets moved, the result did not."
+          ]
+        },
+        "associativeMul": {
+          "title": "associative multiplication",
+          "intro": "Three factors build a cuboid. Cut it flat into layers or upright into slices, the number of cubes stays the same.",
+          "steps": [
+            "Left side $2\\big((3)(4)\\big)$: brackets first, $3 \\cdot 4 = 12$ cubes in one layer.",
+            "Two layers: $2 \\cdot 12 = 24$ cubes.",
+            "Right side $\\big((2)(3)\\big)4$: brackets first, $2 \\cdot 3 = 6$ cubes in one slice.",
+            "Four slices: $6 \\cdot 4 = 24$ cubes.",
+            "The same $2 \\times 3 \\times 4$ cuboid, only cut in a different way. Both sides are 24."
+          ]
+        },
+        "distributive": {
+          "title": "distributive",
+          "intro": "Distributivity links multiplication with addition: $\\tfrac{1}{2}$ multiplies every term inside the brackets.",
+          "steps": [
+            "Left side $\\tfrac{1}{2}(2 + 4)$: brackets first, $2 + 4 = 6$.",
+            "A $\\tfrac{1}{2}$ by 6 rectangle: six half squares, area 3.",
+            "Right side: $\\tfrac{1}{2}(2) = 1$, two half squares.",
+            "$\\tfrac{1}{2}(4) = 2$, then $1 + 2 = 3$.",
+            "Both sides are 3. Cutting a rectangle in two does not change its area."
+          ]
+        },
+        "identityAdd": {
+          "title": "additive identity",
+          "intro": "The identity for addition is 0: adding 0 does not move the point.",
+          "steps": [
+            "Left side $-4 + 0$: move back 4 to $-4$.",
+            "Add 0: no move at all, still at $-4$.",
+            "Right side $-4$: move back 4 to $-4$.",
+            "Both sides are at $-4$. Adding 0 leaves the number unchanged."
+          ]
+        },
+        "identityMul": {
+          "title": "multiplicative identity",
+          "intro": "The identity for multiplication is 1: a rectangle of height 1 has an area equal to its length.",
+          "steps": [
+            "Left side $(4)(1)$: a 4 by 1 rectangle, 4 squares.",
+            "Right side 4: length 4 on the number line.",
+            "Height 1 makes the area equal to the length, so $(4)(1) = 4$."
+          ]
+        },
+        "inverseAdd": {
+          "title": "additive inverse",
+          "intro": "The additive inverse of 6 is $-6$: forward 6, then back 6, home at 0.",
+          "steps": [
+            "Left side $6 + (-6)$: forward 6 to 6.",
+            "Add $-6$: back 6, home at 0.",
+            "Right side 0: stay at 0.",
+            "Both sides are at 0. $-6$ is the additive inverse of 6."
+          ]
+        },
+        "inverseMul": {
+          "title": "multiplicative inverse",
+          "intro": "The multiplicative inverse of 2 is $2^{-1} = \\tfrac{1}{2}$: a 2 by $\\tfrac{1}{2}$ rectangle is exactly one square.",
+          "steps": [
+            "Left side $2 \\cdot 2^{-1}$ with $2^{-1} = \\tfrac{1}{2}$: a 2 by $\\tfrac{1}{2}$ rectangle, two half squares.",
+            "Right side 1: one whole square.",
+            "Two half squares stacked make one square, so $2 \\cdot 2^{-1} = 1$."
+          ]
+        },
+        "subtraction": {
+          "title": "subtraction",
+          "intro": "Subtraction is not a new operation: $4 - 3$ means 4 plus the inverse of 3, which is $-3$.",
+          "steps": [
+            "Left side $4 - 3$ is read as $4 + (-3)$. Forward 4 to 4.",
+            "Add $-3$, the inverse of 3: back 3 to 1.",
+            "Right side 1: forward 1 to 1.",
+            "Both sides are at 1, so $4 - 3 = 4 + (-3) = 1$."
+          ]
+        },
+        "division": {
+          "title": "division",
+          "intro": "Division is not a new operation: $\\tfrac{4}{2}$ means 4 times the inverse of 2, which is $\\tfrac{1}{2}$.",
+          "steps": [
+            "Left side $\\tfrac{4}{2}$ is read as $4 \\cdot 2^{-1} = 4 \\cdot \\tfrac{1}{2}$: a 4 by $\\tfrac{1}{2}$ rectangle, four half squares.",
+            "Right side 2: two whole squares.",
+            "Four half squares make two squares, so $\\tfrac{4}{2} = 4 \\cdot 2^{-1} = 2$."
+          ]
+        }
+      },
+      "otherRemarks": {
+        "commutativeAdd": "both sides are 11",
+        "commutativeMul": "both sides are −12",
+        "associativeAdd": "both sides are 18",
+        "associativeMul": "both sides are −64",
+        "distributive": "both sides are 16. 6 − 2 is read as 6 + (−2), so 4 multiplies both 6 and −2.",
+        "identityAdd": "both sides are 4",
+        "identityMul": "both sides are −2",
+        "inverseAdd": "appears in the middle of 4 − 3 = 1 + 3 + (−3)"
+      },
+      "cards": {
+        "substitution": "from formula to example",
+        "others": "more examples",
+        "chain": "every step spelled out",
+        "nonzero": "why $x \\neq 0$?",
+        "laws": "field axioms"
+      },
+      "substitution": {
+        "formula": "formula",
+        "values": "replace",
+        "example": "example",
+        "footnote": "The formula holds for every real number. The board shows one choice of $x$, $y$, $z$."
+      },
+      "chain": {
+        "reasons": {
+          "subtractionDefinition": "definition of subtraction",
+          "divisionDefinition": "definition of division",
+          "fourAsSum": "4 written as $1 + 3$",
+          "fourAsProduct": "4 written as $2 \\cdot 2$",
+          "associative": "associative",
+          "inverse": "inverse",
+          "identity": "identity"
+        },
+        "footnoteSubtraction": "Every $=$ has a reason: one axiom or one definition.",
+        "footnoteDivision": "Every $=$ has a reason. The divisor may not be 0, because 0 has no multiplicative inverse."
+      },
+      "nonzero": {
+        "body": "No number $y$ gives $0 \\cdot y = 1$, because $0 \\cdot y = 0$ for every $y$. A rectangle with a side of 0 holds no squares at all.",
+        "footnote": "Since 0 has no multiplicative inverse, division by 0 is not defined."
+      },
+      "lawTable": {
+        "property": "property",
+        "addition": "addition",
+        "multiplication": "multiplication",
+        "derived": "not an axiom, built from the inverses",
+        "footnote": "Holds for every $x, y, z \\in \\mathbb{R}$. The results $x + y$ and $x \\cdot y$ are always real numbers again, so $\\mathbb{R}$ is closed under both operations."
+      },
+      "legend": {
+        "arrow": "move right or left by the number",
+        "now": "current step",
+        "end": "end point of both sides",
+        "cell": "one square",
+        "cube": "one cube, one square on each face",
+        "halves": "two half squares",
+        "negative": "negative area: bottom right or top left",
+        "mirror": "diagonal, the mirror line",
+        "result": "result of both sides"
+      },
+      "aria": {
+        "line": "number line with the arrows of both sides",
+        "plane": "signed rectangles on a grid",
+        "cuboid": "a cuboid of unit cubes cut two ways",
+        "area": "rectangles made of unit squares",
+        "side": "{{side}}: {{expression}}"
+      }
+    },
+    "orderAxioms": {
+      "title": "Order Axioms",
+      "laws": {
+        "trichotomy": "trichotomy",
+        "transitive": "transitive",
+        "addition": "addition",
+        "multiplication": "multiplication"
+      },
+      "examples": {
+        "trichotomyY": "relative to y",
+        "trichotomyZero": "relative to 0",
+        "transitiveA": "3, 7, 9",
+        "transitiveB": "−2, 3, 9"
+      },
+      "given": "example: $x = {{x}}$, $y = {{y}}$",
+      "words": {
+        "and": "and",
+        "or": "or"
+      },
+      "slider": "move",
+      "idle": "press start to see the examples one by one, or move ${{name}}$ yourself.",
+      "stamps": {
+        "negative": "negative",
+        "zero": "zero",
+        "positive": "positive",
+        "kept": "order kept",
+        "same": "sign kept",
+        "flipped": "sign flips"
+      },
+      "figure": {
+        "left": "← left",
+        "right": "right →",
+        "negative": "negative",
+        "positive": "positive",
+        "before": "before",
+        "after": "after",
+        "crossed": "crossed",
+        "meet": "both land on 0"
+      },
+      "samples": {
+        "trichotomyY": {
+          "steps": [
+            "$x = -5$ is left of $y = 3$. Only $x < y$ is true.",
+            "$x = 3$ is on $y = 3$. Only $x = y$ is true.",
+            "$x = 8$ is right of $y = 3$. Only $x > y$ is true."
+          ]
+        },
+        "trichotomyZero": {
+          "steps": [
+            "$x = -6$ is left of 0, so $x < 0$: $x$ is negative.",
+            "$x = 0$ is on 0: neither positive nor negative.",
+            "$x = 4$ is right of 0, so $x > 0$: $x$ is positive."
+          ]
+        },
+        "transitiveA": {
+          "steps": [
+            "$x = 3$ is left of $y = 7$, so $3 < 7$.",
+            "$y = 7$ is left of $z = 9$, so $7 < 9$.",
+            "Two steps to the right together still go right: $x$ is left of $z$, so $3 < 9$."
+          ]
+        },
+        "transitiveB": {
+          "steps": [
+            "$x = -2$ is left of $y = 3$, so $-2 < 3$.",
+            "$y = 3$ is left of $z = 9$, so $3 < 9$.",
+            "Two steps to the right together still go right: $x$ is left of $z$, so $-2 < 9$."
+          ]
+        },
+        "addition": {
+          "steps": [
+            "Start from $x = 3$ and $y = 7$: $3$ is left of $7$, so $3 < 7$.",
+            "$\\Rightarrow$ Add $z = 9$ to both sides. Both points move 9 to the right: $12 < 16$, the order stays.",
+            "$\\Leftarrow$ Add $-9$ to both sides. Both points move 9 to the left, back to $3 < 7$.",
+            "With $z = -5$ both points move left: $-2 < 2$. The order stays too."
+          ]
+        },
+        "multiplication": {
+          "steps": [
+            "$z = 3 > 0$: $xz = 6$ and $yz = 12$. The connecting lines do not cross, $6 < 12$. The sign stays.",
+            "$z = -3 < 0$: $xz = -6$ and $yz = -12$. The connecting lines cross above 0, $-6 > -12$. The sign flips.",
+            "$z = -\\tfrac{1}{2} < 0$: $xz = -1$ and $yz = -2$. They cross again, $-1 > -2$.",
+            "$z = \\tfrac{1}{2} > 0$: $xz = 1$ and $yz = 2$. The line shrinks toward 0 without crossing, $1 < 2$."
+          ]
+        }
+      },
+      "intros": {
+        "trichotomyY": "Two numbers $x$ and $y$ have only three possible positions on the number line: $x$ left of $y$, on $y$, or right of $y$. Exactly one happens, so exactly one of $x < y$, $x = y$, $x > y$ is true.",
+        "trichotomyZero": "The number 0 splits $\\mathbb{R}$ into two parts. Numbers right of 0 are positive, numbers left of 0 are negative. 0 itself is neither.",
+        "transitive": "If $x$ is left of $y$ and $y$ is left of $z$, then $x$ must be left of $z$. Two steps to the right together are still one step to the right.",
+        "addition": "Adding $z$ to both sides moves both points by $z$ in the same direction. Their order and distance stay the same, for positive and negative $z$ alike. The sign $\\iff$ means it works both ways: add $z$, then add $-z$ to go back.",
+        "multiplication": "Multiplying by $z > 0$ stretches or shrinks the line from 0, the order stays. Multiplying by $z < 0$ also flips the line at 0: what was on the left moves to the right. That is why the order sign flips."
+      },
+      "tips": {
+        "addition": "Move $z$: the connecting lines always stay parallel.",
+        "multiplication": "Move $z$: the connecting lines cross exactly when $z < 0$."
+      },
+      "reading": {
+        "less": "$x = {{x}}$ is left of $y = {{y}}$, so $x < y$.",
+        "equal": "$x = {{x}}$ is on $y$, so $x = y$.",
+        "greater": "$x = {{x}}$ is right of $y = {{y}}$, so $x > y$.",
+        "negative": "$x = {{x}}$ is left of 0, so $x < 0$: $x$ is negative.",
+        "zero": "$x = 0$: neither positive nor negative.",
+        "positive": "$x = {{x}}$ is right of 0, so $x > 0$: $x$ is positive.",
+        "transitive": "${{a}}$ is left of ${{b}}$ and ${{b}}$ is left of ${{c}}$, so ${{a}}$ is left of ${{c}}$: ${{a}} < {{c}}$.",
+        "additionTop": "${{x}}$ is left of ${{y}}$, so ${{x}} < {{y}}$.",
+        "additionDown": "$x + z = {{movedX}}$ is left of $y + z = {{movedY}}$, so $x + z < y + z$. The distance stays {{gap}}.",
+        "additionUp": "Add ${{back}}$ to both sides: back to ${{x}} < {{y}}$.",
+        "multiplicationZero": "$z = 0$: $xz = yz = 0$. This axiom only covers $z > 0$ and $z < 0$.",
+        "multiplicationPositive": "$z = {{z}} > 0$: $xz = {{movedX}}$ is left of $yz = {{movedY}}$, so $xz < yz$. The sign stays.",
+        "multiplicationNegative": "$z = {{z}} < 0$: $xz = {{movedX}}$ is right of $yz = {{movedY}}$, so $xz > yz$. The sign flips."
+      },
+      "cards": {
+        "substitution": "from formula to example",
+        "signs": "positive & negative",
+        "others": "more examples",
+        "twoWays": "both ways",
+        "trap": "do not mix up",
+        "ordering": "ordering",
+        "rules": "order axioms"
+      },
+      "substitution": {
+        "formula": "formula",
+        "values": "put in",
+        "example": "example",
+        "footnote": "The formula holds for every real number. The board shows just one choice.",
+        "noFormula": "none for $z = 0$",
+        "zeroFootnote": "The multiplication axiom only covers $z > 0$ and $z < 0$. With $z = 0$ both sides are 0."
+      },
+      "signs": {
+        "positive": "$x$ is positive, right of 0",
+        "negative": "$x$ is negative, left of 0",
+        "footnote": "Trichotomy with $y = 0$: every real number is exactly one of negative, zero, or positive."
+      },
+      "transitiveOthers": {
+        "values": "$x = {{a}}$, $y = {{b}}$, $z = {{c}}$",
+        "footnote": "The two inequalities have to connect: the right end of the first is the left end of the second."
+      },
+      "twoWays": {
+        "forward": "add 9 to both sides",
+        "backward": "add $-9$ to both sides",
+        "footnote": "Both directions hold, which is why it is written with $\\iff$."
+      },
+      "multiplicationOthers": {
+        "double": "$x = 3$, $y = 6$, $z = 2$: the sign stays",
+        "half": "$z = \\tfrac{1}{2}$: the sign stays",
+        "minusFour": "$z = -4$: the sign flips",
+        "minusTwoThirds": "$z = -\\tfrac{2}{3}$: the sign flips",
+        "minusTen": "$x = 2$, $y = 4$, $z = -10$: the sign flips"
+      },
+      "trap": {
+        "wrong": "wrong",
+        "right": "right",
+        "footnote": "$-12$ is farther left of 0 than $-6$, so $-12$ is the smaller one. This is $z = -3$ on the board."
+      },
+      "ordering": {
+        "task": "Given $x = 5$, $y = -4$, $z = \\tfrac{1}{3}$, $w = -\\tfrac{1}{2}$. Order $xy$, $xz$, $xw$, $yz$, $yw$, $zw$ from smallest to largest."
+      },
+      "rules": {
+        "property": "property",
+        "formula": "formula",
+        "names": {
+          "trichotomy": "trichotomy",
+          "transitive": "transitive",
+          "addition": "addition",
+          "multiplicationPositive": "multiplication, $z > 0$",
+          "multiplicationNegative": "multiplication, $z < 0$"
+        },
+        "notes": {
+          "trichotomy": "exactly one is true",
+          "multiplicationNegative": "the order sign flips"
+        },
+        "footnote": "Holds for every $x, y, z \\in \\mathbb{R}$. Together with the field axioms, these four properties make up the real number system."
+      },
+      "legend": {
+        "reference": "point $y$, fixed",
+        "referenceZero": "point 0, fixed",
+        "point": "point $x$, moved",
+        "relation": "the true relation",
+        "arrow": "to the right: the start is smaller",
+        "now": "current step",
+        "linkAddition": "where a point goes after adding $z$",
+        "linkMultiplication": "where a point goes after multiplying by $z$",
+        "band": "distance between the two points",
+        "crossed": "crossed: the order sign flips"
+      },
+      "aria": {
+        "trichotomy": "number line with points x and y",
+        "transitive": "number line with three points and arrows",
+        "shift": "two number lines, before and after",
+        "slider": "move {{name}}"
+      }
+    },
+    "inequalities": {
+      "title": "Inequalities",
+      "groups": {
+        "compare": "equation vs inequality",
+        "linear": "linear",
+        "chained": "chained",
+        "bothSides": "x on both sides"
+      },
+      "words": {
+        "or": "or"
+      },
+      "slider": "test",
+      "idle": "press start to see the steps one by one, or move $x$ to test it.",
+      "table": {
+        "step": "step",
+        "test": "test",
+        "holds": "true",
+        "fails": "false"
+      },
+      "reasons": {
+        "add": "add ${{term}}$",
+        "addEach": "add ${{term}}$ to every part",
+        "subtractEach": "subtract ${{term}}$ from every part",
+        "simplify": "simplify",
+        "divideKept": "divide by ${{term}}$, sign stays",
+        "divideFlipped": "divide by ${{term}}$, sign flips",
+        "readBackward": "read from the right",
+        "factor": "factor",
+        "zeroFactor": "one factor is 0"
+      },
+      "samples": {
+        "equationLinear": {
+          "steps": [
+            "The equation $x - 2 = 0$.",
+            "Add 2 to both sides: $x = 2$.",
+            "Only one point satisfies it: $\\{2\\}$."
+          ]
+        },
+        "equationSquare": {
+          "steps": [
+            "The equation $x^2 - \\tfrac{1}{4} = 0$.",
+            "Factor the left side: $(x - \\tfrac{1}{2})(x + \\tfrac{1}{2}) = 0$.",
+            "A product is 0 when one of its factors is 0: $x = \\tfrac{1}{2}$ or $x = -\\tfrac{1}{2}$.",
+            "Two points satisfy it: $\\{-\\tfrac{1}{2}, \\tfrac{1}{2}\\}$."
+          ]
+        },
+        "inequalityBasic": {
+          "steps": [
+            "The inequality $x < 1$.",
+            "Every point left of 1 satisfies it, 1 itself does not: the interval $(-\\infty, 1)$."
+          ]
+        },
+        "linearPositive": {
+          "steps": [
+            "Start from $2x - 4 < 0$.",
+            "Add 4 to both sides (addition axiom).",
+            "Simplify: $2x < 4$.",
+            "Divide both sides by 2. Since $2 > 0$, the sign stays: $x < 2$.",
+            "So every $x$ left of 2 satisfies it, 2 itself does not: the interval $(-\\infty, 2)$."
+          ]
+        },
+        "linearNegative": {
+          "steps": [
+            "Start from $-2x + 4 < 0$.",
+            "Add $-4$ to both sides.",
+            "Simplify: $-2x < -4$.",
+            "Divide both sides by $-2$. Since $-2 < 0$, the sign flips: $x > 2$.",
+            "So every $x$ right of 2 satisfies it: the interval $(2, \\infty)$."
+          ]
+        },
+        "chainedOpen": {
+          "steps": [
+            "Start from $0 < 2x - 2 \\le 4$. It has three parts.",
+            "Add 2 to every part.",
+            "Simplify: $2 < 2x \\le 6$.",
+            "Divide every part by 2 (multiply by $2^{-1}$), the sign stays: $1 < x \\le 3$.",
+            "So $x$ lies between 1 and 3, without 1 but with 3: the interval $(1, 3]$."
+          ]
+        },
+        "chainedClosed": {
+          "steps": [
+            "Start from $10 \\ge 2x + 6 \\ge 4$.",
+            "Subtract 6 from every part: $4 \\ge 2x \\ge -2$.",
+            "Divide every part by 2: $2 \\ge x \\ge -1$.",
+            "Read it from right to left, it means the same: $-1 \\le x \\le 2$.",
+            "So $x$ runs from $-1$ to 2, both ends included: the interval $[-1, 2]$."
+          ]
+        },
+        "bothSidesKept": {
+          "steps": [
+            "Start from $5x + 6 < 3x + 14$. There is an $x$ on both sides.",
+            "Add $(-3x - 6)$ to both sides, so the $x$ terms gather on the left and the numbers on the right.",
+            "Simplify: $2x < 8$.",
+            "Divide both sides by 2, the sign stays: $x < 4$.",
+            "So the interval is $(-\\infty, 4)$."
+          ]
+        },
+        "bothSidesFlipped": {
+          "steps": [
+            "Start from $-2x + 10 \\ge 3x - 5$.",
+            "Add $(-3x - 10)$ to both sides.",
+            "Simplify: $-5x \\ge -15$.",
+            "Divide by $-5$ (multiply by $-\\tfrac{1}{5}$). It is negative, so the sign flips: $x \\le 3$.",
+            "So the interval is $(-\\infty, 3]$, with 3 included."
+          ]
+        }
+      },
+      "intros": {
+        "compare": "An equation is satisfied by a few points, finitely many. An inequality is satisfied by a whole interval, infinitely many.",
+        "linear": "Inequalities are solved with the order axioms: add the same number to both sides, then divide by the coefficient of $x$. If the coefficient is negative, the order sign flips.",
+        "chained": "A chained inequality has three parts. Every step is applied to all three parts at once.",
+        "bothSides": "If $x$ appears on both sides, first gather the $x$ terms on one side by adding their opposites to both sides."
+      },
+      "tip": "Move $x$: all rows are true together or false together. A valid step does not change the solution set.",
+      "reading": {
+        "inside": "$x = {{x}}$ satisfies it: every row is true.",
+        "outside": "$x = {{x}}$ does not satisfy it: every row is false.",
+        "insideSingle": "$x = {{x}}$ satisfies it.",
+        "outsideSingle": "$x = {{x}}$ does not satisfy it."
+      },
+      "cards": {
+        "ways": "three ways to write it",
+        "others": "more examples",
+        "forms": "reading intervals"
+      },
+      "ways": {
+        "line": "line",
+        "set": "set",
+        "interval": "interval",
+        "notInterval": "not an interval, only points"
+      },
+      "counts": {
+        "one": "Number of values of $x$: 1, finite.",
+        "two": "Number of values of $x$: 2, finite.",
+        "infinite": "There are infinitely many values of $x$, because an interval holds every real number inside it."
+      },
+      "others": {
+        "compare": [
+          "1 value",
+          "1 value",
+          "$x = 0$ or $x = 1$: 2 values",
+          "$x = -2$ or $x = 1$: 2 values",
+          "$x = 0$, $x = -\\sqrt{2}$, or $x = \\sqrt{2}$: 3 values",
+          "$x = \\pm 3$ or $x = \\pm 1$: 4 values"
+        ],
+        "linear": [
+          "divide by 2: sign stays",
+          "divide by $-2$: sign flips",
+          "divide by 2: sign stays",
+          "divide by $-2$: sign flips"
+        ],
+        "chained": [
+          "subtract 2, then divide by 4",
+          "add 7, then divide by 3"
+        ],
+        "bothSides": [
+          "add $(-5x + 6)$, then divide by $-8$: sign flips",
+          "add $(2x - 7)$, then divide by 5"
+        ]
+      },
+      "forms": {
+        "inequality": "inequality",
+        "interval": "interval",
+        "line": "line",
+        "footnote": "A round bracket means the end is not included, a square bracket means it is. Next to $\\infty$ the bracket is always round, because $\\infty$ is not a real number."
+      },
+      "legend": {
+        "closed": "closed end: included ($\\le$, $\\ge$)",
+        "open": "open end: not included ($<$, $>$)",
+        "set": "solution set",
+        "probeIn": "tested $x$, satisfies it",
+        "probeOut": "tested $x$, does not satisfy it"
+      },
+      "aria": {
+        "line": "number line with the solution set",
+        "slider": "test x"
+      }
+    },
+    "absoluteValue": {
+      "title": "Absolute Value",
+      "groups": {
+        "definition": "definition",
+        "equation": "equations",
+        "theorem": "theorem",
+        "inequality": "inequalities",
+        "properties": "properties"
+      },
+      "words": {
+        "or": "or",
+        "not": "not",
+        "undefined": "not defined",
+        "decimal": "."
+      },
+      "slider": {
+        "test": "test",
+        "move": "move"
+      },
+      "idle": {
+        "x": "press start to see the steps one by one, or move $x$ to test it.",
+        "a": "press start to see the steps one by one, or move $a$.",
+        "ab": "press start to see the steps one by one, or move $a$ and $b$."
+      },
+      "table": {
+        "step": "step",
+        "test": "test",
+        "holds": "true",
+        "fails": "false"
+      },
+      "reasons": {
+        "open": "open the absolute value",
+        "sameOrOpposite": "equal, or opposite to each other",
+        "subtract": "subtract ${{term}}$",
+        "add": "add ${{term}}$",
+        "addEach": "add ${{term}}$ to every part",
+        "gather": "gather the $x$ terms",
+        "divide": "divide by ${{term}}$",
+        "divideCoefficient": "divide by the coefficient of $x$",
+        "candidates": "divide, two candidates",
+        "condition": "condition: the right side equals an absolute value, so it cannot be negative",
+        "simplify": "simplify"
+      },
+      "cases": {
+        "nonnegative": "if $a \\ge 0$",
+        "negative": "if $a < 0$"
+      },
+      "definition": {
+        "steps": {
+          "point": "The point $a = {{a}}$ on the number line.",
+          "caseNonnegative": "$a \\ge 0$, so use the first row: $\\lvert a \\rvert = a$.",
+          "caseNegative": "$a < 0$, so use the second row: $\\lvert a \\rvert = -a$.",
+          "stay": "$\\lvert a \\rvert = a$: the point stays where it is.",
+          "mirror": "$-a = {{negation}}$: the point is mirrored across 0.",
+          "distance": "Its distance to 0 is ${{result}}$. So ${{absolute}}$, not negative."
+        },
+        "reading": "${{absolute}}$: the point ${{a}}$ is ${{result}}$ away from 0.",
+        "readingZero": "$\\lvert 0 \\rvert = 0$: the point 0 itself, its distance to 0 is 0."
+      },
+      "properties": {
+        "steps": {
+          "sum": "Arrow $a = {{a}}$ from 0, then arrow $b = {{b}}$ from its tip. The final tip is at $a + b = {{sum}}$.",
+          "sumDistance": "$\\lvert a + b \\rvert$ is the distance from that tip to 0: ${{absolute}} = {{left}}$.",
+          "absolute": "For $\\lvert a \\rvert + \\lvert b \\rvert$ both arrows point right: ${{a}} + {{b}} = {{right}}$.",
+          "equal": "Both sides are equal, ${{left}} = {{right}}$, because {{why}}: no arrow turns back.",
+          "less": "The left side is smaller, ${{left}} < {{right}}$, because {{why}}: arrow $b$ turns back and undoes part of the way."
+        },
+        "why": {
+          "zero": "one of them is 0",
+          "same": "$a$ and $b$ have the same sign",
+          "opposite": "$a$ and $b$ have different signs"
+        },
+        "reading": {
+          "equal": "$\\lvert a + b \\rvert = {{left}}$ and $\\lvert a \\rvert + \\lvert b \\rvert = {{right}}$: both sides are equal, because {{why}}.",
+          "less": "$\\lvert a + b \\rvert = {{left}}$ and $\\lvert a \\rvert + \\lvert b \\rvert = {{right}}$: the left side is smaller, because {{why}}."
+        }
+      },
+      "samples": {
+        "equationConstant": {
+          "steps": [
+            "The equation $\\lvert 4x + 3 \\rvert = 7$: the inside of the absolute value is 7 away from 0.",
+            "By Definition 4.2.1, the inside is 7 or $-7$.",
+            "Subtract 3 from both sides of each part.",
+            "Divide by 4: $x = 1$ or $x = -\\tfrac{10}{4}$.",
+            "Two points satisfy it: $\\{-\\tfrac{10}{4}, 1\\}$."
+          ]
+        },
+        "equationVariable": {
+          "steps": [
+            "The equation $\\lvert 7x \\rvert = x - 4$. Its right side contains $x$.",
+            "Open the absolute value as in the first example.",
+            "Gather the $x$ terms: $6x = -4$ or $8x = 4$.",
+            "Divide: the candidates are $x = -\\tfrac{4}{6}$ or $x = \\tfrac{4}{8}$.",
+            "But $\\lvert 7x \\rvert$ is never negative, so neither is the right side: $x - 4 \\ge 0$, that is $x \\ge 4$.",
+            "Both candidates are less than 4, so both are rejected. No $x$ satisfies it: $\\varnothing$."
+          ]
+        },
+        "equationBoth": {
+          "steps": [
+            "The equation $\\lvert 5x - 3 \\rvert = \\lvert 3x + 5 \\rvert$: both insides are equally far from 0.",
+            "Two numbers are equally far from 0 when they are equal or opposite.",
+            "Gather the $x$ terms on the left and the numbers on the right.",
+            "Divide: $x = 4$ or $x = -\\tfrac{2}{8}$.",
+            "Two points satisfy it: $\\{-\\tfrac{2}{8}, 4\\}$."
+          ]
+        },
+        "theoremLess": {
+          "steps": [
+            "$\\lvert x \\rvert < 3$: the distance from $x$ to 0 is less than 3.",
+            "Points closer than 3 to 0 lie between $-3$ and 3.",
+            "The ends $-3$ and 3 are exactly 3 away, so they are not included: the interval $(-3, 3)$."
+          ]
+        },
+        "theoremGreater": {
+          "steps": [
+            "$\\lvert x \\rvert > 3$: the distance from $x$ to 0 is more than 3.",
+            "The points lie left of $-3$ or right of 3.",
+            "Two parts, ends not included: $(-\\infty, -3) \\cup (3, \\infty)$."
+          ]
+        },
+        "theoremLessEqual": {
+          "steps": [
+            "$\\lvert x \\rvert \\le 3$: the distance from $x$ to 0 is at most 3.",
+            "The points lie between $-3$ and 3, both included.",
+            "The ends are exactly 3 away and $3 \\le 3$, so they are included: the interval $[-3, 3]$."
+          ]
+        },
+        "theoremGreaterEqual": {
+          "steps": [
+            "$\\lvert x \\rvert \\ge 3$: the distance from $x$ to 0 is at least 3.",
+            "The points lie left of $-3$ or right of 3, both included.",
+            "Two parts, ends included: $(-\\infty, -3] \\cup [3, \\infty)$."
+          ]
+        },
+        "inequalityA": {
+          "steps": [
+            "Start from $\\lvert x - 4 \\rvert < 7$.",
+            "Theorem 4.2.1(a) with $x - 4$ in place of $x$ and $a = 7$.",
+            "Add 4 to every part.",
+            "Simplify: $-3 < x < 11$.",
+            "So the interval is $(-3, 11)$."
+          ]
+        },
+        "inequalityB": {
+          "steps": [
+            "Start from $\\lvert 2x - 5 \\rvert < 3$.",
+            "Theorem 4.2.1(a): $-3 < 2x - 5 < 3$.",
+            "Add 5 to every part: $2 < 2x < 8$.",
+            "Divide every part by 2: $1 < x < 4$.",
+            "So the interval is $(1, 4)$."
+          ]
+        },
+        "inequalityC": {
+          "steps": [
+            "Start from $\\lvert x - 3 \\rvert > 5$.",
+            "Theorem 4.2.1(b): two parts joined by or.",
+            "Add 3 to both sides of each part: $x < -2$ or $x > 8$.",
+            "So two intervals: $(-\\infty, -2) \\cup (8, \\infty)$."
+          ]
+        },
+        "inequalityD": {
+          "steps": [
+            "Start from $\\lvert 3x - 7 \\rvert > 2$.",
+            "Theorem 4.2.1(b): $3x - 7 < -2$ or $3x - 7 > 2$.",
+            "Add 7: $3x < 5$ or $3x > 9$.",
+            "Divide by 3: $x < \\tfrac{5}{3}$ or $x > 3$.",
+            "So $(-\\infty, \\tfrac{5}{3}) \\cup (3, \\infty)$."
+          ]
+        },
+        "inequalityE": {
+          "steps": [
+            "Start from $\\lvert 3x - 2 \\rvert \\le 4$.",
+            "Corollary 4.2.1(a): $-4 \\le 3x - 2 \\le 4$.",
+            "Add 2 to every part: $-2 \\le 3x \\le 6$.",
+            "Divide every part by 3: $-\\tfrac{2}{3} \\le x \\le 2$.",
+            "So the interval is $[-\\tfrac{2}{3}, 2]$, both ends included."
+          ]
+        },
+        "inequalityF": {
+          "steps": [
+            "Start from $\\lvert 3x - 4 \\rvert \\ge 2$.",
+            "Corollary 4.2.1(b): $3x - 4 \\le -2$ or $3x - 4 \\ge 2$.",
+            "Add 4: $3x \\le 2$ or $3x \\ge 6$.",
+            "Divide by 3: $x \\le \\tfrac{2}{3}$ or $x \\ge 2$.",
+            "So $(-\\infty, \\tfrac{2}{3}] \\cup [2, \\infty)$, ends included."
+          ]
+        }
+      },
+      "intros": {
+        "definition": "The absolute value $\\lvert a \\rvert$ is never negative. If $a \\ge 0$, it stays $a$. If $a < 0$, it is $-a$: the point $a$ is mirrored across 0. On the number line, $\\lvert a \\rvert$ is the distance from $a$ to 0.",
+        "equation": "An absolute value equation splits in two by Definition 4.2.1: the inside equals the right side, or its opposite. If the right side contains $x$, the candidates must be checked.",
+        "theorem": "For $a > 0$: $\\lvert x \\rvert < a$ means the distance from $x$ to 0 is less than $a$, so $x$ lies between $-a$ and $a$. $\\lvert x \\rvert > a$ means $x$ lies outside both.",
+        "inequality": "Remove the absolute value with Theorem 4.2.1 or Corollary 4.2.1, then solve it like an ordinary inequality. The forms $<$ and $\\le$ become chained, the forms $>$ and $\\ge$ become two parts joined by or.",
+        "properties": "The triangle inequality: $\\lvert a + b \\rvert \\le \\lvert a \\rvert + \\lvert b \\rvert$. If $a$ and $b$ have the same sign, the arrows point the same way and both sides are equal. If not, arrow $b$ turns back and the left side is smaller."
+      },
+      "tips": {
+        "definition": "Move $a$ left of 0: the point is mirrored to the right. The result is never left of 0.",
+        "equation": "Move $x$: all rows are true together or false together. In the second example, try $x = \\tfrac{1}{2}$.",
+        "theorem": "Move $x$: the lower bracket is $\\lvert x \\rvert$. Compare its length with 3.",
+        "inequality": "Move $x$: all rows are true together or false together.",
+        "properties": "Move $a$ and $b$. The two sides are equal only when $a$ and $b$ do not have opposite signs."
+      },
+      "reading": {
+        "inside": "$x = {{x}}$ satisfies it: every row is true.",
+        "outside": "$x = {{x}}$ does not satisfy it: every row is false.",
+        "falseCandidate": "$x = {{x}}$ satisfies rows 2 to 4, but not the condition $x \\ge 4$ nor the equation itself: a false candidate.",
+        "conditionOnly": "$x = {{x}}$ meets the condition, but it is not a candidate. The equation is false.",
+        "never": "$x = {{x}}$ does not satisfy the equation."
+      },
+      "cards": {
+        "examples": "more examples",
+        "root": "square root",
+        "opening": "opening the absolute value",
+        "others": "more examples",
+        "cases": "two cases",
+        "condition": "why $a > 0$",
+        "swap": "from theorem to example",
+        "live": "Theorem 4.2.2 with these $a$, $b$",
+        "proof": "proof of (c)",
+        "rules": "absolute value rules"
+      },
+      "labels": {
+        "rule": "rule",
+        "replace": "replace",
+        "result": "so",
+        "live": "with this $a$",
+        "square": "square",
+        "root": "root"
+      },
+      "examplesFootnote": "A non-negative number stays. A negative number gets one more minus sign, so it turns positive.",
+      "rootFootnote": "The equation $x^2 = 16$ has two roots, but the root sign $\\sqrt{\\ }$ only gives the non-negative one. That is why $\\sqrt{x^2} = \\lvert x \\rvert$.",
+      "openingNotes": {
+        "constant": "The condition is $c \\ge 0$. Here $c = 7$, so it holds.",
+        "variable": "Here $c = x - 4$ contains $x$, so the condition $c \\ge 0$ must be checked.",
+        "both": "Both sides are absolute values, both non-negative, so no condition is needed."
+      },
+      "equationOthers": [
+        "right side 2, positive: both candidates satisfy it",
+        "right side 5, positive: both candidates satisfy it",
+        "right side 2, positive: both candidates satisfy it",
+        "no $x$: an absolute value is never negative"
+      ],
+      "inequalityOthers": [
+        "Theorem 4.2.1(a), add 1, divide by 2",
+        "Theorem 4.2.1(b), add 8, divide by 4",
+        "Corollary 4.2.1(a), add 1, divide by 5",
+        "Corollary 4.2.1(b), subtract 8, divide by 4"
+      ],
+      "casesFootnote": "Now ${{now}}$. Join both cases: ${{joined}}$.",
+      "condition": {
+        "remarks": [
+          "no $x$: an absolute value is never negative",
+          "only $x = 0$",
+          "every $x \\in \\mathbb{R}$"
+        ],
+        "footnote": "For $a \\le 0$ the theorem is not used. The answer is read straight from the definition."
+      },
+      "swapFootnote": "What gets replaced is the whole inside of the absolute value, not just $x$.",
+      "live": {
+        "corollaryA": "corollary (a)",
+        "corollaryB": "corollary (b)"
+      },
+      "proof": {
+        "reasons": [
+          "from the definition",
+          "from the definition",
+          "add them (addition axiom)",
+          "Corollary 4.2.1(a)"
+        ],
+        "footnote": "Proof of (a): $\\lvert ab \\rvert = \\sqrt{(ab)^2} = \\sqrt{a^2}\\,\\sqrt{b^2} = \\lvert a \\rvert \\cdot \\lvert b \\rvert$, using $\\sqrt{x^2} = \\lvert x \\rvert$."
+      },
+      "rules": {
+        "name": "name",
+        "formula": "formula",
+        "line": "line",
+        "names": {
+          "definition": "Definition 4.2.1",
+          "root": "square root",
+          "theoremA": "Theorem 4.2.1(a)",
+          "theoremB": "Theorem 4.2.1(b)",
+          "corollaryA": "Corollary 4.2.1(a)",
+          "corollaryB": "Corollary 4.2.1(b)",
+          "product": "Theorem 4.2.2(a)",
+          "quotient": "Theorem 4.2.2(b)",
+          "triangle": "Theorem 4.2.2(c)",
+          "difference": "Corollary 4.2.2"
+        },
+        "footnote": "Theorem 4.2.1 and Corollary 4.2.1 only hold for $a > 0$. In the line pictures, the left point is $-a$ and the right point is $a$."
+      },
+      "legend": {
+        "point": "the point $a$",
+        "mirrorPoint": "the point $-a$, the mirror image of $a$",
+        "mirror": "mirrored across 0",
+        "distance": "distance to 0",
+        "solution": "a point that satisfies it",
+        "rejected": "a rejected candidate",
+        "set": "solution set",
+        "closed": "closed end: included",
+        "open": "open end: not included",
+        "probeIn": "tested $x$, satisfies it",
+        "probeOut": "tested $x$, does not satisfy it",
+        "arrow": "a step of length $a$ or $b$",
+        "end": "final tip",
+        "gap": "difference between the two sides"
+      },
+      "aria": {
+        "definition": "absolute value as the distance to 0",
+        "line": "number line with the solution set",
+        "triangle": "the triangle inequality with arrows",
+        "slider": {
+          "a": "move a",
+          "b": "move b",
+          "x": "test x"
+        }
+      }
+    },
+    "supremumInfimum": {
+      "title": "Supremum & Infimum",
+      "groups": {
+        "bounds": "bounds",
+        "supInf": "sup & inf",
+        "sequences": "sets from sequences"
+      },
+      "words": {
+        "none": "none",
+        "decimal": ".",
+        "decimalMark": "."
+      },
+      "slider": "move",
+      "idle": {
+        "ab": "press start to see the steps one by one, or move $b$ and $a$.",
+        "y": "press start to see the steps one by one, or move $y$."
+      },
+      "rows": {
+        "upper": "upper bounds",
+        "lower": "lower bounds"
+      },
+      "table": {
+        "check": "check",
+        "holds": "true",
+        "fails": "false"
+      },
+      "reasons": {
+        "upperFails": "$x = {{x}} \\in {{name}}$ and ${{x}} > {{b}}$",
+        "upperHolds": "no member of ${{name}}$ lies to the right of $b$",
+        "lowerFails": "$x = {{x}} \\in {{name}}$ and ${{x}} < {{a}}$",
+        "lowerHolds": "no member of ${{name}}$ lies to the left of $a$",
+        "aboveFound": "$x = {{x}}$, so $y$ is not an upper bound yet",
+        "aboveNone": "none, $y$ is already an upper bound",
+        "belowFound": "$x = {{x}}$, so $y$ is not a lower bound yet",
+        "belowNone": "none, $y$ is already a lower bound"
+      },
+      "steps": {
+        "intervalSet": "The set ${{set}}$ is shaded on the line.",
+        "sequenceSet": "The members of ${{set}}$ are dots on the line.",
+        "upperHolds": "Check $b = {{b}}$: no member lies to its right, so it is an upper bound.",
+        "upperFails": "Check $b = {{b}}$: a member lies to its right, so it is not an upper bound.",
+        "lowerHolds": "Check $a = {{a}}$: no member lies to its left, so it is a lower bound.",
+        "lowerFails": "Check $a = {{a}}$: a member lies to its left, so it is not a lower bound.",
+        "allBounds": "All upper bounds: {{upper}}. All lower bounds: {{lower}}.",
+        "uppers": "All upper bounds of ${{name}}$: ${{range}}$.",
+        "noUppers": "Upper bounds: none, the members keep growing.",
+        "supMember": "The least one: $\\sup {{name}} = {{value}}$, a member of ${{name}}$.",
+        "supOutside": "The least one: $\\sup {{name}} = {{value}}$, not a member of ${{name}}$.",
+        "noSup": "${{name}}$ has no upper bound, so $\\sup {{name}}$ does not exist.",
+        "lowers": "All lower bounds of ${{name}}$: ${{range}}$.",
+        "noLowers": "Lower bounds: none, the members keep shrinking.",
+        "infMember": "The greatest one: $\\inf {{name}} = {{value}}$, a member of ${{name}}$.",
+        "infOutside": "The greatest one: $\\inf {{name}} = {{value}}$, not a member of ${{name}}$.",
+        "noInf": "${{name}}$ has no lower bound, so $\\inf {{name}}$ does not exist."
+      },
+      "reading": {
+        "upperHolds": "$b = {{b}}$ is an upper bound of ${{name}}$",
+        "upperFails": "$b = {{b}}$ is not an upper bound of ${{name}}$",
+        "lowerHolds": "$a = {{a}}$ is a lower bound of ${{name}}$",
+        "lowerFails": "$a = {{a}}$ is not a lower bound of ${{name}}$",
+        "aboveFound": "to the right of $y = {{y}}$ there is still $x = {{x}}$",
+        "aboveNone": "to the right of $y = {{y}}$ there is no member",
+        "belowFound": "to its left there is still $x = {{x}}$",
+        "belowNone": "to its left there is no member",
+        "joined": "{{first}}; {{second}}."
+      },
+      "cards": {
+        "many": "bounds are not unique",
+        "member": "not necessarily a member",
+        "membership": "member or not",
+        "completeness": "completeness axiom",
+        "unique": "sup and inf are unique",
+        "others": "more examples",
+        "rules": "bound rules"
+      },
+      "many": {
+        "footnote": "Every number to the right of an upper bound is also an upper bound, and every number to the left of a lower bound is also a lower bound. So there are infinitely many."
+      },
+      "member": {
+        "boundMember": "a bound and also a member",
+        "boundOutside": "a bound, though not a member",
+        "notBound": "not a bound",
+        "footnote": "Upper and lower bounds do not have to be members of the set."
+      },
+      "membership": {
+        "set": "set",
+        "footnote": "Example 4.2.6(b) gives 1 as the lower bound of $E$. It should be $\\tfrac{1}{2}$, as in Example 4.2.8(b)."
+      },
+      "completeness": {
+        "remarks": [
+          "only rational numbers",
+          "all rational upper bounds ($2^2 = 4$, $1{,}5^2 = 2{,}25$, $1{,}4143^2 = 2{,}00024449$), and there is always a smaller one",
+          "$\\mathbb{Q}$ has no least upper bound here, $\\mathbb{R}$ does"
+        ],
+        "footnote": "Theorem 4.2.3: a non-empty set with an upper bound always has a supremum in $\\mathbb{R}$."
+      },
+      "unique": {
+        "remarks": [
+          "suppose there are two",
+          "$a$ is the greatest lower bound and $b$ is a lower bound",
+          "$b$ is the greatest lower bound and $a$ is a lower bound",
+          "so there is only one infimum, and likewise one supremum"
+        ],
+        "footnote": "The module's proof of Theorem 4.2.4 writes $a < b$ and $b < a$. It should be $\\le$."
+      },
+      "others": {
+        "footnote": "From the exercises of this unit, with answers worked out here. The module's hints for 5b and 5c are the answers to 5d and 5h."
+      },
+      "rules": {
+        "name": "rule",
+        "formula": "formula",
+        "names": {
+          "upper": "Definition 4.2.2(a)",
+          "lower": "Definition 4.2.2(b)",
+          "sup": "Definition 4.2.3(a)",
+          "inf": "Definition 4.2.3(b)",
+          "completeUpper": "Theorem 4.2.3(a)",
+          "completeLower": "Theorem 4.2.3(b)",
+          "unique": "Theorem 4.2.4"
+        },
+        "formulas": {
+          "upper": "b \\text{ upper bound of } A \\iff b \\ge x,\\ \\forall x \\in A",
+          "lower": "a \\text{ lower bound of } A \\iff a \\le x,\\ \\forall x \\in A",
+          "sup": "b = \\sup A \\iff b \\text{ upper bound of } A \\text{ and } \\forall y < b\\ \\exists x \\in A,\\ y < x",
+          "inf": "a = \\inf A \\iff a \\text{ lower bound of } A \\text{ and } \\forall y > a\\ \\exists x \\in A,\\ y > x",
+          "completeUpper": "A \\ne \\varnothing \\text{ has an upper bound} \\Rightarrow \\sup A \\text{ exists}",
+          "completeLower": "A \\ne \\varnothing \\text{ has a lower bound} \\Rightarrow \\inf A \\text{ exists}",
+          "unique": "\\sup A \\text{ and } \\inf A \\text{ are each unique}"
+        }
+      },
+      "intros": {
+        "bounds": "$b$ is an upper bound of $A$ if no member of $A$ is greater than $b$. $a$ is a lower bound if no member is smaller than $a$. A bound does not have to be a member of $A$, and there are infinitely many.",
+        "supInf": "The supremum is the least upper bound: move it even a little to the left and some member already passes it. The infimum is the greatest lower bound.",
+        "sequences": "A set built from a sequence is a row of dots. Its supremum or infimum can be one of the members, or a point the dots keep approaching but never reach."
+      },
+      "tips": {
+        "bounds": "Move $b$ to the left until a member appears to its right: from then on $b$ is no longer an upper bound.",
+        "supInf": "Move $y$ below the supremum: there is always a member $x$ to its right. From the supremum onward, there is none.",
+        "sequences": "On $D$, move $y$ toward 0: there is always a $\\tfrac{1}{n}$ that is smaller, just pick a large $n$."
+      },
+      "legend": {
+        "set": "members of the set",
+        "sequence": "members of the set",
+        "probe": "the number being checked",
+        "witness": "a member $x$ that passes it",
+        "bounds": "all upper or lower bounds",
+        "bestMember": "sup or inf, a member of the set",
+        "bestOutside": "sup or inf, not a member"
+      },
+      "aria": {
+        "line": "the set and its bounds on the number line",
+        "slider": {
+          "a": "move a",
+          "b": "move b",
+          "y": "move y"
+        }
+      }
+    },
+    "sequences": {
+      "title": "Sequences",
+      "groups": {
+        "notation": "writing a sequence",
+        "monotone": "monotonicity",
+        "bounded": "boundedness"
+      },
+      "words": {
+        "none": "none",
+        "decimal": ".",
+        "decimalMark": ".",
+        "and": "and",
+        "odd": "odd",
+        "even": "even",
+        "above": "above",
+        "below": "below"
+      },
+      "slider": "move",
+      "relationTitle": "signs",
+      "idle": {
+        "n": "press start to see the steps one by one, or move $n$.",
+        "bounds": "press start to see the steps one by one, or move $M$ and $m$."
+      },
+      "table": {
+        "step": "step",
+        "compare": "compare",
+        "holds": "true",
+        "fails": "false"
+      },
+      "reasons": {
+        "term": "term {{position}}",
+        "finite": "stops at $n = 10$: a finite sequence",
+        "infinite": "general term; the terms never run out: an infinite sequence",
+        "difference": "difference ${{difference}}$",
+        "upperFails": "${{term}} > M$",
+        "upperHolds": "no term lies above $M$",
+        "lowerFails": "${{term}} < m$",
+        "lowerHolds": "no term lies below $m$"
+      },
+      "steps": {
+        "substitute": "Substitute $n = {{n}}$: ${{term}}$, term {{position}}.",
+        "general": "General term $a_n = {{general}}$. The $\\dots$ at the end means the sequence is infinite.",
+        "finite": "This sequence stops at term 10: a finite sequence.",
+        "plotted": "The terms are plotted: $n$ to the right, $a_n$ upward.",
+        "compare": "Compare ${{next}}$ with ${{current}}$: ${{relation}}$.",
+        "monotone": "The general difference shows this sequence is {{properties}}.",
+        "notMonotone": "Some pairs go up and some go down: not a monotone sequence.",
+        "upperHolds": "Check $M = {{M}}$: no term lies above it, so $M$ is an upper bound.",
+        "upperFails": "Check $M = {{M}}$: ${{term}}$ passes it, so $M$ is not an upper bound.",
+        "lowerHolds": "Check $m = {{m}}$: no term lies below it, so $m$ is a lower bound.",
+        "lowerFails": "Check $m = {{m}}$: ${{term}}$ lies below it, so $m$ is not a lower bound.",
+        "all": "Upper bounds: {{upper}}. Lower bounds: {{lower}}.",
+        "everyUpper": "every $M \\ge {{value}}$",
+        "noUpper": "no $M$",
+        "everyLower": "every $m \\le {{value}}$",
+        "noLower": "no $m$"
+      },
+      "reading": {
+        "term": "$n = {{n}}$: term {{position}}, ${{term}}$.",
+        "pair": "${{current}}$ and ${{next}}$: {{word}}.",
+        "less": "it goes up at this pair",
+        "greater": "it goes down at this pair",
+        "equal": "they are equal",
+        "upperHolds": "$M = {{M}}$ is an upper bound",
+        "upperFails": "$M = {{M}}$ is not an upper bound",
+        "lowerHolds": "$m = {{m}}$ is a lower bound",
+        "lowerFails": "$m = {{m}}$ is not a lower bound",
+        "joined": "{{first}}; {{second}}."
+      },
+      "properties": {
+        "increasing": "increasing",
+        "decreasing": "decreasing",
+        "nonIncreasing": "non-increasing",
+        "nonDecreasing": "non-decreasing"
+      },
+      "stamps": {
+        "monotonePending": "monotone?",
+        "notMonotone": "not monotone",
+        "boundedPending": "bounded?",
+        "bounded": "bounded",
+        "belowOnly": "bounded below, not above",
+        "aboveOnly": "bounded above, not below"
+      },
+      "zones": {
+        "noUpper": "no upper bound",
+        "noLower": "no lower bound"
+      },
+      "cards": {
+        "formula": "from formula to term",
+        "finite": "finite and infinite",
+        "allN": "for every n",
+        "four": "four properties",
+        "best": "best bounds",
+        "others": "more examples",
+        "rules": "sequence rules"
+      },
+      "formula": {
+        "general": "the formula for term $n$, with $n$ starting at {{start}}",
+        "position": "term {{position}}",
+        "constant": "term {{position}}, it does not depend on $n$",
+        "zero": "the denominator is 0, so $n$ starts at {{start}}",
+        "typo": "Example 4.2.9(g) in the module prints the first term as $-1$ and the general term as $\\tfrac{n}{n-2}$. For $\\tfrac{n}{2-n}$ from $n = 3$, the first term is $-3$."
+      },
+      "finite": {
+        "remarks": [
+          "stops at term 10: a finite sequence",
+          "never stops: an infinite sequence, read \"the sequence $n$, $n$ from 1 to infinity\"",
+          "the general form, often shortened to $\\{a_n\\}$"
+        ]
+      },
+      "allN": {
+        "holds": "the difference has the same sign for every $n$, so it is {{properties}}",
+        "mixed": "some differences are positive and some are negative",
+        "footnote": "The plot shows only the first 10 terms. \"$\\forall n$\" is proved from the general difference $a_{n+1} - a_n$."
+      },
+      "four": {
+        "yes": "yes",
+        "no": "no",
+        "footnote": "Increasing is also non-decreasing, and decreasing is also non-increasing. The constant sequence $2, 2, 2, \\dots$ (Example 4.2.9f) is both non-increasing and non-decreasing.",
+        "typoThird": "Example 4.2.10(c) in the module prints the third term as $-3$. It should be $1 - 2(3) = -5$.",
+        "typoAlternating": "The module calls Examples 4.2.10(g) and (h) \"non-increasing and non-decreasing\". By Definition 4.2.4 neither is a monotone sequence."
+      },
+      "best": {
+        "sequence": "sequence",
+        "least": "least $M$",
+        "greatest": "greatest $m$",
+        "never": "never reached",
+        "footnote": "The least $M$ is the $\\sup$ and the greatest $m$ is the $\\inf$ of the set of terms (previous topic). Example 4.2.11 uses these $M$ and $m$."
+      },
+      "others": {
+        "sequence": "sequence",
+        "monotone": "monotone",
+        "bounded": "bounded",
+        "footnote": "The sequences of Example 4.2.9, sorted here (not in the module)."
+      },
+      "rules": {
+        "name": "rule",
+        "formula": "formula",
+        "footnote": "$\\ni$ reads \"such that\".",
+        "names": {
+          "notation": "definition of a sequence",
+          "increasing": "Definition 4.2.4(a)",
+          "decreasing": "Definition 4.2.4(b)",
+          "nonIncreasing": "Definition 4.2.4(c)",
+          "nonDecreasing": "Definition 4.2.4(d)",
+          "monotone": "Definition 4.2.4",
+          "upper": "Definition 4.2.5(a)",
+          "lower": "Definition 4.2.5(b)",
+          "bounded": "Definition 4.2.5(c)"
+        },
+        "formulas": {
+          "notation": "\\{a_n\\}_{n=1}^{\\infty} = a_1, a_2, a_3, \\dots, a_n, a_{n+1}, \\dots",
+          "increasing": "\\text{increasing} \\iff a_{n+1} > a_n,\\ \\forall n \\in \\mathbb{N}",
+          "decreasing": "\\text{decreasing} \\iff a_{n+1} < a_n,\\ \\forall n \\in \\mathbb{N}",
+          "nonIncreasing": "\\text{non-increasing} \\iff a_{n+1} \\le a_n,\\ \\forall n \\in \\mathbb{N}",
+          "nonDecreasing": "\\text{non-decreasing} \\iff a_{n+1} \\ge a_n,\\ \\forall n \\in \\mathbb{N}",
+          "monotone": "\\text{monotone} \\iff \\text{one of (a), (b), (c), (d)}",
+          "upper": "\\text{bounded above} \\iff \\exists M \\in \\mathbb{R} \\ni a_n \\le M,\\ \\forall n \\in \\mathbb{N}",
+          "lower": "\\text{bounded below} \\iff \\exists m \\in \\mathbb{R} \\ni a_n \\ge m,\\ \\forall n \\in \\mathbb{N}",
+          "bounded": "\\text{bounded} \\iff \\text{bounded above and below}"
+        }
+      },
+      "intros": {
+        "notation": "A sequence is a list of numbers in order: term 1, term 2, term 3, and so on. The formula $a_n$ gives the terms: substitute $n$ with 1, 2, 3, ...",
+        "monotone": "A sequence is increasing if every term is greater than the one before, decreasing if it is always smaller. Non-increasing and non-decreasing allow equal terms.",
+        "bounded": "A sequence is bounded above if some $M$ is never passed by its terms. It is bounded below if some $m$ is never passed going down."
+      },
+      "tips": {
+        "notation": "In $\\{\\tfrac{1}{n-1}\\}_{n=2}^{\\infty}$ the first term is $a_2$, not $a_1$: look at where $n$ starts.",
+        "monotone": "Move $n$ to compare another pair. One pair that breaks the pattern is enough to rule a property out.",
+        "bounded": "On $\\{\\tfrac{1}{n}\\}$, move $m$ a little above 0: there is always a smaller term, even if it is far to the right."
+      },
+      "legend": {
+        "term": "term $a_n$ above $n$",
+        "shadow": "its value on the number line",
+        "chosen": "the chosen term $n$",
+        "pair": "the pair being compared",
+        "relation": "sign of $a_n$ against $a_{n+1}$",
+        "line": "the line $M$ or $m$ being checked",
+        "witness": "a term that passes it",
+        "zone": "all upper or lower bounds"
+      },
+      "aria": {
+        "plot": "the terms of the sequence: n to the right, a_n upward",
+        "slider": {
+          "n": "move n",
+          "M": "move M",
+          "m": "move m"
+        }
+      }
+    },
+    "relations": {
+      "title": "Relations",
+      "groups": {
+        "meaning": "what a relation is",
+        "rule": "relations by a rule",
+        "domain": "domain & codomain"
+      },
+      "chips": {
+        "hobby": "hobbies",
+        "older": "older than",
+        "less": "$b < c$",
+        "greater": "$b > c$",
+        "all": "every pair",
+        "letters": "list of pairs",
+        "greaterNatural": "$m > n$",
+        "evenSum": "$m + n$ even",
+        "negative": "$xy < 0$",
+        "nonnegative": "$xy \\ge 0$",
+        "one": "$xy = 1$",
+        "sqrt": "$\\sqrt a = b$",
+        "triple": "$b = 3a$",
+        "positive": "$ab > 0$"
+      },
+      "members": {
+        "sports": ["table tennis", "badminton", "swimming"],
+        "siblings": ["Elder", "Me", "Younger"]
+      },
+      "statements": {
+        "hobby": "$x \\mathrel{\\mathrm R} y$ if $x$ likes $y$",
+        "older": "$x \\mathrel{\\mathrm R} y$ if $x$ is older than $y$",
+        "less": "$b \\mathrel{\\mathrm R} c$ if $b < c$",
+        "greater": "$b \\mathrel{\\mathrm R} c$ if $b > c$",
+        "all": "every member of $B$ is paired with every member of $C$",
+        "letters": "$\\mathrm R = \\{(a, 1), (b, 2), (c, 1)\\}$"
+      },
+      "why": {
+        "hobby": { "holds": "{{a}} likes {{b}}", "fails": "{{a}} does not like {{b}}" },
+        "older": { "holds": "{{a}} is older than {{b}}", "fails": "{{a}} is not older than {{b}}", "self": "{{a}} is not older than themselves" },
+        "less": { "holds": "${{a}} < {{b}}$ is true", "fails": "${{a}} < {{b}}$ is false" },
+        "greater": { "holds": "${{a}} > {{b}}$ is true", "fails": "${{a}} > {{b}}$ is false" },
+        "all": { "holds": "every pair is linked", "fails": "every pair is linked" },
+        "letters": { "holds": "$({{a}}, {{b}})$ is on the list of $\\mathrm R$", "fails": "$({{a}}, {{b}})$ is not on the list of $\\mathrm R$" }
+      },
+      "words": {
+        "even": "even",
+        "odd": "odd",
+        "true": "true",
+        "false": "false",
+        "outside": "(outside the picture)",
+        "noB": "no b"
+      },
+      "lists": {
+        "holds": "related:",
+        "fails": "not related:",
+        "noneYet": "none yet",
+        "none": "none"
+      },
+      "table": {
+        "step": "step"
+      },
+      "reading": {
+        "pair": "${{pair}}$: {{why}}, so ${{relation}}$ and ${{pair}} {{member}} \\mathrm R$.",
+        "summary": "$\\mathrm R$ has {{count}} of the {{total}} pairs of ${{product}}$. Click a point to read one pair.",
+        "probe": "${{vars}} = {{pair}}$: {{test}}, so ${{pair}} {{member}} \\mathrm R$.",
+        "sqrtHas": "$a = {{a}}$: ${{root}}$, so ${{a}} \\in D(\\mathrm R)$ with partner $b = {{b}}$.",
+        "sqrtNone": "$a = {{a}}$: ${{root}}$ is not a natural number, so there is no partner $b$; ${{a}} \\notin D(\\mathrm R)$.",
+        "triple": "$a = {{a}}$: $b = {{work}}$, so ${{a}} \\in D(\\mathrm R)$ and ${{b}} \\in \\mathit{R}(\\mathrm R)$.",
+        "positiveZero": "$a = 0$: $0 \\cdot b = 0$, never $> 0$; $0 \\notin D(\\mathrm R)$.",
+        "positiveUp": "$a = {{a}}$: every $b > 0$ works, so ${{a}} \\in D(\\mathrm R)$.",
+        "positiveDown": "$a = {{a}}$: every $b < 0$ works, so ${{a}} \\in D(\\mathrm R)$."
+      },
+      "steps": {
+        "meaningDone": "Every pair has been checked: {{count}} of the {{total}} pairs of ${{product}}$ are in $\\mathrm R$, so $\\mathrm R \\subseteq {{product}}$.",
+        "rulePair": "${{pair}}$: {{test}}, so ${{relation}}$.",
+        "rulePattern": "All pairs that satisfy the rule form $\\mathrm R$: {{pattern}}.",
+        "domainPair": "${{work}}$, so ${{pair}} \\in \\mathrm R$.",
+        "quadrantI": "If $a$ and $b$ are both positive, $ab > 0$: quadrant I is in $\\mathrm R$.",
+        "quadrantIII": "If both are negative, $ab > 0$ too: quadrant III is in $\\mathrm R$.",
+        "zero": "If $a = 0$, then $0 \\cdot b = 0$ for every $b$: the line $a = 0$ never touches $\\mathrm R$.",
+        "domain": "Drop every point onto the horizontal axis: $D(\\mathrm R) = {{set}}$.",
+        "codomain": "Slide every point onto the vertical axis: $\\mathit{R}(\\mathrm R) = {{set}}$."
+      },
+      "tests": {
+        "compare": "${{expression}}$ is {{verdict}}",
+        "product": {
+          "holds": "${{expression}}$, satisfies ${{condition}}$",
+          "fails": "${{expression}}$, does not satisfy ${{condition}}$"
+        }
+      },
+      "patterns": {
+        "greaterNatural": "the points below the line $m = n$",
+        "evenSum": "a checkerboard pattern",
+        "negative": "quadrants II and IV, without the axes",
+        "nonnegative": "quadrants I and III, plus both axes",
+        "one": "the curve $y = \\tfrac{1}{x}$"
+      },
+      "reasons": {
+        "pattern": "every pair that satisfies the rule: {{pattern}}",
+        "quadrantI": "quadrant I: all of its points are in $\\mathrm R$",
+        "quadrantIII": "quadrant III too",
+        "zero": "not $> 0$: 0 has no partner",
+        "domain": "shadow on the $a$ axis: {{why}}",
+        "codomain": "shadow on the $b$ axis: {{why}}"
+      },
+      "pairWhy": {
+        "sqrt": "its partner is $b = {{b}}$",
+        "triple": "every $a$ has exactly one partner"
+      },
+      "domainWhy": {
+        "sqrt": "only square numbers have a partner",
+        "triple": "every integer $a$ has the partner $3a$",
+        "positive": "everything except 0: $(-\\infty, 0) \\cup (0, \\infty)$"
+      },
+      "codomainWhy": {
+        "sqrt": "the roots: only 1 to 4 are used",
+        "triple": "only multiples of 3 become partners",
+        "positive": "$b = 0$ is never a partner either"
+      },
+      "cards": {
+        "product": "$\\mathrm R$ and ${{product}}$",
+        "universal": "universal relations",
+        "rule": "from rule to pair",
+        "nonNumber": "not only numbers",
+        "others": "more examples",
+        "domain": "domain and codomain",
+        "rules": "relation formulas"
+      },
+      "product": {
+        "count": "$|\\mathrm R| = {{count}}$ of $|{{product}}| = {{first}} \\cdot {{second}} = {{size}}$ pairs; the highlighted ones are members of $\\mathrm R$.",
+        "equal": "Here $\\mathrm R = {{product}}$: a subset may equal the whole set.",
+        "subset": "Every member of $\\mathrm R$ is in ${{product}}$, so $\\mathrm R \\subseteq {{product}}$."
+      },
+      "universal": {
+        "yes": "Its domain and codomain are both ${{first}}$: a universal relation, or a relation on ${{first}}$.",
+        "no": "Its domain is ${{first}}$ and its codomain is ${{second}}$: not a universal relation.",
+        "items": [
+          { "tex": "x \\le n,\\ x \\in \\mathbb R,\\ n \\in \\mathbb N", "remark": "between $\\mathbb R$ and $\\mathbb N$: not universal" },
+          { "tex": "\\text{students} \\to \\text{grades A, B, C, D, E}", "remark": "two different sets: not universal" },
+          { "tex": "\\text{marriage on the set of all people}", "remark": "universal" },
+          { "tex": "\\text{finishing order of an F1 race}", "remark": "between drivers: universal" },
+          { "tex": "<,\\ \\le,\\ >,\\ \\ge \\text{ on } \\mathbb R", "remark": "universal" }
+        ]
+      },
+      "ruleCard": {
+        "rule": "the rule",
+        "substitute": "substitute",
+        "result": "so"
+      },
+      "nonNumber": {
+        "items": [
+          { "tex": "\\ell \\mathrel{\\mathrm R} g \\iff \\ell \\perp g", "remark": "on the set of all lines in one plane" },
+          { "tex": "x \\mathrel{\\mathrm R} y \\iff x \\text{ is a parent of } y", "remark": "on the set of all people" }
+        ]
+      },
+      "domainCard": {
+        "first": "the starting set",
+        "domain": "domain: the members of $A$ that have a partner",
+        "second": "the target set",
+        "codomain": "codomain: the members of $B$ that are partners",
+        "footnote": "Some books call all of $A$ the domain and all of $B$ the codomain. Here the domain is only the members of $A$ with a partner, and the codomain only the members of $B$ that are partners."
+      },
+      "rules": {
+        "names": {
+          "relates": "$a$ is related to $b$: the pair satisfies the relation",
+          "negation": "not related",
+          "setOf": "a relation as a set of ordered pairs",
+          "subset": "every relation is a subset of the Cartesian product",
+          "universal": "universal relation: the domain and codomain are the same set",
+          "domain": "domain",
+          "codomain": "codomain"
+        },
+        "formulas": {
+          "relates": "a \\mathrel{\\mathrm R} b",
+          "negation": "\\neg(a \\mathrel{\\mathrm R} b) \\iff (a, b) \\notin \\mathrm R",
+          "setOf": "\\mathrm R = \\{(a, b) \\in A \\times B \\mid a \\mathrel{\\mathrm R} b\\}",
+          "subset": "\\mathrm R \\subseteq A \\times B",
+          "universal": "\\mathrm R \\subseteq A \\times A",
+          "domain": "D(\\mathrm R) = \\{a \\in A \\mid a \\mathrel{\\mathrm R} b \\text{ for some } b \\in B\\}",
+          "codomain": "\\mathit{R}(\\mathrm R) = \\{b \\in B \\mid a \\mathrel{\\mathrm R} b \\text{ for some } a \\in A\\}"
+        },
+        "footnote": "$\\neg$ reads \"not\", $\\iff$ \"if and only if\". In $\\mathit{R}(\\mathrm R)$ the slanted $\\mathit{R}$ is the codomain and the upright $\\mathrm R$ is the relation."
+      },
+      "intros": {
+        "meaning": "A relation links members of $A$ with members of $B$. If $a$ and $b$ are linked we write $a \\mathrel{\\mathrm R} b$, otherwise $\\neg(a \\mathrel{\\mathrm R} b)$. The linked pairs are collected into the set $\\mathrm R$.",
+        "rule": "On number sets a relation usually comes with a rule. Put both numbers into the rule: if it is true, the pair is a member of $\\mathrm R$.",
+        "domain": "The domain $D(\\mathrm R)$ is the members of $A$ that have a partner, the codomain $\\mathit{R}(\\mathrm R)$ is the members of $B$ that are partners. In the picture: the shadows of the points of $\\mathrm R$ on both axes."
+      },
+      "tips": {
+        "meaning": "The arrow diagram and the points in $A \\times B$ are the same relation. Every arrow is one highlighted point.",
+        "rule": "Move both numbers. The highlighted points form the pattern of the rule; on $\\mathbb R$ the pattern is a region or a curve.",
+        "domain": "Move $a$: the dashed line looks for its partner. Without a partner, $a$ is not in the domain."
+      },
+      "idle": {
+        "meaning": "press start to see the steps one by one, or click a point in $A \\times B$.",
+        "two": "press start to see the steps one by one, or move ${{first}}$ and ${{second}}$.",
+        "one": "press start to see the steps one by one, or move ${{first}}$."
+      },
+      "legend": {
+        "arrow": "$a \\mathrel{\\mathrm R} b$: $a$ is linked to $b$",
+        "arrowNow": "the pair being checked",
+        "member": "a pair in $\\mathrm R$",
+        "miss": "a pair not in $\\mathrm R$",
+        "lattice": "other pairs",
+        "region": "the region of $\\mathrm R$ in $\\mathbb R \\times \\mathbb R$",
+        "probe": "the pair you move, red if it is not a member",
+        "shadow": "shadow on an axis",
+        "probeLine": "looking for a partner of $a$",
+        "open": "not included",
+        "not": "not"
+      },
+      "slider": "move",
+      "aria": {
+        "arrows": "arrow diagram of the relation beside its points in the Cartesian product",
+        "plane": "the relation drawn as points in the plane",
+        "slider": "move {{name}}"
+      }
+    },
+    "relationProperties": {
+      "title": "Properties of Relations",
+      "groups": {
+        "reflexive": "reflexive",
+        "symmetric": "symmetric",
+        "antisymmetric": "antisymmetric",
+        "transitive": "transitive",
+        "equivalence": "equivalence relations"
+      },
+      "chips": {
+        "equal": "$a = b$",
+        "lessEq": "$a \\le b$",
+        "less": "$a < b$",
+        "divides": "$a \\mid b$",
+        "sameParity": "$a + b$ even",
+        "diffOne": "$|a - b| = 1$",
+        "modThree": "$3 \\mid a - b$",
+        "listed": "list of pairs"
+      },
+      "statements": {
+        "equal": "$a \\mathrel{\\mathrm R} b \\iff a = b$ on $A = \\{1, 2, 3, 4\\}$",
+        "lessEq": "$a \\mathrel{\\mathrm R} b \\iff a \\le b$ on $A = \\{1, 2, 3, 4\\}$",
+        "less": "$a \\mathrel{\\mathrm R} b \\iff a < b$ on $A = \\{1, 2, 3, 4\\}$",
+        "divides": "$a \\mathrel{\\mathrm R} b \\iff a \\mid b$ ($a$ divides $b$) on $A = \\{1, 2, 3, 4, 6\\}$",
+        "sameParity": "$a \\mathrel{\\mathrm R} b \\iff a + b$ is even, on $A = \\{1, 2, \\dots, 6\\}$",
+        "diffOne": "$a \\mathrel{\\mathrm R} b \\iff |a - b| = 1$ on $A = \\{1, 2, 3, 4\\}$",
+        "modThree": "$a \\mathrel{\\mathrm R} b \\iff a - b$ is a multiple of 3, on $A = \\{1, 2, \\dots, 7\\}$",
+        "listed": "$\\mathrm R = \\{(1, 1), (2, 2), (3, 3), (1, 2), (2, 1), (2, 3)\\}$ on $A = \\{1, 2, 3, 4\\}$"
+      },
+      "names": {
+        "reflexive": "reflexive",
+        "symmetric": "symmetric",
+        "antisymmetric": "antisymmetric",
+        "transitive": "transitive",
+        "equivalence": "equivalence relation"
+      },
+      "stamps": {
+        "reflexive": { "yes": "reflexive", "no": "not reflexive" },
+        "symmetric": { "yes": "symmetric", "no": "not symmetric" },
+        "antisymmetric": { "yes": "antisymmetric", "no": "not antisymmetric" },
+        "transitive": { "yes": "transitive", "no": "not transitive" },
+        "equivalence": { "yes": "equivalence relation", "no": "not an equivalence relation" }
+      },
+      "words": {
+        "truth": { "true": "true", "false": "false" },
+        "parity": { "true": "even", "false": "odd" },
+        "multiple": { "true": "a multiple of 3", "false": "not a multiple of 3" },
+        "yes": "yes",
+        "no": "no"
+      },
+      "why": {
+        "rule": "${{expression}}$ is {{verdict}}",
+        "listed": "${{pair}}$ is on the list",
+        "unlisted": "${{pair}}$ is not on the list"
+      },
+      "verdict": {
+        "yes": "Every case holds ({{count}} checked): $\\mathrm R$ is {{name}}.",
+        "no": "One counterexample is enough: ${{counter}}$, so $\\mathrm R$ is not {{name}}.",
+        "empty": "There is no case to check, so nothing breaks the rule: $\\mathrm R$ is {{name}}."
+      },
+      "steps": {
+        "reflexive": {
+          "holds": "$a = {{a}}$: {{why}}, so ${{need}} \\in \\mathrm R$: a loop at ${{a}}$.",
+          "fails": "$a = {{a}}$: {{why}}, so ${{need}} \\notin \\mathrm R$: no loop at ${{a}}$."
+        },
+        "symmetric": {
+          "holds": "${{premise}} \\in \\mathrm R$. Its mirror pair ${{need}}$: {{why}}, so it is in $\\mathrm R$ too: a return arrow.",
+          "fails": "${{premise}} \\in \\mathrm R$. Its mirror pair ${{need}}$: {{why}}, so ${{need}} \\notin \\mathrm R$: no return arrow."
+        },
+        "antisymmetric": {
+          "holds": "${{premise}} \\in \\mathrm R$. Its mirror pair ${{need}}$: {{why}}, so ${{need}} \\notin \\mathrm R$: one way only.",
+          "fails": "${{premise}} \\in \\mathrm R$. Its mirror pair ${{need}}$: {{why}}, so it is in $\\mathrm R$ too, although ${{a}} \\ne {{b}}$: a two-way pair."
+        },
+        "transitive": {
+          "holds": "${{premise}} \\in \\mathrm R$. The shortcut ${{need}}$: {{why}}, so it is in $\\mathrm R$.",
+          "fails": "${{premise}} \\in \\mathrm R$. The shortcut ${{need}}$: {{why}}, so ${{need}} \\notin \\mathrm R$: no shortcut."
+        },
+        "class": "$[{{a}}]$ collects every member related to ${{a}}$: $[{{a}}] = {{set}}$.",
+        "partition": "The {{count}} classes do not overlap and together cover $A$: they split $A$ into {{count}} parts.",
+        "notEquivalence": "$\\mathrm R$ is not {{name}}, so it is not an equivalence relation."
+      },
+      "reasons": {
+        "class": "the members related to ${{a}}$",
+        "partition": "{{count}} classes, no overlap, together all of $A$",
+        "notEquivalence": "not {{name}}: not an equivalence relation"
+      },
+      "reading": {
+        "classes": "$\\mathrm R$ is an equivalence relation with {{count}} classes: ${{classes}}$."
+      },
+      "table": {
+        "step": "step"
+      },
+      "cards": {
+        "properties": "this relation at a glance",
+        "pairs": "its pairs",
+        "picture": "in the pictures",
+        "classes": "equivalence classes",
+        "rules": "property formulas"
+      },
+      "properties": {
+        "counter": "counterexample: ${{counter}}$",
+        "footnote": "One case that breaks the rule is enough to say no. To say yes, every case has to be checked."
+      },
+      "pairsCard": {
+        "count": "$|\\mathrm R| = {{count}}$ of the $|A \\times A| = {{size}}$ pairs, with $A = {{set}}$. The highlighted pairs belong to the current case."
+      },
+      "picture": {
+        "graph": "arrow diagram",
+        "grid": "points in A × A",
+        "reflexive": {
+          "graph": "every member has a loop",
+          "grid": "the whole diagonal is filled"
+        },
+        "symmetric": {
+          "graph": "every arrow between two members has a return arrow",
+          "grid": "the points mirror each other across the diagonal"
+        },
+        "antisymmetric": {
+          "graph": "no two-way arrows between different members; loops are allowed",
+          "grid": "no point off the diagonal has its mirror image"
+        },
+        "transitive": {
+          "graph": "every path of two arrows $a \\to b \\to c$ has a direct shortcut $a \\to c$",
+          "grid": "no simple pattern: if $(a, b)$ and $(b, c)$ are points, $(a, c)$ must be one too"
+        },
+        "equivalence": {
+          "graph": "the members fall into separate groups; inside a group everything is linked to everything",
+          "grid": "each class is a full square of points, mirrored across the diagonal"
+        }
+      },
+      "classesCard": {
+        "none": "$\\mathrm R$ is not an equivalence relation, so it has no equivalence classes.",
+        "footnote": "Every member lies in exactly one class, and two classes are either equal or disjoint: the classes form a partition of $A$."
+      },
+      "rules": {
+        "names": {
+          "reflexive": "reflexive: every member is related to itself",
+          "symmetric": "symmetric: every pair also works backwards",
+          "antisymmetric": "antisymmetric: two different members never relate both ways",
+          "transitive": "transitive: two steps can be done in one",
+          "equivalence": "equivalence relation",
+          "class": "the equivalence class of $a$"
+        },
+        "formulas": {
+          "reflexive": "\\forall a \\in A:\\ a \\mathrel{\\mathrm R} a",
+          "symmetric": "a \\mathrel{\\mathrm R} b \\Rightarrow b \\mathrel{\\mathrm R} a",
+          "antisymmetric": "a \\mathrel{\\mathrm R} b \\land b \\mathrel{\\mathrm R} a \\Rightarrow a = b",
+          "transitive": "a \\mathrel{\\mathrm R} b \\land b \\mathrel{\\mathrm R} c \\Rightarrow a \\mathrel{\\mathrm R} c",
+          "equivalence": "\\text{reflexive} \\land \\text{symmetric} \\land \\text{transitive}",
+          "class": "[a] = \\{x \\in A \\mid x \\mathrel{\\mathrm R} a\\}"
+        },
+        "footnote": "Each formula is meant for all $a, b, c \\in A$. Symmetric and antisymmetric are not opposites: $=$ is both, and a relation can also be neither."
+      },
+      "intros": {
+        "reflexive": "A relation on $A$ is reflexive if every member is related to itself: $a \\mathrel{\\mathrm R} a$ for every $a \\in A$. Check the members one by one.",
+        "symmetric": "A relation is symmetric if every pair also works backwards: whenever $a \\mathrel{\\mathrm R} b$, also $b \\mathrel{\\mathrm R} a$.",
+        "antisymmetric": "A relation is antisymmetric if two different members never relate in both directions: from $a \\mathrel{\\mathrm R} b$ and $b \\mathrel{\\mathrm R} a$ it follows that $a = b$.",
+        "transitive": "A relation is transitive if two steps can always be done in one: from $a \\mathrel{\\mathrm R} b$ and $b \\mathrel{\\mathrm R} c$ it follows that $a \\mathrel{\\mathrm R} c$.",
+        "equivalence": "A relation that is reflexive, symmetric and transitive is an equivalence relation. It splits $A$ into equivalence classes: groups of members that are all related to each other."
+      },
+      "tips": {
+        "reflexive": "Look at the loops in the arrow diagram, or at the diagonal of $A \\times A$. One missing loop is enough to say no.",
+        "symmetric": "Every arrow needs a return arrow. Loops never break it: a loop is its own mirror image.",
+        "antisymmetric": "$a \\le b$ is antisymmetric but not symmetric, $|a - b| = 1$ is the other way round, and $a = b$ is both.",
+        "transitive": "Follow every path of two arrows. If the direct arrow is missing, that path is a counterexample.",
+        "equivalence": "Inside one class every member is linked to every other, so each class is a full square of points in $A \\times A$. Compare $a + b$ even (2 classes) with $a = b$ (every member alone)."
+      },
+      "idle": "press start to check the cases one by one.",
+      "legend": {
+        "arrow": "$a \\mathrel{\\mathrm R} b$ with $a \\ne b$",
+        "loop": "a loop: $a \\mathrel{\\mathrm R} a$",
+        "cell": "a pair in $\\mathrm R$",
+        "diagonal": "the diagonal: the pairs $(a, a)$",
+        "now": "the pairs we start from",
+        "need": "the required pair, present",
+        "missing": "the required pair, missing: a counterexample"
+      },
+      "aria": {
+        "board": "the relation as an arrow diagram on A beside its points in A × A"
+      }
+    },
+    "orderRelations": {
+      "title": "Order Relations",
+      "groups": {
+        "partial": "partial orders",
+        "hasse": "Hasse diagrams",
+        "extremes": "least & minimal"
+      },
+      "chips": {
+        "lessEq": "$a \\le b$",
+        "divides": "divisors of 12",
+        "less": "$a < b$",
+        "sameParity": "$a + b$ even",
+        "listed": "list of pairs",
+        "subsets": "subsets of $\\{a, b, c\\}$",
+        "divides30": "divisors of 30",
+        "dividesMiddle": "$\\{2, 3, 4, 6\\}$",
+        "properSubsets": "without $\\varnothing$ and $\\{a, b, c\\}$"
+      },
+      "statements": {
+        "lessEq": "$a \\mathrel{\\mathrm R} b \\iff a \\le b$ on $A = \\{1, 2, 3, 4\\}$",
+        "divides": "$a \\mathrel{\\mathrm R} b \\iff a \\mid b$ on the divisors of 12: $A = \\{1, 2, 3, 4, 6, 12\\}$",
+        "less": "$a \\mathrel{\\mathrm R} b \\iff a < b$ on $A = \\{1, 2, 3, 4\\}$",
+        "sameParity": "$a \\mathrel{\\mathrm R} b \\iff a + b$ is even, on $A = \\{1, 2, 3, 4\\}$",
+        "listed": "$\\mathrm R = \\{(1, 1), (2, 2), (3, 3), (1, 2), (2, 3)\\}$ on $A = \\{1, 2, 3\\}$",
+        "subsets": "$X \\mathrel{\\mathrm R} Y \\iff X \\subseteq Y$ on all subsets of $\\{a, b, c\\}$",
+        "divides30": "$a \\mathrel{\\mathrm R} b \\iff a \\mid b$ on the divisors of 30: $A = \\{1, 2, 3, 5, 6, 10, 15, 30\\}$",
+        "dividesMiddle": "$a \\mathrel{\\mathrm R} b \\iff a \\mid b$ on $A = \\{2, 3, 4, 6\\}$",
+        "properSubsets": "$X \\mathrel{\\mathrm R} Y \\iff X \\subseteq Y$ on the subsets of $\\{a, b, c\\}$ without $\\varnothing$ and $\\{a, b, c\\}$"
+      },
+      "names": {
+        "reflexive": "reflexive",
+        "antisymmetric": "antisymmetric",
+        "transitive": "transitive",
+        "partial": "partial order",
+        "total": "total order"
+      },
+      "words": {
+        "truth": { "true": "true", "false": "false" },
+        "parity": { "true": "even", "false": "odd" },
+        "subset": { "true": "true", "false": "false" },
+        "yes": "yes",
+        "no": "no"
+      },
+      "why": {
+        "rule": "${{expression}}$ is {{verdict}}",
+        "listed": "${{pair}}$ is on the list",
+        "unlisted": "${{pair}}$ is not on the list"
+      },
+      "verdict": {
+        "yes": "Every case holds ({{count}} checked): $\\mathrm R$ is {{name}}.",
+        "no": "Counterexample ${{counter}}$ ({{why}}), so $\\mathrm R$ is not {{name}}.",
+        "empty": "There is no case to check, so nothing breaks the rule: $\\mathrm R$ is {{name}}."
+      },
+      "steps": {
+        "incomparable": "${{a}}$ and ${{b}}$: {{forward}} and {{backward}}. They cannot be compared.",
+        "comparable": "Every two members can be compared: one of them is always below the other.",
+        "notOrder": "$\\mathrm R$ is not {{name}}, so it is not a partial order.",
+        "partial": "Reflexive, antisymmetric and transitive: a partial order. Some members cannot be compared, so it is not a total order.",
+        "total": "A partial order in which every two members can be compared: a total order. Its members stand in one line.",
+        "full": "Draw $\\mathrm R$ with every member above the members below it: all {{count}} pairs become arrows, and every arrow points up.",
+        "loops": "A partial order is reflexive, so every member has a loop. We know that anyway: leave out the {{count}} loops.",
+        "shortcut": "${{a}} \\to {{b}}$ is a shortcut: ${{path}}$ already gets there, and transitivity adds the shortcut. Leave it out.",
+        "arrows": "Every arrow points up, so the arrowheads say nothing: leave them out. This is the Hasse diagram, {{count}} lines for the {{total}} pairs of $\\mathrm R$.",
+        "minimal": "Minimal members: nothing lies below them. Here ${{set}}$.",
+        "maximal": "Maximal members: nothing lies above them. Here ${{set}}$.",
+        "least": {
+          "found": "Least member: ${{x}}$ lies below every member.",
+          "none": "No least member: ${{set}}$ are all minimal, but none of them lies below the others."
+        },
+        "greatest": {
+          "found": "Greatest member: ${{x}}$ lies above every member.",
+          "none": "No greatest member: ${{set}}$ are all maximal, but none of them lies above the others."
+        }
+      },
+      "rows": {
+        "full": "every pair as an arrow pointing up",
+        "loops": "{{count}} loops: known from reflexivity, left out",
+        "shortcut": "shortcut: already reached by ${{path}}$, left out",
+        "linesTex": "\\text{lines} = {{count}}",
+        "lines": "arrowheads left out: the Hasse diagram of the {{total}} pairs",
+        "minimalTex": "\\text{minimal: } {{set}}",
+        "minimal": "nothing below them",
+        "maximalTex": "\\text{maximal: } {{set}}",
+        "maximal": "nothing above them",
+        "leastTex": "\\text{least} = {{x}}",
+        "leastNone": "\\text{no least member}",
+        "greatestTex": "\\text{greatest} = {{x}}",
+        "greatestNone": "\\text{no greatest member}"
+      },
+      "roles": {
+        "minimal": "minimal",
+        "maximal": "maximal",
+        "least": "least",
+        "greatest": "greatest",
+        "none": "none of these",
+        "missing": "none"
+      },
+      "reading": {
+        "pick": "${{x}}$: below it ${{below}}$, above it ${{above}}$, not comparable with ${{others}}$. It is {{roles}}.",
+        "extremes": "Minimal ${{minimal}}$, maximal ${{maximal}}$, least {{least}}, greatest {{greatest}}. Click a member to read it.",
+        "hasse": "The Hasse diagram draws the {{total}} pairs of $\\mathrm R$ with only {{count}} lines. Click a member to see what lies below and above it."
+      },
+      "stamps": {
+        "total": "total order",
+        "partial": "partial order",
+        "none": "not a partial order",
+        "hasse": "Hasse diagram",
+        "least": "least: ${{x}}$",
+        "leastNone": "no least",
+        "greatest": "greatest: ${{x}}$",
+        "greatestNone": "no greatest"
+      },
+      "table": {
+        "step": "step"
+      },
+      "cards": {
+        "properties": "this relation at a glance",
+        "leftOut": "what the diagram leaves out",
+        "lines": "the lines that remain",
+        "members": "every member",
+        "rules": "order formulas"
+      },
+      "properties": {
+        "counter": "counterexample: ${{counter}}$",
+        "incomparable": "${{a}}$ and ${{b}}$ cannot be compared",
+        "footnote": "A partial order needs three properties. A total order also needs every two members to be comparable."
+      },
+      "leftOut": {
+        "loops": {
+          "name": "loops",
+          "why": "every member is related to itself (reflexive), so the loops carry no information"
+        },
+        "shortcuts": {
+          "name": "shortcuts",
+          "why": "if $a \\to b \\to c$ is there, transitivity gives $a \\to c$ for free"
+        },
+        "arrows": {
+          "name": "arrowheads",
+          "why": "smaller members are drawn lower, so every line is read upward"
+        }
+      },
+      "linesCard": {
+        "count": "{{count}} lines remain: the pairs where nothing lies in between. Left out: {{loops}} loops and {{shortcuts}} shortcuts."
+      },
+      "membersCard": {
+        "footnote": "A least member is always the only minimal one. The other way round fails: with two minimal members, neither is the least. Click a member in the diagram to highlight its row."
+      },
+      "formulas": {
+        "reflexive": "\\forall a:\\ a \\preceq a",
+        "antisymmetric": "a \\preceq b \\land b \\preceq a \\Rightarrow a = b",
+        "transitive": "a \\preceq b \\land b \\preceq c \\Rightarrow a \\preceq c",
+        "partial": "\\text{reflexive} \\land \\text{antisymmetric} \\land \\text{transitive}",
+        "total": "\\forall a, b:\\ a \\preceq b \\lor b \\preceq a",
+        "cover": "a \\prec b \\text{ with no } c \\text{ such that } a \\prec c \\prec b",
+        "minimal": "m \\text{ minimal} \\iff \\text{no } x \\prec m",
+        "maximal": "m \\text{ maximal} \\iff \\text{no } x \\succ m",
+        "least": "\\ell \\text{ least} \\iff \\forall x:\\ \\ell \\preceq x",
+        "greatest": "g \\text{ greatest} \\iff \\forall x:\\ x \\preceq g"
+      },
+      "rules": {
+        "partial": "partial order",
+        "total": "total order (linear order): every two members are comparable",
+        "cover": "a line in the Hasse diagram: $b$ lies directly above $a$",
+        "minimal": "minimal member",
+        "maximal": "maximal member",
+        "least": "least member",
+        "greatest": "greatest member"
+      },
+      "rulesFootnote": "$\\preceq$ is the usual sign for a partial order: $a \\preceq b$ means $a \\mathrel{\\mathrm R} b$. $a \\prec b$ means $a \\preceq b$ and $a \\ne b$.",
+      "intros": {
+        "partial": "A relation on $A$ that is reflexive, antisymmetric and transitive is a partial order, often written $\\preceq$. If moreover every two members can be compared, it is a total order.",
+        "hasse": "A Hasse diagram is a tidy picture of a partial order: smaller members lower, and only the lines between neighbours. Everything else follows from the properties.",
+        "extremes": "A minimal member has nothing below it; a least member lies below everything. In a total order they are the same, in a partial order they are not."
+      },
+      "tips": {
+        "partial": "$\\le$ is a total order, $\\mid$ (divides) only a partial order: 2 and 3 do not divide each other.",
+        "hasse": "Compare the divisors of 30 with the subsets of $\\{a, b, c\\}$: the two Hasse diagrams have the same shape.",
+        "extremes": "Try $\\{2, 3, 4, 6\\}$: two minimal and two maximal members, but no least and no greatest."
+      },
+      "idle": {
+        "play": "press start to check the order step by step.",
+        "pick": "press start to see the steps one by one, or click a member in the diagram."
+      },
+      "legend": {
+        "arrow": "$a \\mathrel{\\mathrm R} b$ with $a \\ne b$",
+        "loop": "a loop: $a \\mathrel{\\mathrm R} a$",
+        "now": "the pair being checked or left out",
+        "missing": "a pair that is missing",
+        "path": "the path that makes the shortcut unnecessary",
+        "line": "a line of the Hasse diagram, read upward",
+        "lit": "a highlighted member",
+        "focus": "the member in focus",
+        "ring": "least or greatest member"
+      },
+      "aria": {
+        "digraph": "the relation as an arrow diagram on A beside its points in A × A",
+        "hasse": "the Hasse diagram of the order"
+      }
     }
   }
 }

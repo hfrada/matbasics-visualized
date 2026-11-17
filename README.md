@@ -23,6 +23,17 @@ math basics on grid paper
 - Layered Tables & Equivalence
 - Tautologies & Valid Arguments
 
+### Real Numbers & Relations
+- Field Axioms
+- Order Axioms
+- Inequalities
+- Absolute Value
+- Supremum & Infimum
+- Sequences
+- Relations
+- Properties of Relations
+- Order Relations
+
 ## Bahasa Indonesia
 
 dasar matematika di kertas petak
@@ -45,3 +56,14 @@ dasar matematika di kertas petak
 - Konvers, Invers & Kontraposisi
 - Tabel Bertingkat & Keekuivalenan
 - Tautologi & Argumen Sah
+
+### Bilangan Real & Relasi
+- Aksioma Medan
+- Aksioma Urutan
+- Pertidaksamaan
+- Nilai Mutlak
+- Supremum & Infimum
+- Barisan
+- Relasi
+- Sifat Relasi
+- Relasi Urutan

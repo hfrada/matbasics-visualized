@@ -353,62 +353,64 @@ export function SetOperationPropertiesPage() {
               </div>
             ))}
           </div>
-          <div className="pen-border relative overflow-x-auto overflow-y-hidden bg-paper px-4.5 py-3">
+          <div className="pen-border relative bg-paper px-4.5 py-3">
             <h2 className="font-hand text-2xl font-bold">{t('cards.regions')}</h2>
-            <table className="w-full border-collapse text-[15px]">
-              <thead>
-                <tr className="border-b-2 border-ink text-left font-hand text-xl whitespace-nowrap">
-                  <th className="px-2 py-1 font-bold">{t('table.region')}</th>
-                  {law.names.map((name) => (
-                    <th key={name} className="px-2 py-1 font-bold">
-                      <MathTex tex={`\\in ${name}`} />
-                    </th>
-                  ))}
-                  <th className="px-2 py-1 font-bold">{t('table.left')}</th>
-                  <th className="px-2 py-1 font-bold">{t('table.right')}</th>
-                  <th className="px-2 py-1 font-bold">{t('table.same')}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {law.regions.map((region, index) => (
-                  <tr
-                    key={region.key}
-                    className={`border-b border-dashed border-faint transition-colors ${hatchedIndex === index ? 'bg-highlight-soft' : ''}`}
-                  >
-                    <td className="px-2 py-1.5">
-                      <button
-                        type="button"
-                        aria-label={t(`regions.${region.key}`).replaceAll('$', '')}
-                        aria-pressed={selected === index}
-                        disabled={player.playing}
-                        onClick={() => toggleRegion(index)}
-                        className="cursor-pointer text-left underline decoration-faint decoration-dashed underline-offset-4 disabled:cursor-default disabled:no-underline"
-                      >
-                        <MathText text={t(`regions.${region.key}`)} />
-                      </button>
-                    </td>
-                    {region.memberships.map((inside, setIndex) => (
-                      <td key={setIndex} className="px-2 py-1.5 font-hand text-xl">
-                        {t(inside ? 'table.yes' : 'table.no')}
-                      </td>
+            <div className="relative overflow-x-auto overflow-y-hidden">
+              <table className="w-full border-collapse text-[15px]">
+                <thead>
+                  <tr className="border-b-2 border-ink text-left font-hand text-xl whitespace-nowrap">
+                    <th className="px-2 py-1 font-bold">{t('table.region')}</th>
+                    {law.names.map((name) => (
+                      <th key={name} className="px-2 py-1 font-bold">
+                        <MathTex tex={`\\in ${name}`} />
+                      </th>
                     ))}
-                    {([leftHas(region), rightHas(region)] as boolean[]).map((inside, sideIndex) => (
-                      <td key={sideIndex} className="px-2 py-1.5 font-hand text-xl">
-                        {sideDone[sideIndex === 0 ? 'left' : 'right'] &&
-                          (inside ? (
-                            <span className="marker-highlight font-bold">{t('table.in')}</span>
-                          ) : (
-                            <span className="text-muted">{t('table.out')}</span>
-                          ))}
-                      </td>
-                    ))}
-                    <td className="px-2 py-1.5 font-hand text-xl font-bold">
-                      {compared(index) && t(leftHas(region) === rightHas(region) ? 'table.equal' : 'table.different')}
-                    </td>
+                    <th className="px-2 py-1 font-bold">{t('table.left')}</th>
+                    <th className="px-2 py-1 font-bold">{t('table.right')}</th>
+                    <th className="px-2 py-1 font-bold">{t('table.same')}</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {law.regions.map((region, index) => (
+                    <tr
+                      key={region.key}
+                      className={`border-b border-dashed border-faint transition-colors ${hatchedIndex === index ? 'bg-highlight-soft' : ''}`}
+                    >
+                      <td className="px-2 py-1.5">
+                        <button
+                          type="button"
+                          aria-label={t(`regions.${region.key}`).replaceAll('$', '')}
+                          aria-pressed={selected === index}
+                          disabled={player.playing}
+                          onClick={() => toggleRegion(index)}
+                          className="cursor-pointer text-left underline decoration-faint decoration-dashed underline-offset-4 disabled:cursor-default disabled:no-underline"
+                        >
+                          <MathText text={t(`regions.${region.key}`)} />
+                        </button>
+                      </td>
+                      {region.memberships.map((inside, setIndex) => (
+                        <td key={setIndex} className="px-2 py-1.5 font-hand text-xl">
+                          {t(inside ? 'table.yes' : 'table.no')}
+                        </td>
+                      ))}
+                      {([leftHas(region), rightHas(region)] as boolean[]).map((inside, sideIndex) => (
+                        <td key={sideIndex} className="px-2 py-1.5 font-hand text-xl">
+                          {sideDone[sideIndex === 0 ? 'left' : 'right'] &&
+                            (inside ? (
+                              <span className="marker-highlight font-bold">{t('table.in')}</span>
+                            ) : (
+                              <span className="text-muted">{t('table.out')}</span>
+                            ))}
+                        </td>
+                      ))}
+                      <td className="px-2 py-1.5 font-hand text-xl font-bold">
+                        {compared(index) && t(leftHas(region) === rightHas(region) ? 'table.equal' : 'table.different')}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
           <div className="pen-border relative bg-paper px-4.5 py-3">
             <h2 className="font-hand text-2xl font-bold">{t('cards.others')}</h2>
